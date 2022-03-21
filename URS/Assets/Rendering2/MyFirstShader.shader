@@ -7,6 +7,8 @@ Shader "Custom/MyFirstShader"
 			#pragma vertex MyVertexProgram
 			#pragma fragment MyFragmentProgram
 
+			#include "UnityCG.cginc"
+
 			void MyVertexProgram() 
 			{
 			}
