@@ -16,7 +16,7 @@ namespace Converter
 
     public class EasyStrTransformer : IStrTransformer
     {
-        private StringBuilder _strBuilder;
+        private StringBuilder _strBuilder = new StringBuilder();
 
         public string Encryption(string str)
         {
