@@ -11,6 +11,7 @@ namespace Converter
     {
         string Encryption(string str);
         string Decryption(string str);
+        char ShiftChar(char ch, int range);
     }
 
     public class EasyStrTransformer : IStrTransformer
