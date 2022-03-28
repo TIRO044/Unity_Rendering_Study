@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{4CD79B66-A3D4-682D-D0E2-3D66E3C933F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converter", "Converter.csproj", "{D5BF8958-4BC1-A788-01B5-14C62716B8FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRunner", "TestRunner.csproj", "{5186DE32-2C75-DC9F-FDCC-24F7D56D0368}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{4CD79B66-A3D4-682D-D0E2-3D66E3C933F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD79B66-A3D4-682D-D0E2-3D66E3C933F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CD79B66-A3D4-682D-D0E2-3D66E3C933F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BF8958-4BC1-A788-01B5-14C62716B8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BF8958-4BC1-A788-01B5-14C62716B8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BF8958-4BC1-A788-01B5-14C62716B8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BF8958-4BC1-A788-01B5-14C62716B8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5186DE32-2C75-DC9F-FDCC-24F7D56D0368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5186DE32-2C75-DC9F-FDCC-24F7D56D0368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5186DE32-2C75-DC9F-FDCC-24F7D56D0368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5186DE32-2C75-DC9F-FDCC-24F7D56D0368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
