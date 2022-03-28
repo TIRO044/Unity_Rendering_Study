@@ -10,7 +10,7 @@ namespace TestRunner
     [TestFixture()]
     public class NameConverter
     {
-        private static EasyStrTransformer _est = new EasyStrTransformer();
+        private static IStrTransformer _est = new EasyStrTransformer();
 
         [Test()]
         [TestCase("Assets/ASSET_BUNDLE/AB_LOADING_LOC_THA/")]
