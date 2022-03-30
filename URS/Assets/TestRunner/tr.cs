@@ -168,8 +168,8 @@ namespace TestRunner
                 var c = _est.Encryption(fileName);
                 if (isMetaFile == false)
                 {
-                    var meta = $@"{dirPath}\{fileName}{extension}";
-                    var meta1 = $@"{dirPath}\{c}{extension}";
+                    var meta = $@"{dirPath}/{fileName}{extension}";
+                    var meta1 = $@"{dirPath}/{c}{extension}";
                     sb.Append($"{meta} to {meta1}").AppendLine();
                     //Debug.Log($"{meta} to {meta1}");
                     if (File.Exists(meta) == false)
@@ -181,8 +181,8 @@ namespace TestRunner
                 }
                 else
                 {
-                    var meta = $@"{dirPath}\{fileName}{extension}.meta";
-                    var meta1 = $@"{dirPath}\{c}{extension}.meta";
+                    var meta = $@"{dirPath}/{fileName}{extension}.meta";
+                    var meta1 = $@"{dirPath}/{c}{extension}.meta";
                     sb.Append($"{meta} to {meta1}").AppendLine();
                     //Debug.Log($"{meta} to {meta1}");
                     if (File.Exists(meta) == false)
@@ -231,8 +231,8 @@ namespace TestRunner
                 var c = _est.Decryption(fileName);
                 if (isMetaFile == false)
                 {
-                    var meta = $@"{dirPath}\{fileName}{extension}";
-                    var meta1 = $@"{dirPath}\{c}{extension}";
+                    var meta = $@"{dirPath}/{fileName}{extension}";
+                    var meta1 = $@"{dirPath}/{c}{extension}";
                     Debug.Log($"{meta} to {meta1}");
                     if (File.Exists(meta) == false)
                     {
@@ -243,8 +243,8 @@ namespace TestRunner
                 }
                 else
                 {
-                    var meta = $@"{dirPath}\{fileName}{extension}.meta";
-                    var meta1 = $@"{dirPath}\{c}{extension}.meta";
+                    var meta = $@"{dirPath}/{fileName}{extension}.meta";
+                    var meta1 = $@"{dirPath}/{c}{extension}.meta";
                     Debug.Log($"{meta} to {meta1}");
                     if (File.Exists(meta) == false)
                     {
