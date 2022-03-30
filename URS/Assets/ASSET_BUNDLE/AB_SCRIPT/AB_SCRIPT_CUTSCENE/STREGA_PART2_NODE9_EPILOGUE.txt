@@ -1,0 +1,12 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 2100215,
+    m_CutScenStrID = "STREGA_PART2_NODE9_EPILOGUE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+  },
+}

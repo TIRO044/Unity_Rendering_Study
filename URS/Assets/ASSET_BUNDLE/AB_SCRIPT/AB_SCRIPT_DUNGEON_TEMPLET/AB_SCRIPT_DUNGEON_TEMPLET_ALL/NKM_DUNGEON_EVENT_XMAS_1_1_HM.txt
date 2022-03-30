@@ -1,0 +1,116 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 5,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EVENT_DELTA_JAKE_H",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+    },
+    
+    m_listDungeonUnitRespawnB = 
+	{
+        {
+            m_UnitStrID                           = "NKM_MOB_BOSS_X_MAS_JOO_SHI_YOON_N",
+            m_NKMDungeonEventTiming =
+            {
+                m_NKM_DUNGEON_EVENT_TYPE             = "NDET_ONE_TIME",
+                m_fEventPos                          = 0.1,
+            },
+            m_listStaticBuffData =
+            {
+              {
+                m_BuffStrID                         = "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+                m_BuffLevel                         = 75,
+              }
+            },
+        },
+
+        {
+            m_UnitStrID                           = "NKM_MOB_BOSS_X_MAS_YG_SORIM_N",
+            m_NKMDungeonEventTiming =
+            {
+                m_NKM_DUNGEON_EVENT_TYPE             = "NDET_ONE_TIME",
+                m_fEventPos                          = 0.1,
+            },
+            m_listStaticBuffData =
+            {
+              {
+                m_BuffStrID                         = "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+                m_BuffLevel                         = 75,
+              }
+            },
+        },
+
+        {
+            m_UnitStrID                           = "NKM_MOB_BOSS_X_MAS_MAID_S_LEADER_N",
+            m_NKMDungeonEventTiming =
+            {
+                m_NKM_DUNGEON_EVENT_TYPE             = "NDET_ONE_TIME",
+                m_fEventPos                          = 0.1,
+            },
+            m_listStaticBuffData =
+            {
+              {
+                m_BuffStrID                         = "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+                m_BuffLevel                         = 75,
+              }
+            },
+        },
+
+        {
+            m_UnitStrID                           = "NKM_MOB_ELITE_X_MAS_MAID_C_TONFA_N",
+            m_NKMDungeonEventTiming =
+            {
+                m_NKM_DUNGEON_EVENT_TYPE             = "NDET_ONE_TIME",
+                m_fEventPos                          = 0.1,
+            },
+            m_listStaticBuffData =
+            {
+              {
+                m_BuffStrID                         = "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+                m_BuffLevel                         = 75,
+              }
+            },
+        },
+
+        {
+            m_UnitStrID                           = "NKM_MOB_BOSS_X_MAS_DELTA_SYLVIA_N",
+            m_NKMDungeonEventTiming =
+            {
+                m_NKM_DUNGEON_EVENT_TYPE             = "NDET_ONE_TIME",
+                m_fEventPos                          = 0.1,
+            },
+            m_listStaticBuffData =
+            {
+              {
+                m_BuffStrID                         = "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+                m_BuffLevel                         = 75,
+              }
+            },
+        },
+
+        {
+            m_UnitStrID                           = "NKM_MOB_ELITE_EVENT_MACHINE_GAP_N",
+            m_NKMDungeonEventTiming =
+            {
+                m_NKM_DUNGEON_EVENT_TYPE             = "NDET_ONE_TIME",
+                m_fEventPos                          = 0.1,
+            },
+            m_listStaticBuffData =
+            {
+              {
+                m_BuffStrID                         = "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+                m_BuffLevel                         = 75,
+              }
+            },
+        },
+    },
+
+}

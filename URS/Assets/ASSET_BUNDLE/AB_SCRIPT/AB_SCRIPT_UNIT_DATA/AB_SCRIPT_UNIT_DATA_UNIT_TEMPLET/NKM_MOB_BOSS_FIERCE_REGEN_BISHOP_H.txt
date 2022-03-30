@@ -1,0 +1,4 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID        = "NKM_MOB_BOSS_FIERCE_REGEN_BISHOP_N",
+}

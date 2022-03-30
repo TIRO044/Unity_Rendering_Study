@@ -1,0 +1,38 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 12000002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JAPAN_S_KUNOICHI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_JAPAN_S_KUNOICHI@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 12000002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JAPAN_S_KUNOICHI",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_IDLE",
+    m_CharStrID = "KANADE_JAPAN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "무사에게 있어 주인의 명은 주인의 목숨보다 절대적인 것. 하지만 이 사람은 과거, 감정에 휘둘려 일을 그르쳤던 몸입니다. 만일 주인어른이 위험에 빠지신다면 전 다시 한번 명을 어기게 되겠지요. 그러니, 저를 너무 믿지 마시어요.",
+    m_fTalkTime = 0.03,
+    m_Talk_TWN = "雖然對武士而言，主人的命令必須絕對服從，但是我曾經因為一時的意氣用事而抗命過。萬一主人身陷危險當中，我很可能會再次抗命，所以請不要太信任我。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 12000002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JAPAN_S_KUNOICHI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

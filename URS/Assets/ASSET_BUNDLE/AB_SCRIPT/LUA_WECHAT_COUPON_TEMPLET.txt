@@ -1,0 +1,19 @@
+﻿-- Exported from EVENT_TEMPLET.xlsx
+
+WECHAT_COUPON_TEMPLET =
+{
+  {
+    m_EventID = 3223,
+    Zlong_CardCode = "wxmpklcs1",
+    Zlong_ActivityInstanceId = 1,
+    RewardType_1 = "RT_MISC",
+    RewardId_1 = 101,
+    RewardValue_1 = 100,
+    RewardType_2 = "RT_MISC",
+    RewardId_2 = 1,
+    RewardValue_2 = 50000,
+    RewardType_3 = "RT_MISC",
+    RewardId_3 = 1033,
+    RewardValue_3 = 10,
+  },
+}

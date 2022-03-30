@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10051902,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ALT_YOO_JIN_RECITAL",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_ALT_YOO_JIN_RECITAL@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10051902,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ALT_YOO_JIN_RECITAL",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "YOOJIN_ALT_NULL_RECITAL",
+    m_Pos = "C",
+    m_Talk_KOREA = "생각해 보면 사장님이랑은 죽이 잘 맞았던 것 같아. 뭐, 이렇게 됐으니까 앞으로도 자주 불러 달라고.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "考えてみたら、社長とは気が合うと思うんだ。まあ、こうなったことだし、これからもたくさん呼んでくれよ。",
+    m_Talk_ENG = "Now that I think of it, you and I hit it off pretty quickly. Since we'll be seeing each other for a long time, call me often, alright?",
+    m_Talk_TWN = "仔細想想，我和老闆還蠻有默契的嘛。好啦，既然已經簽好了，那老闆以後也要經常叫我喔！",
+    m_Talk_THA = "จะว่าไป คุณกับฉันก็สนิทกันเร็วเหมือนกันนะ ในเมื่อเราจะได้เจอกันอีกนาน ก็อย่าลืมเรียกฉันบ่อยๆ ล่ะ โอเคมั้ย?",
+    m_Talk_VTN = "Bây giờ khi nghĩ về chuyện đó, ngài và tôi đã kết thúc nó rất nhanh. Vì chúng ta sẽ còn gặp nhau dài dài, cứ gọi cho tôi thường xuyên nhé!",
+    m_Talk_SCN = "回想起来，跟老板还真是挺合拍的。老板你可要经常来找我哦。",
+    m_Talk_DEU = "Jetzt, wo ich drüber nachdenke: Die Chemie stimmt zwischen uns. Also, wir sehen uns jetzt ja länger, also rufen Sie mich mal ab und zu an, ja?",
+    m_Talk_FRA = "Maintenant que j'y pense, on a tout de suite accroché, vous et moi. Puisqu'on va se fréquenter pendant un moment, n'hésitez pas à m'appeler, d'accord ?",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10051902,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ALT_YOO_JIN_RECITAL",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

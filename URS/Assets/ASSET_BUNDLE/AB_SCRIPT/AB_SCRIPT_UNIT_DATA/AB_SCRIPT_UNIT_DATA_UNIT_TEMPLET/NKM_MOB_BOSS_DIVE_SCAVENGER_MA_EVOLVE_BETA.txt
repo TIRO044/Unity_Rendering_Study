@@ -1,0 +1,881 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID        = "NKM_UNIT_BASE_BOSS_MOVE",
+	m_UnitSizeX				= 400,
+	m_UnitSizeY				= 500,
+	
+	m_SpriteScale          	= 0.7,
+	
+	m_fForceRespawnZposMin 	= 0.95,
+	m_fForceRespawnZposMax 	= 1.0,
+	
+	m_bShowGage             = false,
+
+	m_fShadowScaleX        	= 600,
+	m_fShadowScaleY        	= 600,
+
+	m_fGageOffsetY         	= 450,
+
+	m_SpeedRun              = 150,
+  
+	m_TargetNearRange       = 600,
+	m_SeeRange              = 1100,
+	m_SeeRangeMax           = 1200,
+
+	m_AttackedTargetTime	= 1,
+	m_bAttackedTarget		= true,
+	
+	m_bUseMotionBlur		= true,
+
+	--*경직
+	m_bImmuneStun                 = false,
+	m_bNoDamageStopTime           = true,
+	m_bNoDamageState              = true,
+	m_bNoDamageDownState          = true,
+	m_fDamageUpFactor             = 0.0,
+	m_fDamageBackFactor           = 0.0,
+
+	m_listAttackStateData =   
+	{ 
+		{
+			m_StateName = "USN_ATTACK1",
+			-- m_StateName = "USN_PASSIVE",
+		},
+	},
+	m_listAirAttackStateData = 
+	{
+		{
+			m_StateName = "USN_ATTACK1_AIR",
+		},
+	},
+	m_listSkillStateData = 
+	{
+		{
+			m_StateName = "USN_PASSIVE",
+		},
+	},
+	-- m_listHyperSkillStateData = 
+	-- {
+	-- 	{
+	-- 		m_StateName	 = "USN_HYPER1",
+	-- 		m_fStartCool = 0.7,
+			
+	-- 		m_fRangeMax	= 1200,
+	-- 	},
+	-- },
+	
+	m_listAccumStateChangePack = 
+	{
+		{
+			m_listAccumStateChange = 
+			{
+				{
+					m_listAccumStateName	= {"USN_ATTACK1"},
+					m_AccumCount 			= 3,
+					m_TargetStateName 		= "USN_SKILL1",
+				},
+			}
+		},
+	},
+
+	m_dicNKMUnitState =
+	{
+		{--*시작
+			m_StateName                 = "USN_START",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_START",
+			m_bShowGage                 = false,
+			m_DamagedChangeState        = "USN_ASTAND",
+			--*애니메이션
+			m_AnimName                  = "START2",
+			m_fAnimSpeed                = 1.0,
+			
+			m_AnimEndChangeState        = "USN_ASTAND",
+			m_DamagedChangeState		= "USN_ASTAND",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime               = 5/30,
+					m_fLocalVol                = 0.8,
+					m_listSoundName            = {"FX_COMBAT_ALL_EARTHQUAKE_02",},
+				},
+				{
+					m_fEventTime               = 30/30,
+					m_fLocalVol                = 1.0,
+					m_listSoundName            = {"FX_COMBAT_ALL_MAGIC_SPELL_25",},
+				},
+				{
+					m_fEventTime              = 75/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_CUTSCEN_ENERGY_CHARGE",},
+				},
+				{
+					m_fEventTime              = 90/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_ELECTRIC_ATTACK_BIG_04",},
+				},
+				{
+					m_fEventTime              = 95/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_74",},
+				},
+				{
+					m_fEventTime              = 95/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_HIT_ELECTRIC_BIG_03",},
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE	= "NUST_MOVE",
+			m_StateName          	= "USN_RUN",
+			m_AnimName           	= "RUN",
+			m_bAnimLoop          	= true,
+			m_bRun 					= true,
+			
+			m_fAnimSpeed			= 0.9
+		},
+		{--*패시브
+			m_StateName            		= "USN_PASSIVE",
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",	
+			m_AnimName             		= "PASSIVE",
+			m_fAnimSpeed           		= 1.0,
+			m_SuperArmorLevel      		= "NSAL_SKILL",
+
+			m_StateCoolTime	= 18,
+			
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime   		= false,
+					m_fEventTime  		= 0/30,
+					m_EffectName  		= "AB_FX_CAST_SKILL",
+					m_AnimName    		= "BASE",
+					m_BoneName    		= "BIP01_SPINE1",
+					m_fScaleFactor		= 30.0,
+					m_bHold       		= true,
+
+					m_OffsetX			= 120,
+					m_OffsetY			= 270,
+				},
+			},
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 45/30,
+					m_DEName    		= "DE_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_PASSIVE1",
+					m_bIgnoreTarget		= true,			--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTargets	= false,		--? 타겟없을 때 무시 여부
+			
+					m_OffsetX			= 10,
+					m_OffsetY			= 250,
+					m_OffsetZ			= -70,
+					m_fAddRotate		= 0,
+				},
+			},
+
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 140/30,
+
+					m_fColorR                 = 0.5,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 1.0,
+				},
+			},
+
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime              = 0/30,
+					m_fAnimSpeed              = 1.5,
+				},
+				{
+					m_fEventTime              = 15/30,
+					m_fAnimSpeed              = 1.0,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 30/30,
+
+					m_fColorR                 = 0.5,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 0.5,
+
+					m_fMapColorKeepTime       = 15/30,
+					m_fMapColorReturnTime     = 15/30,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 23/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 8,
+					m_fCameraCrashTime        = 10/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 0/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SKILL_START",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_C_SOL_PASSIVE",},
+				},
+
+				-- {
+				-- 	m_bAnimTime               = true,
+				-- 	m_fEventTime              = 1/30,
+				-- 	m_bVoice                  = true,
+				-- 	m_PlayRate                = 0.7,
+				-- 	m_listSoundName =
+				-- 	{
+				-- 		"VOICE_UNIT_GUILTY_C_SOL_BATTLE_PASSIVE_1",
+				-- 		"VOICE_UNIT_GUILTY_C_SOL_BATTLE_PASSIVE_2",
+				-- 		"VOICE_UNIT_GUILTY_C_SOL_BATTLE_PASSIVE_3",
+				-- 	},
+				-- },
+			},
+		},
+	
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.5,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_AnimEndChangeState		= "USN_ATTACK1_LOOP",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_MECHANIC_WORK_30",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_MECHANIC_WORK_02",},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_LOOP",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_LOOP",
+			m_bAnimLoop                 = true,
+			m_fAnimSpeed                = 1.2,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_StateTimeChangeStateTime			= 3,
+			m_StateTimeChangeState				= "USN_ATTACK1_END",
+			
+			m_TargetLostOrDieStateDurationTime	= 0.5,
+			m_TargetLostOrDieState				= "USN_ATTACK1_END", 
+
+			m_TargetDistOverChangeStateDist		= 950,
+			m_TargetDistOverChangeState			= "USN_ATTACK1_END",
+
+			m_AirTargetThisFrameChangeState 	= "USN_ATTACK1_AIR_LOOP",
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 1/30,
+					m_DEName    		= "DE_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_ATTACK1",
+
+					m_bTargetPos		= true,
+					m_OffsetX			= 0,
+					m_OffsetY			= 0,
+					m_OffsetZ			= 0,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_MINIGUN_FIRE",},
+				},
+				{
+					m_fEventTime              = 18/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_MINIGUN_FIRE",},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_END",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_END",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.25,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_AIR",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_AIR",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.5,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_AnimEndChangeState		= "USN_ATTACK1_AIR_LOOP",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_MECHANIC_WORK_30",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MECHANIC_WORK_07",},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_AIR_LOOP",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_AIR_LOOP",
+			m_bAnimLoop                 = true,
+			m_fAnimSpeed                = 1.2,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_StateTimeChangeStateTime			= 3,
+			m_StateTimeChangeState				= "USN_ATTACK1_AIR_END",
+			
+			m_TargetLostOrDieStateDurationTime	= 0.5,
+			m_TargetLostOrDieState				= "USN_ATTACK1_AIR_END", 
+
+			m_TargetDistOverChangeStateDist		= 950,
+			m_TargetDistOverChangeState			= "USN_ATTACK1_AIR_END",
+
+			m_LandTargetThisFrameChangeState 	= "USN_ATTACK1_LOOP",
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 1/30,
+					m_DEName    		= "DE_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_ATTACK1_AIR",
+
+					m_bTargetPos		= true,
+				},
+			},
+			
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 4/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 7/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 10/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 13/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 17/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 23/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 26/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+				{
+					m_fEventTime              = 29/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_GUN_FIRE_SMALL_05",},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_AIR_END",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_AIR_END",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.25,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+		},
+		{--*특수기
+			m_StateName                 = "USN_SKILL1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_SKILL",
+			-- m_bSkillCutIn               = true,
+			m_StateCoolTime             = 15,
+			--*애니메이션
+			m_AnimName                  = "SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               	= true,
+					m_fEventTimeMin           	= 25/30,
+					m_fEventTimeMax           	= 30/30,
+
+					m_fRangeMin              	= -150.0,
+					m_fRangeMax              	= 800.0,
+
+					m_AttackUnitCount        	= 3,
+					m_DamageTempletName      	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_SKILL1",
+					m_bDamageSpeedDependRight 	= true,
+				},
+				{
+					m_bAnimTime               	= true,
+					m_fEventTimeMin           	= 45/30,
+					m_fEventTimeMax           	= 50/30,
+
+					m_fRangeMin              	= -150.0,
+					m_fRangeMax              	= 800.0,
+
+					m_AttackUnitCount        	= 3,
+					m_DamageTempletName      	= "DT_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_BETA_SKILL1_END",
+					m_bDamageSpeedDependRight 	= true,
+				},
+			},
+
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 25/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 7,
+					m_fCameraCrashTime        = 10/30,
+				},
+				{
+					m_fEventTime              = 45/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 15,
+					m_fCameraCrashTime        = 25/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MECHANIC_WORK_22",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_ELECTRIC_04",},
+				},
+				{
+					m_fEventTime              = 40/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_ELECTRIC_ATTACK_BIG_04",},
+				},
+				{
+					m_fEventTime              = 45/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_EXPLOSION_ATTACK_BIG",},
+				},
+			},
+		},
+
+		{--*궁극기
+			m_StateName                 = "USN_HYPER1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_HYPER",
+			m_bShowGage                 = false,
+			--*애니메이션
+			m_AnimName                  = "HYPER_SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			-- m_listNKMEventHyperSkillCutIn =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 0/30,
+			-- 		m_fDurationTime           = 55/30,
+
+			-- 		m_BGEffectName            = "AB_FX_SKILL_CUTIN_COMMON_A",
+			-- 		m_CutInEffectName         = "AB_FX_SKILL_CUTIN_NKM_UNIT_GUILTY_C_SOL",
+			-- 		m_CutInEffectAnimName     = "BASE",
+			-- 	},
+			-- },
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime               = false,
+					m_fEventTime              = 0/30,
+					m_EffectName              = "AB_FX_CAST_HYPER",
+					m_AnimName                = "BASE",
+					m_BoneName                = "BIP01_SPINE1",
+					m_fScaleFactor            = 30.0,
+					m_bHold                   = true,
+
+					m_OffsetX			= 120,
+					m_OffsetY			= 270,
+				},
+			},
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 90/30,
+					m_DEName    		= "DE_NKM_MOB_BOSS_DIVE_SCAVENGER_MA_EVOLVE_HYPER1_HUD",
+
+					m_bTargetPos		= true,
+					m_OffsetX			= 0,
+					m_OffsetY			= 0,
+					m_OffsetZ			= 0,
+				},
+			},
+			-- m_listNKMEventBuff =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime  		= true,
+			-- 		m_fEventTime 		= 1/30,
+			-- 		m_BuffStrID  		= "BUFF_GUILTY_SOL_PASSIVE_STACK",
+			-- 	},
+			-- },
+
+			-- m_listNKMEventAttack =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTimeMin           = 75/30,
+			-- 		m_fEventTimeMax           = 90/30,
+
+			-- 		m_fRangeMin               = -600,
+			-- 		m_fRangeMax               = 600,
+
+			-- 		m_bHitAir                 = false,
+			-- 		m_AttackUnitCount         = 3,
+			-- 		m_DamageTempletName       = "DT_UNIT_GUILTY_C_SOL_HYPER1",
+			-- 	},
+			-- },
+
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+
+					m_fColorR                 = 1.0,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 0.5,
+				},
+			},
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 90/30,
+				},
+			},
+			
+			-- m_listNKMEventCameraMove =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTimeMin           = 0/30,
+			-- 		m_fEventTimeMax           = 40/30,
+
+			-- 		m_fPosXOffset             = -250,
+			-- 		m_fPosYOffset             = 150,
+			-- 		m_fZoom                   = -175,
+
+			-- 		m_fMoveTrackingTime       = 0.1,
+			-- 		m_fZoomTrackingTime       = 0.1,
+			-- 	},
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTimeMin           = 40/30,
+			-- 		m_fEventTimeMax           = 55/30,
+
+			-- 		m_fPosXOffset             = 150,
+			-- 		m_fPosYOffset             = 150,
+			-- 		m_fZoom                   = -175,
+
+			-- 		m_fMoveTrackingTime       = 0.5,
+			-- 		m_fZoomTrackingTime       = 0.5,
+			-- 	},
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTimeMin           = 55/30,
+			-- 		m_fEventTimeMax           = 75/30,
+
+			-- 		m_fPosXOffset             = 100,
+			-- 		m_fPosYOffset             = 400,
+			-- 		m_fZoom                   = -200,
+
+			-- 		m_fMoveTrackingTime       = 0.2,
+			-- 		m_fZoomTrackingTime       = 0.2,
+			-- 	},
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTimeMin           = 75/30,
+			-- 		m_fEventTimeMax           = 125/30,
+
+			-- 		m_fPosXOffset             = 0,
+			-- 		m_fPosYOffset             = 0,
+			-- 		m_fZoom                   = 0,
+
+			-- 		m_fMoveTrackingTime       = 0.1,
+			-- 		m_fZoomTrackingTime       = 0.1,
+			-- 	},
+			-- },
+			-- m_listNKMEventCameraCrash = 
+			-- {
+			-- 	{
+			-- 		m_fEventTime              = 20/30,
+			-- 		m_CameraCrashType         = "NCCT_UP_DOWN",
+			-- 		m_fCrashRadius            = 1250,
+			
+			-- 		m_fCameraCrashGap         = 10,
+			-- 		m_fCameraCrashTime        = 15/30,
+			-- 	},
+			-- 	{
+			-- 		m_fEventTime              = 76/30,
+			-- 		m_CameraCrashType         = "NCCT_UP_DOWN",
+			-- 		m_fCrashRadius            = 1250,
+			
+			-- 		m_fCameraCrashGap         = 15,
+			-- 		m_fCameraCrashTime        = 40/30,
+			-- 	},
+			-- },
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+
+					m_fColorR                 = 0.0,
+					m_fColorG                 = 0.0,
+					m_fColorB                 = 0.0,
+
+					m_fMapColorKeepTime       = 10/30,
+					m_fMapColorReturnTime     = 10/30,
+				},
+			},
+			m_listNKMEventStopTime =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					
+					m_StopTimeIndex           = "NSTI_SKILL",
+					m_fStopTime               = 30/30,
+					m_bStopEnemyOnly          = false,
+					m_bMyStop                 = false,
+					m_fRange                  = 1200,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.85,
+					m_listSoundName           = {"FX_COMBAT_ALL_HYPER_ATTACK_START",},
+				},
+				-- {
+				-- 	m_fEventTime              = 18/30,
+				-- 	m_fLocalVol               = 1.0,
+				-- 	m_listSoundName           = {"FX_COMBAT_ALL_MONSTER_MOVEMENT",},
+				-- },
+				-- {
+				-- 	m_fEventTime              = 35/30,
+				-- 	m_fLocalVol               = 1.0,
+				-- 	m_listSoundName           = {"FX_COMBAT_ALL_FIRE_03",},
+				-- },
+				-- {
+				-- 	m_fEventTime              = 55/30,
+				-- 	m_fLocalVol               = 1.0,
+				-- 	m_listSoundName           = {"FX_COMBAT_ALL_WIND",},
+				-- },
+				-- {
+				-- 	m_fEventTime              = 75/30,
+				-- 	m_fLocalVol               = 1.0,
+				-- 	m_listSoundName           = {"FX_COMBAT_ALL_EXPLOSION_ATTACK_BIG_02",},
+				-- },
+
+				-- {
+				-- 	m_bAnimTime               = true,
+				-- 	m_fEventTime              = 10/30,
+				-- 	m_bVoice                  = true,
+				-- 	m_PlayRate                = 1.0,
+				-- 	m_listSoundName   =
+				-- 	{
+				-- 		"VOICE_UNIT_GUILTY_C_SOL_BATTLE_HYPER_1",
+				-- 		"VOICE_UNIT_GUILTY_C_SOL_BATTLE_HYPER_2",
+				-- 		"VOICE_UNIT_GUILTY_C_SOL_BATTLE_HYPER_3",
+				-- 	},
+				-- },
+			},
+		},
+
+		{--*경직A
+			m_StateName			= "USN_DAMAGE_A",
+			-- m_listNKMEventSound =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 1/30,
+			-- 		m_bVoice                  = true,
+			-- 		m_PlayRate                = 0.25,
+			-- 		m_listSoundName   =
+			-- 		{
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_1",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_2",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_3",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_4",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_5",
+			-- 		},
+			-- 	},
+			-- },
+		},
+		{--*경직B
+			m_StateName			= "USN_DAMAGE_B",
+			-- m_listNKMEventSound =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 1/30,
+			-- 		m_bVoice                  = true,
+			-- 		m_PlayRate                = 0.25,
+			-- 		m_listSoundName   =
+			-- 		{
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_1",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_2",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_3",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_4",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_5",
+			-- 		},
+			-- 	},
+			-- },
+		},
+		{--*에어본
+			m_StateName  			= "USN_DAMAGE_AIR_UP",
+			-- m_listNKMEventSound =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 1/30,
+			-- 		m_bVoice                  = true,
+			-- 		m_PlayRate                = 0.25,
+			-- 		m_listSoundName   =
+			-- 		{
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_1",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_2",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_3",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_4",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_5",
+			-- 		},
+			-- 	},
+			-- },
+		},
+		{--*다운
+			m_StateName  			= "USN_DAMAGE_DOWN",
+			-- m_listNKMEventSound =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 1/30,
+			-- 		m_bVoice                  = true,
+			-- 		m_PlayRate                = 0.25,
+			-- 		m_listSoundName   =
+			-- 		{
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_1",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_2",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_3",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_4",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DAMAGE_5",
+			-- 		},
+			-- 	},
+			-- },
+		},
+		{--*다이
+			m_StateName      	= "USN_DAMAGE_DIE",
+			-- m_listNKMEventSound =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 1/30,
+			-- 		m_bVoice                  = true,
+			-- 		m_PlayRate                = 0.7,
+			-- 		m_listSoundName   =
+			-- 		{
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DEATH_1",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DEATH_4",
+			-- 			"VOICE_UNIT_GUILTY_C_SOL_BATTLE_DEATH_5",
+			-- 		},
+			-- 	},
+			-- },
+		},
+		
+		{
+			m_StateName          = "USN_DAMAGE_STAND",
+			m_AnimName           = "DAMAGE_STAND",
+			m_AnimName           = "ASTAND",
+		},
+	},
+}

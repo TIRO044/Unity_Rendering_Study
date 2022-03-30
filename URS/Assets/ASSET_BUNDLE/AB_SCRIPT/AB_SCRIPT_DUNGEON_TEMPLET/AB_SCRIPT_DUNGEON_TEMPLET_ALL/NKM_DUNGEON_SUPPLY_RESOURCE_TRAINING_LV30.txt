@@ -1,0 +1,174 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1.5, -- 적
+	m_fCostSpeedRateA = 1.2, -- 플레이어
+    m_BossUnitStrID = "NKM_MOB_BOSS_SUPPLY_BARRICADE4_N", -- ~50
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 90,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 45,
+				m_fEventTimeEnd				= 105,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 90,
+				m_fEventTimeEnd				= 120,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_BIO_H",
+			m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.6,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_SL_TANK_EP5_N",
+			-- m_EventRespawnUnitTag		= "WALL",
+			
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.57,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+			-- m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.55,
+			},
+		},	
+
+
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_BIO_H",
+			m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.4,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+			-- m_EventRespawnUnitTag		= "WALL",
+			
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",	
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,	
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.37,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+			-- m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",	
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,	
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.35,
+			},
+		},	
+
+
+		
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_BIO_H",
+			m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.2,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_SL_TANK_EP5_N",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.27,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_FIGHTER_EP5_N",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.25,
+			},
+		},	
+	},
+}

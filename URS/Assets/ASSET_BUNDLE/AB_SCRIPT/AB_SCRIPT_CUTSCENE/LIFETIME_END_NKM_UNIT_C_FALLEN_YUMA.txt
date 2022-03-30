@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_FALLEN_YUMA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_FALLEN_YUMA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_FALLEN_YUMA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_CharStrID = "YUMA_FALLEN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사장님이랑 같이 일하고 있으면 목숨이 두 개라도 남아나지 않을 거 같은 느낌이야. 크큭, 완전 내 스타일이란 뜻이지. 그러니까 앞으로도 잘 부탁할게?",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "あんたと一緒に働いてると、命がいくつあっても足りなさそうだな。ククッ、つまりアタシの好みど真ん中ってわけさ。だから、今後ともよろしく頼むな？",
+    m_Talk_ENG = "I have a feeling that I'd need nine lives to survive working with you, and that's the way I like it. Teehee! Looking forward to working with you.",
+    m_Talk_TWN = "感覺和老闆一起工作有兩條命都不夠用啊。嘻嘻，意思是這完全就是我的風格。那以後就多指教啦？",
+    m_Talk_THA = "ฉันรู้สึกว่าการทำงานกับคุณน่าจะต้องมีเก้าชีวิตถึงจะรอด ซึ่งนั่นก็เป็นแบบที่ฉันชอบเลยล่ะ ฮ่าฮ่า! ฉันตั้งตารอที่จะได้ร่วมงานกันอีกนะคะ",
+    m_Talk_VTN = "Tôi có cảm giác mình sẽ cần đến chín mạng thì mới đủ để sống sót khi làm việc với ngài, nhưng mà tôi lại thích như thế đấy. He he! Rất mong được làm việc với ngài.",
+    m_Talk_SCN = "和老板一起工作，让我觉得就算有两条命也会全部丢掉。我的意思就是很符合我口味的意思，那么以后也请多关照了。",
+    m_Talk_DEU = "Ich fürchte, ich brauche neun Leben, um die Zusammenarbeit mit Ihnen zu meistern, und das ist auch gut so. Tihi! Ich freu mich auf die Zusammenarbeit mit Ihnen.",
+    m_Talk_FRA = "J'ai comme l'impression qu'il va me falloir neuf vies pour survivre à ce boulot, mais justement, c'est ça qui me plaît. Hé hé hé ! J'ai hâte de travailler avec toi.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_FALLEN_YUMA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

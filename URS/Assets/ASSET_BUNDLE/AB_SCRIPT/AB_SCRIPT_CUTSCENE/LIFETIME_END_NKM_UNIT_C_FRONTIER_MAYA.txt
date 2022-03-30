@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11270002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_FRONTIER_MAYA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_FRONTIER_MAYA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11270002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_FRONTIER_MAYA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "MAYA_FRONTIER_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "이걸로 계약은 성립된 거죠? 안심하세요. 사장님을 방해하는 것들은 전부 제가 콰광─ 하고 치워 드릴게요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "これで契約成立ってことなのですね？　安心してください。\n社長を邪魔するものは、私が全部ドカーンって片付けてあげます。",
+    m_Talk_ENG = "Now, our contract is done, right? Rest assured, Boss, that I'll destroy anything that gets in your way!",
+    m_Talk_TWN = "這樣契約就成立了嗎？請放心，所有妨礙老闆的東西，我都會“碰碰——”把他們全部解決掉的。",
+    m_Talk_THA = "เอาล่ะ สัญญาระหว่างเราเป็นอันเรียบร้อยใช่มั้ยคะบอส? วางใจได้เลย ฉันจะทำลายทุกอย่างที่ขวางทางคุณให้เองค่ะ!",
+    m_Talk_VTN = "Bây giờ, hợp đồng của chúng ta đã xong rồi phải không? Cứ yên tâm, Ông Chủ, tôi sẽ phá hủy mọi thứ ngáng đường ngài!",
+    m_Talk_SCN = "这就算签约了吧？放心吧，我会把老板讨厌的东西全部炸掉的。",
+    m_Talk_DEU = "Also, der Vertrag steht, oder? Sie können sich sicher sein, Boss, ich zerstöre alles, was Ihnen im Weg steht!",
+    m_Talk_FRA = "C'est bon, notre contrat est signé ? Je vous promets que je détruirai tout ce qui se trouvera sur votre chemin, monsieur !",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11270002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_FRONTIER_MAYA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,28 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 1,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_SPORTS_ACADEMY_C_TWINTAIL_HM",
+    
+    m_fBossPosZ 	= 0.0,
+	
+	m_listDungeonDeck = 
+	{
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_SPORTS_BONUS_DRONE", --보너스 드론
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 5,
+				m_fEventTimeGap	        	= 25,
+				m_fEventPos 	        	= 0.2,
+			},
+		},
+	},
+}

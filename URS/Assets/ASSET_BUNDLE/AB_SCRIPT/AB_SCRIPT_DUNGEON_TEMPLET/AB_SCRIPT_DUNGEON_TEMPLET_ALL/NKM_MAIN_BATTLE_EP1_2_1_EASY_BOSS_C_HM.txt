@@ -1,0 +1,42 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 8,
+	m_fCostSpeedRateB = 1.0,
+	
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_OMEN_N",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_H",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.15,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_H",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

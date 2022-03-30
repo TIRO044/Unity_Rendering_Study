@@ -1,0 +1,207 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 5,
+	m_MapSizeY = 4,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+		m_BattleConditionStrID = "BC_FOG",
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWNTT_CHEST",
+		m_DungeonStrID = "NKM_DUNGEON_DAILY_SEARCH_WAVE_1",
+		m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_DAILY_SEARCH_WAVE_1",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+		m_BattleConditionStrID = "BC_FOG",
+	},
+	NKMWarfareTile16 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile17 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile18 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile19 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+}

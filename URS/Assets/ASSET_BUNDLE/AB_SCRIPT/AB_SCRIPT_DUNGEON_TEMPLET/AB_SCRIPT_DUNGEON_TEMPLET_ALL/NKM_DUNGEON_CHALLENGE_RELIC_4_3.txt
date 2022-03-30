@@ -1,0 +1,88 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 5,
+	m_fCostSpeedRateB = 0.6,
+    m_BossUnitStrID = "NKM_MOB_BOSS_RELIC_SCAVENGER_S_HAMMER",
+    
+    m_fBossPosZ 	= 0.6,
+
+	
+	m_BossRespawnUnitTemplet =
+	{
+		m_AddStatData =
+		{
+			m_StatValue =
+			{
+				NST_HP  = -100000,
+				NST_ATK = 5500,
+			},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+        {
+			m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_STATE_GUNSHIP",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart        	= 6,
+				m_fEventTimeEnd             = 180,
+				m_fEventTimeGap             = 10,
+				m_fEventPos 	        	= 0.5,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+					NST_HP			= 2.0,
+				},
+			},	
+		},
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_AXE_N",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart        	= 6,
+				m_fEventTimeEnd             = 180,
+				m_fEventTimeGap             = 10,
+				m_fEventPos 	        	= 0.2,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+					NST_HP			= 2.0,
+				},
+			},	
+		},
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_RETURNER_N",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart        	= 6,
+				m_fEventTimeEnd             = 180,
+				m_fEventTimeGap             = 10,
+				m_fEventPos 	        	= 0.3,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+					NST_HP			= 2.0,
+				},
+			},	
+		},
+	},
+}

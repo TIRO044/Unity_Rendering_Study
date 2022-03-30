@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11050002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_MILITIA_JIHUN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_MILITIA_JIHUN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11050002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_MILITIA_JIHUN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_CharStrID = "JIHUN_MILITIA_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사명 같은 건 아무래도 좋았어. 죽이고 싶은 놈은 죽이고, 억울한 사람은 달래주고. 그땐 그걸로 충분했으니까. 너무 깊이 발을 담가 버린 지금은 이도 저도 아니게 되어 버렸지만.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "使命なんてどうでもよかった。殺したい奴を殺し、無実の人を慰める。あの頃はそれだけで十分だったから。深く関与している今は、中途半端な状態だが。",
+    m_Talk_ENG = "I couldn't care less about the causes. I just killed those who I thought deserved to die, helped out those whom I wanted to. That was good enough for me. And then I got myself into this mess that I can't seem to get out of.",
+    m_Talk_TWN = "那時覺得所背負的使命挺好的，可以隨時制裁想要制裁的人，並以此慰藉受冤的人，本來以為這些就足夠了。沒發現現在已經陷得太深，把自己搞的不倫不類了。",
+    m_Talk_THA = "ผมไม่สนอุดมการณ์หรอก ผมก็แค่ฆ่าคนที่ผมคิดว่าสมควรตาย และช่วยคนที่ผมอยากช่วย แค่นี้ก็ดีพอสำหรับผมแล้ว และแล้วผมก็มาลงเอยแบบนี้ โดยที่ไม่สามารถวางมือได้",
+    m_Talk_VTN = "Tôi không quan tâm đến nguyên nhân. Tôi chỉ giết những người tôi nghĩ đáng chết, giúp đỡ những người tôi muốn. Điều đó là đủ tốt cho tôi. Và sau đó tôi đã tự đưa mình vào mớ hỗn loạn mà tôi dường như không thể thoát ra được.",
+    m_Talk_SCN = "那时觉得使命挺好的，可以杀想杀的人，慰藉受冤的人，这些就足够了。只是现在陷得太深，变得不伦不类了。",
+    m_Talk_DEU = "Der Grund dafür war mir völlig gleichgültig. Ich habe nur diejenigen getötet, die meiner Meinung nach den Tod verdient hatten, und denen geholfen, denen ich helfen wollte. Das reichte mir völlig aus. Und dann habe ich mich selbst in diesen Schlamassel gebracht, aus dem ich nicht mehr herauszukommen scheine.",
+    m_Talk_FRA = "Je me fichais bien de leurs intentions. Je tuais ceux qui, selon moi, devaient mourir, et j'aidais ceux qui le méritaient à mes yeux. Ça me suffisait. Et puis, je me suis retrouvé empêtré jusqu'au cou...",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11050002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_MILITIA_JIHUN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

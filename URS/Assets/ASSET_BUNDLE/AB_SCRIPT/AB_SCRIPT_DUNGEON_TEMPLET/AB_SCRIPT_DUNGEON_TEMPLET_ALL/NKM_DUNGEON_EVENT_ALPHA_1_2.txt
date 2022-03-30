@@ -1,0 +1,65 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 6,
+	m_fCostSpeedRateB = 0.8,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_DJEHUTY_BARRICADE",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EVENT_SL_RIFLE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.1,
+    		},
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_EVENT_SL_RIFLE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 7,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.15,
+    		},
+        },
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EVENT_SL_SHIELD_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+    		},
+        },
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_EVENT_ALPHA_C_SPEAR",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.7,
+				m_fEventBossHPUpper  	     = 0.51,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+			},
+        },
+	},
+}

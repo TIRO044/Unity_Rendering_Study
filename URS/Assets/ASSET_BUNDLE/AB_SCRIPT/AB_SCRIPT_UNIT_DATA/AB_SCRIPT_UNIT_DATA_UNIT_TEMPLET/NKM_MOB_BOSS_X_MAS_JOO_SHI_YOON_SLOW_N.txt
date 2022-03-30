@@ -1,0 +1,15 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID = "NKM_MOB_BOSS_X_MAS_JOO_SHI_YOON_N",
+	m_listStaticBuffData =
+	{
+		{
+			m_BuffStrID    = "BUFF_MOB_X_MAS_JOO_SHI_YOON_SLOW",
+			m_BuffLevel    = 1,
+		},
+		{
+			m_BuffStrID    = "DEBUFF_MOB_X_MAS_JOO_SHI_YOON_SLOW",
+			m_BuffLevel    = 50,
+		},
+	},
+}

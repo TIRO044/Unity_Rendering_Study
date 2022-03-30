@@ -1,0 +1,29 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 1,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_SHADE_CORRUPTED_CA_MINISTRA_CM",
+    
+    m_fBossPosZ 	= 0.0,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_BOSS_SHADE_CORRUPTED_C_SHADOW_CM",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+    		},
+        },
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

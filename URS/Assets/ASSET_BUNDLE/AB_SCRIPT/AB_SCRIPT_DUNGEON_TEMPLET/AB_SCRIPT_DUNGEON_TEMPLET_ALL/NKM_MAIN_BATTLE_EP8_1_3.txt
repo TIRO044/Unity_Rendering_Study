@@ -1,0 +1,206 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1.0,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP6_BEAST_MELEE_N",
+    
+    m_fBossPosZ 	= 0.8,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.3,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 1.5,
+					NST_HP 	= 1.5,
+				},
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 10,
+				m_fEventPos 	        	= 0.3,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 1.5,
+					NST_HP 	= 1.5,
+				},
+			},		
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 12,
+				m_fEventPos 	        	= 0.2,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},		
+		},		
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 30,
+				m_fEventPos 	        	= 0.2,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 1.5,
+					NST_HP 	= 1.5,
+				},
+			},		
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 32,
+				m_fEventPos 	        	= 0.1,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},		
+		},
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 60,
+				m_fEventPos 	        	= 0.1,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 1.5,
+					NST_HP 	= 1.5,
+				},
+			},		
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 62,
+				m_fEventPos 	        	= 0.05,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},		
+		},
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 120,
+				m_fEventPos 	        	= 0.1,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 1.5,
+					NST_HP 	= 1.5,
+				},
+			},		
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 122,
+				m_fEventPos 	        	= 0.05,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},		
+		},
+	},
+}

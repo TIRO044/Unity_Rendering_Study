@@ -1,0 +1,43 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11341702,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_IRIE_PANDA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_CIVIL_IRIE_PANDA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11341702,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_IRIE_PANDA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "IRIE_CIVIL_NULL_PANDA",
+    m_Pos = "C",
+    m_Talk_KOREA = "그런 말 듣고도 도장을 찍었으면, 진심이라고 생각해도 되지? 하긴 아이리 님처럼 귀여운 카운터 무지 드무니까♪ 앞으로도 언제나 어디서나 사장님한테 장난쳐 줄게!",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "あの話を聞いてもハンコを押したってことは、それだけ本気ってことよね？\nまぁ、アイリ様みたいにキュートなカウンターは少ないし♪\nこれからもず～っと、社長にいたずらしちゃおっ！",
+    m_Talk_ENG = "You signed the contract even after you heard that. You really must want me. Then again, it's not easy to find a cute Counter like Irie, is it? ♪ I'll continue to play pranks on you when you least expect them!",
+    m_Talk_TWN = "聽完這些話還能把章蓋下，可以認為你是真心的吧？也是，畢竟像艾莉這麼可愛的制裁者可是獨一無二的♪今後無論何時何處，我都會繼續對老闆惡作劇的！",
+    m_Talk_THA = "ขนาดได้ยินแบบนั้นแล้วก็ยังเซ็นสัญญา แสดงว่าคุณต้องการฉันจริงๆ แต่จะว่าไป การหาเคาน์เตอร์น่ารักๆ อย่างไอรี่มันก็ไม่ใช่เรื่องง่ายน่ะนะ ♪ ฉันจะคอยแกล้งคุณต่อไปเวลาที่คุณไม่ทันตั้งตัวก็แล้วกัน!",
+    m_Talk_VTN = "Ngài đã ký hợp đồng ngay cả sau khi nghe thấy điều đó. Chắc chắn là ngài thực sự cần tôi. Vậy đúng là không dễ tìm thấy một Counter dễ thương như Irie phải không? ♪ Tôi sẽ tiếp tục trêu đùa ngài vào những lúc ngài không ngờ nhất!",
+    m_Talk_SCN = "听完这些话还能把章盖下，应该就是动真心了吧？也是，像艾力这么可爱的制裁者可是独一无二的♪从今往后无论何时何地我都会对老板...调皮捣蛋的！",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11341702,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_IRIE_PANDA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

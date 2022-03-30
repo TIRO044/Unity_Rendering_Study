@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11600002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_CA_ADMIN_LEE_SUYEON",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_CA_ADMIN_LEE_SUYEON@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11600002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_CA_ADMIN_LEE_SUYEON",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_SERIOUS2",
+    m_CharStrID = "LEESOOYEON_WING_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "저는 믿고 있어요. 사장님께선 이 세계를 결코 저버리지 않는다는 걸요. 그러니, 우리의 관계는 거래가 아닌 약속이라고 해두죠.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "私は信じています。社長はこの世界を決して見捨てないということを。なので、私たちの関係は取引ではなく、約束ということにしておきましょう。",
+    m_Talk_ENG = "I believe in you. I know you'll never abandon this world. So let's call our relationship something more like... a promise, rather than a mere transaction.",
+    m_Talk_TWN = "我相信老闆，老闆是絕對不會拋棄這個世界的。所以，我會將我們的關係視為約定，而不是交易。",
+    m_Talk_THA = "ฉันเชื่อในตัวคุณนะ ฉันรู้ว่าคุณจะไม่มีวันทิ้งโลกใบนี้ ดังนั้นเราควรเรียกสายสัมพันธ์ของเราว่าเป็นอะไรที่เหมือนกับ... สัญญา ไม่ใช่แค่การทำธุรกรรมธรรมดาๆ",
+    m_Talk_VTN = "Tôi có lòng tin ở ngài. Tôi biết ngài sẽ không bao giờ bỏ rơi thế giới này. Vì vậy, chúng ta hãy gọi mối quan hệ của chúng ta giống như... một lời hứa, hơn là một giao dịch đơn thuần. ",
+    m_Talk_SCN = "我相信老板是绝对不会放弃这个世界的。所以，我会把我们的关系也定义成承诺而不是交易。",
+    m_Talk_DEU = "Ich glaube an Sie. Ich weiß, Sie werden diese Welt nie aufgeben. Vielleicht sollten wir unsere Zusammenarbeit also mehr als Versprechen statt als Geschäftsbeziehung verstehen.",
+    m_Talk_FRA = "Je crois en vous. Je sais que vous n'abandonnerez jamais ce monde. Notre relation est à voir comme... une promesse, plutôt qu'une simple transaction.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11600002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_CA_ADMIN_LEE_SUYEON",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,421 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID        = "NKM_MOB_BOSS_RAID_INHIBITOR",
+  	 
+	m_dicNKMUnitState =
+	{
+
+		--기본 공격에 대한 서술
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_ATTACK_LOOP",
+			m_AnimName              = "ATTACK1_LOOP",
+			m_bAnimLoop             = true,
+			m_bSeeTarget            = true,
+			m_fAnimSpeed            = 1, --1배속
+			
+			m_StateTimeChangeStateTime 	= 7,
+			m_StateTimeChangeState		= "USN_ATTACK_END",
+			
+			m_TargetLostOrDieStateDurationTime = 0.5,
+			m_TargetLostOrDieState		= "USN_ATTACK_END", 
+            
+			m_TargetDistOverChangeStateDist = 1600.0,
+			m_TargetDistOverChangeState = "USN_ATTACK_END",
+			m_SuperArmorLevel		= "NSAL_HYPER",
+			
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30, --30은 너와 나의 약속이라구?
+					m_fEventTimeMax           = 5/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1600.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_ATTACK1",
+					m_bHitAir                 = false,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 5/30, --30은 너와 나의 약속이라구?
+					m_fEventTimeMax           = 10/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1600.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_ATTACK1",
+					m_bHitAir                 = false,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 10/30, --30은 너와 나의 약속이라구?
+					m_fEventTimeMax           = 15/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1600.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_ATTACK1",
+					m_bHitAir                 = false,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime	= 3/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 0.5,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+
+
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_ATTACK_AIR_LOOP",
+			m_AnimName              = "ATTACK1_AIR_LOOP",
+			m_bAnimLoop             = true,
+			m_bSeeTarget            = true,
+			m_fAnimSpeed            = 1, --1배속
+
+			m_StateTimeChangeStateTime 	= 5,
+			m_StateTimeChangeState		= "USN_ATTACK_AIR_END",
+			
+			m_TargetLostOrDieStateDurationTime = 0.5,
+			m_TargetLostOrDieState		= "USN_ATTACK_AIR_END", 
+            
+			m_TargetDistOverChangeStateDist = 1600.0,
+			m_TargetDistOverChangeState = "USN_ATTACK_AIR_END",
+
+			m_AnimEndChangeState    = "USN_ATTACK_AIR_END",
+			m_SuperArmorLevel		= "NSAL_HYPER",
+			
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30, --30은 너와 나의 약속이라구?
+					m_fEventTimeMax           = 5/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1600.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_ATTACK1",
+					m_bHitAir                 = true,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 5/30, --30은 너와 나의 약속이라구?
+					m_fEventTimeMax           = 10/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1600.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_ATTACK1",
+					m_bHitAir                 = true,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 10/30, --30은 너와 나의 약속이라구?
+					m_fEventTimeMax           = 15/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1600.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_ATTACK1",
+					m_bHitAir                 = true,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime  	= 3/30,
+					m_fLocalVol		= 0.4,	
+					m_listSoundName        = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					}, 
+				},
+			},
+		},
+	
+		
+	----NUST_ATTACK 타입내의 USN_SKILL1(특수기)
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_SKILL",
+			m_AnimName              = "SKILL1",
+			m_bAnimLoop             = false,
+			m_AnimEndChangeState    = "USN_ASTAND",
+			
+			m_SuperArmorLevel		= "NSAL_HYPER",
+		
+			m_bSkillCutIn			= true,
+
+			m_StateCoolTime         =  30,
+			
+
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 50/30,
+					m_fEventTimeMax           = 70/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 3000.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_SKILL1",
+					m_bHitAir                 = true,
+					m_bCleanHit 		      = true,
+					m_bHitBossUnit 			  = false,
+				},
+			},
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime              = true,
+					m_fEventTime             = 0/30,
+					m_EffectName             = "AB_FX_CAST_HYPER",
+					m_AnimName               = "BASE",
+					m_OffsetX                = 120,
+					m_OffsetY                = 220,
+					m_fScaleFactor           = 30.0,
+				},
+			},
+
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SKILL_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_WHOOSH",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 35/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_10",
+					},
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+					m_fLocalVol		= 0.3,
+				},
+			},
+		},
+	
+		----NUST_ATTACK 타입내의 USN_HYPER1(궁극기)
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_PHASE_CHANGE_HYPER",
+			m_AnimName              = "HYPER_SKILL1",
+			m_bAnimLoop             = false,
+			m_fAnimSpeed            = 1.0, --애니메이션 재생 속도
+			m_AnimEndChangeState    = "USN_ASTAND",
+			
+			m_SuperArmorLevel		= "NSAL_HYPER",
+		
+			m_StateCoolTime         = 150,
+
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 70/30,
+					m_fEventTimeMax           = 80/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 2400.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_HYPER1",
+					m_bHitAir                 = true, --공중 타격 판정
+					m_bCleanHit 		      = true, --필중 여부
+					m_bHitBossUnit 			  = false,--보스(함선)타격 여부
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 80/30,
+					m_fEventTimeMax           = 90/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 2400.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_HYPER2",
+					m_bHitAir                 = true,
+					m_bCleanHit 		      = true,
+					m_bHitBossUnit 			  = false,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 90/30,
+					m_fEventTimeMax           = 100/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 2400.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_HYPER2",
+					m_bHitAir                 = true,
+					m_bCleanHit 		      = true,
+					m_bHitBossUnit 			  = false,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 100/30,
+					m_fEventTimeMax           = 110/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 2400.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_HYPER2",
+					m_bHitAir                 = true,
+					m_bCleanHit 		      = true,
+					m_bHitBossUnit 			  = false,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 110/30,
+					m_fEventTimeMax           = 120/30,
+					
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 2400.0,
+				
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_ENEMY",
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_RAID_INHIBITOR_H_HYPER2",
+					m_bHitAir                 = true,
+					m_bCleanHit 		      = true,
+					m_bHitBossUnit 			  = false,
+				},
+			},
+			
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 0/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_HYPER_ATTACK_START",
+					},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 7/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_WORK_23",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 10/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_34",
+					},
+					m_fLocalVol		= 0.5,
+				},      
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 20/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_33",
+					},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 70/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_67",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 120/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_59",
+					},
+					m_fLocalVol		= 0.3,
+				},     
+			},
+
+			m_listNKMEventCameraMove =
+			{
+				{--? 고개들어 올릴때 잠시 줌인
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 10/30,
+					m_fEventTimeMax       = 70/30,
+					
+					m_bForce              = true,
+					m_fPosXOffset         = -300,
+					m_fPosYOffset         = 500,
+					m_fZoom               = -350,
+					
+					m_fMoveTrackingTime   = 2.5,
+					m_fZoomTrackingTime   = 5.0,
+				},
+			},
+			m_listNKMEventCameraCrash =
+			{
+				{--? 레이저 발사 흔들림
+					m_bAnimTime               = true,
+					m_fEventTime              = 70/30,
+
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+				
+
+					m_fCameraCrashGap         = 10.0,
+					m_fCameraCrashTime        = 1.5,
+				},
+			},
+
+		},
+	},
+}

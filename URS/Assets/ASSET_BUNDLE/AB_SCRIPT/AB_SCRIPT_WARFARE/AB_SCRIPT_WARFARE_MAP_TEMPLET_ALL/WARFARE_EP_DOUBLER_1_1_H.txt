@@ -1,0 +1,27 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 4,
+	m_MapSizeY = 1,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP1_2_1_MEDIUM_BOSS_B_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP1_2_2_HARD_BOSS_A_HM",
+		m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+}

@@ -1,0 +1,33 @@
+﻿-- Exported from WORKSPACE3.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenID = 12110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_OZ_S_RUNNER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenID = 12110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_OZ_S_RUNNER",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "RUNNER_OZ_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "뭐야, 친구가 행복해지면 좋겠다니. 그런 소원이라면 굳이 빌 필요도 없잖아. 네가 이미 이루어 줬는걸.",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenID = 12110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_OZ_S_RUNNER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

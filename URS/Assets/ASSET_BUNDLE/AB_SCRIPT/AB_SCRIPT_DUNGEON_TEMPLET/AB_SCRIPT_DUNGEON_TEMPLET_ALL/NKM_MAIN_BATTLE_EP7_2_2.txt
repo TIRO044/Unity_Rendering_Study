@@ -1,0 +1,180 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_PALADIN_TRANS",
+    
+    m_fBossPosZ 	= 0.8,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		-- {
+			-- m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				-- m_fEventTimeStart   		= 5,
+				-- m_fEventTimeEnd				= 180,
+				-- m_fEventPos 				= 0.0,
+    		-- },
+		-- },
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{		
+		-- {
+			-- m_UnitStrID = "NKM_MOB_ELITE_MAGE_WHITE",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 10,
+				-- m_fEventPos 	        	= 0.1,
+    		-- },
+		-- },		
+		-- {
+			-- m_UnitStrID = "NKM_MOB_ELITE_MAGE_WHITE",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 10,
+				-- m_fEventPos 	        	= 0.3,
+    		-- },
+		-- },		
+		-- {
+			-- m_UnitStrID = "NKM_MOB_ELITE_MAGE_WHITE",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 0,
+				-- m_fEventPos 	        	= 0.5,
+    		-- },
+		-- },		
+		-- {
+			-- m_UnitStrID = "NKM_MOB_ELITE_MAGE_WHITE",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 0,
+				-- m_fEventPos 	        	= 0.7,
+    		-- },
+		-- },
+		----------
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 13.0,
+				m_fEventPos 	        	= 0.2,
+    		},
+		},
+		-- {
+			-- m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 15.0,
+				-- m_fEventPos 	        	= 0.1,
+    		-- },
+		-- },
+		
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 63.0,
+				m_fEventPos 	        	= 0.2,
+    		},
+		},
+		-- {
+			-- m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 65.0,
+				-- m_fEventPos 	        	= 0.1,
+    		-- },
+		-- },
+		
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 113.0,
+				m_fEventPos 	        	= 0.2,
+    		},
+		},
+		-- {
+			-- m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 115.0,
+				-- m_fEventPos 	        	= 0.1,
+    		-- },
+		-- },
+		
+		
+		-- {
+			-- m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 173.0,
+				-- m_fEventPos 	        	= 0.0,
+    		-- },
+		-- },
+		-- {
+			-- m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			-- m_NKMDungeonEventTiming = 
+			-- {
+				-- m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				-- m_fEventTimeStart           = 175.0,
+				-- m_fEventPos 	        	= 0.0,
+    		-- },
+		-- },
+	},
+}

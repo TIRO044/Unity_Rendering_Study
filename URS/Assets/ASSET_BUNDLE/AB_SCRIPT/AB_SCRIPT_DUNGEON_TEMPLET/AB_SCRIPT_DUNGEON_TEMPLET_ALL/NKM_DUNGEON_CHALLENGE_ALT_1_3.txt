@@ -1,0 +1,61 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 2,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_EQC_ALT_SEO_YOON",
+    m_fBossPosZ 	= 0.05,
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_ALT_YOO_JIN",
+			
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart   		= 15,
+				m_fEventTimeGap             = 41,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.4,
+			},
+        },
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_ALT_XIAOLIN",
+			
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart   		= 35,
+				m_fEventTimeGap             = 51,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.05,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 0.6, 
+				},
+			},	
+        },
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_ALT_KIM_SOBIN",
+        
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart   		= 25,
+				m_fEventTimeGap             = 51,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.1,
+			},			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 0.9, 
+				},
+			},	
+        },		
+	},
+}

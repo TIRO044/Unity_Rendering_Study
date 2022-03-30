@@ -1,0 +1,18 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 6,
+	m_fCostSpeedRateB = 0.7,
+    m_BossUnitStrID   = "NKM_MOB_BOSS_CHALLENGE_SL_HEAVY_TANK",
+	m_bRespawnFreePos = true,
+	
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

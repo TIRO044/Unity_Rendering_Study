@@ -1,0 +1,45 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost = 10,
+	m_fCostSpeedRateB = 1,
+	m_BossUnitStrID = "NKM_MONSTER_BOSS_MAD_BEAST_MELEE_MOVE_N",
+	
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_DEMOLISHER_H",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 3,
+				m_fEventTimeGap	        	= 10,
+				m_fEventPos 	        	= 0.2,
+			},
+		},		
+	},
+
+	m_listDungeonUnitRespawnA = 
+	{
+		{
+			m_UnitStrID 				= "NKM_UNIT_C_DELTA_KYLE", -- 카일 웡
+			m_UnitLevel 				= 90,
+			m_UnitLimitBreakLevel 		= 1,
+			-- m_SkinID 					= 100203,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 30,
+				m_fEventTimeGap	        	= 15,
+				m_fEventPos 	        	= 0.1,
+			},
+		},
+	},
+}

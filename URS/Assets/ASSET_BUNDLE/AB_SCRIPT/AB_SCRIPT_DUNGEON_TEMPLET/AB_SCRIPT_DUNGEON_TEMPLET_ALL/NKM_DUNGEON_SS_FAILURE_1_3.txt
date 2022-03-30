@@ -1,0 +1,17 @@
+﻿
+NKMDungeonTemplet = 
+{
+	m_fStartCost 		= 8,
+	m_fCostSpeedRateB	= 1.0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_NEPHILIM_N",
+
+    m_fBossPosZ 	= 0.6,
+
+    m_listDungeonDeck = 
+    {
+    },
+ 
+    m_listDungeonUnitRespawnB = 
+    {
+    },
+}   	

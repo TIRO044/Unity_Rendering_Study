@@ -1,0 +1,24 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID = "NKM_MONSTER_BOSS_BASIC_BEAST_SUMMON_N",
+  
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName             = "USN_SKILL1",
+			m_listNKMEventRespawn = 
+			{
+				{
+					m_UnitStrID 	= "NKM_MONSTER_NORMAL_MAD_BITER_H",
+				},
+				{
+					m_UnitStrID 	= "NKM_MONSTER_NORMAL_MAD_BITER_H",
+				},
+				{
+					m_UnitStrID 	= "NKM_MONSTER_NORMAL_MAD_DEMOLISHER_H",
+				},
+			},
+		},
+	},
+}
+

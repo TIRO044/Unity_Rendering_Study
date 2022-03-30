@@ -1,0 +1,516 @@
+﻿NKMUnitTemplet =
+{
+	--*출격
+	m_fForceRespawnZposMin       = 0.0,
+	m_fForceRespawnZposMax       = 0.2,
+	--*크기
+	m_UnitSizeX                  = 120,
+	m_UnitSizeY                  = 250,
+	m_SpriteScale                = 1.0,
+	--*게이지
+	m_bShowGage                  = true,
+	m_fGageOffsetY               = 250,
+	--*그림자
+	m_fShadowScaleX              = 140,
+	m_fShadowScaleY              = 140,
+	--*이동
+	m_SpeedRun                   = 380,
+	--*타겟
+	m_SeeTarget                  = true,
+	m_TargetNearRange            = 300,
+	m_SeeRange                   = 1200,
+	m_SeeRangeMax                = 1400,
+	--*사망
+	m_fDieCompleteTime           = 60/30,
+	--*이펙트
+	m_bUseMotionBlur             = true,
+	m_fBuffEffectScaleFactor     = 1.0,
+	--*경직
+	m_fDamageBackFactor			 = 0.5,
+	m_fDamageUpFactor			 = 0.5,
+
+
+
+	m_listAttackStateData =
+	{
+		{--* 기본공격
+			m_StateName                = "USN_ATTACK1",
+		},
+	},
+	m_listSkillStateData =
+	{
+		{--*특수기
+			m_StateName                = "USN_SKILL1",
+			m_fRangeMax                = 400,
+		},
+	},
+	m_dicNKMUnitState =
+	{
+		{--*시작
+			m_StateName                = "USN_START",
+			m_NKM_UNIT_STATE_TYPE      = "NUST_START",
+			m_SuperArmorLevel          = "NSAL_SKILL",
+			m_NKM_SKILL_TYPE           = "NST_ATTACK",
+			--*애니메이션
+			m_AnimName                 = "START",
+			m_bAnimLoop                = false,
+			m_fAnimSpeed               = 1.0,
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime             = 0/30,
+					m_fAnimSpeed             = 1.0,
+				},
+				{
+					m_fEventTime             = 20/30,
+					m_fAnimSpeed             = 0.9,
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 7/30,
+					m_fEventTimeMax          = 12/30,
+			
+					m_fRangeMin              = -150,
+					m_fRangeMax              = 450,
+			
+					m_bHitLand               = true,
+					m_AttackTargetUnit       = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_PASSIVE",
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime             = 6/30,
+					m_CameraCrashType        = "NCCT_UP_DOWN",
+					m_fCrashRadius           = 1250,
+			
+					m_fCameraCrashGap        = 20,
+					m_fCameraCrashTime       = 7/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime             = 1/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 3/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_HIT_SLASH_BIG",},
+				},
+				{
+					m_fEventTime             = 6/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_HIT_ROCK_BIG",},
+				},
+				{
+					m_fEventTime             = 6/30,
+					m_fLocalVol              = 0.6,
+					m_listSoundName          = {"FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG_02",},
+				},
+				{
+					m_fEventTime             = 27/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWORD_SLASH_SMALL_02",},
+				},
+				{
+					m_fEventTime             = 29/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_MAGIC_SPELL_45",},
+				},
+				{
+					m_fEventTime             = 29/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_HIT_SHIELD_SMALL",},
+				},
+				{
+					m_fEventTime             = 0/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_START_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_START_2",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_PASSIVE_2",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_PASSIVE_3",
+					},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                = "USN_ATTACK1",
+			m_NKM_UNIT_STATE_TYPE      = "NUST_ATTACK",
+			m_SuperArmorLevel          = "NSAL_INVALID",
+			m_NKM_SKILL_TYPE           = "NST_ATTACK",
+			--*애니메이션
+			m_AnimName                 = "ATTACK1",
+			m_bAnimLoop                = false,
+			m_fAnimSpeed               = 1.0,
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 15/30,
+					m_fEventTimeMax          = 20/30,
+			
+					m_fRangeMin              = 0,
+					m_fRangeMax              = 450,
+			
+					m_bHitAir                = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_ATTACK1",
+				},
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 25/30,
+					m_fEventTimeMax          = 30/30,
+			
+					m_fRangeMin              = 0,
+					m_fRangeMax              = 450,
+			
+					m_bHitAir                = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_ATTACK1",
+				},
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 45/30,
+					m_fEventTimeMax          = 50/30,
+			
+					m_fRangeMin              = 0,
+					m_fRangeMax              = 450,
+			
+					m_bHitAir                = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_ATTACK1",
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime             = 45/30,
+					m_CameraCrashType        = "NCCT_UP_DOWN",
+					m_fCrashRadius           = 1250,
+			
+					m_fCameraCrashGap        = 5,
+					m_fCameraCrashTime       = 5/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime             = 12/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 23/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 40/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_06",},
+				},
+				{
+					m_fEventTime             = 45/30,
+					m_fLocalVol              = 0.6,
+					m_listSoundName          = {"FX_COMBAT_ALL_HIT_ROCK_BIG",},
+				},
+				{
+					m_fEventTime             = 12/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.3,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ATTACK_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ATTACK_3",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ATTACK_4",
+					},
+				},
+				{
+					m_fEventTime             = 40/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.3,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ATTACK_5",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ATTACK_6",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ATTACK_7",
+					},
+				},
+			},
+		},
+		{--*특수기
+			m_StateName                = "USN_SKILL1",
+			m_NKM_UNIT_STATE_TYPE      = "NUST_ATTACK",
+			m_SuperArmorLevel          = "NSAL_SKILL",
+			m_NKM_SKILL_TYPE           = "NST_ATTACK", 
+			m_StateCoolTime            = 18,            
+			--*애니메이션
+			m_AnimName                 = "SKILL1",
+			m_bAnimLoop                = false,
+			m_fAnimSpeed               = 1.2,
+
+            m_SuperArmorLevel          = "NSAL_HYPER",
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 20/30,
+					m_fEventTimeMax          = 30/30,
+			
+					m_fRangeMin              = 0,
+					m_fRangeMax              = 650,
+			
+					m_bHitAir                = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_SKILL1",
+				},
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 30/30,
+					m_fEventTimeMax          = 40/30,
+			
+					m_fRangeMin              = 0,
+					m_fRangeMax              = 650,
+			
+					m_bHitAir                = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_SKILL1",
+				},
+				{
+					m_bAnimTime              = true,
+					m_fEventTimeMin          = 40/30,
+					m_fEventTimeMax          = 50/30,
+			
+					m_fRangeMin              = 0,
+					m_fRangeMax              = 650,
+			
+					m_bHitAir                = false,
+			
+					m_AttackUnitCount        = 2,
+					m_NKM_DAMAGE_TARGET_TYPE = "NDTT_ENEMY",
+					m_DamageTempletName      = "DT_UNIT_JUNIOR_C_POLEARM_SKILL1",
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime             = 20/30,
+					m_CameraCrashType        = "NCCT_UP_DOWN",
+					m_fCrashRadius           = 1250,
+			
+					m_fCameraCrashGap        = 3,
+					m_fCameraCrashTime       = 30/30,
+				},
+				{
+					m_fEventTime             = 50/30,
+					m_CameraCrashType        = "NCCT_UP_DOWN",
+					m_fCrashRadius           = 1250,
+			
+					m_fCameraCrashGap        = 12,
+					m_fCameraCrashTime       = 10/30,
+				},
+			},
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime              = false,
+					m_fEventTime             = 0/30,
+					m_EffectName             = "AB_FX_CAST_SKILL",
+					m_AnimName               = "BASE",
+					m_BoneName               = "BIP01_SPINE1",
+					m_fScaleFactor           = 20.0,
+					m_bHold                  = true,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime             = 0/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SKILL_START",},
+				},
+				{
+					m_fEventTime             = 2/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_MAGIC_SPELL_06",},
+				},
+				{
+					m_fEventTime             = 20/30,
+					m_fLocalVol              = 0.75,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_09","FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 25/30,
+					m_fLocalVol              = 0.75,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_09","FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 30/30,
+					m_fLocalVol              = 0.75,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_09","FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 35/30,
+					m_fLocalVol              = 0.75,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_09","FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 40/30,
+					m_fLocalVol              = 0.75,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_09","FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 45/30,
+					m_fLocalVol              = 0.75,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_09","FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_fEventTime             = 50/30,
+					m_fLocalVol              = 1.0,
+					m_listSoundName          = {"FX_COMBAT_ALL_SWING_SMALL_02",},
+				},
+				{
+					m_fEventTime             = 0/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ACTIVE_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_ACTIVE_2",
+					},
+				},
+			},
+		},
+		{--*경직A
+			m_NKM_UNIT_STATE_TYPE      = "NUST_DAMAGE",
+			m_StateName                = "USN_DAMAGE_A",
+			m_AnimName                 = "DAMAGE_A",
+
+			m_AnimEndChangeState       = "USN_ASTAND",
+			m_FootOffLandChangeState   = "USN_DAMAGE_AIR_DOWN",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime             = 1/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_3",
+					},
+				},
+			},
+		},
+		{--*경직B
+			m_NKM_UNIT_STATE_TYPE      = "NUST_DAMAGE",
+			m_StateName                = "USN_DAMAGE_B",
+			m_AnimName                 = "DAMAGE_B",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime             = 1/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_3",
+					},
+				},
+			},
+		},
+		{--*에어본
+			m_NKM_UNIT_STATE_TYPE      = "NUST_DAMAGE",
+			m_StateName                = "USN_DAMAGE_AIR_UP",
+			m_AnimName                 = "DAMAGE_AIR_UP",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime             = 1/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_3",
+					},
+				},
+			},
+		},
+		{--*다운
+			m_NKM_UNIT_STATE_TYPE      = "NUST_DAMAGE",
+			m_StateName                = "USN_DAMAGE_DOWN",
+			m_AnimName                 = "DAMAGE_DOWN",
+			m_AnimEndDyingState        = "USN_DAMAGE_DIE",
+			m_AnimEndChangeState       = "USN_DAMAGE_STAND",
+			m_FootOnLandChangeState    = "",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime             = 1/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DAMAGE_3",
+					},
+				},
+			},
+		},
+		{--*죽음
+			m_StateName                = "USN_DAMAGE_DIE",
+			m_NKM_UNIT_STATE_TYPE      = "NUST_DIE",
+			m_AnimName                 = "DAMAGE_DIE",
+			m_bAnimLoop                = false,
+			m_fAnimSpeed               = 1.0,
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime             = 1/30,
+					m_bVoice                 = true,
+					m_PlayRate               = 0.7,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DEATH_1",
+						"VOICE_UNIT_JUNIOR_C_POLEARM_BATTLE_DEATH_2",
+					},
+				},
+			},
+		},
+	},
+}

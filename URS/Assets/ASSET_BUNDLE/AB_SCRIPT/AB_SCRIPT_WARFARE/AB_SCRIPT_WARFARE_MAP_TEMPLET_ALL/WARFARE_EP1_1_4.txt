@@ -1,0 +1,17 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 2,
+	m_MapSizeY = 1,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP1_1_1_HARD_BOSS",
+		m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+}

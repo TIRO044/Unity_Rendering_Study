@@ -1,0 +1,5 @@
+﻿-- Exported from NPC_TEMPLET.xlsx
+
+m_dicNPCTemplet =
+{
+}

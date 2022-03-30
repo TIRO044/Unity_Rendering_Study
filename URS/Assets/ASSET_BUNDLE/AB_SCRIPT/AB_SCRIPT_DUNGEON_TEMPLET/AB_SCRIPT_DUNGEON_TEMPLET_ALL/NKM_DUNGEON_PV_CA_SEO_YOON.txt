@@ -1,0 +1,47 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 7,
+    m_fCostSpeedRateB = 0.5,
+    
+    m_BossUnitStrID = "NKM_MOB_BOSS_PV_CA_SEO_YOON_YOO_MI_NA",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PV_CA_SEO_YOON_ALT_YOO_JIN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart            = 4,
+				m_fEventPos 				 = 0.3,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PV_CA_SEO_YOON_ALT_KIM_SOBIN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart            = 6,
+				m_fEventPos 				 = 0.25,
+			},
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_PV_CA_SEO_YOON_ALT_XIAOLIN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart            = 8,
+				m_fEventPos 				 = 0.2,
+			},
+		},
+	},
+}

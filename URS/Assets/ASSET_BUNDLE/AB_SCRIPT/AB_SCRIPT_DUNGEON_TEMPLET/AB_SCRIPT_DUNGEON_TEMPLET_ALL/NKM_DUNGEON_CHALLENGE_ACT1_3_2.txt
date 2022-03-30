@@ -1,0 +1,85 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 6,
+	m_fCostSpeedRateB = 0.8,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_CHALLENGE_VEHCLE",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_RIFLE",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+                m_fEventPos 				 = 0.15,
+    		},
+			-- m_AddStatData =
+			-- {
+			--   m_StatFactor =
+			--   {
+			-- 	  NST_ATK         = 0.4,
+			-- 	  NST_HP          = 1.0,
+			--   },
+			-- },
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_RIFLE",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 6,
+				m_fEventTimeEnd				= 180,
+                m_fEventPos 				 = 0.05,
+    		},
+			-- m_AddStatData =
+			-- {
+			--   m_StatFactor =
+			--   {
+			-- 	  NST_ATK         = 0.4,
+			-- 	  NST_HP          = 1.0,
+			--   },
+			-- },
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHIELD",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 180,
+                m_fEventPos 				 = 0.2,
+    		},
+			-- m_AddStatData =
+			-- {
+			--   m_StatFactor =
+			--   {
+			-- 	  NST_ATK         = 0.4,
+			-- 	  NST_HP          = 1.0,
+			--   },
+			-- },
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_CHALLENGE_EDDIE",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart            = 5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.15,
+			},
+        },
+	},
+}

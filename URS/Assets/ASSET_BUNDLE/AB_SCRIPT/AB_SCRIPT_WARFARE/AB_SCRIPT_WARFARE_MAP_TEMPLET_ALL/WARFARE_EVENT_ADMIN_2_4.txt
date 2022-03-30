@@ -1,0 +1,103 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 6,
+	m_MapSizeY = 3,
+ NKMWarfareTile0 =
+ {
+  m_TileType = "NWMTT_NORMAL",
+  m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+		m_BattleConditionStrID = "BC_ADMIN",
+ },
+ NKMWarfareTile1 =
+ {
+  m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+		m_BattleConditionStrID = "BC_ADMIN",
+ },
+ NKMWarfareTile2 =
+ {
+  m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_EVENT_ADMIN_2_4_C",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_ADMIN",
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_EVENT_ADMIN_2_4_B",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_EVENT_ADMIN_2_4_A",
+  m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_ADMIN",
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_EVENT_ADMIN_2_4_C",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_ADMIN",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_ADMIN_SNOW",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile16 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_ADMIN",
+	},
+	NKMWarfareTile17 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+ },
+}

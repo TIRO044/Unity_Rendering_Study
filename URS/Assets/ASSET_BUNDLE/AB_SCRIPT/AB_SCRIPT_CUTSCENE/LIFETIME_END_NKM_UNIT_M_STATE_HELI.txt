@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10800002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_STATE_HELI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_STATE_HELI@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10800002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_STATE_HELI",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "HELI_STATE_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "상시 대기 중. 풍속도 지형도 관계없다. 증원이 필요하다면 언제든 호출 바란다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "常時待機中。風速も地形も関係ありません。増員が必要なら、いつでも呼び出してください。",
+    m_Talk_ENG = "I'll always be there for you, no matter the wind or terrain. You just call me if you need help.",
+    m_Talk_TWN = "正常待命中。無論風速和地形如何，只要您需要增援，隨時都請呼叫我。",
+    m_Talk_THA = "ฉันพร้อมรับใช้คุณเสมอ ไม่ว่าจะลมแรงหรือมีสภาพแวดล้อมแบบไหน ถ้าต้องการความช่วยเหลือก็โปรดเรียกใช้งานได้เลย",
+    m_Talk_VTN = "Tôi sẽ luôn luôn bên ngài khi ngài cần, bất kể mưa bom, bão đạn. Ngài chỉ việc gọi cho tôi nếu ngài cần giúp đỡ.",
+    m_Talk_SCN = "正常待命中。无所谓怎样的风速和地形。如果需要增援，请随时传唤。",
+    m_Talk_DEU = "Ich werde immer für Sie da sein, ganz gleich, wie der Wind weht oder wie das Gelände aussieht.",
+    m_Talk_FRA = "Je serai toujours là pour vous, quels que soient le terrain ou les conditions. Vous n'avez qu'à m'appeler dès que vous avez besoin d'aide.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10800002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_STATE_HELI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,89 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 4,
+	m_MapSizeY = 4,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP2_3_4_MEDIUM_BOSS_B",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP2_3_4_ACT_BOSS_A",
+		m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_RESUPPLY",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP2_3_4_MEDIUM_BOSS_B",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP2_3_4_EASY_WAVE",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWMTT_RESUPPLY",
+			Rate = 50,
+		},
+	},
+}

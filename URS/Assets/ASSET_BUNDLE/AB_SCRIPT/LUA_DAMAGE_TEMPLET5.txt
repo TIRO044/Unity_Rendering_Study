@@ -1,0 +1,8 @@
+﻿m_dicDamageTempletStrID =
+{
+	{
+		m_DamageTempletName 	= "DT_DAMAGE_TEMPLET5",
+		m_ReActType 			= "NRT_DAMAGE_B",
+		m_CrashSuperArmorLevel 	= "NSAL_SKILL",
+	},
+}

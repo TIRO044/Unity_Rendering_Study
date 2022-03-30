@@ -1,0 +1,42 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 12010002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JAPAN_C_OROCHI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_JAPAN_C_OROCHI@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 12010002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JAPAN_C_OROCHI",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_SERIOUS2",
+    m_CharStrID = "OROCHI_JAPAN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "쉽게 부러질 나뭇가지는 아니로구나. 얼마나 더 발버둥칠 수 있을지 기꺼이 지켜보겠다.",
+    m_fTalkTime = 0.03,
+    m_Talk_ENG = "You're not a twig that easily breaks. I'd love to see how long you'll last.",
+    m_Talk_TWN = "看來你不是輕易就可以折斷的樹枝，我就等著看你可以掙扎到什麼時候。",
+    m_Talk_THA = "คุณไม่ใช่กิ่งไม้ที่หักง่ายๆ ฉันจะรอดูว่าคุณจะอยู่ได้นานแค่ไหน",
+    m_Talk_VTN = "Ngươi không phải là một cành cây dễ gãy. Ta rất muốn xem ngươi sẽ tồn tại được bao lâu.",
+    m_Talk_SCN = "哦？原来不是一折就断的树枝呢。真是期待啊，你到底还能再挣扎多久。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 12010002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JAPAN_C_OROCHI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,154 @@
+﻿NKMUnitTemplet =
+{ 
+	m_UnitSizeX 			= 250,
+	m_UnitSizeY 			= 300,
+	m_SpriteScale           = 1.5,
+  
+	m_fShadowScaleX         = 300,     
+	m_fShadowScaleY         = 300,
+	
+	m_fForceRespawnZposMin	 = 0.5,
+	m_fForceRespawnZposMax	 = 0.5,
+
+	m_SpeedRun              = 0,
+  
+	m_SeeTarget				= false,
+	m_SeeRange              = 200,
+	m_SeeRangeMax           = 300,
+	m_TargetNearRange       = 200,
+	m_bShowGage				= false,
+	m_bNoDamageState		= true,
+	m_NKM_FIND_TARGET_TYPE  = "NFTT_NEAR_ENEMY",
+  
+	m_AttackedTargetTime    = 1,
+	m_bAttackedTarget       = false,
+  
+	m_bUseMotionBlur        = true,
+	
+	m_bNoMove				= true,
+	m_fDamageUpFactor		= 0,
+	m_bImmuneStun			= true,
+
+	m_dicNKMUnitState =
+	{
+		{
+			m_NKM_UNIT_STATE_TYPE	= "NUST_START",
+			m_StateName          	= "USN_START",
+			m_AnimName           	= "START",
+			m_bAnimLoop          	= false,
+			
+			m_fAnimSpeed			= 1.5,
+			
+
+			m_AnimEndChangeState          = "USN_ASTAND",
+			
+			m_listNKMEventAgro	=
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime 	= 8/30,
+					m_bGetAgro 		= true,
+					m_fRange 		= 300,
+					m_fDurationTime = 8,
+					m_MaxCount 		= 2,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_EARTHQUAKE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 10/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC_06",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_MOVE",
+			m_StateName             = "USN_RUN",
+			m_AnimName              = "ASTAND",
+			m_bAnimLoop             = true,
+		
+			m_bRun                  = true,
+		},
+		{
+			m_StateName					= "USN_PASSIVE",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "ASTAND",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			
+			m_AnimEndChangeState		= "USN_ASTAND",
+			
+			m_listNKMEventBuff =
+			{
+				{
+					m_fEventTime   	= 1/30,
+					
+					m_BuffStrID		= "BUFF_REPLACER_PASSIVE",
+					m_BuffLevel		= 1,
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_ASTAND",
+			m_StateName                   = "USN_ASTAND",
+			m_AnimName                    = "ASTAND",
+			m_bAnimLoop                   = true,
+			
+			m_listNKMEventDie	=
+			{
+				{
+					m_bAnimTime		= false,
+					m_fEventTime	= 420/30,
+				},
+			},
+		},
+		
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DIE",
+			m_StateName                   = "USN_DAMAGE_DIE",
+			m_AnimName                    = "DAMAGE_DIE",
+			m_bAnimLoop                   = false,
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = true,
+					m_fEventTime      = 0.0,
+            
+					m_fDissolve       = 1,
+					m_fTrackTime      = 2,
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_DOWN",
+			m_AnimName                    = "DAMAGE_DOWN",
+			m_bAnimLoop                   = false,
+		
+			m_AnimEndDyingState           = "USN_DAMAGE_DIE",
+			m_AnimEndChangeState          = "USN_DAMAGE_STAND",
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+		},
+		
+	
+		
+	},
+}
+

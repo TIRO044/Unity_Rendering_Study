@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10390002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FUTURE_BALLISTA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_FUTURE_BALLISTA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10390002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FUTURE_BALLISTA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_CharStrID = "BALLISTA_FAW_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "명령권자 님이 보여주신 신뢰에 부응하기 위해, 일회성 병기 또한 반복학습을 통해 성장할 수 있다는 사실을 증명해 보이겠습니다. 감사합니다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "命令権者様のご期待に応えるため、使い捨て兵器も反復学習を通じて成長できるということを証明してみせます。ありがとうございます。",
+    m_Talk_ENG = "To live up to the trust you've shown me, I'll prove that an expendable weapons are also capable of growth through repeated learning. Thank you.",
+    m_Talk_TWN = "為了回應指揮官向我展現的信任，一次性武器也能藉由反復學習獲得成長這件事，我會證明給您看的。非常謝謝您！",
+    m_Talk_THA = "เพื่อตอบแทนความไว้วางใจที่คุณมีต่อฉัน ฉันจะพิสูจน์ว่าอาวุธที่ไม่สำคัญก็สามารถเติบโตผ่านการเรียนรู้ซ้ำๆ ได้ ขอบคุณ",
+    m_Talk_VTN = "Để đáp ứng sự tin tưởng mà ngài đã thể hiện, tôi sẽ chứng minh rằng vũ khí tiêu hao cũng có khả năng phát triển thông qua việc học hỏi lặp đi lặp lại. Cảm ơn ngài.",
+    m_Talk_SCN = "为了不辜负主人对我的信任，我会向您证明，一次性武器也能通过反复学习得到成长。谢谢！",
+    m_Talk_DEU = "Um dem Vertrauen, das Sie mir entgegengebracht haben, gerecht zu werden, werde ich beweisen, dass auch entbehrliche Waffen durch wiederholtes Lernen zu Wachstum fähig sind. Danke schön.",
+    m_Talk_FRA = "Pour me montrer à la hauteur de la confiance que vous m'accordez, je vous prouverai que les armes sacrifiables sont capables de progresser grâce à un apprentissage répété. Merci.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10390002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FUTURE_BALLISTA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

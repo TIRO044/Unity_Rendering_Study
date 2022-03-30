@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10061002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ALT_XIAOLIN_WEDDING",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "CHURCH",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_ALT_XIAOLIN_WEDDING@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10061002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ALT_XIAOLIN_WEDDING",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_PRIDE",
+    m_CharStrID = "XIAOLIN_ALT_WEDDING_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "저격수의 생명은 인내심입니다. 계약서가 아니라 혼인 신고서에 도장을 찍을 때까지, 이 부케는 던지지 않을 거예요. 아셨죠?",
+    m_fTalkTime = 0.04,
+    m_Talk_JPN = "スナイパーにとって辛抱強さは大事なんです。契約書ではなく婚姻届に判を押すまで、このブーケは投げませんよ。いいですね？",
+    m_Talk_ENG = "Patience is the most important virtue for a sniper. I won't throw this bouquet until the marriage certificate is out. Forget the contract. Got that?",
+    m_Talk_TWN = "狙擊手的生命是耐心。不是契約書，而是在婚姻登記申請書上蓋章之前，我都不會扔掉這個捧花，你是知道的吧？",
+    m_Talk_THA = "ความอดทนคือคุณธรรมที่สำคัญที่สุดสำหรับพลซุ่มยิง ฉันจะไม่ปาช่อดอกไม้นี้จนกว่าจะมีการจดทะเบียนแต่งงานนะ ลืมเรื่องสัญญาไปซะ เข้าใจมั้ย?",
+    m_Talk_VTN = "Kiên nhẫn là đức tính quan trọng nhất đối với một lính bắn tỉa. Tôi sẽ không ném bó hoa này cho đến khi có giấy đăng ký kết hôn. Quên hợp đồng đi. Hiểu chưa? ",
+    m_Talk_SCN = "狙击手的生命是耐心。不是什么契约书，而是在婚姻登记申请书上盖章之前，我都不会扔这个捧花，明白吗？",
+    m_Talk_DEU = "Geduld ist die wichtigste Tugend für Scharfschützen. Ich werde den Strauß nicht werfen, bevor die Heiratsurkunde unterzeichnet ist! Vergessen Sie den Vertrag. Verstanden?",
+    m_Talk_FRA = "La patience est la plus grande qualité d'un sniper. Je ne lancerai pas ce bouquet tant que le contrat de mariage n'aura pas été signé. Oubliez le contrat. Compris ?",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10061002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ALT_XIAOLIN_WEDDING",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,99 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 8,
+	m_MapSizeY = 2,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_INCR",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_PLUS_WAVE_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_SummonDungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_PLUS_WAVE_HM",
+		m_SummonCondition = "PHASE",
+		m_SummonConditionValue = 2,
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_RESUPPLY",
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_MEDIUM_BOSS_B_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 50,
+		},
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_MEDIUM_BOSS_A_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_TileWinType = "WFC_TILE_ENTER",
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_INCR",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_PLUS_WAVE_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_SummonDungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_PLUS_WAVE_HM",
+		m_SummonCondition = "PHASE",
+		m_SummonConditionValue = 2,
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_MEDIUM_BOSS_A_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_3_MEDIUM_BOSS_B_HM",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+}

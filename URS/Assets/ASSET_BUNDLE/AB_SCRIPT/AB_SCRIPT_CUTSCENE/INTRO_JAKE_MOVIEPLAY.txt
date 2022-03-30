@@ -1,0 +1,16 @@
+﻿-- Exported from WORKSPACE1.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenID = 1510014,
+    m_CutScenStrID = "INTRO_JAKE_MOVIEPLAY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "BLACK",
+    m_bFadeIn = true,
+    m_fFadeTime = 0.01,
+    m_StartBGMFileName = "CUTSCENE_SILENCE",
+    m_MovieName = "AWAKEN_JAKE_PV.mp4",
+  },
+}

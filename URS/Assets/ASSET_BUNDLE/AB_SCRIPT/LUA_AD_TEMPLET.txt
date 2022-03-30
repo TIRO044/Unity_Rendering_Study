@@ -1,0 +1,25 @@
+﻿-- Exported from AD_TEMPLET.xlsx
+
+AD_TEMPLET =
+{
+  {
+    IDX = 1,
+    AdRewardStrID = "ADREWARD_DUMMY_V1",
+    AdItemID = 2,
+    DayLimit = 3,
+    WatchCoolTime = 0,
+    RewardItemType = "RT_MISC",
+    RewardItemID = 2,
+    RewardItemValue = 1000,
+  },
+  {
+    IDX = 3,
+    AdRewardStrID = "ADREWARD_DUMMY_V2",
+    AdItemID = 1,
+    DayLimit = 5,
+    WatchCoolTime = 30,
+    RewardItemType = "RT_MISC",
+    RewardItemID = 1,
+    RewardItemValue = 20000,
+  },
+}

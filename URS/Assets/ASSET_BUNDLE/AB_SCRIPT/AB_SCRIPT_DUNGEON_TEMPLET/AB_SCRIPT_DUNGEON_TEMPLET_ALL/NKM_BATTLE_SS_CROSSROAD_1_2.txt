@@ -1,0 +1,12 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost = 10,
+	m_fCostSpeedRateB = 1,
+	m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_JOO_SHI_YOON_AP_MOVE_N",
+	
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+}

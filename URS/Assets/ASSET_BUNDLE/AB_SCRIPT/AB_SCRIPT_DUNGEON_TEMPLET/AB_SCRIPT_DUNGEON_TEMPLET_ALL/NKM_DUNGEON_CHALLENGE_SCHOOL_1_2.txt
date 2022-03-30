@@ -1,0 +1,113 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 8,
+	m_fCostSpeedRateB = 1,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_EQC_SCHOOL_C_CHAIR",
+    
+    m_fBossPosZ 	= 0.4,
+	 
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHIELD",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart           = 1,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.4,
+			},
+		},
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHOTGUN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart           = 1,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+			},
+		},	
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_RIFLE",
+			
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart           = 1,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+        },	
+    },
+
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHOTGUN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.48,
+				m_fEventBossHPUpper  	     = 0.4,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.35,
+			},
+		},			
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHOTGUN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.48,
+				m_fEventBossHPUpper  	     = 0.4,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.37,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHOTGUN",
+        
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.48,
+				m_fEventBossHPUpper  	     = 0.4,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.39,
+    		},
+        },
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_TIDE_SHOTGUN",
+        
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.48,
+				m_fEventBossHPUpper  	     = 0.4,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.25,
+    		},
+        },
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_TIDE_SHOTGUN",
+        
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.48,
+				m_fEventBossHPUpper  	     = 0.4,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.26,
+    		},
+        },		
+		
+	},
+}

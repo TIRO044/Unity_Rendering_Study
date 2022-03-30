@@ -1,0 +1,37 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 12050002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BAR_C_CEO",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_BAR_C_CEO@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 12050002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BAR_C_CEO",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "GREMORY_BAR_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "도시에선 계약이란 게 흔하니까, 너도 나도 사인을 아무렇지 않게 한단 말이지. 후훗, 어쨌거나 잘 받아갈게? 아, 배신한다고 영혼을 빼앗기진 않으니 걱정마. 요즘은 그런 식으로 장사 안 하거든.",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 12050002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BAR_C_CEO",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11460002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_DELTA_KING",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_DELTA_KING@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11460002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_DELTA_KING",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_CharStrID = "DOMINIC_DELTA_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "훗날 나와 적으로 만난다면 주저하지 말고 무찔러 주겠나? 자네가 싸우기로 결심한다면... 분명 그 시절의 나는 잘못된 길을 걷고 있을 거다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "いつか私と敵対することになったら、ためらわずに倒してほしい。君が戦うと決めたのなら、きっと私は道を誤っているはずだ。",
+    m_Talk_ENG = "If you ever come to face me as your enemy, please don't hesitate to defeat me. If I ever choose to become your adversary, I'd be walking down the wrong path.",
+    m_Talk_TWN = "日後我們以敵人的身份相遇時，你會毫不猶豫地打倒我嗎？如果你決定戰鬥的話……那時的我，肯定走在一條錯誤的道路上吧。",
+    m_Talk_THA = "ถ้าคุณต้องเผชิญหน้ากับผมในฐานะศัตรู โปรดอย่าลังเลที่จะกำจัดผม เพราะถ้าผมเลือกที่จะเป็นศัตรูกับคุณแล้ว นั่นก็แสดงว่าผมกำลังเดินในเส้นทางที่ผิดแน่นอน",
+    m_Talk_VTN = "Nếu có phải đối mặt với tôi như hai kẻ thù địch, xin đừng ngần ngại đánh bại tôi. Nếu có lúc tôi phải lựa chọn trở thành đối thủ của ngài, thì tức là lúc đó tôi đã đi sai đường mất rồi đấy.",
+    m_Talk_SCN = "如果有一天我们以对手的身份相见，请不要心慈手软。当你决定与我战斗时候，那一定是因为我误入了歧途。",
+    m_Talk_DEU = "Wenn ich Ihnen je als Feind gegenüberstehe, zögern Sie bitte nicht, mich zu vernichten. Sollte ich mich Ihnen je entgegenstellen, wäre ich ganz schön auf Abwege geraten.",
+    m_Talk_FRA = "Si je devais devenir votre ennemi un jour, n'hésitez pas à me vaincre. Si je choisissais de m'opposer à vous, je serais sur la mauvaise voie.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11460002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_DELTA_KING",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

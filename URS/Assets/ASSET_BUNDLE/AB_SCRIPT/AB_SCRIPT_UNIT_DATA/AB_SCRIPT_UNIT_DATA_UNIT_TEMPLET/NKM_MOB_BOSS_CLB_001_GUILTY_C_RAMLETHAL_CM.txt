@@ -1,0 +1,1198 @@
+﻿NKMUnitTemplet =
+{
+    BASE_UNIT_STR_ID              = "NKM_UNIT_BASE_BOSS_MOVE",
+	m_NKC_TEAM_COLOR_TYPE         = "NTCT_ONLY_SHADOW",
+
+	--*출격
+	m_fForceRespawnZposMin        = 0.1,
+	m_fForceRespawnZposMax        = 0.2,
+	--*크기
+	m_UnitSizeX                   = 100,
+	m_UnitSizeY                   = 300,
+	m_SpriteScale                 = 1.0,
+	--*게이지
+	m_bShowGage                   = false,
+	m_fGageOffsetY                = 340,
+	--*그림자
+	m_fShadowScaleX               = 200,
+	m_fShadowScaleY               = 200,
+	--*이동
+	m_SpeedRun                    = 300,
+	--*타겟
+	m_SeeTarget                   = true,
+	m_TargetNearRange             = 125,
+	m_SeeRange                    = 3000,
+	m_SeeRangeMax                 = 3000,
+    
+    --*경직
+	m_bImmuneStun                 = true,
+	m_bNoDamageStopTime           = true,
+	m_bNoDamageState              = true,
+	m_bNoDamageDownState          = true,
+	m_fDamageUpFactor             = 0.0,
+	m_fDamageBackFactor           = 0.6,
+
+	--*사망
+	m_fDieCompleteTime            = 1.8,
+	--*이펙트
+	m_bUseMotionBlur              = true,
+	m_fBuffEffectScaleFactor      = 1.0,
+
+    m_listPhaseChangeData =
+	{
+		{--* 뒤로 대기
+			m_TargetPhase                = 1,
+			m_fChangeConditionHPRate     = 0.5,
+
+			m_ChangeStateName            = "USN_BACK",
+		},
+		{--* 돌진하면서 참전
+			m_Condition =
+			{
+				m_NeedBuffStrID          = "BUFF_MOB_BOSS_CLB_001_TAG_TRIGGER"
+			},
+			m_TargetPhase                = 2,
+			m_ChangeStateName            = "USN_REGAME",
+		},
+		{--* 돌진하면서 참전 (1분 남았을 때)
+			m_Condition =
+			{
+				m_IgnoreBuffStrID        = "BUFF_MOB_BOSS_CLB_001_TAG_TRIGGER"
+			},
+			m_TargetPhase                = 2,
+			m_fChangeConditionTime       = 120.0,
+			m_ChangeStateName            = "USN_REGAME",
+		},
+	},
+
+	m_listAttackStateData =
+	{
+		{--*기본공격
+			m_Condition = 
+			{
+				m_IgnoreBuffStrID			= "BUFF_GUILTY_RAMLETHAL_PASSIVE", 
+			},
+		
+			m_StateName			= "USN_ATTACK1",
+			m_fRangeMin			= 0,
+			m_fRangeMax			= 150,
+		},
+		
+		{--*기본공격
+			m_Condition = 
+			{
+				m_NeedBuffStrID			= "BUFF_GUILTY_RAMLETHAL_PASSIVE", 
+			},
+		
+			m_StateName			= "USN_PASSIVE1",
+			m_fRangeMin			= 0,
+			m_fRangeMax			= 150,
+		},
+		{--*기본공격
+			m_Condition = 
+			{
+				m_NeedBuffStrID			= "BUFF_GUILTY_RAMLETHAL_PASSIVE", 
+			},
+		
+			m_StateName			= "USN_PASSIVE2",
+			m_fRangeMin			= 151,
+			m_fRangeMax			= 350,
+		},
+		{--*기본공격
+			m_Condition = 
+			{
+				m_NeedBuffStrID			= "BUFF_GUILTY_RAMLETHAL_PASSIVE", 
+			},
+
+			m_StateName			= "USN_PASSIVE3",
+			m_fRangeMin			= 351,
+			m_fRangeMax			= 700,
+		},
+	},
+	m_listSkillStateData =
+	{
+		{--*특수기
+			m_StateName                 = "USN_SKILL1",
+			m_fRangeMax                 = 400,
+		},
+	},
+	m_listHyperSkillStateData =
+	{
+		{--*궁극기
+			m_StateName                 = "USN_HYPER1",
+			m_fStartCool                = 0.7,
+			m_fRangeMax                 = 1200,
+		},
+	},
+
+	m_dicNKMUnitState =
+	{
+        {--* 대기 상태
+			m_StateName					  = "USN_WAITING",
+			m_NKM_UNIT_STATE_TYPE		  = "NUST_ATTACK",
+            m_AnimName					  = "ASTAND",
+            m_fAnimSpeed                  = 1.0,
+			m_bAnimLoop					  = true,
+			m_bNoMove					  = true,
+			m_bForceLeft				  = true,
+
+			-- m_DamagedChangeState		  = "USN_ASTAND",
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = false,
+					m_fEventTime      = 0/30,
+
+					m_fDissolve       = 0,
+					m_fTrackTime      = 0.1,
+				},
+			},
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime         = false,
+					m_fEventTime		= 0/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_INVINCIBLE",
+					m_StateEndRemove	= true,
+				},
+			},
+        },
+        {--*선수 교체
+			m_StateName            		= "USN_BACK",
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",	
+			m_AnimName             		= "DAMAGE_A",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed           		= 1.0,
+			m_SuperArmorLevel      		= "NSAL_HYPER",
+			-- m_AnimTimeChangeStateTime 	= 19/30,
+			-- m_AnimTimeChangeState 		= "USN_WAITING",
+			m_AnimEndChangeState 		= "USN_WAITING",
+			m_bNoAI					    = true,
+			m_bForceLeft				= true,
+
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime            = 1/30,
+					m_UnitStrID             = "NKM_MOB_BOSS_CLB_001_ORCA_CM",
+					m_MaxCount              = 1,
+					m_bMaxCountReRespawn 	= true,
+				},
+			},
+			
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime              = false,
+					m_fEventTime             = 15/30,
+
+					m_EffectName             = "AB_FX_CMN_RECALL",
+					m_AnimName               = "BASE",
+					m_BoneName               = "root",
+					
+					-- m_OffsetY				 = -150,
+					m_fScaleFactor           = 0.8,
+					m_bHold                  = false,
+				},
+			},
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = false,
+					m_fEventTime      = 15/30,
+
+					m_fDissolve       = 1,
+					m_fTrackTime      = 0.1,
+				},
+			},
+
+			m_listNKMEventInvincible =
+            {
+                {
+                    m_bAnimTime 	= true,
+                    m_fEventTimeMin = 0/30,
+                    m_fEventTimeMax = 99/30,
+                },
+			},
+			
+
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 0/30,
+					m_bTargetUnit             = false,
+					m_bOffsetDependMe         = true,
+
+					m_OffsetX			   	  = -100,
+
+					m_MoveTime                = 0.6,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 18/30,
+					m_bTargetUnit             = false,
+					m_bOffsetDependMe         = true,
+
+					m_fMapPosFactor			  = 0.01,
+					m_MoveTime                = 0.1,
+				},	
+			},
+		},
+        {--*같이 싸움
+			m_StateName                 = "USN_REGAME",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_SKILL",
+			--*애니메이션
+			m_AnimName                  = "RUN",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+			m_AnimEndChangeState 		= "USN_ASTAND",
+
+            m_listNKMEventInvincible =
+            {
+                {
+                    m_bAnimTime 	= true,
+                    m_fEventTimeMin = 0/30,
+                    m_fEventTimeMax = 99/30,
+                },
+			},
+
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 1/30,
+					m_bTargetUnit 		= true,
+					
+					m_OffsetX 			= -200,
+				
+					m_MoveTime 			= 30/30,
+					m_bLandMove 		= true,
+				},
+			},
+		},
+		{--*시작
+			m_StateName                 = "USN_START",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_START",
+			m_bShowGage                 = false,
+			m_DamagedChangeState        = "USN_ASTAND",
+			--*애니메이션
+			m_AnimName                  = "START",
+			m_fAnimSpeed                = 1.2,
+			m_AnimEndChangeState        = "USN_ASTAND",
+
+
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 5/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 8,
+					m_fCameraCrashTime        = 10/30,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_HIT_METAL",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MOVEMENT_04",},
+				},
+				{
+					m_fEventTime              = 36/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWORD_SLASH_SMALL_05",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 10/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_START_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_START_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_START_3",
+					},
+				},
+			},
+		},
+
+		{--*패시브
+			m_StateName            		= "USN_PASSIVE1",
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",	
+			m_AnimName             		= "PASSIVE1",
+			m_fAnimSpeed           		= 1.5,
+			m_SuperArmorLevel      		= "NSAL_SKILL",
+
+			-- m_AnimTimeChangeStateTime 	= 12/30,
+			-- m_AnimTimeChangeState 		= "USN_ASTAND",
+			
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime         	= true,
+					m_fEventTimeMin     	= 10/30,
+					m_fEventTimeMax     	= 20/30,
+
+					m_fRangeMin         	= 0.0,
+					m_fRangeMax         	= 150.0,
+
+					m_bHitAir           	= false,
+					m_AttackUnitCount   	= 2,
+					m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE1",
+				},
+			},
+
+			m_listNKMEventChangeState	=
+			{
+				{
+					m_fEventTime	= 18/30,	
+					m_ChangeState	= "USN_PASSIVE2",
+				},
+			},
+
+			-- m_listNKMEventAnimSpeed = 
+			-- {
+			-- 	{
+			-- 		m_fEventTime              = 0/30,
+			-- 		m_fAnimSpeed              = 1.5,
+			-- 	},
+			-- 	{
+			-- 		m_fEventTime              = 15/30,
+			-- 		m_fAnimSpeed              = 1.0,
+			-- 	},
+			-- },
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 2,
+					m_fCameraCrashTime        = 5/30,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_HIT_STING_SMALL",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.33,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_PASSIVE_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_PASSIVE_2",
+					},
+				},
+			},
+		},
+		{--*패시브
+			m_StateName            		= "USN_PASSIVE2",
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",	
+			m_AnimName             		= "PASSIVE2",
+			m_fAnimSpeed           		= 1.7,
+			m_SuperArmorLevel      		= "NSAL_SKILL",
+
+			-- m_AnimTimeChangeStateTime 	= 32/30,
+			-- m_AnimTimeChangeState 		= "USN_ASTAND",
+			
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime         	= true,
+					m_fEventTimeMin     	= 10/30,
+					m_fEventTimeMax     	= 20/30,
+
+					m_fRangeMin         	= 0.0,
+					m_fRangeMax         	= 300.0,
+
+					m_bHitAir           	= false,
+					m_AttackUnitCount   	= 2,
+					m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE2",
+				},
+			},
+
+			m_listNKMEventChangeState	=
+			{
+				{
+					m_fEventTime	= 20/30,	
+					m_ChangeState	= "USN_PASSIVE3",
+				},
+			},
+			-- m_listNKMEventAnimSpeed = 
+			-- {
+			-- 	{
+			-- 		m_fEventTime              = 0/30,
+			-- 		m_fAnimSpeed              = 1.5,
+			-- 	},
+			-- 	{
+			-- 		m_fEventTime              = 15/30,
+			-- 		m_fAnimSpeed              = 1.0,
+			-- 	},
+			-- },
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 4,
+					m_fCameraCrashTime        = 5/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWING_SMALL_11",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.33,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_PASSIVE_3",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_PASSIVE_4",
+					},
+				},
+			},
+		},
+		{--*패시브
+			m_StateName            		= "USN_PASSIVE3",
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",	
+			m_AnimName             		= "PASSIVE3",
+			m_fAnimSpeed           		= 1.3,
+			m_SuperArmorLevel      		= "NSAL_SKILL",
+
+			m_AnimTimeChangeStateTime 	= 32/30,
+			m_AnimTimeChangeState 		= "USN_ASTAND",
+
+			m_StateCoolTime	= 3,
+			
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime         	= true,
+					m_fEventTimeMin     	= 10/30,
+					m_fEventTimeMax     	= 15/30,
+
+					m_fRangeMin         	= 0.0,
+					m_fRangeMax         	= 600.0,
+
+					m_bHitAir           	= false,
+					m_AttackUnitCount   	= 2,
+					m_DamageTempletName 	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_PASSIVE3",
+
+					m_fGetAgroTime			= 8,
+				},
+			},
+			m_listNKMEventBuff =
+			{
+				{
+					m_fEventTime		= 1/30,
+					m_BuffStrID  		= "BUFF_GUILTY_RAMLETHAL_PASSIVE",
+					m_BuffRemove		= true,
+				},
+			},
+			-- m_listNKMEventAnimSpeed = 
+			-- {
+			-- 	{
+			-- 		m_fEventTime              = 0/30,
+			-- 		m_fAnimSpeed              = 1.5,
+			-- 	},
+			-- 	{
+			-- 		m_fEventTime              = 15/30,
+			-- 		m_fAnimSpeed              = 1.0,
+			-- 	},
+			-- },
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 6,
+					m_fCameraCrashTime        = 5/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWORD_SLASH_SMALL_11",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.33,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_PASSIVE_5",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_PASSIVE_6",
+					},
+				},
+			},
+		},
+		
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			-- m_listNKMEventAnimSpeed = 
+			-- {
+			-- 	{
+			-- 		m_fEventTime              = 40/30,
+			-- 		m_fAnimSpeed              = 0.6,
+			-- 	},
+			-- },
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 10/30,
+					m_fEventTimeMax           = 20/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 300.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 26/30,
+					m_fEventTimeMax           = 36/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 300.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 46/30,
+					m_fEventTimeMax           = 56/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 300.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_ATTACK1",
+				},
+			},
+			-- m_listNKMEventSpeedX = 
+			-- {
+			-- 	{
+			-- 		m_bAnimTime       	= true,
+			-- 		m_fEventTimeMin		= 46/30,
+			-- 		m_fEventTimeMax		= 51/30,
+					
+			-- 		m_SpeedX          	= 200.0,
+			-- 	},
+			-- },
+			m_listNKMEventBuff =
+			{
+				{
+					m_fEventTime		= 1/30,	
+					m_BuffStrID  		= "BUFF_GUILTY_RAMLETHAL_PASSIVE",
+				},
+			},
+
+			-- m_listNKMEventChangeState	=
+			-- {
+			-- 	{
+			-- 		m_Condition = 
+			-- 		{
+			-- 			m_NeedBuffStrID			= "BUFF_GUILTY_RAMLETHAL_PASSIVE", 
+			-- 		},
+
+			-- 		m_fEventTime	= 47/30,	
+			-- 		m_ChangeState	= "USN_ASTAND",
+			-- 	},
+			-- },
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 8/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWING_SMALL_06",},
+				},
+				{
+					m_fEventTime              = 23/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWING_SMALL_09",},
+				},
+				{
+					m_fEventTime              = 46/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 5/30,
+					m_PlayRate                = 0.33,
+					m_bVoice                  = true,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ATTACK_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ATTACK_2",
+					},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 40/30,
+					m_PlayRate                = 0.33,
+					m_bVoice                  = true,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ATTACK_3",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ATTACK_4",
+					},
+				},
+			},
+		},
+		{--*특수기
+			m_StateName                 = "USN_SKILL1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_SKILL",
+			-- m_bSkillCutIn               = true,
+            m_StateCoolTime             = 16,
+			--*애니메이션
+			m_AnimName                  = "SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime              = 0/30,
+					m_fAnimSpeed              = 1.2,
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fAnimSpeed              = 2.0,
+				},
+				{
+					m_fEventTime              = 40/30,
+					m_fAnimSpeed              = 1.0,
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               	= true,
+					m_fEventTimeMin           	= 30/30,
+					m_fEventTimeMax           	= 40/30,
+
+					m_fRangeMin              	= -100.0,
+					m_fRangeMax              	= 500.0,
+
+					m_bHitAir                	= false,
+					m_AttackUnitCount        	= 3,
+					m_DamageTempletName      	= "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_SKILL1",
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical            = true,
+				},
+			},
+			m_listNKMEventSpeedX =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 25/30,
+					m_fEventTimeMax           = 28/30,
+					m_SpeedX                  = 600.0,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 39/30,
+					m_fEventTimeMin           = 42/30,
+					m_SpeedX                  = 0.0,
+				},
+			},
+			-- m_listNKMEventMove	=
+			-- {
+			-- 	{
+			-- 		m_bAnimTime 		= true,
+			-- 		m_fEventTime 		= 19/30,
+			-- 		m_bTargetUnit 		= true,
+					
+			-- 		m_OffsetX 			= -140,
+			    
+			-- 		m_MoveTime 			= 10/30,
+			-- 		m_bLandMove 		= true,
+			-- 	},
+			-- },
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime               = false,
+					m_fEventTime              = 0/30,
+					m_EffectName              = "AB_FX_CAST_SKILL",
+					m_AnimName                = "BASE",
+					m_BoneName                = "BIP01_SPINE1",
+					m_fScaleFactor            = 30.0,
+					m_bHold                   = true,
+				},
+			},
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 140/30,
+
+					m_fColorR                 = 0.5,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 1.0,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 28/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 15,
+					m_fCameraCrashTime        = 15/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 0/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SKILL_START",},
+				},
+				{
+					m_fEventTime              = 20/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWORD_SLASH_BIG",},
+				},
+				{
+					m_fEventTime              = 28/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_HIT_SLASH_BIG",},
+				},
+				{
+					m_fEventTime              = 55/30,
+					m_fLocalVol               = 0.6,
+					m_listSoundName           = {"FX_COMBAT_ALL_MECHANIC_WORK_07",},
+				},
+				{ 
+					m_bAnimTime               = true,
+					m_fEventTime              = 20/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ACTIVE_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ACTIVE_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_ACTIVE_3",
+					},
+				},
+			},
+		},
+
+		{--*궁극기
+			m_StateName                 = "USN_HYPER1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_HYPER",
+			m_bShowGage                 = false,
+            m_StateCoolTime             = 48,
+			--*애니메이션
+			m_AnimName                  = "HYPER_SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			-- m_listNKMEventHyperSkillCutIn =
+			-- {
+			-- 	{
+			-- 		m_bAnimTime               = true,
+			-- 		m_fEventTime              = 0/30,
+			-- 		m_fDurationTime           = 55/30,
+
+			-- 		m_BGEffectName            = "AB_FX_SKILL_CUTIN_COMMON_A",
+			-- 		m_CutInEffectName         = "AB_FX_SKILL_CUTIN_NKM_UNIT_GUILTY_C_RAMLETHAL",
+			-- 		m_CutInEffectAnimName     = "BASE",
+			-- 	},
+			-- },
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 85/30,
+					m_fEventTimeMax           = 105/30,
+
+					m_fRangeMin               = 0,
+					m_fRangeMax               = 1200,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 3,
+					m_DamageTempletName       = "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HYPER1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 107/30,
+					m_fEventTimeMax           = 115/30,
+
+					m_fRangeMin               = 0,
+					m_fRangeMax               = 1200,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 3,
+					m_DamageTempletName       = "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HYPER1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 125/30,
+					m_fEventTimeMax           = 130/30,
+
+					m_fRangeMin               = 0,
+					m_fRangeMax               = 1200,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 3,
+					m_DamageTempletName       = "DT_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HYPER1_END",
+				},
+			},
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+	
+					m_fColorR                 = 1.0,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 0.5,
+				},
+			},
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 90/30,
+				},
+			},
+			
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 40/30,
+
+					m_fPosXOffset             = 0,
+					m_fPosYOffset             = 200,
+					m_fZoom                   = -175,
+
+					m_fMoveTrackingTime       = 0.1,
+					m_fZoomTrackingTime       = 0.5,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 40/30,
+					m_fEventTimeMax           = 55/30,
+
+					m_fPosXOffset             = -150,
+					m_fPosYOffset             = 200,
+					m_fZoom                   = -175,
+
+					m_fMoveTrackingTime       = 0.5,
+					m_fZoomTrackingTime       = 0.1,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 55/30,
+					m_fEventTimeMax           = 81/30,
+
+					m_fPosXOffset             = 150,
+					m_fPosYOffset             = 150,
+					m_fZoom                   = -150,
+
+					m_fMoveTrackingTime       = 1.5,
+					m_fZoomTrackingTime       = 1.5,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 81/30,
+					m_fEventTimeMax           = 125/30,
+
+					m_fPosXOffset             = 500,
+					m_fPosYOffset             = 150,
+					m_fZoom                   = -75,
+
+					m_fMoveTrackingTime       = 2.0,
+					m_fZoomTrackingTime       = 2.0,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 125/30,
+					m_fEventTimeMax           = 140/30,
+
+					m_fPosXOffset             = 400,
+					m_fPosYOffset             = 0,
+					m_fZoom                   = 0,
+
+					m_fMoveTrackingTime       = 0.1,
+					m_fZoomTrackingTime       = 0.1,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 83/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 7,
+					m_fCameraCrashTime        = 40/30,
+				},
+				{
+					m_fEventTime              = 125/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 15,
+					m_fCameraCrashTime        = 10/30,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+
+					m_fColorR                 = 0.0,
+					m_fColorG                 = 0.0,
+					m_fColorB                 = 0.0,
+
+					m_fMapColorKeepTime       = 10/30,
+					m_fMapColorReturnTime     = 10/30,
+				},
+			},
+			m_listNKMEventStopTime =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					
+					m_StopTimeIndex           = "NSTI_SKILL",
+					m_fStopTime               = 30/30,
+					m_bStopEnemyOnly          = false,
+					m_bMyStop                 = false,
+					m_fRange                  = 1200,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.85,
+					m_listSoundName           = {"FX_COMBAT_ALL_HYPER_GUILTY",},
+				},
+				{
+					m_fEventTime              = 30/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_28",},
+				},
+				{
+					m_fEventTime              = 60/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_65",},
+				},
+				{
+					m_fEventTime              = 82/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_67",},
+				},
+				{
+					m_fEventTime              = 90/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_74",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 0/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 1.0,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_HYPER_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_HYPER_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_HYPER_3",
+					},
+				},
+			},
+		},
+
+		{	-- 스턴 (길티기어 유닛한테만 있음)
+			m_StateName                   = "USN_DAMAGE_STUN",
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = false,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.75,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_STUN_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_STUN_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_STUN_3",
+					},
+				},
+			},
+		},
+		{--*경직A
+			m_StateName			= "USN_DAMAGE_A",
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*경직B
+			m_StateName			= "USN_DAMAGE_B",
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*에어본
+			m_StateName  			= "USN_DAMAGE_AIR_UP",
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*다운
+			m_StateName  			= "USN_DAMAGE_DOWN",
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*다이
+			m_StateName      	= "USN_DAMAGE_DIE",
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DEATH_1",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DEATH_2",
+						"VOICE_UNIT_GUILTY_C_RAMLETHAL_BATTLE_DEATH_3",
+					},
+				},
+			},
+		},
+	},
+}

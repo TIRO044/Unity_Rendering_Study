@@ -1,0 +1,272 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.8,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP8_KNIGHT_C_FLAG_H",
+    
+    m_fBossPosZ 	= 0.8,
+
+	m_BossRespawnUnitTemplet =
+	{
+	  m_AddStatData =
+	  {
+		m_StatValue =
+		{
+		  NST_ATK                 = 3000,
+		  NST_HP                  = 0,
+		  NST_DEF                 = -1000,
+		},
+	  },
+	},		
+	
+	m_listDungeonDeck = 
+	{	
+		--- 기간 유닛 : 침식된 방위 기사대원 ---		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			m_EventRespawnUnitTag		= "PALADIN",				
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.19,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK   = 1.0,
+					NST_HP    = 0.5,
+					NST_DEF   = 1.0,
+				},
+			},			
+		},	
+
+		--- 기간 유닛 : 침식된 군종 마술사 ---		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			m_EventRespawnUnitTag		= "MAGE",				
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.02,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK   = 2.1,
+					NST_HP    = 0.4,
+				},
+			},			
+		},
+
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	
+		---방위 사망시 추가 배치/방위 태그---			
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			m_EventRespawnUnitTag		= "PALADIN",				
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DIE_AFTER_TIME",
+				m_EventDieUnitTag 			= "PALADIN",
+				m_EventDieUnitTagCount 		= 2,	
+
+				m_fEventTimeStart           = 0,
+				m_fEventTimeGap	        	= 4,				
+				m_fEventPos 				= 0.18,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK   = 1.0,
+					NST_HP    = 0.5,
+					NST_DEF   = 1.0,
+				},
+			},
+		},
+
+		---메이지 사망시 추가 배치/메이지 태그---			
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",			
+			m_EventRespawnUnitTag		= "MAGE",				
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DIE_AFTER_TIME",
+				m_EventDieUnitTag 			= "MAGE",
+				m_EventDieUnitTagCount 		= 3,
+
+				m_fEventTimeStart           = 0,
+				m_fEventTimeGap	        	= 6,				
+				m_fEventPos 				= 0.01,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK   = 2.1,
+					NST_HP    = 0.4,
+				},
+			},
+		},
+
+		---샬롯(보스) 이동시, 개를 한번 풀어라---	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart           = 0,
+				m_fEventPos 				= 0.22,
+				
+				m_EventTag = "BOSS_MOVE", -- BOSS_MOVE(이동 시작) 값이 1이면, 배치 시작 -- 
+				m_EventTagCount = 1,
+    		},
+
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.0,
+				},
+			},	
+		},
+
+		-- ---샬롯(보스) 패시브 발동 후, 레이스를 하나 풀어라---
+		-- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_EP6_WRAITH_N",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+		-- 		m_fEventTimeStart           = 0,
+		-- 		m_fEventTimeGap	        	= 2,
+		-- 		m_fEventPos 				= 0.11,
+				
+		-- 		m_EventTag = "USN_PASSIVE1", -- BOSS_SKILL 값일 때, 배치 시작 -- 
+		-- 		m_EventTagCount = 1,
+    	-- 	},
+
+		-- 	m_AddStatData =
+		-- 	{
+		-- 		m_StatFactor =
+		-- 		{
+		-- 			NST_ATK   = 8.5,
+		-- 			NST_HP    = 0.8,
+		-- 		},
+		-- 	},	
+		-- },
+
+		-- ---샬롯(보스)이 첫 궁극기를 사용하면, 오버로드를 하나 더 풀어라---
+		-- {
+		-- 	m_UnitStrID = "NKM_MOB_ELITE_EP6_FLOATER_N",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+		-- 		m_fEventTimeStart           = 0,
+		-- 		m_fEventTimeGap	        	= 3,
+		-- 		m_fEventPos 				= 0.01,
+				
+		-- 		m_EventTag = "BOSS_HYPER", -- BOSS_HYPER 값일 때, 배치 시작 -- 
+		-- 		m_EventTagCount = 1,
+    	-- 	},
+
+		-- 	m_AddStatData =
+		-- 	{
+		-- 		m_StatFactor =
+		-- 		{
+		-- 			NST_ATK   = 9.5,
+		-- 			NST_HP    = 0.8,
+		-- 		},
+		-- 	},	
+		-- },
+	},
+
+	m_listDungeonEventTempletTeamB =
+	{
+		-- --- 조건 : 샬롯(보스)이 이동하면, "BOSS_MOVE" 값 1 추가 ---	
+		{
+			m_EventCondition       = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_EP8_KNIGHT_C_FLAG_H",
+			m_EventConditionValue2 = "USN_RUN",		
+
+			m_dungeonEventType = "ADD_EVENTTAG",
+			m_EventActionStrValue	= "BOSS_MOVE",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+
+		-- --- 조건 : 샬롯(보스)이 패시브(강공격?)를 사용하면, "USN_PASSIVE1" 값 1 추가 ---	
+		{
+			m_EventCondition       = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_EP8_KNIGHT_C_FLAG_H",
+			m_EventConditionValue2 = "USN_SKILL1",		
+
+			m_dungeonEventType = "ADD_EVENTTAG",
+			m_EventActionStrValue	= "USN_PASSIVE1",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+
+		-- --- 조건 : 샬롯(보스)이 특수기(찌르기)를 사용하면, "BOSS_SKILL1" 값 1 추가 ---	
+		{
+			m_EventCondition       = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_EP8_KNIGHT_C_FLAG_H",
+			m_EventConditionValue2 = "USN_SKILL1",		
+
+			m_dungeonEventType = "ADD_EVENTTAG",
+			m_EventActionStrValue	= "BOSS_SKILL1",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+
+		-- --- 조건 : 샬롯(보스)이 궁극기(힐)를 사용하면, "BOSS_HYPER" 값 1 추가 ---	
+		{
+			m_EventCondition       = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_EP8_KNIGHT_C_FLAG_H",
+			m_EventConditionValue2 = "USN_HYPER1",		
+
+			m_dungeonEventType = "ADD_EVENTTAG",
+			m_EventActionStrValue	= "BOSS_HYPER",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+
+
+
+	},
+}

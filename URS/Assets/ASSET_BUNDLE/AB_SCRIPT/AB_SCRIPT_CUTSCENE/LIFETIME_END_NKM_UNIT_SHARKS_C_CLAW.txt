@@ -1,0 +1,42 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11990002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_SHARKS_C_CLAW",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_SHARKS_C_CLAW@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11990002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_SHARKS_C_CLAW",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "DRACO_NPC_SUMMER_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "좀만 기다려. 곧 온 바다에 내 이름이 퍼질 테니까. 그 날을 대비해서 선원 계약서도 한 장 준비해 두는 게 어때? 어차피 이제 나 없이는 못 살잖아? 캬하핫!",
+    m_fTalkTime = 0.03,
+    m_Talk_ENG = "You just wait. Soon, my name will spread throughout the sea. Why don't you draft up a sailor employment contract for that day? You can't live without me now, can you? Teehee!",
+    m_Talk_TWN = "等我一下！因為我的威名很快就會傳遍整個海上，在那之前你要不要也先準備個船員契約書？反正你現在沒有我就活不下去不是嗎？哇哈哈哈～～",
+    m_Talk_THA = "คุณเพียงแค่รอ อีกไม่นาน ชื่อของฉันจะลามไปในท้องทะเล ทำไมคุณไม่เตรียมสัญญาจ้างลูกเรือให้วันนั้นล่ะ? คุณไม่สามารถอยู่ได้โดยปราศจากฉันในตอนนี้ ใช่มั้ย? อิอิ!",
+    m_Talk_VTN = "Cứ chờ đi. Chẳng bao lâu nữa, tên tôi sẽ nổi khắp biển cả. Sao ngài không soạn hợp đồng lao động thủy thủ cho ngày hôm đó? Giờ ngài đâu thể sống thiếu tôi mà. Hê hê.",
+    m_Talk_SCN = "很快，整片海域都将会流传我的名字。为了这一天先准备一份船员契约书怎么样？反正现在你不是没有我不行吗？嘎哈哈！",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11990002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_SHARKS_C_CLAW",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10670002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_ADMIN_SHIELD",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_ADMIN_SHIELD@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10670002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_ADMIN_SHIELD",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "SHIELD_ADMIN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "저흰 전장의 베이시스트라고 할 수 있죠. 혼자 튀지 않고서 묵직하게 다른 화음들을 받쳐주니까요. 아무래도 사장님께서 그 매력에 푹 빠지신 것 같군요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "私たちは戦場のベーシストとも言えます。一人で飛び出るわけでもなく、ずっしりと他の音を支えているのですから。おそらく社長はその魅力にハマってしまったようですね。",
+    m_Talk_ENG = "We're the bass player of the battlefield. Instead of standing out, we provide rhythmic support. And it seems you're bedazzled by our charm.",
+    m_Talk_TWN = "我們可以說是戰場上的貝斯手。貝斯手一個人的聲音並不突出，而是沉穩地支撐著其他和絃。看來老闆已經深深迷上貝斯的魅力了呢。",
+    m_Talk_THA = "พวกเราก็เหมือนมือเบสของสนามรบ คอยเป็นจังหวะสนับสนุน ไม่ได้มีบทบาทโดดเด่นบนเวที แต่ถึงอย่างนั้นคุณก็ยังประทับใจในเสน่ห์ของพวกเรา",
+    m_Talk_VTN = "Chúng tôi là những tay chơi thầm lặng trên chiến trường. Thay vì nổi bật, chúng tôi hỗ trợ nhịp nhàng. Và dường như ngài đã bị ấn lượng bởi sức hút của chúng tôi.",
+    m_Talk_SCN = "我们可以说是战场上的贝斯手。因为贝斯的声音不突出，只是在沉稳地支撑着其他和弦。看来老板已经被充满魅力的贝斯深深地迷住了。",
+    m_Talk_DEU = "Wir sind auf dem Schlachtfeld wie Bassisten in einer Band. Anstatt hervorzustechen, bieten wir rhythmische Unterstützung. Und Ihnen scheint zu gefallen, was Sie hören.",
+    m_Talk_FRA = "On est un peu les bassistes du champ de bataille. On se fait pas trop remarquer, mais on donne le rythme. Et vous avez l'air d'être complètement sous le charme.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10670002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_ADMIN_SHIELD",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,33 @@
+﻿-- Exported from STRING_TABLE_SHOP.xlsx
+
+m_dicString =
+{
+  { "SI_SHOP_RECOMMEND_DESC_202005_NORMAL", "<b><color=#0e4480>가정의 달 특별 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202005_FEATURE_3DAY", "<b><color=#0e4480>가정의 달 특별 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202005_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>가정의 달 특별 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202005_HEADHUNTING_NORMAL", "<b><color=#0e4480>헤드헌팅 채용 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202005_HEADHUNTING_FEATURE_3DAY", "<b><color=#0e4480>헤드헌팅 채용 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202005_HEADHUNTING_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>헤드헌팅 채용 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_NEWBIE_NORMAL", "<b><color=#0e4480>[time]</color></b> 동안만 구입 가능한\n<color=#0e4480>신임 사장님 특별 상품</color> 입고!\n이 기회를 놓치지 마세요!", },
+  { "SI_SHOP_RECOMMEND_DESC_RETURN_NORMAL", "<b><color=#0e4480>[time]</color></b>동안만 구입 가능한\n<color=#0e4480>복직 사장님을 위한 특별 상품</color> 입고!\n이 기회를 놓치지 마세요!", },
+  { "SI_SHOP_RECOMMEND_DESC_202006_NORMAL", "<b><color=#0e4480>2.0 리뉴얼 기념 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202006_FEATURE_3DAY", "<b><color=#0e4480>2.0 리뉴얼 기념 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202006_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>2.0 리뉴얼 기념 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202007_NORMAL", "<b><color=#0e4480>AWAKEN 기간 한정 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202007_FEATURE_3DAY", "<b><color=#0e4480>AWAKEN 기간 한정 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202007_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>AWAKEN 기간 한정 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202008_NORMAL", "<b><color=#0e4480>장비 강화 특별 패키지</color></b> 상품 3종이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202008_FEATURE_3DAY", "<b><color=#0e4480>장비 강화 특별 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202008_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>장비 강화 특별 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_NORMAL", "<b><color=#0e4480>블랙프라이데이 1주차 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_FEATURE_3DAY", "<b><color=#0e4480>블랙프라이데이 1주차 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>블랙프라이데이 1주차 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_VOL2_NORMAL", "<b><color=#0e4480>블랙프라이데이 2주차 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_VOL2_FEATURE_3DAY", "<b><color=#0e4480>블랙프라이데이 2주차 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_VOL2_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>블랙프라이데이 2주차 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_VOL3_NORMAL", "<b><color=#0e4480>블랙프라이데이 3주차 패키지</color></b> 상품이\n입고되었습니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_VOL3_FEATURE_3DAY", "<b><color=#0e4480>블랙프라이데이 3주차 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_202011_VOL3_FEATURE_1DAY", "서두르세요!\n<b><color=#0e4480>블랙프라이데이 3주차 패키지</color></b> 상품이\n[time]후 판매 종료됩니다!", },
+  { "SI_SHOP_RECOMMEND_DESC_NEWBIE_FEATURE_FIRST_PURCHASE", "<b><color=#0e4480>[기념주화 & 채용 계약서 패키지]</color></b>\n최대 11배의 고효율 상품 입고!\n지금 바로 확인해보세요!", },
+  { "SI_SHOP_RECOMMEND_DESC_NEWBIE_FUNCTION", "<b><color=#0e4480>높은 효율 보장!</color></b> 30일 정액제 3종 입고!\n지금 바로 확인해보세요!", },
+}

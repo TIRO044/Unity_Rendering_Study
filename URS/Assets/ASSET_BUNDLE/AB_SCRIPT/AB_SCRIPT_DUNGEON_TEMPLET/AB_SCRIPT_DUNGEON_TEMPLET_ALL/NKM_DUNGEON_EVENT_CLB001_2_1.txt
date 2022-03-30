@@ -1,0 +1,9 @@
+NKMDungeonTemplet = 
+{
+  m_fStartCost  = 5,
+  m_fCostSpeedRateB = 0.5,
+  m_BossUnitStrID = "NKM_MOB_BOSS_CLB_001_ORCA",
+      
+  m_fBossPosZ  = 0.6,
+
+}

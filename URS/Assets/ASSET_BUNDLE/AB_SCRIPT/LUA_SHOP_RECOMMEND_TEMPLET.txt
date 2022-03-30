@@ -1,0 +1,5 @@
+﻿-- Exported from SHOP_TEMPLET.xlsx
+
+SHOP_RECOMMEND_TEMPLET =
+{
+}

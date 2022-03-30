@@ -1,0 +1,150 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1,
+
+	m_BossUnitStrID = "NKM_MONSTER_RAID_BASIC_ABOMINATION_H",
+	
+	m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+
+	m_listDungeonUnitRespawnB = 
+	{
+		--! 100%
+		{	--* 엘리트 샷건
+			m_UnitStrID	= "NKM_MONSTER_ELITE_REPLACER_SHOTGUN_N",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE		= "NDET_DIE_AFTER_TIME",
+
+				m_fEventBossHPLess				= 1.10,
+				m_fEventBossHPUpper				= 0.61,
+				m_fEventIgnoreBossInitHPLess	= false,
+
+				m_fEventTimeGap					= 60,
+				m_fEventTimeStart				= 1,
+				m_fEventPos						= 0.2,
+			},
+		},
+		{	--* 노말 쉴드
+			m_UnitStrID = "NKM_MONSTER_NORMAL_REPLACER_SHIELD_N",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 		= "NDET_DIE_AFTER_TIME",
+
+				m_fEventBossHPLess				= 1.10,
+				m_fEventBossHPUpper				= 0.61,
+				m_fEventIgnoreBossInitHPLess	= false,
+
+				m_fEventTimeGap					= 20,
+				m_fEventTimeStart				= 3,
+				m_fEventPos 					= 0.15,
+			},
+		},
+		-- {	--* 노말 라이플
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 		= "NDET_DIE_AFTER_TIME",
+
+		-- 		m_fEventBossHPLess				= 1.10,
+		-- 		m_fEventBossHPUpper				= 0.61,
+		-- 		m_fEventIgnoreBossInitHPLess	= false,
+
+		-- 		m_fEventTimeGap					= 20,
+		-- 		m_fEventTimeStart				= 4,
+		-- 		m_fEventPos 					= 0.1,
+		-- 	},
+		-- },
+
+		--! 60%
+		{	--* 엘리트 쉴드
+			m_UnitStrID	= "NKM_MONSTER_ELITE_REPLACER_SHIELD_N",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE		= "NDET_DIE_AFTER_TIME",
+
+				m_fEventBossHPLess				= 0.40,
+				m_fEventBossHPUpper				= 0.31,
+				m_fEventIgnoreBossInitHPLess	= false,
+
+				m_fEventTimeGap					= 60,
+				m_fEventTimeStart				= 1,
+				m_fEventPos						= 0.20,
+			},
+		},
+		-- {	--* 엘리트 하운드
+		-- 	m_UnitStrID	= "NKM_MONSTER_ELITE_BASIC_SL_TANK_EP5_N",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE		= "NDET_DIE_AFTER_TIME",
+
+		-- 		m_fEventBossHPLess				= 0.40,
+		-- 		m_fEventBossHPUpper				= 0.31,
+		-- 		m_fEventIgnoreBossInitHPLess	= false,
+
+		-- 		m_fEventTimeGap					= 25,
+		-- 		m_fEventTimeStart				= 8,
+		-- 		m_fEventPos						= 0.15,
+		-- 	},
+		-- },
+		-- {	--* 노말 샷건
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_SHOTGUN_N",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE		= "NDET_DIE_AFTER_TIME",
+
+		-- 		m_fEventBossHPLess				= 0.10,
+		-- 		m_fEventBossHPUpper				= 0.0,
+		-- 		m_fEventIgnoreBossInitHPLess	= false,
+
+		-- 		m_fEventTimeGap					= 10,
+		-- 		m_fEventTimeStart				= 1,
+		-- 		m_fEventPos						= 0.1,
+		-- 	},
+		-- },
+
+		-- --! 30%
+		-- {	--* 라이노 등장
+		-- 	m_UnitStrID	= "NKM_MONSTER_ELITE_BASIC_SL_HEAVY_TANK_EP5_N",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE		= "NDET_DIE_AFTER_TIME",
+
+		-- 		m_fEventBossHPLess				= 0.10,
+		-- 		m_fEventBossHPUpper				= 0.0,
+		-- 		m_fEventIgnoreBossInitHPLess	= false,
+
+		-- 		m_fEventTimeGap					= 25,
+		-- 		m_fEventTimeStart				= 1,
+		-- 		m_fEventPos						= 0.5,
+		-- 	},
+		-- },
+		-- {	--* 라이노 등장
+		-- 	m_UnitStrID	= "NKM_MONSTER_ELITE_BASIC_SL_HEAVY_TANK_EP5_N",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE		= "NDET_DIE_AFTER_TIME",
+
+		-- 		m_fEventBossHPLess				= 0.10,
+		-- 		m_fEventBossHPUpper				= 0.0,
+		-- 		m_fEventIgnoreBossInitHPLess	= false,
+
+		-- 		m_fEventTimeGap					= 10,
+		-- 		m_fEventTimeStart				= 3,
+		-- 		m_fEventPos						= 0.3,
+		-- 	},
+		-- },
+	},
+}

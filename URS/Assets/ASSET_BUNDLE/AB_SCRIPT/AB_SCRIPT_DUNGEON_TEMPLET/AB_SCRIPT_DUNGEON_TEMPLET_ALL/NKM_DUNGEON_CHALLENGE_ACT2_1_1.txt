@@ -1,0 +1,56 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 6,
+	m_fCostSpeedRateB = 0.8,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_CHALLENGE_TOMBSTONE_SUMMER",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_NEEDLER_SUMMER",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 180,
+                m_fEventPos 				= 0.2,
+    		},
+			-- m_AddStatData =
+			-- {
+			--   m_StatFactor =
+			--   {
+			-- 	  NST_ATK         = 0.4,
+			-- 	  NST_HP          = 1.0,
+			--   },
+			-- },
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_NEEDLER_SUMMER",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 6,
+				m_fEventTimeEnd				= 180,
+                m_fEventPos 				 = 0.1,
+    		},
+			-- m_AddStatData =
+			-- {
+			--   m_StatFactor =
+			--   {
+			-- 	  NST_ATK         = 0.4,
+			-- 	  NST_HP          = 1.0,
+			--   },
+			-- },
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+
+	},
+}

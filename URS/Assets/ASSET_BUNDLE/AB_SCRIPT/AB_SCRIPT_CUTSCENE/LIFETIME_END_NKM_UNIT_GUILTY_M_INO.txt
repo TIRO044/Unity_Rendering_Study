@@ -1,0 +1,34 @@
+﻿-- Exported from WORKSPACE1.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenID = 11860002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_GUILTY_M_INO",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenID = 11860002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_GUILTY_M_INO",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_TOUCH",
+    m_CharStrID = "INO_COLLABO_NULL_NULL",
+    m_Pos = "C",
+    m_bFaceLoop = false,
+    m_Talk_KOREA = "연주를 즐길 준비는 됐어? 각오를 했으면 절대 흔들리면 안 되지.",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenID = 11860002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_GUILTY_M_INO",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

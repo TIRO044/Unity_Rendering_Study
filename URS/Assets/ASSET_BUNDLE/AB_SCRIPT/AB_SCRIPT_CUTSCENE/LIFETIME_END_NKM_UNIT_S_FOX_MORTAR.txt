@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10230002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_FOX_MORTAR",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_FOX_MORTAR@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10230002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_FOX_MORTAR",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "MORTAR_FOX_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "하긴... 저희가 유난히 구닥다리스럽긴 하죠. 그러니 기왕 고생할 거라면, 구식이라고 무시하지 않는 분 밑에서 하겠습니다. 필요할 땐 언제든 불러만 주십시오, 사장님.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "まあ……我々は古い人間ではありますが、どうせ苦労するなら時代遅れなどと貶さない方の下で働きたいです。必要な時にいつでも呼んでください、社長。",
+    m_Talk_ENG = "It's true we're pretty old-school. If we're going to do this, we want to do it under someone who respects our style. Call us whenever you need us, Boss.",
+    m_Talk_TWN = "說起來......我們可能特別在意舊式武器吧。既然跟不上時代會很辛苦，那不如就在不會瞧不起我們的老闆手下工作吧。有需要的話隨時呼叫我們，老闆。",
+    m_Talk_THA = "จริงอยู่ ว่าพวกเราเป็นคนหัวเก่า แต่ถ้าเราจะรบแบบนี้ เราก็อยากจะรับใช้ผู้บังคับบัญชาที่เคารพในสไตล์ของเรา เรียกใช้เราได้ทุกเมื่อที่ต้องการเลยนะครับ บอส",
+    m_Talk_VTN = "Đúng là chúng tôi khá cổ điển. Nếu chúng tôi định làm một việc, chúng tôi muốn làm với một người tôn trọng phong cách của chúng tôi. Hãy gọi cho chúng tôi bất cứ khi nào ngài cần, Ông Chủ.",
+    m_Talk_SCN = "也是......我们可能特别古板吧。所以既然注定会很辛苦，我们就要在尊重我们的人手下工作。有需要请随时联系我，老板。",
+    m_Talk_DEU = "Stimmt, wir sind ziemlich altmodisch. Wenn wir das durchziehen, dann wollen wir es unter jemandem tun, der unseren Stil respektiert. Rufen Sie uns, wann immer Sie uns brauchen, Boss.",
+    m_Talk_FRA = "C'est vrai qu'on est assez vieux jeu. Si vous voulez continuer à travailler avec nous, il va falloir que vous respectiez notre style. Appelez-nous dès que vous aurez besoin d'aide, boss.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10230002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_FOX_MORTAR",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

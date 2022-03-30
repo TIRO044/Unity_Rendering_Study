@@ -1,0 +1,37 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11910002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_ETC_S_DOCTOR",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_ETC_S_DOCTOR@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11910002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_ETC_S_DOCTOR",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "LONELY_NPC_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "아아, 이 순간만을 기다려왔어요. 사장님도 저와 같은 마음이시겠죠? 후훗, 이젠 그 무엇도 우릴 갈라놓을 수 없어요. ...영원히.",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11910002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_ETC_S_DOCTOR",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

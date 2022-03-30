@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10090002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SL_SHIELD",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_SL_SHIELD@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10090002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SL_SHIELD",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "SHIELD_SL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "이 일도 의외로 보람 있지 말입니다. 시원찮은 일거리나 받으면서 시간낭비 할 바엔, 사장님께 한 번 걸어 보렵니다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "この仕事も、意外とやりがいがあります。そこそこの仕事を受けて、時間を無駄にするくらいなら、社長に賭けてみようと思います。",
+    m_Talk_ENG = "Being a shieldman is more rewarding than I thought. And I'd rather test my luck with you than waste my time, picking up meaningless jobs here and there.",
+    m_Talk_TWN = "這份工作意外地有意義。與其幹些不盡人意的工作浪費時間，我寧願跟隨老闆。",
+    m_Talk_THA = "การเป็นพลโล่นั้นให้คุณค่ากับผมมากกว่าที่คิด และผมก็ยินดีเสี่ยงโชคไปกับคุณ ดีกว่าต้องมาเสียเวลากับการทำงานไร้ความหมายไม่เป็นหลักแหล่ง",
+    m_Talk_VTN = "Trở thành lính vác khiên tuyệt vời hơn tôi nghĩ. Và tôi muốn thử vận may của mình với ngài thay vì tốn thời gian với những công việc vô nghĩa ở đâu đó.",
+    m_Talk_SCN = "这工作我觉得也挺有意义的，与其做其他工作浪费时间，我还是愿意跟随老板。",
+    m_Talk_DEU = "Schildwache zu sein ist lohnenswerter, als ich dachte. Und ich versuche lieber mein Glück mit Ihnen, als meine Zeit mit sinnlosen Gelegenheitsjobs zu verschwenden.",
+    m_Talk_FRA = "Être un hoplite est plus gratifiant que je le pensais. Et je préfère tenter ma chance auprès de vous que perdre mon temps avec des boulots vides de sens ici et là.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10090002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SL_SHIELD",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,42 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11920002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_EXPRESS_C_LALA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_EXPRESS_C_LALA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11920002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_EXPRESS_C_LALA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "LARA_NPC_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "VIP 고객님 등록 완료됐습니다! 앞으로도 플라티나 익스프레스를 애용해 주시길! 앗, 물론 개인적인 데이트도 환영인데요! 그라운드 원에서 열리는 레이싱을 구경하러 가도 좋을 텐데~ 헤헷, 진도가 너무 빨랐나?",
+    m_fTalkTime = 0.02,
+    m_Talk_ENG = "Now you are a VIP! I hope you enjoy our services in the future as well! I’m okay if you ask me out too! I would love to see the racing in Ground One. Oh, am I going too fast?",
+    m_Talk_TWN = "VIP登錄完畢！以後也請多加利用白金運通！要私約的話也完全OK喔！去G1看賽車好像不錯欸～哈哈，進展太快嗎？",
+    m_Talk_THA = "ตอนนี้คุณเป็นวีไอพีแล้ว! ฉันหวังว่าคุณจะเพลิดเพลินกับบริการของเราในอนาคตเช่นกัน! ถ้าคุณอยากออกเดทกับฉันก็โอเคน้า!ฉันชอบดูการแข่งรถในกราวด์วันนะ โอ้ เร็วเกินอีกหรือ?",
+    m_Talk_VTN = "Giờ ngài là một VIP! Tôi hy vọng ngài cũng sẽ thích dịch vụ của chúng tôi trong tương lai! Nếu ngài rủ tôi đi chơi thì okay thôi! Tôi rất thích xem trận đua ở Ground One. Ôi, tiến triển hơi nhanh quá không?",
+    m_Talk_SCN = "已登记为vip顾客！以后都要使用普拉提娜快递服务哦！啊！个人邀请也欢迎哦！去看G1举办的赛车比赛也不错 - 嘿嘿，进度是不是有点快了。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11920002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_EXPRESS_C_LALA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

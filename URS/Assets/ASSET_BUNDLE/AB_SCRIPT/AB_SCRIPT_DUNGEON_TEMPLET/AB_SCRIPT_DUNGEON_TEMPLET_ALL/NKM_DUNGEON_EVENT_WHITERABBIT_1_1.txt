@@ -1,0 +1,79 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.25,
+    m_BossUnitStrID = "NKM_MOB_BOSS_WHITERABBIT_SCHOOL_C_PRESIDENT",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+        {
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_SNIPER_H",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 30,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnA = 
+	{
+	},
+
+	m_listDungeonEventTempletTeamA =
+	{
+		{
+			-- 양하림 등장 후 대사
+			m_dungeonEventType = "GAME_EVENT", -- 게임 이벤트 탬플릿 참조 이벤트
+			m_EventID = 3251011, -- 게임 이벤트 탬플릿 안에서 사용할 이벤트 ID
+			m_bPause = false, -- 해당 이벤트가 발생했을 때, 멈출거야?
+
+			m_EventCondition = "UNIT_STATE_START", -- ConditionValue2의 마지막 시점에 이벤트 발생 (상세 이벤트 타이밍)
+			m_EventConditionValue1 = "NKM_UNIT_C_YG_HARIM", -- 기준 유닛 ID
+			m_EventConditionValue2 = "USN_START", -- 유닛의 StateName 
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0.0,
+    		},
+		},
+
+		{	
+			-- 양하림 궁
+			m_dungeonEventType = "SET_UNIT_HYPER_FULL", --궁극기 게이지 풀로 채운다.
+			m_EventActionValue = 1135, -- 궁극기 게이지를 풀로 채울 유닛 ID
+			
+			m_bPause = false, -- 해당 이벤트가 발생했을 때, 멈출거야?
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 25.0,
+    		},
+		},
+
+		{	
+			-- 양하림 화이팅 대사
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3251012,
+			m_bPause = false,
+
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_YG_HARIM",
+			m_EventConditionValue2 = "USN_HYPER1",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 20.0,
+    		},
+		},
+	},
+}

@@ -1,0 +1,39 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11950002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_KNIGHT_C_HOLY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_KNIGHT_C_HOLY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11950002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_KNIGHT_C_HOLY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_PRIDE",
+    m_CharStrID = "HOLY_KNIGHT_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "예식의 경중이 맹세의 무게를 좌우하지는 않는 법. 그대가 저와 같은 길을 걷는 날을 기다리겠습니다, 현자여.",
+    m_fTalkTime = 0.03,
+    m_Talk_ENG = "Formality doesn't add to the weight of one's oath. I'll wait for the day you'll join me on the same path, Sage.",
+    m_Talk_TWN = "儀式的大小不影響誓言的份量，我會期待你和我走上同一條道路的那天到來。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11950002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_KNIGHT_C_HOLY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

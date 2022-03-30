@@ -1,0 +1,530 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID = "NKM_UNIT_BASE_BOSS",
+	
+	m_UnitSizeX 			= 300,
+	m_UnitSizeY 			= 300,
+	m_bDieDeActive			= false,
+
+	m_bShowGage				= false,
+
+	m_SpriteScale			= 1.0,
+	m_SpriteOffsetX			= 0,
+	m_SpriteOffsetY			= 0,
+	
+	m_fForceRespawnZposMin	 = 0.3,
+	m_fForceRespawnZposMax	 = 0.3,
+  
+	m_NKC_TEAM_COLOR_TYPE	= "NTCT_ONLY_SHADOW",
+	m_fShadowOffsetX		= 0,
+	m_fShadowOffsetY		= 0,
+	m_fShadowScaleX			= 1000,
+	m_fShadowScaleY			= 1200,
+	m_fShadowRotateX		= 0,
+	m_fShadowRotateZ		= 0,
+  
+	m_SpeedRun				= 130,
+
+	m_SeeTarget				= false,
+	m_SeeRange				= 1200,
+	m_SeeRangeMax			= 1300,
+	m_TargetNearRange		= 1000,
+	m_bTargetNoChange		= false,
+
+	m_AttackedTargetTime	= 1,
+	m_bAttackedTarget		= true,
+	
+	m_bNoMove				= true, 
+	m_bNoDamageStopTime		= true,
+	m_fDamageUpFactor		= 0.0,
+	m_bNoDamageBackSpeed	= true,
+	m_bImmuneStun			= true,
+
+	m_dicNKMUnitState =
+	{
+		{	
+			m_StateName					= "USN_START",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_START",
+		
+			m_AnimName					= "START",
+			m_bAnimLoop					= false,
+			m_bShowGage					= false,
+			m_AnimEndChangeState		= "USN_ASTAND",
+		
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 1/30,
+					m_fAnimSpeed    = 0.075,
+				},
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 3/30,
+					m_fAnimSpeed    = 1.0,
+				},
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 14/30,
+					m_fAnimSpeed    = 0.4,
+				},
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 34/30,
+					m_fAnimSpeed    = 0.5,
+				},
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 41/30,
+					m_fAnimSpeed    = 0.15,
+				},
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 44/30,
+					m_fAnimSpeed    = 1.0,
+				},
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 60/30,
+					m_fAnimSpeed    = 0.7,
+				},
+			},
+			m_listNKMEventStopTime =
+			{
+				{
+					m_fEventTime               = 1/30,
+					m_StopTimeIndex            = "NSTI_SKILL",
+					m_fStopTime                = 120/30,
+					m_bMyStop                  = false,
+					m_fRange                   = 3000,
+				},
+			},	
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime                      = true,
+					m_fEventTime                     = 34/30,
+					m_EffectName                     = "AB_FX_CMN_CHARGE",
+					m_AnimName                       = "BASE",
+					m_OffsetX                        = 62,
+					m_OffsetY                        = 307,
+
+					m_fScaleFactor                   = 0.4,
+				},
+				{
+					m_bAnimTime                      = true,
+					m_fEventTime                     = 46/30,
+					m_EffectName                     = "AB_FX_C_HB_BOMI_SKILL1",
+					m_AnimName                       = "BASE",
+					m_OffsetX                        = 0,
+					m_OffsetY                        = 0,
+
+					m_fScaleFactor                   = 1.8,
+				},
+				{
+					m_bAnimTime                      = true,
+					m_fEventTime                     = 46/30,
+					m_EffectName                     = "AB_FX_HORIZON_M_LOAN_SKILL1",
+					m_AnimName                       = "BASE",
+					m_OffsetX                        = 50,
+					m_OffsetY                        = 0,
+
+					m_fScaleFactor                   = 1.3,
+				},
+				{
+					m_bAnimTime                      = true,
+					m_fEventTime                     = 55/30,
+					m_EffectName                     = "AB_FX_UNIT_C_SCHOOL_CHAIR_START_JUMP",
+					m_AnimName                       = "BASE",
+					m_OffsetX                        = 0,
+					m_OffsetY                        = 0,
+
+					m_fScaleFactor                   = 2.0,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{		
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 0/30,
+					m_fEventTimeMax			= 4/30,
+		
+					m_fPosXOffset			= 100,
+					m_fPosYOffset			= 600,
+					m_fZoom					= -250,
+		
+					m_fMoveTrackingTime		= 5/30,
+					m_fZoomTrackingTime		= 5/30,
+					m_bForce				= true,
+				},
+				{		
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 4/30,
+					m_fEventTimeMax			= 20/30,
+		
+					m_fPosXOffset			= 100,
+					m_fPosYOffset			= 150,
+					m_fZoom					= -150,
+		
+					m_fMoveTrackingTime		= 10/30,
+					m_fZoomTrackingTime		= 10/30,
+					m_bForce				= true,
+				},
+				{
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 20/30,
+					m_fEventTimeMax			= 34/30,
+		
+					m_fPosXOffset			= 100,
+					m_fPosYOffset			= 200,
+					m_fZoom					= -250,
+		
+					m_fMoveTrackingTime		= 45/30,
+					m_fZoomTrackingTime		= 45/30,
+					m_bForce				= true,
+				},
+				{		
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 34/30,
+					m_fEventTimeMax			= 44/30,
+		
+					m_fPosXOffset			= 75,
+					m_fPosYOffset			= 300,
+					m_fZoom					= -400,
+
+					m_fMoveTrackingTime		= 3/30,
+					m_fZoomTrackingTime		= 3/30,
+					m_fCameraRadius			= 0.0,
+				},
+				{		
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 44/30,
+					m_fEventTimeMax			= 90/30,
+		
+					m_fPosXOffset			= 100,
+					m_fPosYOffset			= 0,
+					m_fZoom					= 0,
+
+					m_fMoveTrackingTime		= 10/30,
+					m_fZoomTrackingTime		= 10/30,
+					m_fCameraRadius			= 0.0,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime      		= 5/30,
+					m_CameraCrashType 		= "NCCT_UP_DOWN",
+			
+					m_fCameraCrashGap 		= 15,
+					m_fCameraCrashTime		= 20/30,
+				},
+				{
+					m_fEventTime      		= 34/30,
+					m_CameraCrashType 		= "NCCT_UP_DOWN",
+			
+					m_fCameraCrashGap 		= 5,
+					m_fCameraCrashTime		= 15/30,
+				},
+				{
+					m_fEventTime      		= 55/30,
+					m_CameraCrashType 		= "NCCT_UP_DOWN",
+			
+					m_fCameraCrashGap 		= 8,
+					m_fCameraCrashTime		= 20/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 45/30,
+					m_fLocalVol		= 1.0,
+					m_bVoice		= true,
+
+					m_listSoundName = 
+					{
+						"AB_NPC_VOICE_MACHINE_GAP_START_HATE_2",
+						"AB_NPC_VOICE_MACHINE_GAP_START_DESPAIR_3",
+						"AB_NPC_VOICE_MACHINE_GAP_SELECT_NEGOTIATE_3",
+					},
+				},
+
+				{
+					m_fEventTime	= 3/30,
+					m_fLocalVol		= 1.0,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_EARTHQUAKE",
+					},
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_fLocalVol		= 1.0,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_WORK_24",
+					},
+				},
+				{
+					m_fEventTime	= 25/30,
+					m_fLocalVol		= 1.0,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_WORK_33",
+					},
+				},
+				{
+					m_fEventTime	= 34/30,
+					m_fLocalVol		= 1.0,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_WORK_30",
+					},
+				},
+				{
+					m_fEventTime	= 34/30,
+					m_fLocalVol		= 0.7,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_17",
+					},
+				},
+				{
+					m_fEventTime	= 46/30,
+					m_fLocalVol		= 0.7,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_03",
+					},
+				},
+			},
+		},  
+
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ASTAND",
+			m_StateName             = "USN_ASTAND",
+			m_AnimName              = "ASTAND",
+            m_bAnimLoop             = true,
+            m_fAnimSpeed            = 0.85,
+        },
+
+		{
+			m_NKM_UNIT_STATE_TYPE        = "NUST_MOVE",
+			m_StateName                  = "USN_RUN",
+			m_AnimName                   = "ASTAND",
+			m_bAnimLoop                  = true,
+			m_bRun                       = false,
+		},
+
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_A",
+			m_AnimName                    = "DAMAGE_A",
+			m_bAnimLoop                   = false,
+			
+			m_AnimEndChangeState          = "USN_ASTAND",
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 1/30,
+					m_fLocalVol		= 0.05,
+					m_bVoice		= true,
+
+					m_listSoundName = 
+					{
+						"AB_NPC_VOICE_MACHINE_GAP_TOUCH_LAUGH_1",
+						"AB_NPC_VOICE_MACHINE_GAP_START_DESPAIR_3",
+						"AB_NPC_VOICE_MACHINE_GAP_TOUCH_2",
+					},
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_B",
+			m_AnimName                    = "DAMAGE_A",
+			m_bAnimLoop                   = false,
+			
+			m_AnimEndChangeState          = "USN_ASTAND",
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_STUN",
+			m_AnimName                    = "DAMAGE_A",
+			m_bAnimLoop                   = true,
+			
+			m_bStunState				  = true,
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+			
+			
+			m_listNKMEventEffect = 
+			{
+				{
+					m_bAnimTime               = false,
+					m_fEventTime              = 1/30,
+					m_EffectName              = "AB_FX_BUFF_STUN",
+					m_BoneName				  = "BIP01_HEAD",
+					m_bStateEndStop			  = true,
+					m_bHold                   = true,
+					m_bStateEndStopForce	  = true,
+					m_AnimName				  = "BASE",
+				},
+			},
+		},
+        {
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_SLEEP",
+			m_AnimName                    = "DAMAGE_A",
+			m_bAnimLoop                   = true,
+			
+			m_bSleepState				  = true,
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+		},
+
+		{	m_StateName					= "USN_DAMAGE_DOWN",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_DAMAGE",
+		
+			m_AnimName					= "DAMAGE_DOWN",
+			m_bAnimLoop					= false,
+			m_AnimEndDyingState			= "USN_DAMAGE_DIE",
+		
+
+
+			m_listNKMEventGameSpeed = 
+			{
+				{
+					m_bAnimTime			= true,
+					m_fEventTime		= 15/30,
+	
+					m_fGameSpeed		= 0.33,
+					m_fTrackingTime		= 1.5,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 0,
+					m_fEventTimeMax			= 100/30,
+		
+					m_bForce				= true,
+					m_fPosXOffset			= 0,
+					m_fPosYOffset			= 400,
+					m_fZoom					= -100,
+					m_fFocusBlur			= 0.3,
+		
+					m_fMoveTrackingTime		= 0.2,
+					m_fZoomTrackingTime		= 1.0,
+					m_fCameraRadius			= 0.0,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime			= 5/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashSpeed		= 20,
+					m_fCameraCrashGap		= 5,
+					m_fCameraCrashTime		= 10/30,
+				},
+				{
+					m_fEventTime			= 25/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashSpeed		= 20,
+					m_fCameraCrashGap		= 5,
+					m_fCameraCrashTime		= 10/30,
+				},
+				{
+					m_fEventTime			= 35/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashSpeed		= 20,
+					m_fCameraCrashGap		= 5,
+					m_fCameraCrashTime		= 10/30,
+				},
+				{
+					m_fEventTime			= 50/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashSpeed		= 20,
+					m_fCameraCrashGap		= 20,
+					m_fCameraCrashTime		= 20/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_bStateEndTime	= true,
+					m_fLocalVol		= 1.0,
+					m_bVoice		= true,
+
+					m_listSoundName = 
+					{
+						"AB_NPC_VOICE_MACHINE_GAP_START_DESPAIR_1",
+						"AB_NPC_VOICE_MACHINE_GAP_TOUCH_PRIDE_2",
+						"AB_NPC_VOICE_MACHINE_GAP_DISMISSAL_RESULT_1",
+					},
+				},
+				
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_SMALL",
+					},
+					m_fLocalVol		= 0.7,
+				},
+				{
+					m_fEventTime	= 5/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC_ATTACK_BIG",
+					},
+					m_fLocalVol		= 0.7,
+				},
+				{
+					m_fEventTime	= 10/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC_ATTACK_BIG_03",
+					},
+					m_fLocalVol		= 0.7,
+				},
+				{
+					m_fEventTime	= 25/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC_ATTACK_BIG",
+					},
+					m_fLocalVol		= 0.7,
+				},
+				{
+					m_fEventTime	= 35/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_ELECTRIC_BIG_02",
+					},
+					m_fLocalVol		= 0.7,
+				},
+				{
+					m_fEventTime	= 50/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_EXPLOSION_ATTACK_BIG_02",
+					},
+					m_fLocalVol		= 0.7,
+				},
+			},
+		},
+	},
+}
+

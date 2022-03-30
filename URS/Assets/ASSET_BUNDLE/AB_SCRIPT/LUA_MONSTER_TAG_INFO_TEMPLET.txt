@@ -1,0 +1,400 @@
+﻿-- Exported from MONSTER_TAG_TEMPLET.xlsx
+
+MONSTER_TAG_INFO =
+{
+  {
+    m_MonsterTagID = 1001,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_HEAL",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_HEAL",
+  },
+  {
+    m_MonsterTagID = 1002,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_BARRIER",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_BARRIER",
+  },
+  {
+    m_MonsterTagID = 1003,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_ATTACK",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_ATTACK",
+  },
+  {
+    m_MonsterTagID = 1004,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_ATK_SPEED_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_ATTACK_SPEED_RATE",
+  },
+  {
+    m_MonsterTagID = 1005,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_DEFENCE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_DEF",
+  },
+  {
+    m_MonsterTagID = 1006,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_INCREASE_ATK_SPEED_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_INCREASE_ATK_SPEED_RATE",
+  },
+  {
+    m_MonsterTagID = 1007,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_EVADE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_EVADE",
+  },
+  {
+    m_MonsterTagID = 1008,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_HIT",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_HIT",
+  },
+  {
+    m_MonsterTagID = 1009,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1010,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 1011,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_MOVE_SPEED_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_MOVE_SPEED_RATE",
+  },
+  {
+    m_MonsterTagID = 1012,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_SKILL_COOL_TIME",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_SKILL_COOL_TIME",
+  },
+  {
+    m_MonsterTagID = 1013,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_CRITICAL",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_CRITICAL",
+  },
+  {
+    m_MonsterTagID = 1014,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_CRITICAL_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_CRITICAL_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1015,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_ROLE_TYPE_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_ROLE_TYPE_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1016,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_LAND_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_AND_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1017,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_AIR_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_AIR_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1018,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_SNIPER_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_SNIPER_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1019,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_SIEGE_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_SIEGE_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1020,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_HP_REGEN_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_HP_REGEN_RATE",
+  },
+  {
+    m_MonsterTagID = 1021,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_HP",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_HP",
+  },
+  {
+    m_MonsterTagID = 1022,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_COUNTER_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_COUNTER_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1023,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_MECHANIC_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_MECHANIC_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1024,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_SOLDIER_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_SOLDIER_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1025,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_CORRUPTED_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_CORRUPTED_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1026,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_DEFFENDER_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_DEFFENDER_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 1027,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_BUFF_TOWER_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_BUFF_TOWER_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 2001,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_HEAL",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_HEAL",
+  },
+  {
+    m_MonsterTagID = 2002,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_BARRIER_BREAK",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_BARRIER",
+  },
+  {
+    m_MonsterTagID = 2003,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_ATK",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_ATK",
+  },
+  {
+    m_MonsterTagID = 2004,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_ATK_SPEED_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_ATTACK_SPEED_RATE",
+  },
+  {
+    m_MonsterTagID = 2005,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_DEF",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_DEF",
+  },
+  {
+    m_MonsterTagID = 2006,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_EVADE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_EVADE",
+  },
+  {
+    m_MonsterTagID = 2007,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_HIT",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_HIT",
+  },
+  {
+    m_MonsterTagID = 2008,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_ATK_DAMAGE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_DAMAGE_RATE",
+  },
+  {
+    m_MonsterTagID = 2009,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_MOVE_SPEED_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_MOVE_SPEED_RATE",
+  },
+  {
+    m_MonsterTagID = 2010,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_SKILL_COOL_ATK_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_SKILL_COOL_TIME_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2011,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_ROLE_TYPE_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_ROLE_TYPE_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2012,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_LAND_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_LAND_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2013,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_SKILL_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_SKILL_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2014,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_HYPER_SKILL_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_HYPER_SKILL_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2015,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2016,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_HP",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_HP",
+  },
+  {
+    m_MonsterTagID = 2017,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_HP_REGEN_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_HP_REGEN_RATE",
+  },
+  {
+    m_MonsterTagID = 2018,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_AIR_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_AIR_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2019,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_COUNTER_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_COUNTER_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2020,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_MECHANIC_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_MECHANIC_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2021,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_SOLDIER_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_SOLDIER_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2022,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_CORRUPTED_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_CORRUPTED_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2023,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_RANGER_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_RANGER_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2024,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_SIEGE_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_SIEGE_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 2025,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_DEBUFF_SNIPER_DAMAGE_REDUCE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_DEBUFF_SNIPER_DAMAGE_REDUCE_RATE",
+  },
+  {
+    m_MonsterTagID = 3001,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_HIDE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_HIDE",
+  },
+  {
+    m_MonsterTagID = 3002,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_SILENCE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_SILENCE",
+  },
+  {
+    m_MonsterTagID = 3003,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_SLEEP",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_SLEEP",
+  },
+  {
+    m_MonsterTagID = 3004,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_IMMUNE_SLEEP",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_IMMUNE_SLEEP",
+  },
+  {
+    m_MonsterTagID = 3005,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_NOT_CAST_SUMMON",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_NOT_CAST_SUMMON",
+  },
+  {
+    m_MonsterTagID = 3006,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_STUN",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_STUN",
+  },
+  {
+    m_MonsterTagID = 3007,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_IMMUNE_STUN",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_IMMUNE_STUN",
+  },
+  {
+    m_MonsterTagID = 3008,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_FORCE_MISS",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_FORCE_MISS",
+  },
+  {
+    m_MonsterTagID = 3009,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_FORCE_EVADE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_FORCE_EVADE",
+  },
+  {
+    m_MonsterTagID = 3010,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_FORCE_HIT",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_FORCE_HIT",
+  },
+  {
+    m_MonsterTagID = 3011,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_INVINCIBLE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_INVINCIBLE",
+  },
+  {
+    m_MonsterTagID = 3012,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_IMMORTAL",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_IMMORTAL",
+  },
+  {
+    m_MonsterTagID = 3013,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_CC_RESIST_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_CC_RESIST_RATE",
+  },
+  {
+    m_MonsterTagID = 3014,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DAMAGE_LIMIT_RATE_BY_HP",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DAMAGE_LIMIT_RATE_BY_HP",
+  },
+  {
+    m_MonsterTagID = 3015,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_HP_GROWN_ATK_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_HP_GROWN_ATK_RATE",
+  },
+  {
+    m_MonsterTagID = 3016,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DAMAGE_REDUCE_PENETRATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DAMAGE_REDUCE_PENETRATE",
+  },
+  {
+    m_MonsterTagID = 3017,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_HP_PHASE_CHANGE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_HP_PHASE_CHANGE",
+  },
+  {
+    m_MonsterTagID = 3018,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_TIME_PHASE_CHANGE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_TIME_PHASE_CHANGE",
+  },
+  {
+    m_MonsterTagID = 3019,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DAMAGE_PHASE_CHANGE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DAMAGE_PHASE_CHANGE",
+  },
+  {
+    m_MonsterTagID = 3020,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DEF_PENETRATE_RATE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DEF_PENETRATE_RATE",
+  },
+  {
+    m_MonsterTagID = 3021,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DAMAGE_REDUCE_RATE_AGAINST_BARRIER",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DAMAGE_REDUCE_RATE_AGAINST_BARRIER",
+  },
+  {
+    m_MonsterTagID = 3022,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_EVENT_RESPAWN",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_EVENT_RESPAWN",
+  },
+  {
+    m_MonsterTagID = 3023,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_IMMUNEATTACKSLOW",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_IMMUNEATTACKSLOW",
+  },
+  {
+    m_MonsterTagID = 3024,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_IMMUNESKILLCOOLTIME",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_IMMUNESKILLCOOLTIME",
+  },
+  {
+    m_MonsterTagID = 3025,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_IMMUNESILENCE",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_MMUNESILENCE",
+  },
+  {
+    m_MonsterTagID = 3026,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DISPELDEBUFF",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DISPELDEBUFF",
+  },
+  {
+    m_MonsterTagID = 3027,
+    m_MonsterTagDesc = "SI_MONSTER_TAG_USE_DISPELBUFF",
+    m_MonsterTagIcon = "NKM_UNIT_MONSTER_TAG_USE_DISPELBUFF",
+  },
+}

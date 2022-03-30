@@ -1,0 +1,170 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1.0,
+    m_BossUnitStrID = "NKM_MOB_BOSS_GUILD_AXE_S",
+    
+    m_fBossPosZ 	= 0.1,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_AXE_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.4,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_RANGER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.3,
+    		},
+		},
+		
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_AXE_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 1.1,
+				m_fEventBossHPUpper  	     = 0.8,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_RANGER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 1.1,
+				m_fEventBossHPUpper  	     = 0.8,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.2,
+    		},
+		},
+
+		
+
+
+		
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_AXE_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.5,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_RANGER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_RANGER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+    		},
+		},
+
+
+
+
+		
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_GUILD_DEMOLISHER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.2,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.5,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_AXE_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.2,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.4,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_RANGER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.2,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_RANGER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.2,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+    		},
+		},
+	},
+}

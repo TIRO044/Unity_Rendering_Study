@@ -1,0 +1,17 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 6,
+	m_fCostSpeedRateB = 0.8,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_CHALLENGE_STATE_TANK_MK2",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

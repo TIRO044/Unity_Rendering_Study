@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_JAPAN_SETSUNA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_JAPAN_SETSUNA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_JAPAN_SETSUNA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_PRIDE",
+    m_CharStrID = "CHINATSU_NANA_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "백년도 못가 스러질 덧없는 몸이지만...... 가장 마지막까지, 그대의 곁을 지키기로 하겠습니다. 부디... 허락해 주시길 바라요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "せいぜい百年で潰えてしまう儚い身なれど…………最期のその時まで、あなた様のお傍を離れるつもりはございません。どうか……私のわがままをお許しください。",
+    m_Talk_ENG = "My mortal body probably won't even last for a hundred years, but I'd like to use it to protect you for as long as I can. Please... let me.",
+    m_Talk_TWN = "我雖然是不過百年，即會倒下的微薄之軀……但直到最後，我都會守在您身邊。希望……您能夠允許。",
+    m_Talk_THA = "ชีวิตของฉันคงจะอยู่ได้ไม่ถึงร้อยปีหรอกค่ะ แต่ฉันก็อยากจะใช้มันปกป้องคุณให้นานที่สุดเท่าที่จะทำได้ โปรดให้ฉัน… ทำหน้าที่นั้นด้วยเถอะนะคะ",
+    m_Talk_VTN = "Cơ thể thường nhân của tôi sẽ không thể sống đến trăm năm, nhưng tôi muốn sử dụng nó để bảo vệ miễn là tôi có thể. Hãy… cho phép tôi.",
+    m_Talk_SCN = "虽然我的身体无法坚持上百年......但我想一直守护在他的身边...请成全我吧。",
+    m_Talk_DEU = "Meine sterbliche Hülle wird wahrscheinlich keine hundert Jahre halten, aber ich möchte Sie damit so lange beschützen, wie ich kann. Bitte … erlauben Sie mir das.",
+    m_Talk_FRA = "Mon corps mortel ne sera pas à l'épreuve des siècles, mais j'aimerais vous protéger aussi longtemps que je le pourrai. S'il vous plaît... permettez-le.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_JAPAN_SETSUNA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

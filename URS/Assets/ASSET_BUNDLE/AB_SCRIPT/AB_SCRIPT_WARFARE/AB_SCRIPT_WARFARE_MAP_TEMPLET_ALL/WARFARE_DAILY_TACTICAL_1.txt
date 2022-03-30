@@ -1,0 +1,139 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 6,
+	m_MapSizeY = 4,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_DAILY_TACTICAL_1_NORMAL",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 50,
+		},
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWNTT_CHEST",
+		m_DungeonStrID = "NKM_DUNGEON_DAILY_TACTICAL_1_BOSS",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_RESUPPLY",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile16 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile17 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile18 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile19 =
+	{
+		m_TileType = "NWMTT_RESUPPLY",
+	},
+	NKMWarfareTile20 =
+	{
+		m_TileType = "NWNTT_CHEST",
+		m_DungeonStrID = "NKM_DUNGEON_DAILY_TACTICAL_1_BOSS",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile21 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 25,
+		},
+	},
+	NKMWarfareTile22 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_DUNGEON_DAILY_TACTICAL_1_NORMAL",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 50,
+		},
+	},
+	NKMWarfareTile23 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+}

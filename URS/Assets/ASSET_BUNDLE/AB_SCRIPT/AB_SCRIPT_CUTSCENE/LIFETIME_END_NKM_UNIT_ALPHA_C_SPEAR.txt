@@ -1,0 +1,37 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 12080002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_ALPHA_C_SPEAR",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_ALPHA_C_SPEAR@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 12080002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_ALPHA_C_SPEAR",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "SPEAR_ALPHA_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "그래? 그럼 너도 파사의 길에 삶을 바치기로 결정했다는 거지? 좋아! 파사의 맹약에 따라 나 라파엘라, 너와 힘을 합쳐 세상의 악을 처단하겠어!",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 12080002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_ALPHA_C_SPEAR",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

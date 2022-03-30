@@ -1,0 +1,152 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP7_KNIGHT_C_HOLY_S",
+    
+    m_fBossPosZ 	= 0.8,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_MAGE_TRANS",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+	},
+	
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			-- 주시윤 등장에 카메라 포커싱
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 1007441,
+			
+			m_EventCondition = "UNIT_STATE_START", -- 주시윤 등장 모션 종료 시
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP7_CA_JOO_SHI_YOON_E",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		
+		{	
+			-- 각시윤 등장 시 궁게이지 한번에 FULL
+			m_dungeonEventType = "SET_UNIT_HYPER_FULL",
+			m_EventActionValue = 210272,
+			
+			m_EventCondition = "UNIT_STATE_END", -- 주시윤 등장 모션 종료 시
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP7_CA_JOO_SHI_YOON_E",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		
+		
+	},
+	
+	m_listDungeonUnitRespawnA = 
+    {
+        {
+			m_UnitStrID 				= "NKM_MOB_NORMAL_EP7_CA_JOO_SHI_YOON_E", -- 각성 주시윤
+			m_EventRespawnUnitTag		= "SHI_YOON",
+            m_UnitLevel 				= 110,
+			
+            m_NKMDungeonEventTiming = 
+            {
+				m_EventDieUnitTag 			= "HELP",
+				m_EventDieUnitTagCount 		= 1,
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 5,
+				m_fEventPos 	        	= 0.45,
+            },
+        },
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 5,
+				m_fEventBossHPLess			= 0.6,
+                m_fEventPos 	        	= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 5,
+				m_fEventBossHPLess			= 0.6,
+                m_fEventPos 	        	= 0.1,
+    		},
+		},
+		
+		
+		
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			m_EventRespawnUnitTag		= "HELP",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 5,
+				m_fEventBossHPLess			= 0.31,
+                m_fEventPos 	        	= 0.0,
+    		},
+		},
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PALADIN_TRANS",
+			m_EventRespawnUnitTag		= "HELP",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 5,
+				m_fEventBossHPLess          = 0.31,
+				m_fEventPos 	        	= 0.0,
+    		},
+		},
+	},
+}

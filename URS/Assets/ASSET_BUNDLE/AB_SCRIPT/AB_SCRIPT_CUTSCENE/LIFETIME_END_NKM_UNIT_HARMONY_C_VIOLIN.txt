@@ -1,0 +1,38 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11980002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_HARMONY_C_VIOLIN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_HARMONY_C_VIOLIN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11980002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_HARMONY_C_VIOLIN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "SENA_HARMONY_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사실은 나도 너한테 선물해 줄 곡을 준비해 왔어. 연주가 끝나면 기립박수 부탁할게. 곡의 제목은... 지긋지긋한 악연이야.",
+    m_fTalkTime = 0.03,
+    m_Talk_TWN = "其實我也有準備一首曲子要送給你。演奏結束後記得起立鼓掌。曲目是…令人窒息的愛。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11980002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_HARMONY_C_VIOLIN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

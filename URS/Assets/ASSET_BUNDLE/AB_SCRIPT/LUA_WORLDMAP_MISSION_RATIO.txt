@@ -1,0 +1,17 @@
+﻿-- Exported from WORLDMAP_TEMPLET.xlsx
+
+m_WorldmapMissionRatio =
+{
+  {
+    m_WorldMapMissionRank = "WMMR_S",
+    m_WorldMapMissionRankRatio = 11,
+  },
+  {
+    m_WorldMapMissionRank = "WMMR_A",
+    m_WorldMapMissionRankRatio = 24,
+  },
+  {
+    m_WorldMapMissionRank = "WMMR_B",
+    m_WorldMapMissionRankRatio = 42,
+  },
+}

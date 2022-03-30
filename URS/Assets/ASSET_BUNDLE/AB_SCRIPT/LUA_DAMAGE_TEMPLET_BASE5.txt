@@ -1,0 +1,9 @@
+﻿-- Exported from UNIT_DAMAGE_TEMPLET5.xlsx
+
+m_dicDamageTempletStrID =
+{
+  {
+    m_DamageTempletName = "DT_DAMAGE_TEMPLET5",
+    m_fAtkFactor = 1,
+  },
+}

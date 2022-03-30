@@ -1,0 +1,121 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 0,
+	m_fCostSpeedRateB = 0,
+	m_BossUnitStrID = "NKM_MONSTER_BOSS_REPLACER_SEO_YOON_N",
+	
+	m_DungeonTag = "hello",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 	        	= 0.5,
+    		},
+		},
+	},
+
+	m_listDungeonUnitRespawnA = 
+	{
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",	
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+		-- 		m_fEventTimeStart           = 0,
+		-- 		m_fEventTimeGap	        	= 10,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+
+		{
+			m_UnitStrID 			= "NKM_UNIT_S_SL_SHIELD_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_EventLiveWarfareDungeonTag = "hello",
+				m_fEventTimeStart   = 2,
+				m_fEventPos 		= 0.4,
+    		},
+		},
+
+		-- {
+		-- 	m_UnitStrID 			= "NKM_UNIT_M_SL_HEAVY_TANK_TR",
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   = 3,
+		-- 		m_fEventPos 		= 0.4,
+				
+		-- 		-- 마지막 웨이브 대응인가
+		-- 		m_EventTag = "TEST",
+		-- 		m_EventTagCount = 1,
+    	-- 	},
+		-- },
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",	
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+		-- 		m_fEventTimeStart           = 0,
+		-- 		m_fEventTimeGap	        	= 10,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+	},
+
+	m_listDungeonEventTempletTeamA =
+	{
+		-- {	
+		-- 	-- 적 보스 HP에 데미지가 있으면 깎음 적 소환 코스트를 10 으로 설정
+		-- 	m_EventCondition = "TARGET_ENEMY_UNIT_HP_RATE_LESS",
+		-- 	m_EventConditionValue1 = "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_N",
+		-- 	m_EventConditionNumValue = 99,
+						
+		-- 	m_dungeonEventType = "NEAT_RESPAWN_COST_B_TEAM",
+		-- 	m_EventActionValue = 10,
+		-- 	m_bPause = false,
+        
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 3,
+    	-- 	},
+		-- },
+	},
+
+	m_listDungeonEventTempletTeamB =
+	{
+		-- {	
+		-- 	m_EventCondition = "TARGET_ALLY_UNIT_HP_RATE_LESS", 
+		-- 	m_EventConditionValue1 = "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_N",	--체크하는 몬스터 ID
+		-- 	m_EventConditionValue2 = "99",  --몬스터 HP
+			
+		-- 	m_dungeonEventType = "ADD_EVENTTAG", -- 태그 달린 NPC/몬스터 스폰해라
+		-- 	m_EventActionStrValue	= "TEST", --태그 이름
+		-- 	m_EventActionValue 		= 1, --미사용
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 0,
+    	-- 	},
+		-- },
+	},
+}

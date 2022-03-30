@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11350302,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_YG_HARIM_VALEN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_YG_HARIM_VALEN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11350302,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_YG_HARIM_VALEN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "HARIM_REBBIT_VAL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "고미, 더쿠, 토리, 너네도 방금 잘 봤지? 이걸로 이 언니도 당당한 어른이라구. 오늘은 어른인 내가 맛있는 거 사 줄게! 사장님도 같이 가 주실 거죠? 네?",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "クマたん、ダック、トリも見た？　これでお姉ちゃんも大人になったんだよ！\n今日はおいしいものを買ってあげるからね！　社長も一緒に行ってくれますよね？",
+    m_Talk_ENG = "Teddy, Ducky, Hopper. You saw that, right? As of today, I'm a grown-up. Let's celebrate! I'll treat you to something delicious! Boss, you'll come with us, right?",
+    m_Talk_TWN = "咕美熊熊、德庫、托里，你們剛才都看到了吧？現在你們的姐姐也是個大人了。今天身為大人的我會幫你們買很多好吃的東西！老闆也會一起來的吧？對吧？",
+    m_Talk_THA = "เท็ดดี้ ดั๊กกี้ ฮ็อปเปอร์ พวกเธอเห็นแล้วใช่มั้ย? ตั้งแต่วันนี้ไป ฉันเป็นผู้ใหญ่แล้ว มาฉลองกันเถอะ! ฉันจะเลี้ยงอาหารอร่อยๆ เอง! บอสคะ คุณก็จะมาทานข้าวกับพวกเราใช่มั้ย?",
+    m_Talk_VTN = "Teddy, Ducky, Hopper. Các em thấy chứ? Kể từ hôm nay, ta đã trưởng thành. Hãy chúc mừng nào! Ta sẽ đãi các em vài món ngon! Ông Chủ, ngài sẽ đi với chúng tôi chứ?",
+    m_Talk_SCN = "咕美、德库、托里，你们都看到了吧？现在姐姐也是个大人了。今天作为大人的我，请你们吃好吃的！老板你也会来的，对吧？",
+    m_Talk_DEU = "Teddy, Ducky, Hopper, ihr habt es gesehen! Ab heute bin ich erwachsen. Lasst uns feiern! Ich lass mir was Leckeres für euch einfallen. Boss, kommst du mit?",
+    m_Talk_FRA = "Vous avez vu ça, Teddy, Ducky, Hopper ? À partir de maintenant, je suis une adulte. C'est l'heure de fêter ça ! Je vous offre un repas délicieux pour la peine ! Vous venez, patron ?",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11350302,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_YG_HARIM_VALEN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

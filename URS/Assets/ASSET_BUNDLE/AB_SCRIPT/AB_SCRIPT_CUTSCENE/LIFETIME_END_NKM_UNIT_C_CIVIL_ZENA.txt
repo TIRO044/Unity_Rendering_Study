@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 13200002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_ZENA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_CIVIL_ZENA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 13200002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_ZENA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "ZENA_CIVIL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "하루 빨리 사장님께 어울리는 어엿한 소대장이 되겠어요. 그럼, 앞으로도 많은 지도 부탁드리겠습니다!",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "1日でも早く社長に似合う一人前の小隊長になりたいです。それでは、これからもたくさんのご指導をよろしくお願いします！",
+    m_Talk_ENG = "I'll grow into a great commander as quickly as I can, to live up to your expectations. Thank you for choosing me!",
+    m_Talk_TWN = "我會儘快成為和您相稱優秀的小隊長。那麼，以後也請多多指教！",
+    m_Talk_THA = "ฉันจะพัฒนาตัวเองให้เร็วที่สุดเพื่อมุ่งสู่การเป็นผู้บัญชาการที่ดีให้สมกับที่คุณคาดหวัง ขอบคุณที่เลือกฉันค่ะ!",
+    m_Talk_VTN = "Tôi sẽ trở thành một chỉ huy tài ba nhanh nhất có thể, để đáp ứng kỳ vọng của ngài. Cảm ơn vì đã chọn tôi!",
+    m_Talk_SCN = "我会尽快成为可以与您相称的小队长。那么，以后也请多多指教！",
+    m_Talk_DEU = "Ich werde so schnell ich kann eine starke Kommandantin werden, damit ich Ihre Erwartungen erfüllen kann. Danke, dass Sie sich für mich entschieden haben.",
+    m_Talk_FRA = "Je deviendrai une bonne commandante, je ne vous décevrai pas. Merci de me donner ma chance, merci !",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 13200002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_ZENA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

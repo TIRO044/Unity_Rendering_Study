@@ -1,0 +1,102 @@
+﻿PVP_CONST = 
+{
+	-- 구 NKMPVPManager 하드코딩
+    DemotionScore = 100, -- 강등 점수 갭 
+	
+	AsyncResetScore = 1000, -- 전략전 리셋 점수
+	RankResetScore = 3000, -- 랭크전 리셋 점수
+	LeagueResetScore = 0, -- 리그전 리셋 점수
+	
+	RankLosePenaltyScore = 3000,		-- 랭크전 패배 시 점수 방어 기준 : 해당 점수 이하는 감산 시 점수 값 1/2 적용
+	
+	ScoreMinIntervalUnit = 25,			-- 인터벌 최소 값... 
+	
+	DefaultRankListMaxCount = 200,		-- ?
+	LeagueRankListMaxCount = 100,		-- ?
+	RankSimpleCount = 10,				-- ?
+	
+	UnitBanExceptionScore = 1000,		-- 해당 스코어 아래는 유닛 밴 레벨이 적용되지 않음
+	
+	AsyncTicketChargeInterval = 60*60*2, -- 전략전 티켓 차징 인터벌 (단위 : 초) : 현재 적용은 2시간간격
+	AsyncTicketMaxCount = 6, -- 전략전 티켓 보유 가능 최대 수량
+	AsyncTicketChargeCount = 1, -- 한 틱에 충전 개수
+
+    MaxHistoryCount = 30, -- 전투 히스토리 보존
+	
+    ChargePointRefreshIntervalTicks = 216000000000, -- 6(hour) * 60 (minute) * 60 (second) * 1000 (millisecond) * 10000 (ticks)
+    ChargePointMaxCountForPractice = 100,
+    ChargePointMax = 900,   -- 건틀렛 충전 포인트
+    ChargePointCount = 225, -- 1회 충전되는 포인트
+	
+    AsyncPvpWinPoint = 75,  -- 전략전 승리 시 획득 포인트
+    AsyncPvpLosePoint = 50, -- 전략전 패배 시 획득 포인트
+	
+    RankPvpWinPoint = 150,  -- 랭크전 승리 시 획득 포인트
+    RankPvpLosePoint = 90, -- 랭크전 패배 시 획득 포인트
+	
+    LeaguePvpWinPoint = 250,  -- 리그전 승리 시 획득 포인트
+    LeaguePvpLosePoint = 120, -- 리그전 패배 시 획득 포인트
+	
+    RankPvpOpenPoint = 100, -- 랭크전이 열리기 위해 필요한 전략전 점수
+    LeaguePvpOpenPoint = 1000,  -- 리그전이 열리기 위해 필요한 랭크전 점수
+    AsyncTargetCountStandardTime = 15,
+
+    RankUnlockInfo = 
+    {
+        m_UnlockReqType = "SURT_PVP_ASYNC_SCORE_RECORD",
+        m_UnlockReqValue = 100,
+        m_strPopupTitle = "SI_CONTENTS_UNLOCK_PVP_RANK_POPUP_TITLE";
+        m_strPopupDesc = "SI_CONTENTS_UNLOCK_PVP_RANK_POPUP_DESC";
+        m_strPopupImageName = "NKM_UI_CONTENTS_UNLOCK_RANKINGMATCH";
+	},
+
+    LeagueUnlockInfo = 
+    {
+        m_UnlockReqType = "SURT_PVP_RANK_SCORE_RECORD",
+        m_UnlockReqValue = 1000,
+        m_strPopupTitle = "SI_CONTENTS_UNLOCK_PVP_LEAGUE_POPUP_TITLE";
+        m_strPopupDesc = "SI_CONTENTS_UNLOCK_PVP_LEAGUE_POPUP_DESC";
+        m_strPopupImageName = "NKM_UI_CONTENTS_UNLOCK_LEAGUEMATCH";
+    },
+
+    DraftBan = 
+    {
+        MinUnitCount = 30,
+        MinShipCount = 3,
+    },
+
+    LeaguePvp =
+    {
+        OpenDaysOfWeek = 
+        {
+            "WEEK_MON",
+            "WEEK_TUE",
+            "WEEK_WED",
+            "WEEK_THU",
+            "WEEK_FRI",
+            "WEEK_SAT",
+            "WEEK_SUN",
+        },
+
+        OpenTimeStart = "12:00",
+        OpenTimeEnd = "23:59",
+
+        ShipHpMultiply = 3.0, -- 함선 체력에 적용하는 배수
+        ShipAttackPowerMultiply = 3.0, -- 함선 공격력에 적용하는 배수
+
+        TotalGameTimeSec = 300, -- 전체 게임시간
+
+        RageBuff_ShipHpRate = 0.6, -- 함선 체력이 해당 비율 미만으로 떨어지면 레이지버프 발동
+        RageBuff_Id = 'GAUNLET_BUFF_RAGE_MODE', -- 버프 종류
+        UiRageBuff_Id = 'GAUNLET_BUFF_RAGE_MODE_DUMMY', -- UI 표시 기준을 할 빈 함선 버프
+
+        DeadlineBuff_Id = 'GAUNLET_DEBUFF_DEADLINE_MODE', -- 버프 종류
+        UiDeadlineBuff_Id = 'GAUNLET_DEBUFF_DEADLINE_MODE_DUMMY', -- UI 표시 기준을 할 빈 함선 버프
+        DeadlineBuff_Condition = 
+        {
+            { RemainTimeSec = 120, BuffLevel = 1 },
+            { RemainTimeSec = 60, BuffLevel = 2 },
+            { RemainTimeSec = 30, BuffLevel = 3 },
+        },
+    },
+ }

@@ -1,0 +1,154 @@
+﻿NKMDungeonTemplet = 
+{
+	m_listDungeonWave = 
+	{
+		{
+			m_WaveID		= 1,	
+			m_NextWaveID	= 2,	
+			m_fNextWavetime	= 25,
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SHIELD_H",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 0+(0.3*0),		
+						m_fEventPos 				= 0.3,					
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SHOTGUN_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 0+(0.3*0),
+						m_fEventPos 				= 0.25,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SNIPER_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*1),
+						m_fEventPos 				= 0.1,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_RIFLE_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*0),
+						m_fEventPos 				= 0.25,
+					},
+				},	
+			},
+		},
+		
+		{
+			m_WaveID		= 2,	
+			m_NextWaveID	= 3,
+			m_fNextWavetime	= 25,
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SHIELD_H",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 0+(0.3*0),		
+						m_fEventPos 				= 0.3,					
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SHOTGUN_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 0+(0.3*1),
+						m_fEventPos 				= 0.2,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_RIFLE_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*0),
+						m_fEventPos 				= 0.25,
+					},
+				},	
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_RIFLE_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*0),
+						m_fEventPos 				= 0.2,
+					},
+				},	
+			},
+		},
+
+		{
+			m_WaveID		= 3,	
+			m_fNextWavetime	= 180,
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SHOTGUN_H",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 0+(0.3*0),		
+						m_fEventPos 				= 0.2,					
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SHOTGUN_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 0+(0.3*1),
+						m_fEventPos 				= 0.15,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_SNIPER_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*1),
+						m_fEventPos 				= 0.01,
+					},
+				},	
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_SL_RIFLE_H",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*0),
+						m_fEventPos 				= 0.05,
+					},
+				},	
+			},
+		},
+	},
+}

@@ -1,0 +1,160 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 5,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_RELIC_DOMINION",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{--*도플갱어 카일 웡
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_KYLE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 1,
+				m_fEventPos              = 0.25,
+			},
+		},
+        {--*도플갱어 카일 웡
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_KYLE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 30,
+				m_fEventPos              = 0.2,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--*도플갱어 카일 웡
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_KYLE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 60,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 2,
+			},
+		},
+		{--*도플갱어 카일 웡
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_KYLE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 90,
+				m_fEventPos              = 0.1,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 3,
+			},
+		},
+		{--*도플갱어 카일 웡
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_KYLE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 120,
+				m_fEventPos              = 0.05,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 4,
+			},
+		},
+		{--*도플갱어 실비아
+			m_UnitStrID	              = "NKM_MOB_ELITE_RELIC_DELTA_SYLVIA",
+			m_EventRespawnUnitTag     = "SYLVIA",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 6,
+				m_fEventPos 	        	= 0,
+			},
+		},	
+
+		{--*도플갱어 실비아
+			m_UnitStrID	              = "NKM_MOB_ELITE_RELIC_DELTA_SYLVIA",
+			m_EventRespawnUnitTag     = "SYLVIA",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 45,
+				m_fEventPos 	        	= 0,
+
+				m_EventDieUnitTag           = "SYLVIA",
+				m_EventDieUnitTagCount      = 1,
+			},
+		},	
+		{--*도플갱어 실비아
+			m_UnitStrID	              = "NKM_MOB_ELITE_RELIC_DELTA_SYLVIA",
+			m_EventRespawnUnitTag     = "SYLVIA",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 90,
+				m_fEventPos 	        	= 0,
+
+				m_EventDieUnitTag           = "SYLVIA",
+				m_EventDieUnitTagCount      = 2,
+			},
+		},	
+		{--*도플갱어 실비아
+			m_UnitStrID	              = "NKM_MOB_ELITE_RELIC_DELTA_SYLVIA",
+			m_EventRespawnUnitTag     = "SYLVIA",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 135,
+				m_fEventPos 	        	= 0,
+
+				m_EventDieUnitTag           = "SYLVIA",
+				m_EventDieUnitTagCount      = 3,
+			},
+		},
+		{--침식된 피스 키퍼
+			m_UnitStrID               = "NKM_MOB_NORMAL_DIVE_STATE_AIRCRAFT_TRANS",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 3,
+				m_fEventTimeGap	        	= 7,
+				m_fEventPos 	        	= 0.15,
+			},
+			-- m_AddStatData =
+			-- {
+			-- 	m_StatValue =
+			-- 	{
+			-- 		NST_ATK                 = 5000,
+			-- 		NST_HP                  = 1500,
+			-- 		NST_DEF                 = 0,
+			-- 		NST_CRITICAL            = 300,
+			-- 		NST_HIT                 = 2000,
+			-- 		NST_EVADE               = 0,
+			-- 	},
+			-- },
+		},
+	},
+}

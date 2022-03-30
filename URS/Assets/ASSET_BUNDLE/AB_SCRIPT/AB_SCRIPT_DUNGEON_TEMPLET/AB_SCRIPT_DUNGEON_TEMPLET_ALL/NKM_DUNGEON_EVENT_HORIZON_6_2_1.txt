@@ -1,0 +1,272 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 0,
+	m_fCostSpeedRateB = 0.5, -- 적
+	m_fCostSpeedRateA = 0.5, -- 아군
+    m_BossUnitStrID = "NKM_MOB_BOSS_SUPPLY_BARRICADE4_S", --바리게이트
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_GUNSHIELD",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 10,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_SUBMACHINEGUN",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 15,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+	},
+
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			-- 호라이즌 등장에 포커싱
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3236121,
+			
+			m_EventCondition = "UNIT_STATE_START", -- 호라이즌 등장 모션
+			m_EventConditionValue1 = "NKM_MOB_BOSS_HORIZON_M_LOAN_E",
+			m_EventConditionValue2 = "USN_START",
+
+			m_fEventDelay		= 2.25,
+			
+			m_bPause = true,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 1.0,
+    		},
+		},
+
+		{	
+			-- 으악 돔황챠-!
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3236122,
+			
+			m_EventCondition = "UNIT_STATE_START", -- 호라이즌 런 모션 시작 시, 확인 
+			m_EventConditionValue1 = "NKM_MOB_BOSS_HORIZON_M_LOAN_E",
+			m_EventConditionValue2 = "USN_RUN",
+
+			m_fEventDelay		= 0.5,
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+	},
+
+	m_listDungeonEventTempletTeamB =
+	{
+		{
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3236123,
+
+			m_bPause = false,
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventBossHPLess			 = 0.05,
+				m_fEventIgnoreBossInitHPLess = false,
+			},
+		},	
+	},
+
+	m_listDungeonUnitRespawnA = 
+    {
+        {
+			m_UnitStrID 				= "NKM_MOB_BOSS_HORIZON_M_LOAN_E", -- 호라이즌 최초 리스폰
+			m_EventRespawnUnitTag		= "HORIZON",
+            m_UnitLevel 				= 77,
+			
+            m_NKMDungeonEventTiming = 
+            {
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 2,
+				m_fEventPos 	        	= 0.15,
+            },
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 4.0,
+					NST_HP  = 1.5,
+					NST_DEF = 2.0,
+				},
+			},
+        },
+    },
+
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_SUBMACHINEGUN",
+			m_EventRespawnUnitTag		= "FIRST",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 2.0,
+				m_fEventPos 	        	= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_SUBMACHINEGUN",
+			m_EventRespawnUnitTag		= "FIRST",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 2.0,
+				m_fEventPos 	        	= 0.2,
+			},
+		},
+
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_KYLE_S",
+			m_EventRespawnUnitTag		= "WALL",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 7.5,
+				m_fEventPos 	        	= 0.65,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_KYLE_S",
+			m_EventRespawnUnitTag		= "WALL",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 8,
+				m_fEventPos 	        	= 0.45,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_KYLE_S",
+			m_EventRespawnUnitTag		= "WALL",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 8.5,
+				m_fEventPos 	        	= 0.25,
+    		},
+		},
+
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_GUNSHIELD",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_SUBMACHINEGUN",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_GUNSHIELD",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_SUBMACHINEGUN",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_GUNSHIELD",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 3,
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HORIZON_TIDE_SUBMACHINEGUN",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 3,
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+
+	},
+}

@@ -1,0 +1,99 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 1.0,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_SHADE_CORRUPTED_C_SHADOW",
+    
+    m_fBossPosZ 	= 0.0,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BOMB_EVENT_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.4,
+    		},
+			m_AddStatData = 
+			{
+			  m_StatFactor = 
+			  {
+				  NST_ATK         = 1.2,
+				  NST_HP          = 1.1,
+			  },
+			},
+        },
+        {
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BLASTER_EVENT_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 6,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+    		},
+        },
+		m_AddStatData = 
+		{
+		  m_StatFactor = 
+		  {
+			  NST_ATK         = 1.1,
+			  NST_HP          = 1.1,
+		  },
+		},
+		
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BOMB_EVENT_N",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   	 	= 30.0,
+				m_fEventPos 			 	= 0.8,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BOMB_EVENT_N",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   	 	= 31.0,
+				m_fEventPos 			 	= 0.8,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BOMB_EVENT_N",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   	 	= 45.0,
+				m_fEventPos 			 	= 0.8,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BOMB_EVENT_N",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   	 	= 46.0,
+				m_fEventPos 			 	= 0.8,
+    		},
+		},
+	},
+
+}

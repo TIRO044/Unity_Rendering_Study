@@ -1,0 +1,37 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID               = "NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_N",
+
+	m_dicNKMUnitState =
+	{
+        {--* 일반 근접공격
+			m_StateName             = "USN_ATTACK1",
+			
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 24/30,
+					m_fEventTimeMax     = 34/30,
+
+					m_fRangeMin         = 0,
+					m_fRangeMax	        = 500,
+
+					m_AttackUnitCount         = 3,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK1",
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 44/30,
+					m_fEventTimeMax     = 54/30,
+
+					m_fRangeMin         = 0,
+					m_fRangeMax	        = 500,
+
+					m_AttackUnitCount         = 3,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_FIERCE_TYRANT_STRIKER_ATTACK1_END_H",
+				},
+			},
+		},
+	},
+}

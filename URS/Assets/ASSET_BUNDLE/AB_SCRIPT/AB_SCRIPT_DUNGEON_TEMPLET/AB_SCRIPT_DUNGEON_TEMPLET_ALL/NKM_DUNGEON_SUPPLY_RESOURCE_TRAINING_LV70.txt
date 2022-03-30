@@ -1,0 +1,170 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1.5, -- 적
+	m_fCostSpeedRateA = 1.2, -- 플레이어
+    m_BossUnitStrID = "NKM_MOB_BOSS_SUPPLY_BARRICADE4_S", -- 50~80
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_BOMBER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 90,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_BOMBER_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 60,
+				m_fEventTimeEnd				= 100,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_STATE_TANK_S",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 60,
+				m_fEventTimeEnd				= 110,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+		
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_BIO_H",
+			m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.6,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_STATE_TANK_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.57,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_BOMBER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.55,
+			},
+		},	
+
+
+
+
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_BIO_H",
+			m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.4,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_BOMBER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.37,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_BOMBER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 1,
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.35,
+			},
+		},	
+
+
+		
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_WALL_BIO_H",
+			m_EventRespawnUnitTag		= "WALL",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.2,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_STATE_TANK_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.27,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SL_DRONE_BOMBER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+
+				m_EventDieUnitTag 			= "WALL",
+				m_EventDieUnitTagCount 		= 2,
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.25,
+			},
+		},	
+	},
+}

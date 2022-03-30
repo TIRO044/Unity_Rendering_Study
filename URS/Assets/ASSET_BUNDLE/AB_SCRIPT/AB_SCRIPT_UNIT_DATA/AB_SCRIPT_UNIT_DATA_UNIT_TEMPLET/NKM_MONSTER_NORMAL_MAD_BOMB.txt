@@ -1,0 +1,5 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_NORMAL_BASIC_BOMB_N",
+}
+

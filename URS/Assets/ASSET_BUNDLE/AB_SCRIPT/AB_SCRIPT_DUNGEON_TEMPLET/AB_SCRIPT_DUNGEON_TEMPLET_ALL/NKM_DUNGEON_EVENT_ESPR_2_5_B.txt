@@ -1,0 +1,71 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.5,
+
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_BD_THADDEUS_ESPR_MOVE_N", --모건
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_STATE_HELI_ESPR_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.15,
+    		},
+        },
+    },
+    
+    m_listDungeonUnitRespawnA = 
+    {
+        {
+            m_UnitStrID 				= "NKM_UNIT_C_ESPR_FROZEN", -- 레지나
+            m_UnitLevel 				= 65,
+            m_UnitLimitBreakLevel 		= 3,
+            -- m_SkinID 					= 100203,
+            
+            m_NKMDungeonEventTiming = 
+            {
+                m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+                m_fEventTimeStart           = 0,
+                m_fEventTimeGap	        	= 15,
+                m_fEventPos 	        	= 0.1,
+            },
+        },
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID	= "NKM_MONSTER_NORMAL_BASIC_SL_HEAVY_TANK_ESPR_N",	    
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.6,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.25,
+			},
+        },
+        {
+			m_UnitStrID	= "NKM_MONSTER_NORMAL_BASIC_STATE_TANK_ESPR_N",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.6,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.3,
+			},
+		},	
+	},
+}

@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10920002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_STREGA_EVELYN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_STREGA_EVELYN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10920002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_STREGA_EVELYN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "EVELYN_STREGA_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "약만 만들 수 있다면, 장소는 어디든 상관없었지만...... 이젠, 당신 곁이어야 할 것 같네. 잘 부탁해. 후훗.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "薬さえ作ることができるなら、どこにいたって構わないと思ってたけど……\nこれからは、あなたの隣じゃないとダメそうだわ。よろしくね。ふふっ。",
+    m_Talk_ENG = "I didn't care where I was so long as I could make potions, but I guess I'll have to stay by your side now. Thank you for choosing me, Hah hah.",
+    m_Talk_TWN = "雖說只要能調製藥品，我在哪裡都無所謂……但現在，我似乎只能在你身邊了呢。那就請多多指教吧，呵呵。",
+    m_Talk_THA = "ฉันไม่สนหรอกว่าตัวเองจะต้องอยู่ที่ไหน ตราบใดที่ฉันยังมีโอกาสทำโพชั่น แต่ดูท่าทางตอนนี้ฉันคงต้องอยู่ข้างๆ คุณแล้วล่ะ ขอบคุณที่เลือกฉันนะคะ ฮะฮะ",
+    m_Talk_VTN = "Tôi không quan tâm tôi ở đâu miễn là tôi có thể chế thuốc, nhưng tôi đoán từ giờ tôi sẽ phải ở cạnh ngài rồi. Cảm ơn vì đã chọn tôi. Ha ha.",
+    m_Talk_SCN = "虽说只要能继续制药，无论在哪儿都可以……但是接下来要在您身边了~嘻嘻。 ",
+    m_Talk_DEU = "Solang ich Tränke brauen konnte, war mir egal, wo ich bin, aber jetzt muss ich wohl an Ihrer Seite bleiben. Danke, dass Sie sich für mich entschieden haben, hahaha.",
+    m_Talk_FRA = "Peu m'importait où j'étais tant que je pouvais faire des potions. Mais à présent, je vais devoir rester à vos côtés. Merci de m'avoir choisie, hi hi.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10920002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_STREGA_EVELYN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

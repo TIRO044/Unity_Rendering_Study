@@ -1,0 +1,54 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 3,
+	m_fCostSpeedRateB = 0.6,
+    m_BossUnitStrID = "NKM_MOB_BOSS_HALLOWEEN_WIZARD_H",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_HALLOWEEN_NEEDLER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.3,
+			},
+			-- m_listStaticBuffData =
+			-- {
+			-- 	{
+			-- 		m_BuffStrID		= "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+			-- 		m_BuffLevel		= 30,
+			-- 	},
+			-- },
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_HALLOWEEN_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.3,
+			},
+			-- m_listStaticBuffData =
+			-- {
+			-- 	{
+			-- 		m_BuffStrID		= "DEBUFF_MONSTER_X_MAS_STAT_DOWN",
+			-- 		m_BuffLevel		= 30,
+			-- 	},
+			-- },
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

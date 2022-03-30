@@ -1,0 +1,953 @@
+NKMDungeonTemplet = 
+{
+	m_bCanUseAuto	= false,
+	
+	m_fStartCost 	= 3,
+	m_fCostSpeedRateB = 1,
+	m_fCostSpeedRateB = 0.5,
+	
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_TOMBSTONE_MINI_TR",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		--1. 디몰리셔 출몰
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.0,
+    		},
+		},		
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		--//
+		--2. 유미나 스킬쓰고 등장하는 니들러
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.0,
+				
+				m_EventTag = "NEED",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.05,
+				
+				m_EventTag = "NEED",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.1,
+				
+				m_EventTag = "NEED",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.15,
+				
+				m_EventTag = "NEED",
+				m_EventTagCount = 1,
+    		},
+		},
+		
+		--3. 소총병이 처치할 놈 추가하기 위한 추가몹
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			
+			m_EventRespawnUnitTag		= "NEED_PULS",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.2,
+				
+				m_EventTag = "NEED_DIE",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_EventRespawnUnitTag		= "NEED_PULS",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.0,
+				
+				m_EventTag = "NEED_DIE",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_EventRespawnUnitTag		= "NEED_PULS",
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.04,
+				
+				m_EventTag = "NEED_DIE",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_EventRespawnUnitTag		= "NEED_PULS",
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.08,
+				
+				m_EventTag = "NEED_DIE",
+				m_EventTagCount = 1,
+    		},
+		},
+		--//
+		--4. 포위섬멸진		
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			
+			m_EventRespawnUnitTag		= "DEMOL",	
+			
+			m_NKMDungeonEventTiming = 
+			{				
+				
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 0,
+				m_fEventPos 		= 0.6,							
+				
+				m_EventDieUnitTag 			= "NEED_PULS",
+				m_EventDieUnitTagCount  	= 4,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			
+			m_EventRespawnUnitTag		= "DEMOL",	
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 0,
+				m_fEventPos 		= 0.5,							
+				
+				m_EventDieUnitTag 			= "NEED_PULS",
+				m_EventDieUnitTagCount  	= 4,
+				
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+				
+			
+			m_EventRespawnUnitTag		= "DEMOL",	
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 0,
+				m_fEventPos 		= 0.4,							
+				
+				m_EventDieUnitTag 			= "NEED_PULS",
+				m_EventDieUnitTagCount  	= 4,
+				
+    		},
+		},
+		
+		--5. 바이터 백도어	
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+			
+			m_EventRespawnUnitTag		= "BACKDOOR",	
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 0,
+				m_fEventPos 		= 0.92,
+				
+				
+				m_EventTag = "BACKDOOR",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+			
+			m_EventRespawnUnitTag		= "BACKDOOR",	
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 0,
+				m_fEventPos 		= 0.9,
+				m_EventTag = "BACKDOOR",
+				m_EventTagCount = 1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+			
+			m_EventRespawnUnitTag		= "BACKDOOR",	
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 0,
+				m_fEventPos 		= 0.88,
+				
+				m_EventTag = "BACKDOOR",
+				m_EventTagCount = 1,
+    		},
+		},
+		
+		
+	},
+	
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			-- 카메라
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10700,
+			m_bPause = false,
+			
+			m_fEventDelay		=	0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0.7,
+    		},
+		},	
+		{	
+			-- 카메라
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10700,
+			m_bPause = false,
+			
+			m_fEventDelay		=	0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 1.4,
+    		},
+		},	
+		{	
+			--2. 유미나 스킬 쓰고나면 니들러 소환
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_UNIT_C_YOO_MI_NA_TR_NOULT",
+			m_EventConditionValue2 = "USN_SKILL1",
+			
+			
+			m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventActionStrValue	= "NEED",
+			m_EventActionValue 		= 1,
+			
+			m_fEventDelay		=	0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},		
+		{	
+			--5. 디몰 포위하면 힐데 출격해서 공격
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10704,
+			m_bPause = true,
+			
+			m_fEventDelay		=	1.5,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+				
+				m_EventDieUnitTag 			= "NEED_PULS",
+				m_EventDieUnitTagCount  	= 4,
+    		},
+		},	
+		{	
+			--6. 힐데 나오면 유미나 쪼금있다 고맙다고 함
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10705,
+			m_bPause = false,
+			
+			m_fEventDelay		=	2,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},	
+		
+		{	
+			--7. 힐데 스킬 쓰고나면 8초뒤에 백도어 태그 카운트 +1
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+			m_EventConditionValue2 = "USN_SKILL1",
+			
+			m_dungeonEventType = "ADD_EVENTTAG", 
+			m_EventActionStrValue	= "BACKDOOR",
+			m_EventActionValue 		= 1,
+			
+			m_fEventDelay		=	8,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 4,
+    		},
+		},	
+		{	-- 11. 게임끝나고 대사
+			m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+			m_EventConditionNumValue = 1,
+			
+			m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventID = 10611,
+			m_bPause = false,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		--{	-- 9#. 힐데 등장하고나면 궁극기 게이지 채워주고
+		--	m_EventCondition = "UNIT_STATE_START",
+		--	m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+		--	m_EventConditionValue2 = "USN_START",
+		--	
+		--	m_dungeonEventType = "SET_UNIT_HYPER_FULL",
+		--	m_EventActionValue = 315,
+		--	m_bPause = false,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventTimeStart   		= 0,
+		--		
+		--		m_EventTag = "BACKDOOR", -- 힐데 울트 1 이상일때만 실행
+		--		m_EventTagCount = 1, 				
+    	--	},
+		--},
+		--{	-- 9. 힐데 스킬 쓰고나면 궁극기로 바로 이어간다
+		--	m_EventCondition = "UNIT_STATE_END",
+		--	m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+		--	m_EventConditionValue2 = "USN_START",
+		--	
+		--	m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+		--	m_EventID = 10609,
+		--	m_fEventDelay	= 0,
+		--	m_bPause = true,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventTimeStart   		= 0,
+		--		
+		--		m_EventTag = "BACKDOOR", -- 힐데 울트 1 이상일때만 실행
+		--		m_EventTagCount = 1, 			
+    	--	},
+		--},
+	
+	},
+	m_listDungeonEventTempletTeamB =
+	{
+		{	
+			--1. 디몰리셔 등장모션 끝나고 유미나 소환
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10701,
+			m_bPause = true,
+			
+			m_fEventDelay		=	0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.5,
+    		},
+		},	
+		{	
+			--3. 니들러 등장 끝나면 수 많다고 당황하고 방패병 소환시킴
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10702,
+			m_bPause = true,
+			
+			m_fEventDelay		=	1.5,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},	
+		{	
+			--4. 니들러 죽으면 적 추가 등장 카운트
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			m_EventConditionValue2 = "USN_DAMAGE_DIE",
+			
+			m_dungeonEventType = "ADD_EVENTTAG", 
+			m_EventActionStrValue	= "NEED_DIE",
+			m_EventActionValue 		= 1,
+			
+			m_fEventDelay		=	2,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},	
+		{	
+			--4. 니들러 죽으면 적 등장후 살짝 딜레이 주고 소총병 소환 튜토리얼
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			m_EventConditionValue2 = "USN_DAMAGE_DIE",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10703,
+			m_bPause = true,
+			
+			m_fEventDelay		=	4,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{	-- #8. 바이터 등장하면 카메라이동
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10706,
+			m_bPause = false,
+			
+			m_fEventDelay	= 0.0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{	
+			--8. 바이터 등장하고 나면 힐데 재출격 튜토리얼
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10608,
+			m_bPause = true,
+			
+			m_fEventDelay		=	0.8,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},	
+	},
+		
+	--m_listDungeonUnitRespawnB = 
+	--{
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 2,
+	--			m_fEventPos 		= 0.4,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 2.3,
+	--			m_fEventPos 		= 0.34,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 2.6,
+	--			m_fEventPos 		= 0.28,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 3.2,
+	--			m_fEventPos 		= 0.2,
+    --		},
+	--	},
+	--	-- 레이스
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_WRAITH_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "AIR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.5,
+	--			m_EventTag = "AIR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_WRAITH_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "AIR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.53,
+	--			m_EventTag = "AIR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_WRAITH_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "AIR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.48,
+	--			m_EventTag = "AIR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	-- 백도어 유닛 발생
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "BACKDOOR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.92,
+	--			
+	--			
+	--			m_EventTag = "BACKDOOR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "BACKDOOR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.9,
+	--			m_EventTag = "BACKDOOR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "BACKDOOR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.88,
+	--			m_EventTag = "BACKDOOR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "BACKDOOR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.85,
+	--			m_EventTag = "BACKDOOR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--	{
+	--		m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+	--		
+	--		m_EventRespawnUnitTag		= "BACKDOOR",	
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+	--			m_fEventTimeStart   = 0,
+	--			m_fEventPos 		= 0.82,
+	--			m_EventTag = "BACKDOOR",
+	--			m_EventTagCount = 1,
+    --		},
+	--	},
+	--},
+	--
+	--m_listDungeonEventTempletTeamA =
+	--{
+	--	{	-- 1. 게임 시작하면 힐데 대사 시작해서 함선 스킬 사용
+	--		m_dungeonEventType = "GAME_EVENT",
+	--		m_EventID = 10601,
+	--		
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 3,
+    --		},
+	--	},
+	--	{	-- 2. 함선 끝나고 조금 시간 지나면 주시윤 비아냥대면서 시작, 힐데 출격
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_SHIP_A_COFFIN_TR_2",
+	--		m_EventConditionValue2 = "USN_HYPER1",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10602,
+	--		m_fEventDelay	= 2,
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--	{	-- 3. 힐데 나오고 조금 있다가 주시윤 출격
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10603,
+	--		m_fEventDelay	= 1,
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 6,
+    --		},
+	--	},
+	--	{	-- 4#. 4번이벤트 시작용. 코스트4 되면 레이스 나온다
+	--		m_EventCondition = "HAVE_SUMMON_COST",
+	--		m_EventConditionValue1 = 6,
+	--		
+	--		m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventActionStrValue	= "AIR",
+	--		m_EventActionValue 		= 1,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 20,
+    --		},
+	--	},
+	--	{	-- 5#. 유미나 출격하고 잠깐있다가 소총병 나갈 수 있게 코스트 셋업
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_UNIT_C_YOO_MI_NA_TR_NOULT",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "NEAT_RESPAWN_COST_A_TEAM", 
+	--		m_EventActionValue = 3,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--	{	-- 5. 유미나 출격하고 잠깐있다가 소총병 나간다
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_UNIT_C_YOO_MI_NA_TR_NOULT",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10605,
+	--		m_fEventDelay	= 2,
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--	{	-- #7. 힐데 나갈 수 있게 코스트 셋업한다
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_UNIT_S_SL_RIFLE_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "NEAT_RESPAWN_COST_A_TEAM", 
+	--		m_EventActionValue = 4,
+	--		m_fEventDelay	= 5,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--	--{	-- 7. 보스 HP 50% 이하로 떨어지면 백도어 발생			
+	--	--	m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+	--	--	m_EventConditionNumValue = 60,
+	--	--	
+	--	--	m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--	--	m_EventActionStrValue	= "BACKDOOR",
+	--	--	m_EventActionValue 		= 1,
+	--	--	
+	--	--	m_NKMDungeonEventTiming = 
+	--	--	{
+	--	--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--	--		m_fEventTimeStart   		= 0,
+    --	--	},
+	--	--},
+	--	{	-- 7. 힐데 특수기 2번째 쓰고나면 백도어 발생		
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+	--		m_EventConditionValue2 = "USN_SKILL1",
+	--		
+	--		m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventActionStrValue	= "BACKDOOR",
+	--		m_EventActionValue 		= 1,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 30,
+    --		},
+	--	},
+	--	{	-- 9#. 힐데 등장하고나면 궁극기 게이지 채워주고
+	--		m_EventCondition = "UNIT_STATE_START",
+	--		m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "SET_UNIT_HYPER_FULL",
+	--		m_EventActionValue = 315,
+	--		m_bPause = false,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+	--			
+	--			m_EventTag = "BACKDOOR", -- 힐데 울트 1 이상일때만 실행
+	--			m_EventTagCount = 1, 				
+    --		},
+	--	},
+	--	{	-- 9. 힐데 스킬 쓰고나면 궁극기로 바로 이어간다
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10609,
+	--		m_fEventDelay	= 0,
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+	--			
+	--			m_EventTag = "BACKDOOR", -- 힐데 울트 1 이상일때만 실행
+	--			m_EventTagCount = 1, 			
+    --		},
+	--	},
+	--	--{	-- 10. 힐데 궁극기 끝나고 나면 주시윤 궁극기로
+	--	--	m_EventCondition = "UNIT_STATE_END",
+	--	--	m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+	--	--	m_EventConditionValue2 = "USN_HYPER_SKILL1",
+	--	--	
+	--	--	m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--	--	m_EventID = 10610,
+	--	--	m_fEventDelay	= 1,
+	--	--	m_bPause = false,
+	--	--	
+	--	--	m_NKMDungeonEventTiming = 
+	--	--	{
+	--	--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--	--		m_fEventTimeStart   		= 0,
+    --	--	},
+	--	--},
+	--	{	-- 11. 게임끝나고 대사
+	--		m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+	--		m_EventConditionNumValue = 1,
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10611,
+	--		m_bPause = false,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--},
+	--
+	--m_listDungeonEventTempletTeamB =
+	--{
+	--	{	-- 4. 레이스 등장 하고나면 유미나 출격 이벤트
+	--		m_EventCondition = "UNIT_STATE_END",
+	--		m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_WRAITH_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10604,
+	--		m_fEventDelay	= 1,
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--	{	-- 7. 백도어 발생하면 카메라 이동하고 김하나 경고
+	--		m_EventCondition = "UNIT_STATE_START",
+	--		m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10607,
+	--		m_fEventDelay	= 0,
+	--		m_bPause = false,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--	{	-- 8. 김하나 외치고 바이터 다 나오면 2초있다가 힐데 재출격
+	--		m_EventCondition = "UNIT_STATE_START",
+	--		m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_BITER_TR",
+	--		m_EventConditionValue2 = "USN_START",
+	--		
+	--		m_dungeonEventType = "GAME_EVENT", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+	--		m_EventID = 10608,
+	--		m_fEventDelay	= 2,
+	--		m_bPause = true,
+	--		
+	--		m_NKMDungeonEventTiming = 
+	--		{
+	--			m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+	--			m_fEventTimeStart   		= 0,
+    --		},
+	--	},
+	--},
+}

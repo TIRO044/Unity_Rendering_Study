@@ -1,0 +1,88 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID               = "NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_N",
+	m_dicNKMUnitState =
+	{
+		{--* 일반 근접공격
+            m_StateName             = "USN_ATTACK1",
+
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 24/30,
+					m_fEventTimeMax     = 34/30,
+
+					m_fRangeMin         = 0,
+					m_fRangeMax	        = 310,
+
+					m_AttackUnitCount  		= 3,
+					m_DamageTempletName		= "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_ATTACK1_S",
+				},
+                {
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 45/30,
+					m_fEventTimeMax     = 54/30,
+
+					m_fRangeMin         = 0,
+					m_fRangeMax	        = 310,
+
+					m_AttackUnitCount  		= 3,
+					m_DamageTempletName		= "DT_NKM_MOB_BOSS_FIERCE_TYRANT_DEFFENDER_ATTACK1_S",
+				},
+            },
+        },
+        {--* 패턴1 단단해지기
+            m_StateName                           = "USN_PATTERN1",
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bStateEndTime            = true,
+					m_BuffStrID                = "DEBUFF_FIERCE_TYRANT_DEFFENDER_PATTERN_S",
+				},
+			},
+        },
+		{--* 패턴1 방어모드
+            m_StateName                           = "USN_PATTERN1_LOOP",
+
+			m_DangerCharge =
+            {
+                m_fChargeTime                     = 8,
+                m_CancelHitCount                  = 80,
+                m_SuccessState                    = "USN_PATTERN1_SUCCESS",
+                m_CancelState                     = "USN_PATTERN1_CANCEL",
+            },
+        },
+		{--* 패턴1 성공 (패턴 발동)
+			m_StateName                           = "USN_PATTERN1_SUCCESS",
+
+			m_listNKMEventBuff = 
+			{
+				{
+					m_bAnimTime                   = true,
+					m_fEventTime                  = 0/30,
+					m_BuffStrID                   = "DEBUFF_FIERCE_TYRANT_DEFFENDER_PATTERN_S",
+					m_BuffRemove                  = true,
+				},
+				{
+					m_bStateEndTime               = true,
+					m_BuffStrID                   = "BUFF_FIERCE_TYRANT_DEFFENDER_DAMAGE_REDUCE",
+				},
+			},
+        },
+		{--* 패턴 실패
+			m_StateName                  = "USN_PATTERN1_CANCEL",
+
+			m_listNKMEventBuff = 
+			{
+				{
+					m_bAnimTime                   = true,
+					m_fEventTime                  = 0/30,
+					m_BuffStrID                   = "DEBUFF_FIERCE_TYRANT_DEFFENDER_PATTERN_S",
+					m_BuffRemove                  = true,
+				},
+			},
+		},
+	},
+}

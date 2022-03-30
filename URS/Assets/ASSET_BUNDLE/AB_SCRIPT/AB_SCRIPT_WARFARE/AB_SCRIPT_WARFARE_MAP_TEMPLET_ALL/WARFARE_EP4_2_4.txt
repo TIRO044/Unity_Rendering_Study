@@ -1,0 +1,99 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 6,
+	m_MapSizeY = 3,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_RESUPPLY",
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_4_PLUS_WAVE",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_4_MEDIUM_BOSS_B",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_MAIN_BATTLE_EP4_2_4_ACT_BOSS_A",
+		m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		TileChange =
+		{
+			Condition = "WFC_PHASE",
+			Value = 0,
+			Type = "NWNTT_CHEST",
+			Rate = 50,
+		},
+	},
+	NKMWarfareTile16 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile17 =
+	{
+		m_TileType = "NWMTT_INCR",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_SummonDungeonStrID = "NKM_MAIN_BATTLE_EP4_2_4_PLUS_WAVE",
+		m_SummonCondition = "SUMMONEE_IS_DEAD",
+		m_SummonConditionValue = 0,
+	},
+}

@@ -1,0 +1,903 @@
+﻿NKMUnitTemplet =
+{ 
+	m_UnitSizeX 			= 120,
+	m_UnitSizeY 			= 300,
+	m_SpriteScale           = 1.0,     
+	m_fGageOffsetY			= 310, 
+  
+	m_fShadowScaleX         = 150,     
+	m_fShadowScaleY         = 150,
+
+	m_fForceRespawnZposMin	 = 0.21,
+	m_fForceRespawnZposMax	 = 0.3,
+
+	m_SpeedRun              = 230,
+  
+	m_SeeRange              = 850,
+	m_SeeRangeMax           = 1000,
+	m_TargetNearRange       = 850,
+
+  
+	m_AttackedTargetTime    = 1,
+	m_bAttackedTarget       = false,
+  
+	m_bUseMotionBlur        = true,
+  
+	m_listAttackStateData =
+	{
+		{--*기본공격
+			m_StateName		= "USN_ATTACK2",
+			-- m_StateName		= "USN_MOVE",
+		},
+	},
+
+	m_listHyperSkillStateData =
+	{
+		{--*궁극기
+			m_StateName 	= "USN_HYPER1",
+			m_fStartCool	= 1.0,
+		},
+	},
+
+
+	m_dicNKMUnitState =
+	{
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_START",
+			m_StateName             = "USN_START",
+			m_AnimName              = "START",
+			m_bAnimLoop             = false,
+			m_fAnimSpeed            = 1.0,
+
+			m_AnimEndChangeState          = "USN_ASTAND",
+			-- m_DamagedChangeState		  = "USN_ASTAND",
+			m_bForceRightLeftDependTeam	 = true,
+			
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 65/30,
+				},
+			},
+			m_listNKMEventChangeCooltime =
+			{ 
+				{  
+					m_fEventAnimTime           = 1/30,
+					m_TargetStateName          = "USN_HYPER1",
+					m_eChangeType              = "SET_RATIO",
+					m_fChangeValue             = 1.0,
+				},
+			},
+			m_listNKMEventBuff =
+			{
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_PASSIVE2",      
+						m_SkillLevel	= {0,1},
+					},
+					m_bAnimTime 		= true,
+					m_fEventTime		= 30/30,					
+					m_BuffStrID			= "BUFF_BAR_C_CEO_PASSIVE2",
+					m_BuffLevel    		= 8,
+				},
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_PASSIVE2",      
+						m_SkillLevel	= {2,2},
+					},
+					m_bAnimTime 		= true,
+					m_fEventTime		= 30/30,					
+					m_BuffStrID			= "BUFF_BAR_C_CEO_PASSIVE2",
+					m_BuffLevel    		= 9,
+				},
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_PASSIVE2",      
+						m_SkillLevel	= {3,3},
+					},
+					m_bAnimTime 		= true,
+					m_fEventTime		= 30/30,					
+					m_BuffStrID			= "BUFF_BAR_C_CEO_PASSIVE2",
+					m_BuffLevel    		= 10,
+				},
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_PASSIVE2",      
+						m_SkillLevel	= {4,4},
+					},
+					m_bAnimTime 		= true,
+					m_fEventTime		= 30/30,					
+					m_BuffStrID			= "BUFF_BAR_C_CEO_PASSIVE2",
+					m_BuffLevel    		= 12,
+				},
+
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_PASSIVE2",      
+						m_SkillLevel	= {5,99},
+					},
+					m_bAnimTime 		= true,
+					m_fEventTime		= 30/30,					
+					m_BuffStrID			= "BUFF_BAR_C_CEO_PASSIVE2_LV5",
+					m_BuffLevel    		= 12,
+				},
+			},
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime   	= true,
+					m_fEventTime  	= 30/30,
+					m_DEName      	= "DE_UNIT_BAR_C_CEO_START",
+					m_OffsetX     	= 0,
+					m_OffsetY     	= 0,
+					m_OffsetZ		= 50,
+				},
+			},
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 40/30,
+					m_fEventTimeMax           = 50/30,
+                    
+					m_fRangeMin               = -700.0,
+					m_fRangeMax               = 0.0,
+
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_MY_TEAM_NOT_SELF",
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_UNIT_BAR_C_CEO_ALLY",
+				},
+				{
+					m_ConditionTarget = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_S_BARTENDER_PASSIVE2",      
+						m_SkillLevel	= {5,99},
+					},
+					
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 1/30,
+					m_fEventTimeMax           = 10/30,
+                    
+					m_fRangeMin               = -6000.0,
+					m_fRangeMax               = 6000.0,
+
+					m_NKM_DAMAGE_TARGET_TYPE  = "NDTT_MY_TEAM_NOT_SELF",
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_UNIT_BAR_C_CEO_BARTENDER",
+				},
+			},
+			m_listNKMEventChangeState	=
+			{
+				{
+					m_Condition = 
+					{
+						m_IgnoreBuffStrID	= "BUFF_BAR_C_CEO_ALLY", 
+					},
+
+					m_fEventTime	= 63/30,	
+					m_ChangeState	= "USN_MOVE",
+				},
+			},
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime              = 0/30,
+					m_fAnimSpeed              = 1.75,
+				},
+				{
+					m_fEventTime              = 30/30,
+					m_fAnimSpeed              = 1.25,
+				},
+			},
+
+			m_listNKMEventCameraCrash =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 20/30,
+                
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+                
+					m_fCameraCrashSpeed       = -300.0,
+					m_fCameraCrashAccel       = 1000.0,
+                
+					m_fCameraCrashGap         = 5,
+					m_fCameraCrashTime        = 0.2,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 35/30,
+                
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+                
+					m_fCameraCrashSpeed       = -300.0,
+					m_fCameraCrashAccel       = 1000.0,
+                
+					m_fCameraCrashGap         = 10,
+					m_fCameraCrashTime        = 0.75,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,	
+					m_fLocalVol	= 0.7,		
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_WATER_07",
+					},
+				}, 
+
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 35/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_START_1",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_START_3",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_START_4",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_PASSIVE_4",
+					},
+				},
+			},
+		},
+
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_MOVE",
+			m_AnimName              = "ATTACK1",
+			m_bAnimLoop             = false,
+	        m_NKM_SKILL_TYPE		= "NST_ATTACK",
+			m_fAnimSpeed            = 1.0,
+
+			m_bForceRightLeftDependTeam	 = true,
+
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_fAnimSpeed	= 1.75,
+				},
+				{
+					m_fEventTime	= 24/30,
+					m_fAnimSpeed	= 1.0,
+				},
+			},
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 40/30,
+				},
+			},
+			m_listNKMEventBuff =
+			{
+				{
+					m_fEventTime 	= 25/30,
+					m_BuffStrID  		= "BUFF_BAR_C_CEO_PASSIVE2",
+					m_BuffRemove		= true,
+				},
+				{
+					m_fEventTime 	= 25/30,
+					m_BuffStrID  		= "BUFF_BAR_C_CEO_PASSIVE2_LV5",
+					m_BuffRemove		= true,
+				},
+				{
+					m_fEventTime 	= 25/30,
+					m_BuffStrID  		= "BUFF_BAR_C_CEO_ALLY",
+					m_BuffRemove		= true,
+				},
+			},
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime  	= true,
+					m_fEventTime 	= 23/30,
+					m_DEName     	= "DE_UNIT_BAR_C_CEO_MOVE",
+					m_OffsetX    	= 100,
+					m_OffsetY    	= 200,
+				},
+			},
+
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 20/30,
+					m_fEventTimeMax           = 27/30,
+	
+					m_fColorR                 = 0.8,
+					m_fColorG                 = 0.2,
+					m_fColorB                 = 0.6,
+				},
+			},
+			m_listNKMEventColor	=
+			{
+				{
+					m_bAnimTime		= true,
+					m_fEventTime	= 20/30,
+
+					m_fColorR = 0.0,
+					m_fColorG = 0.0,
+					m_fColorB = 0.0,
+
+					m_fTrackTime	= 5/30,
+					m_fColorTime	= 5/30,
+				},
+			},
+			m_listNKMEventMove = 
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 28/30,
+					m_bLandMove 		= true,
+					m_fMapPosFactor		= 0.0,
+			
+					m_MoveTime 			= 1/30,
+				},
+			},
+		},
+
+		{
+			m_NKM_UNIT_STATE_TYPE       = "NUST_MOVE",
+			m_StateName                 = "USN_RUN",
+			m_AnimName                  = "RUN",
+			m_bAnimLoop                 = true,
+			
+			m_fAnimSpeed				= 0.8,
+			
+			m_bRun                      = true,
+		},
+
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_ATTACK1",
+			m_AnimName              = "ATTACK1",
+			m_bAnimLoop             = false,
+	        m_NKM_SKILL_TYPE		= "NST_ATTACK",
+			m_fAnimSpeed            = 1.0,
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime  	= true,
+					m_fEventTime 	= 24/30,
+					m_DEName     	= "DE_UNIT_BAR_C_CEO_ATTACK1",
+					m_OffsetX    	= 100,
+					m_OffsetY    	= 200,
+				},
+			},
+
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 999/30,
+	
+					m_fColorR                 = 0.8,
+					m_fColorG                 = 0.2,
+					m_fColorB                 = 0.6,
+				},
+			},
+
+			m_listNKMEventMove = 
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 25/30,
+					m_bOffsetDependMe 	= true,
+			
+					m_OffsetX 		= -150,
+					m_bLandMove 	= true,
+			
+					m_MoveTime 			= 5/30,
+					m_MoveTrackingType 	= "TDT_SLOWER",
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 30/30,
+					m_bOffsetDependMe 	= true,
+			
+					m_OffsetX 		= -50,
+					m_bLandMove 	= true,
+			
+					m_MoveTime 			= 10/30,
+					m_MoveTrackingType 	= "TDT_SLOWER",
+				},
+			},
+			m_listNKMEventSound =
+			{
+				-- {
+				-- 	m_bAnimTime         = true,
+				-- 	m_fEventTime        = 4/30,
+				-- 	m_fLocalVol			= 0.5,
+				-- 	m_listSoundName	= 
+				-- 	{
+				-- 		"FX_COMBAT_ALL_GUN_FIRE_SMALL_09",
+				-- 	},
+				-- },
+				-- {
+				-- 	m_bAnimTime         = true,
+				-- 	m_fEventTime        = 4/30,
+				-- 	m_bVoice			= true,
+				-- 	m_PlayRate			= 0.33,			
+				-- 	m_listSoundName	= 
+				-- 	{
+				-- 		"VOICE_UNIT_C_ALT_YOO_JIN_BATTLE_ATTACK_1",
+				-- 		"VOICE_UNIT_C_ALT_YOO_JIN_BATTLE_ATTACK_2",
+				-- 		"VOICE_UNIT_C_ALT_YOO_JIN_BATTLE_ATTACK_3",
+				-- 		"VOICE_UNIT_C_ALT_YOO_JIN_BATTLE_ATTACK_5",
+				-- 	},
+				-- 	m_dicSkinSound =
+                --     {
+				-- 		{
+                --             100519,
+                --             "VOICE_UNIT_C_ALT_YOO_JIN_RECITAL_BATTLE_ATTACK_1",
+                --             "VOICE_UNIT_C_ALT_YOO_JIN_RECITAL_BATTLE_ATTACK_2",
+				-- 			"VOICE_UNIT_C_ALT_YOO_JIN_RECITAL_BATTLE_ATTACK_3",
+				-- 			"VOICE_UNIT_C_ALT_YOO_JIN_RECITAL_BATTLE_ATTACK_4",
+                --         },
+                --     },
+				-- },	
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_ATTACK2",
+			m_AnimName              = "ATTACK2",
+			m_bAnimLoop             = false,
+	        m_NKM_SKILL_TYPE		= "NST_ATTACK",
+			m_fAnimSpeed            = 1.0,
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime  	= true,
+					m_fEventTime 	= 24/30,
+					m_DEName     	= "DE_UNIT_BAR_C_CEO_ATTACK1",
+					m_OffsetX    	= 100,
+					m_OffsetY    	= 200,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.25,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_ATTACK_1-2",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_ATTACK_2-2",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_ATTACK_19",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_ATTACK_28-1",
+					},
+				},
+			},
+		},
+
+		{
+			m_NKM_UNIT_STATE_TYPE 	= "NUST_ATTACK",
+			m_StateName           	= "USN_HYPER1",
+			m_bAnimLoop           	= false,
+			m_fAnimSpeed          	= 1,
+			
+			m_AnimName            	= "HYPER_SKILL1",
+				
+			m_NKM_SKILL_TYPE		= "NST_HYPER",
+			m_SuperArmorLevel		= "NSAL_HYPER",
+
+			m_listNKMEventHyperSkillCutIn =
+			{
+				{				
+					m_bAnimTime			= true,
+					m_fEventTime		= 1/30,
+					m_fDurationTime		= 1.5,
+		
+					m_BGEffectName 			= "AB_FX_SKILL_CUTIN_COMMON_A",
+					m_CutInEffectName 		= "AB_FX_SKILL_CUTIN_NKM_UNIT_BAR_C_CEO",
+					m_CutInEffectAnimName 	= "BASE",	
+				},
+			},	
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 105/30,
+				},
+			},
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 80/30,
+					m_fEventTimeMax           = 90/30,
+                    
+					m_fRangeMin               = -300.0,
+					m_fRangeMax               = 300.0,
+
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_UNIT_BAR_C_CEO_HYPER1",
+				},
+			},
+			m_listNKMEventBuff =
+			{
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_HYPER",      
+						m_SkillLevel	= {5,99},
+					},
+					m_bStateEndTime		= true,
+					m_BuffStrID			= "BUFF_BAR_C_CEO_HYPER_LV5_STACK",
+				},
+			},
+			m_listNKMEventCost =
+			{
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= "NKM_UNIT_BAR_C_CEO_HYPER",      
+						m_SkillLevel	= {5,99},
+
+						m_IgnoreBuffStrID	= "BUFF_BAR_C_CEO_HYPER_LV5_STACK",  
+					},
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 100/30,
+					m_AddCost			= 1,	--유닛 팀의 사용가능 코스트 증가치 절대값
+				},
+			},
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 100/30,
+					m_DEName     		= "DE_UNIT_BAR_C_CEO_START",
+					m_OffsetX    		= 0,
+					m_OffsetY    		= 0,
+					m_bTargetPos		= true,
+				},
+			},
+
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 999/30,
+	
+					m_fColorR                 = 1.0,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 0.5,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 0/30,
+					m_fEventTimeMax       = 50/30,
+					
+					m_fPosXOffset         = -250,
+					m_fPosYOffset         = 150,
+					m_fZoom               = -250,
+					
+					m_fMoveTrackingTime   = 0.1,
+					m_fZoomTrackingTime   = 0.1,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 50/30,
+					m_fEventTimeMax       = 80/30,
+					
+					m_fPosXOffset         = 50,
+					m_fPosYOffset         = 150,
+					m_fZoom               = -200,
+					
+					m_fMoveTrackingTime   = 6.0,
+					m_fZoomTrackingTime   = 6.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 80/30,
+					m_fEventTimeMax       = 100/30,
+					
+					m_fPosXOffset         = 50,
+					m_fPosYOffset         = 150,
+					m_fZoom               = -100,
+					
+					m_fMoveTrackingTime   = 0.1,
+					m_fZoomTrackingTime   = 0.1,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 100/30,
+					m_fEventTimeMax       = 150/30,
+					
+					m_fPosXOffset         = 500,
+					m_fPosYOffset         = 0,
+					m_fZoom               = 0,
+					
+					m_fMoveTrackingTime   = 0.1,
+					m_fZoomTrackingTime   = 0.1,
+				},
+			},
+			m_listNKMEventCameraCrash =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 80/30,
+                
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+                
+					m_fCameraCrashSpeed       = -300.0,
+					m_fCameraCrashAccel       = 1000.0,
+                
+					m_fCameraCrashGap         = 10,
+					m_fCameraCrashTime        = 0.75,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime             = true,
+					m_fEventTimeMin         = 0/30,
+					m_fEventTimeMax         = 130/30,
+            
+					m_fColorR               = 0.0,
+					m_fColorG               = 0.0,
+					m_fColorB               = 0.0,
+        
+					m_fMapColorKeepTime     = 0.3,
+					m_fMapColorReturnTime   = 1,
+				},
+			},
+			m_listNKMEventStopTime =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 0/30,
+					
+					m_StopTimeIndex     = "NSTI_SKILL",
+					m_fStopTime         = 0.5,
+					m_bStopEnemyOnly    = false,
+					m_bMyStop           = false,
+					m_fRange            = 800,
+				},
+			},
+			
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime    	= true,
+					m_fEventTime   	= 1/30,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_HYPER_ATTACK_START",
+					},
+				},  
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime	= 17/30,
+					m_fLocalVol		= 0.3,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_WATER_04",
+					},
+				},  
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime	= 27/30,
+					m_fLocalVol		= 0.3,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_WATER_04",
+					},
+				},  
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime	= 37/30,
+					m_fLocalVol		= 0.3,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_WATER_04",
+					},
+				},  
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime	= 60/30,
+					m_fLocalVol		= 0.5,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_07",
+					},
+				},  
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime	= 80/30,
+					m_fLocalVol		= 1.0,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_11",
+					},
+				},  
+
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 1.0,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_HYPER_1-1",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_HYPER_2",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_HYPER_5",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_ATTACK_32",
+					},
+				},
+			},		
+		},
+
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_A",
+			m_AnimName                    = "DAMAGE_A",
+			m_bAnimLoop                   = false,
+			
+			m_AnimEndChangeState          = "USN_ASTAND",
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+
+			
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_13",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_16",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_20",
+					},
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_B",
+			m_AnimName                    = "DAMAGE_B",
+			m_bAnimLoop                   = false,
+			
+			m_AnimEndChangeState          = "USN_ASTAND",
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_13",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_16",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_20",
+					},
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_AIR_UP",
+			m_AnimName                    = "DAMAGE_AIR_UP",
+			m_bAnimLoop                   = false,
+			
+			m_SpeedY0NegativeChangeState   = "USN_DAMAGE_AIR_DOWN",
+
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_13",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_16",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_20",
+					},
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_DOWN",
+			m_AnimName                    = "DAMAGE_DOWN",
+			m_bAnimLoop                   = false,
+      
+			m_AnimEndDyingState           = "USN_DAMAGE_DIE",
+			m_AnimEndChangeState          = "USN_DAMAGE_STAND",
+			m_FootOffLandChangeState      = "USN_DAMAGE_AIR_DOWN",
+
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_13",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_16",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DAMAGE_20",
+					},
+				},
+			},
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE       = "NUST_DIE",
+			m_StateName                 = "USN_DAMAGE_DIE",
+			m_AnimName                  = "DAMAGE_DIE",
+			m_bAnimLoop                 = false,
+			m_bShowGage					= false,
+			m_fAnimSpeed            	= 1.1,
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = true,
+					m_fEventTime      = 3.0,
+					
+					m_fDissolve       = 1,
+					m_fTrackTime      = 1.8,
+				},
+			},
+
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,		
+
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DEATH_2",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DEATH_3",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DEATH_8",
+						"VOICE_UNIT_BAR_C_CEO_BATTLE_DEATH_9",
+					},
+				},
+			},
+		},
+	},
+}
+

@@ -1,0 +1,42 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11001602,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JUNIOR_C_RULER_SPORTS",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_JUNIOR_C_RULER_SPORTS@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11001602,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JUNIOR_C_RULER_SPORTS",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "RULER_JUNIOR_SPORTS_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "히어로가 되지 못해도 친구들을 지킬 수만 있다면 그걸로 충분해. 하지만 사장님은 모두를 지키고 싶은 거지? 그럼 나도 사장님과 같이 모두를 지킬래!",
+    m_fTalkTime = 0.03,
+    m_Talk_ENG = "I don't care if I can't be a hero, so long as I can protect my friends. But you want to protect everyone, don't you? Then, I'll help you protect them!",
+    m_Talk_TWN = "我不想當英雄，我只想守護我的朋友。但是老闆的心願是想守護所有人吧？那我也要和老闆一起守護所有人！",
+    m_Talk_THA = "ต่อให้ฉันเป็นฮีโร่ไม่ได้ก็ไม่เป็นไร ตราบใดที่ฉันปกป้องเพื่อนๆ ของฉันได้ แต่คุณอยากปกป้องทุกคนใช่มั้ยคะ? งั้นฉันจะช่วยคุณเอง!",
+    m_Talk_VTN = "Tôi không quan tâm nếu mình không thể trở thành người hùng, miễn là tôi có thể bảo vệ bạn bè của mình. Nhưng ngài muốn bảo vệ mọi người, phải không? Vậy, tôi sẽ giúp ngài bảo vệ họ!",
+    m_Talk_SCN = "哪怕不能成为英雄，只要能保护朋友我就满足了。可是老板你想保护所有人对吧？那我也要跟你一起保护所有人！",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11001602,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_JUNIOR_C_RULER_SPORTS",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,2862 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID = "NKM_UNIT_BASE_BOSS",
+	m_UnitSizeX 			= 120,
+	m_UnitSizeY 			= 250,
+	m_SpriteScale			= 1.0,
+
+	m_bShowGage				= false,
+
+	m_NKC_TEAM_COLOR_TYPE	= "NTCT_ONLY_SHADOW",
+	m_fShadowScaleX			= 400,
+	m_fShadowScaleY			= 300,
+		
+	m_fForceRespawnZposMin	= 0.4,
+	m_fForceRespawnZposMax	= 0.55,
+
+	m_SpeedRun				= 380,
+	m_bNoMove				= true,
+
+	m_bNoDamageStopTime		= true,
+	m_bNoDamageDownState	= true,
+	m_fDamageUpFactor		= 0.0,
+	m_fDamageBackFactor		= 0.5,
+	m_bImmuneStun			= true,
+	
+	m_TargetNearRange		= 500,
+	m_SeeRange				= 1500,
+	m_SeeRangeMax			= 1600,
+
+	m_bTargetNoChange		= false,
+	m_AttackedTargetTime	= 1,
+	m_bAttackedTarget		= false,
+	m_fDieCompleteTime		= 10.0,
+
+	m_listPhaseChangeData	=
+	{
+		{	--* 페이즈1 (HP: 90%)
+			m_TargetPhase				= 1,
+			m_fChangeConditionHPRate 	= 0.9,
+			
+			m_ChangeStateName			= "USN_PHASECHANGE1",
+		},
+		{	--* 페이즈1 (HP: 60%)
+			m_TargetPhase				= 2,
+			m_fChangeConditionHPRate 	= 0.6,
+			
+			m_ChangeStateName			= "USN_PHASECHANGE1",
+		},
+		{	--* 페이즈1 (HP: 30%)
+			m_TargetPhase				= 3,
+			m_fChangeConditionHPRate 	= 0.3,
+			
+			m_ChangeStateName			= "USN_PHASECHANGE1",
+		},
+	},
+
+	m_listAttackStateData = 
+	{
+		{	--* 공격1 (거리: 600 ~ 1100)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_ATTACK1",
+			m_fRangeMin						= 600,
+			m_fRangeMax						= 1100,
+			m_PhaseLess						= 1,
+		},
+		{	--* 공격2 (거리: 0 ~ 600)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_ATTACK2",
+			m_fRangeMin						= 0,
+			m_fRangeMax						= 600,
+		},
+	},
+	m_listAirAttackStateData =
+	{
+		{	--* 공격2 공중 (거리: 0 ~ 800)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_ATTACK2_AIR",
+			m_fRangeMin						= 0,
+			m_fRangeMax						= 800,
+		},
+	},
+	m_listSkillStateData =
+	{
+		{	--* 스킬1 (거리: 600 ~ 1100)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_SKILL1",
+			m_fStartCool					= 0.3,
+			m_bTargetLandOnly				= true,
+			m_fRangeMin						= 600,
+			m_fRangeMax						= 1100,
+			m_PhaseLess						= 1,
+		},
+		{	--* 스킬2 (거리: 0 ~ 600)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_SKILL2",
+			m_fStartCool					= 0.3,
+			m_bTargetLandOnly				= true,
+			m_fRangeMin						= 0,
+			m_fRangeMax						= 600,
+		},
+	},
+	m_listHyperSkillStateData =
+	{
+		{	--* 하이퍼1 (거리: 0 ~ 1500)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_HYPER1",
+			m_fStartCool					= 0.7,
+			m_fRangeMin						= 0,
+			m_fRangeMax						= 1500,
+			m_PhaseLess						= 1,
+		},
+		{	--* 하이퍼2 (거리: 0 ~ 1500)
+			m_NKM_ATTACK_STATE_DATA_TYPE	= "NASDT_NORMAL",
+			m_StateName						= "USN_HYPER2",
+			m_fStartCool					= 0.7,
+			m_fRangeMin						= 0,
+			m_fRangeMax						= 1500,
+			m_PhaseOver						= 1,
+		},
+	},
+	m_listAccumStateChangePack = 
+	{
+		{	--* 스택1 (HP100%, 공격2를 5회 시전 할 때마다 패턴1 발동)
+			m_Condition =
+			{
+				m_Phase		= {0,0},
+			},
+			m_listAccumStateChange = 
+			{
+				{
+					m_listAccumStateName	= {"USN_ATTACK2", "USN_ATTACK2_AIR"},
+					m_AccumCount 			= 6,
+					m_TargetStateName 		= "USN_PATTERN1",
+				},
+			},
+		},
+		{	--* 스택2 (HP90%, 공격2를 5회 시전 할 때마다 패턴1 발동)
+			m_Condition =
+			{
+				m_Phase		= {1,99},
+			},
+			m_listAccumStateChange = 
+			{
+				{
+					m_listAccumStateName	= {"USN_ATTACK2", "USN_ATTACK2_AIR"},
+					m_AccumCount 			= 4,
+					m_TargetStateName 		= "USN_PATTERN2",
+				},
+			},
+		},
+	},
+	m_dicNKMUnitState =
+	{
+		{	--* 시작 보스
+			m_StateName					= "USN_START_BOSS",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_START",
+
+			m_AnimName					= "NOANI",
+			m_bAnimLoop					= false,
+			
+			m_StateTimeChangeStateTime	= 1,
+			m_StateTimeChangeState		= "USN_START",
+			
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime				= false,
+					m_fEventTime			= 0,
+					m_EffectName			= "AB_FX_UI_WARNING",
+					m_ParentType			= "NEPT_NUF_BEFORE_HUD_EFFECT",
+					m_bUseZScale			= false,
+					m_AnimName				= "FX_UI_WARNING",
+					m_bForceRight			= true,
+					m_bFixedPos				= true,
+				},
+			},
+		},
+		{	--* 시작
+			m_StateName					= "USN_START",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_START",
+			m_AnimName					= "START",
+			
+			m_DamagedChangeState		= "USN_ASTAND",
+			m_AnimEndChangeState		= "USN_ASTAND",
+			
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime 		= 0/30,
+					m_fAnimSpeed		= 1.0,
+				},
+				{
+					m_fEventTime 		= 5/30,
+					m_fAnimSpeed		= 1.0,
+				},
+				{
+					m_fEventTime 		= 50/30,
+					m_fAnimSpeed		= 1.2,
+				},
+				{
+					m_fEventTime 		= 60/30,
+					m_fAnimSpeed		= 1.0,
+				},
+				{
+					m_fEventTime 		= 85/30,
+					m_fAnimSpeed		= 0.5,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 0/30,
+					m_fEventTimeMax			= 25/30,
+
+					m_bForce				= true,
+					m_fPosXOffset			= 0,
+					m_fPosYOffset			= 100,
+					m_fZoom					= -200,
+					m_fFocusBlur			= 0.1,
+
+					m_fMoveTrackingTime		= 0.2,
+					m_fZoomTrackingTime		= 0.2,
+					m_fCameraRadius			= 0.0,
+				},
+				{
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 25/30,
+					m_fEventTimeMax			= 50/30,
+
+					m_bForce				= true,
+					m_fPosXOffset			= 0,
+					m_fPosYOffset			= 100,
+					m_fZoom					= -100,
+					m_fFocusBlur			= 0.1,
+
+					m_fMoveTrackingTime		= 0.5,
+					m_fZoomTrackingTime		= 0.5,
+					m_fCameraRadius			= 0.0,
+				},
+				{
+					m_bAnimTime				= true,
+					m_fEventTimeMin			= 50/30,
+					m_fEventTimeMax			= 85/30,
+
+					m_bForce				= true,
+					m_fPosXOffset			= 0,
+					m_fPosYOffset			= 100,
+					m_fZoom					= 0,
+					m_fFocusBlur			= 0.0,
+
+					m_fMoveTrackingTime		= 35/30,
+					m_fZoomTrackingTime		= 35/30,
+					m_fCameraRadius			= 0.0,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime			= 3/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashGap		= 8,
+					m_fCameraCrashTime		= 10/30,
+				},
+				{
+					m_fEventTime			= 60/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashGap		= 12,
+					m_fCameraCrashTime		= 15/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 3/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MONSTER_MOVEMENT_03",
+					},
+					m_fLocalVol		= 0.8,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 3/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_17",
+					},
+					m_fLocalVol		= 0.8,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 5/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_MONSTER_MINISTRA_START",
+					},
+					m_fLocalVol		= 0.8,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_67",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+		{	--* 패턴1 앞점멸 꿀밤 (100%)
+			m_StateName					= "USN_PATTERN1",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "PATTERN1",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_SKILL",
+			m_bForceLeft				= true,
+			m_fAnimSpeed				= 3,
+			
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 25/30,
+				},
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 110/30,
+					m_fEventTimeMax = 115/30,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 10/30,
+
+					m_bTargetUnit		= true,
+                
+					m_OffsetX 			= -300,
+					m_OffsetJumpYPos	= 0,
+			    
+					m_MoveTime 			= 15/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 110/30,
+                
+					m_bTargetUnit		= true,
+                
+					m_OffsetX 			= -800,
+					m_OffsetJumpYPos	= 0,
+			    
+					m_MoveTime 			= 0/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime			= 30/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashGap		= 8,
+					m_fCameraCrashTime		= 10/30,
+				},
+				{
+					m_fEventTime			= 90/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 1250,
+			
+					m_fCameraCrashGap		= 12,
+					m_fCameraCrashTime		= 15/30,
+				},
+			},
+			m_listNKMEventEffect =
+			{
+				{
+					m_fEventTime		= 15/30,
+					m_EffectName		= "AB_FX_THADDEUS_MOVE",
+					m_AnimName			= "BASE",
+					m_fScaleFactor		= 1.0,
+				},
+				{
+					m_fEventTime		= 109/30,
+					m_EffectName		= "AB_FX_THADDEUS_MOVE",
+					m_AnimName			= "BASE",
+					m_fScaleFactor		= 1.0,
+				},
+				{
+					m_fEventTime		= 111/30,
+					m_EffectName		= "AB_FX_THADDEUS_MOVE",
+					m_AnimName			= "BASE",
+					m_fScaleFactor		= 2.0,
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					m_fEventTimeMin				= 30/30,
+					m_fEventTimeMax				= 35/30,
+			
+					m_fRangeMin					= -500,
+					m_fRangeMax					= 500,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= true,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 3,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PATTERN1",
+				},
+				{
+					m_fEventTimeMin				= 92/30,
+					m_fEventTimeMax				= 97/30,
+			
+					m_fRangeMin					= -750,
+					m_fRangeMax					= 750,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= true,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 3,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PATTERN1_END",
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 5/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_27",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 24/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_11",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 90/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_ROCK_BIG_02",
+					},
+					m_fLocalVol		= 0.7,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 90/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_17",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_52",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+		{	--* 패턴2 제자리 스윙 (90%)
+			m_StateName					= "USN_PATTERN2",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "SKILL3",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_SKILL",
+			m_bSkillCutIn				= true,
+			m_bForceLeft				= true,
+
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_StateCoolTime				= 30,
+
+			m_listNKMEventAnimSpeed =
+			{
+				{
+					m_fEventTime 		= 0/30,
+					m_fAnimSpeed		= 1.6,
+				},
+				{
+					m_fEventTime 		= 60/30,
+					m_fAnimSpeed		= 1.0,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 47/30,
+
+					m_bTargetUnit		= true,
+
+					m_OffsetX 			= 600,
+					m_OffsetJumpYPos	= 0,
+
+					m_MoveTime 			= 5/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= false,
+					m_MoveTrackingType	= "TDT_SLOWER"
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 88/30,
+
+					m_bTargetUnit		= false,
+
+					m_OffsetX 			= -100,
+					m_OffsetJumpYPos	= 0,
+
+					m_MoveTime 			= 5/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= false,
+					m_MoveTrackingType	= "TDT_SLOWER"
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 48/30,
+					m_fEventTimeMax				= 53/30,
+			
+					m_fRangeMin					= -300,
+					m_fRangeMax					= 1000,
+			
+					m_AttackTargetUnit			= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SKILL3",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 91/30,
+					m_fEventTimeMax				= 96/30,
+			
+					m_fRangeMin					= -300,
+					m_fRangeMax					= 1000,
+			
+					m_AttackTargetUnit			= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SKILL3",
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_bAnimTime			= true,
+					m_fEventTime		= 91/30,
+					m_DEName			= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SKILL3",
+					m_bTargetPos		= false,
+					m_bShipSkillPos		= false,
+					m_bIgnoreTarget		= true,		--? 마스터의 타겟 상속무시 여부
+					m_bIgnoreNoTarget	= false,		--? 타겟없을 때 무시 여부
+			
+					m_OffsetX			= 0,
+					m_OffsetY			= 350,
+					m_OffsetZ			= 0,
+					m_fAddRotate		= 15,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SKILL_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_08",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 44/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_09",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 47/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_BIG_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{	--* 번쩍
+					m_fEventTime	= 75/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_SMALL_09",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{	--* 번쩍
+					m_fEventTime	= 75/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_10",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 85/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_09",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 88/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_BIG_03",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+		{	--* 페이즈1
+			m_StateName					= "USN_PHASECHANGE1",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "PATTERN2",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_HYPER",
+			m_bForceLeft				= true,
+			m_bSkillCutIn				= true,
+			
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_StateCoolTime				= 30,
+			
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 30/30,
+				},
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 110/30,
+					m_fEventTimeMax = 115/30,
+				},
+			},
+			
+			m_listNKMEventAnimSpeed =
+			{
+				{
+					m_fEventTime 		= 0/30,
+					m_fAnimSpeed		= 1.0,
+				},
+				{
+					m_fEventTime 		= 102/30,
+					m_fAnimSpeed		= 0.5,
+				},
+				{
+					m_fEventTime 		= 115/30,
+					m_fAnimSpeed		= 1.2,
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					bForceCritical				= true,
+					m_fEventTimeMin				= 0/30,
+					m_fEventTimeMax				= 5/30,
+			
+					m_fRangeMin					= -3000,
+					m_fRangeMax					= 3000,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= false,
+			
+					m_AttackUnitCount			= 3,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_MY_TEAM_NOT_SELF",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PHASECHANGE_END",
+				},
+				{
+					bForceCritical				= true,
+					m_fEventTimeMin				= 10/30,
+					m_fEventTimeMax				= 15/30,
+			
+					m_fRangeMin					= -3000,
+					m_fRangeMax					= 3000,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= false,
+			
+					m_AttackUnitCount			= 3,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_MY_TEAM_NOT_SELF",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PHASECHANGE_END",
+				},
+				{
+					m_fEventTimeMin				= 27/30,
+					m_fEventTimeMax				= 32/30,
+			
+					m_fRangeMin					= -800,
+					m_fRangeMax					= 800,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_HYPER2",
+				},
+				{
+					m_fEventTimeMin				= 85/30,
+					m_fEventTimeMax				= 90/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1000,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= true,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 3,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PHASECHANGE",
+				},
+				{
+					m_fEventTimeMin				= 95/30,
+					m_fEventTimeMax				= 97/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1000,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= true,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 3,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PHASECHANGE",
+				},
+			},
+			m_listNKMEventRespawn = 
+			{
+				{
+					m_fEventTime	= 115/30,
+					m_bAnimTime		= true,
+					m_UnitStrID 	= "NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SUMMON_N",
+					m_MaxCount 		= 3,
+					m_fOffsetX		= 500,
+					
+					m_bUsePerSkillLevel	= 0,
+				},
+			},
+			m_listNKMEventDispel =
+			{
+				{
+					m_fEventTime		= 115/30,
+					m_bAnimTime 		= true,
+					m_bStateEndTime		= false,
+					m_bDebuff 			= true, --true이면 우리편 디버프 제거, false이면 적편 버프 제거
+					m_fRange			= 1, 	--0이면 무한대
+					m_MaxCount 			= 1, 	--0이면 무한대
+					m_bDeleteInfinity 	= true, -- true이면 infinity 도 없애줌.
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 50/30,
+
+					m_bTargetUnit		= true,
+
+					m_OffsetX 			= 800,
+					m_OffsetJumpYPos	= 0,
+
+					m_MoveTime 			= 30/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= false,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 0/30,
+					m_fEventTimeMax       = 50/30,
+        
+					m_fPosXOffset         = 200,
+					m_fPosYOffset         = 100,
+					m_fZoom               = -100,
+					m_fFocusBlur          = 0.0,
+        
+					m_fMoveTrackingTime   = 0.1,
+					m_fZoomTrackingTime   = 0.1,
+					m_fCameraRadius       = 0.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 50/30,
+					m_fEventTimeMax       = 70/30,
+                
+					m_fPosXOffset         = 250,
+					m_fPosYOffset         = 350,
+					m_fZoom               = -200,
+					m_fFocusBlur          = 0.0,
+                
+					m_fMoveTrackingTime   = 0.3,
+					m_fZoomTrackingTime   = 0.8,
+					m_fCameraRadius       = 0.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 70/30,
+					m_fEventTimeMax       = 120/30,
+                
+					m_fPosXOffset         = 1000,
+					m_fPosYOffset         = 150,
+					m_fZoom               = 0,
+					m_fFocusBlur          = 0.0,
+                
+					m_fMoveTrackingTime   = 2.4,
+					m_fZoomTrackingTime   = 0.8,
+					m_fCameraRadius       = 0.0,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime             = true,
+					m_fEventTimeMin         = 1/30,
+					m_fEventTimeMax         = 110/30,
+            
+					m_fColorR               = 0.5,
+					m_fColorG               = 0.0,
+					m_fColorB               = 0.5,
+        
+					m_fMapColorKeepTime     = 1.0,
+					m_fMapColorReturnTime   = 1.0,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SKILL_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 22/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_WIND_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 22/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_24",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 55/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_46",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 55/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_59",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 80/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_MONSTER_MINISTRA_SHADOW_HYPER_ATTACK_STRAT",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 80/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_BIG_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 95/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_BIG_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 100/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_56",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_EARTHQUAKE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_17",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_46",
+					},
+					m_fLocalVol		= 0.7,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+			},
+		},
+		{	--* 이동
+			m_StateName					= "USN_RUN",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_MOVE",
+			m_AnimName					= "RUN",
+			
+			m_fAnimSpeed				= 1.0,
+			m_bAnimLoop					= true,
+			m_bRun						= true,
+		},
+		{	--* 공격1
+			m_StateName					= "USN_ATTACK1",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "ATTACK1",
+			m_fAnimSpeed				= 1.0,
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_bAutoCoolTime				= true,
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 12/30,
+					m_fEventTimeMax				= 18/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK1",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 18/30,
+					m_fEventTimeMax				= 25/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK1",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 25/30,
+					m_fEventTimeMax				= 32/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK1",
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_fEventTime			= 60/30,
+					m_DEName				= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK1",
+					m_bTargetPos			= false,
+					m_bShipSkillPos			= false,
+					m_bIgnoreTarget			= true,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget		= false,		--? 타겟없을 때 무시 여부
+					
+					m_OffsetX				= -80,
+					m_OffsetY				= 230,
+					m_OffsetZ				= 0,
+					m_fAddRotate			= 0,
+				},	
+				{	
+					m_fEventTime			= 63/30,
+					m_DEName				= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK1",
+					m_bTargetPos			= false,
+					m_bShipSkillPos			= false,
+					m_bIgnoreTarget			= true,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget		= false,		--? 타겟없을 때 무시 여부
+					
+					m_OffsetX				= -80,
+					m_OffsetY				= 170,
+					m_OffsetZ				= 0,
+					m_fAddRotate			= 0,
+				},	
+				{	
+					m_fEventTime			= 66/30,
+					m_DEName				= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK1",
+					m_bTargetPos			= false,
+					m_bShipSkillPos			= false,
+					m_bIgnoreTarget			= true,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget		= false,		--? 타겟없을 때 무시 여부
+					
+					m_OffsetX				= -50,
+					m_OffsetY				= 120,
+					m_OffsetZ				= 0,
+					m_fAddRotate			= 0,
+				},
+			},
+			m_listNKMEventSound =
+			{
+			
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 12/30,
+					m_bStateEndTime			= false,
+			    
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 15/30,
+					m_bStateEndTime			= false,
+			    
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_bStopSound			= true,
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 17/30,
+					m_bStateEndTime			= false,
+			    
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 20/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 23/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 25/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 27/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 29/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_bStopSound			= true,
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 32/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+				}, 
+
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 60/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 63/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 66/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 1/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_68",
+					},
+				}, 
+				{
+					m_bAnimTime				= true,
+					m_fEventTime			= 48/30,
+					m_bStateEndTime			= false,
+				
+					m_listSoundName			= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_68",
+					},
+				}, 
+			},
+		},
+		{	--* 공격2
+			m_StateName					= "USN_ATTACK2",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "ATTACK2",
+
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_bAutoCoolTime				= false,
+			m_StateCoolTime				= 1,
+
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime 		= 0/30,
+					m_fAnimSpeed		= 1.0,
+				},
+				{
+					m_fEventTime 		= 15/30,
+					m_fAnimSpeed		= 1.5,
+				},
+				{
+					m_fEventTime 		= 35/30,
+					m_fAnimSpeed		= 1.7,
+				},
+				{
+					m_fEventTime 		= 95/30,
+					m_fAnimSpeed		= 1.0,
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 30/30,
+					m_fEventTimeMax				= 48/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 700,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 48/30,
+					m_fEventTimeMax				= 62/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 700,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 62/30,
+					m_fEventTimeMax				= 79/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 700,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_fEventTime		= 97/30,
+					m_DEName			= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					m_bTargetPos		= false,
+					m_bShipSkillPos		= false,
+					m_bIgnoreTarget		= true,			--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget	= false,		--? 타겟없을 때 무시 여부
+			
+					m_OffsetX			= -300,
+					m_OffsetY			= 200,
+					m_OffsetZ			= 0,
+					m_fAddRotate		= 0,
+				},
+				{
+					m_fEventTime		= 100/30,
+					m_DEName			= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					m_bTargetPos		= false,
+					m_bShipSkillPos		= false,
+					m_bIgnoreTarget		= true,			--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget	= false,		--? 타겟없을 때 무시 여부
+			
+					m_OffsetX			= 150,
+					m_OffsetY			= 230,
+					m_OffsetZ			= 0,
+					m_fAddRotate		= 0,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 24/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 31/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 36/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 39/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 45/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 49/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 56/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 60/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_GUN_FIRE_SMALL_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 35/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 50/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 65/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 97/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ONESHOT_FIRE_SMALL_03",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 100/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ONESHOT_FIRE_SMALL_03",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 0/30,
+				
+					m_bTargetUnit		= false,
+				
+					m_OffsetX 			= 15,
+					m_OffsetJumpYPos	= 0.0,
+				
+					m_MoveTime 			= 90/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+					m_MoveTrackingType	= "TDT_FASTER"
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 97/30,
+				
+					m_bTargetUnit		= false,
+				
+					m_OffsetX 			= -15,
+					m_OffsetJumpYPos	= 0.0,
+				
+					m_MoveTime 			= 2/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+					m_MoveTrackingType	= "TDT_SLOWER"
+				},
+			},
+		},
+		{	--* 공격2 공중
+			m_StateName					= "USN_ATTACK2_AIR",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "ATTACK2_AIR",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_bAutoCoolTime				= true,
+
+			m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_fEventTime 		= 0/30,
+					m_fAnimSpeed		= 1.0,
+				},
+				{
+					m_fEventTime 		= 15/30,
+					m_fAnimSpeed		= 1.5,
+				},
+				{
+					m_fEventTime 		= 35/30,
+					m_fAnimSpeed		= 1.7,
+				},
+				{
+					m_fEventTime 		= 95/30,
+					m_fAnimSpeed		= 1.0,
+				},
+			},
+			m_listNKMEventAttack =
+			{
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 30/30,
+					m_fEventTimeMax				= 40/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 900,
+			
+					m_bHitLand					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					-- m_SoundName					= "FX_COMBAT_ALL_GUN_FIRE_SMALL_05",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 42/30,
+					m_fEventTimeMax				= 50/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 900,
+			
+					m_bHitLand					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					-- m_SoundName					= "FX_COMBAT_ALL_GUN_FIRE_SMALL_05",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 48/30,
+					m_fEventTimeMax				= 60/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 900,
+			
+					m_bHitLand					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					-- m_SoundName					= "FX_COMBAT_ALL_GUN_FIRE_SMALL_05",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 59/30,
+					m_fEventTimeMax				= 70/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 900,
+			
+					m_bHitLand					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					-- m_SoundName					= "FX_COMBAT_ALL_GUN_FIRE_SMALL_05",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 70/30,
+					m_fEventTimeMax				= 80/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 900,
+			
+					m_bHitLand					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					-- m_SoundName					= "FX_COMBAT_ALL_GUN_FIRE_SMALL_05",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 81/30,
+					m_fEventTimeMax				= 90/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 900,
+			
+					m_bHitLand					= false,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2",
+					-- m_SoundName					= "FX_COMBAT_ALL_GUN_FIRE_SMALL_05",
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_fEventTime		= 97/30,
+					m_DEName			= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2_AIR",
+					m_bTargetPos		= false,
+					m_bShipSkillPos		= false,
+					m_bIgnoreTarget		= true,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget	= false,		--? 타겟없을 때 무시 여부
+			
+					m_OffsetX			= -300,
+					m_OffsetY			= 200,
+					m_OffsetZ			= 0,
+					m_fAddRotate		= 0,
+				},
+				{
+					m_fEventTime		= 100/30,
+					m_DEName			= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_ATTACK2_AIR",
+					m_bTargetPos		= false,
+					m_bShipSkillPos		= false,
+					m_bIgnoreTarget		= true,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget	= false,		--? 타겟없을 때 무시 여부
+			
+					m_OffsetX			= 150,
+					m_OffsetY			= 230,
+					m_OffsetZ			= 0,
+					m_fAddRotate		= 0,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 30/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 40/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 50/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 60/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 70/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 80/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_GUN_FIRE_SMALL",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 97/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ONESHOT_FIRE_SMALL_03",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 100/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ONESHOT_FIRE_SMALL_03",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 0/30,
+				
+					m_bTargetUnit		= false,
+				
+					m_OffsetX 			= 15,
+					m_OffsetJumpYPos	= 0.0,
+				
+					m_MoveTime 			= 90/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+					m_MoveTrackingType	= "TDT_FASTER"
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 97/30,
+				
+					m_bTargetUnit		= false,
+				
+					m_OffsetX 			= -15,
+					m_OffsetJumpYPos	= 0.0,
+				
+					m_MoveTime 			= 2/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+					m_MoveTrackingType	= "TDT_SLOWER"
+				},
+			},
+		},
+		{	--* 스킬1
+			m_StateName					= "USN_SKILL1",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "SKILL1",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_SKILL",
+			m_bSkillCutIn				= true,
+			m_fAnimSpeed				= 1.2,
+
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_StateCoolTime				= 30,
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 30/30,
+					m_fEventTimeMax				= 40/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_SKILL1",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 39/30,
+					m_fEventTimeMax				= 50/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_SKILL1",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 52/30,
+					m_fEventTimeMax				= 60/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_SKILL1",
+				},
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 57/30,
+					m_fEventTimeMax				= 70/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1200,
+			
+					m_bHitAir					= false,
+			
+					m_AttackUnitCount			= 1,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_SKILL1",
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime			= 30/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 2000,
+			
+					m_fCameraCrashGap		= 8,
+					m_fCameraCrashTime		= 40/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SKILL_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 5/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_56",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_MONSTER_MINISTRA_SHADOW_HYPER_ATTACK_LAST",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 30/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 45/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 60/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MINIGUN_FIRE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 80/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_56",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 85/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_51",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+		{	--* 스킬2
+			m_StateName					= "USN_SKILL2",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "SKILL2",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_SKILL",
+			m_bSkillCutIn				= true,
+
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_StateCoolTime				= 30,
+			m_fAnimSpeed				= 1.3,
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bDamageSpeedDependRight	= true,
+					m_fEventTimeMin				= 52/30,
+					m_fEventTimeMax				= 62/30,
+			
+					m_fRangeMin					= 0,
+					m_fRangeMax					= 1000,
+			
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SKILL2",
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SKILL_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 10/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+					m_bStopSound	= true,
+				},
+				{
+					m_fEventTime	= 52/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_ROCK_BIG_02",
+					},
+					m_fLocalVol		= 0.7,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 52/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_14",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 52/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_17",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+			},
+		},
+		{	--* 하이퍼1
+			m_StateName					= "USN_HYPER1",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "HYPER_SKILL1",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_HYPER",
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 80/30,
+				},
+			},
+			m_bForceLeft				= true,
+			
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_StateCoolTime				= 85,
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HYPER_ATTACK_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 22/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_WIND_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 22/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_24",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 55/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_46",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 55/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_59",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 80/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_MONSTER_MINISTRA_SHADOW_HYPER_ATTACK_STRAT",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 80/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_56",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 95/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_56",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_EARTHQUAKE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_17",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 110/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_46",
+					},
+					m_fLocalVol		= 0.7,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 50/30,
+                
+					m_bTargetUnit		= true,
+                
+					m_OffsetX 			= -1400,
+					m_OffsetJumpYPos	= 0,
+			    
+					m_MoveTime 			= 30/30,
+					m_bLandMove 		= true,
+					m_bOffsetDependMe	= true,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 0/30,
+					m_fEventTimeMax       = 50/30,
+        
+					m_fPosXOffset         = 200,
+					m_fPosYOffset         = 100,
+					m_fZoom               = -100,
+					m_fFocusBlur          = 0.0,
+        
+					m_fMoveTrackingTime   = 0.1,
+					m_fZoomTrackingTime   = 0.1,
+					m_fCameraRadius       = 0.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 50/30,
+					m_fEventTimeMax       = 70/30,
+                
+					m_fPosXOffset         = 250,
+					m_fPosYOffset         = 350,
+					m_fZoom               = -200,
+					m_fFocusBlur          = 0.0,
+                
+					m_fMoveTrackingTime   = 0.3,
+					m_fZoomTrackingTime   = 0.8,
+					m_fCameraRadius       = 0.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 70/30,
+					m_fEventTimeMax       = 120/30,
+                
+					m_fPosXOffset         = 1000,
+					m_fPosYOffset         = 150,
+					m_fZoom               = 0,
+					m_fFocusBlur          = 0.0,
+                
+					m_fMoveTrackingTime   = 2.4,
+					m_fZoomTrackingTime   = 0.8,
+					m_fCameraRadius       = 0.0,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime             = true,
+					m_fEventTimeMin         = 1/30,
+					m_fEventTimeMax         = 110/30,
+            
+					m_fColorR               = 0.5,
+					m_fColorG               = 0.0,
+					m_fColorB               = 0.5,
+        
+					m_fMapColorKeepTime     = 1.0,
+					m_fMapColorReturnTime   = 1.0,
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_bAnimTime				= false,
+					m_fEventTime			= 78/30,
+					m_DEName				= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_HYPER1_1",
+					m_bTargetPos			= false,
+					m_bShipSkillPos			= false,
+					m_bIgnoreTarget			= false,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget		= false,		--? 타겟없을 때 무시 여부
+					
+					m_OffsetX				= 200,
+					m_OffsetY				= -1000,
+					m_OffsetZ				= 0,
+					m_fAddRotate			= 0,
+				},
+				{
+					m_bAnimTime				= false,
+					m_fEventTime			= 92/30,
+					m_DEName				= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_HYPER1_6",
+					m_bTargetPos			= false,
+					m_bShipSkillPos			= false,
+					m_bIgnoreTarget			= false,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget		= false,		--? 타겟없을 때 무시 여부
+					
+					m_OffsetX				= 1400,
+					m_OffsetY				= -1000,
+					m_OffsetZ				= 0,
+					m_fAddRotate			= 0,
+				},
+				{
+					m_bAnimTime				= false,
+					m_fEventTime			= 110/30,
+					m_DEName				= "DE_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_HYPER1_9",
+					m_bTargetPos			= true,
+					m_bShipSkillPos			= false,
+					m_bIgnoreTarget			= false,		--? 마스터의 타겟 상속 여부
+					m_bIgnoreNoTarget		= false,		--? 타겟없을 때 무시 여부
+					
+					m_OffsetX				= 0,
+					m_OffsetY				= -1000,
+					m_OffsetZ				= 0,
+					m_fAddRotate			= 0,
+				},
+			},
+		},
+		{	--* 하이퍼2
+			m_StateName					= "USN_HYPER2",
+			m_NKM_UNIT_STATE_TYPE		= "NUST_ATTACK",
+			m_AnimName					= "HYPER_SKILL2",
+			
+			m_NKM_SKILL_TYPE			= "NST_ATTACK",
+			m_SuperArmorLevel			= "NSAL_HYPER",
+
+			m_bForceLeft				= true,
+			
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_StateCoolTime				= 85,
+			
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 80/30,
+				},
+			},
+
+			m_listNKMEventRespawn = 
+			{
+				{
+					m_fEventTime	= 130/30,
+					m_bAnimTime		= true,
+					m_UnitStrID 	= "NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SUMMON_N",
+					m_MaxCount 		= 3,
+					m_fOffsetX		= 500,
+					
+					m_bUsePerSkillLevel	= 0,
+				},
+			},
+			
+			m_listNKMEventAttack =
+			{
+				{
+					bForceCritical				= true,
+					m_fEventTimeMin				= 0/30,
+					m_fEventTimeMax				= 5/30,
+			
+					m_fRangeMin					= -3000,
+					m_fRangeMax					= 3000,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_MY_TEAM_NOT_SELF",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_PHASECHANGE_END",
+				},
+				{
+					m_fEventTimeMin				= 0/30,
+					m_fEventTimeMax				= 5/30,
+			
+					m_fRangeMin					= -500,
+					m_fRangeMax					= 500,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SKILL3",
+				},
+				{
+					m_fEventTimeMin				= 20/30,
+					m_fEventTimeMax				= 25/30,
+			
+					m_fRangeMin					= -500,
+					m_fRangeMax					= 500,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_SKILL3",
+				},
+				{
+					m_fEventTimeMin				= 37/30,
+					m_fEventTimeMax				= 42/30,
+			
+					m_fRangeMin					= -600,
+					m_fRangeMax					= 600,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= false,
+					m_AttackTargetUnit			= true,
+			
+					m_AttackUnitCount			= 2,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_HYPER2",
+				},
+				{
+					m_fEventTimeMin				= 115/30,
+					m_fEventTimeMax				= 120/30,
+			
+					m_fRangeMin					= -500,
+					m_fRangeMax					= 3000,
+			
+					m_bHitLand					= true,
+					m_bHitAir					= true,
+					m_AttackTargetUnit			= false,
+			
+					m_AttackUnitCount			= 5,
+					m_NKM_DAMAGE_TARGET_TYPE	= "NDTT_ENEMY",
+					m_DamageTempletName			= "DT_NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_HYPER2_END",
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HYPER_ATTACK_START",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_08",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 5/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_BIG_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 15/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_09",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_BIG_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 35/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_WIND_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 풍압
+					m_fEventTime	= 37/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_16",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 이동음
+					m_fEventTime	= 50/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_11",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 오오라
+					m_fEventTime	= 60/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_74",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 번쩍
+					m_fEventTime	= 100/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_SMALL_09",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{	--* 투창
+					m_fEventTime	= 114/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_21",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 투창
+					m_fEventTime	= 115/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_WIND",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 여진
+					m_fEventTime	= 118/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_SLASH_BIG",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 풍압음
+					m_fEventTime	= 125/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+				{	--* 덥사운드
+					m_fEventTime	= 125/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_COFFIN_LASER_MAIN_EXPLOSION",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 9999.0,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 55/30,
+
+					m_bTargetUnit		= false,
+
+					m_OffsetX 			= -1000,
+					m_OffsetJumpYPos	= 800,
+
+					m_MoveTime 			= 0/30,
+					m_bLandMove 		= false,
+					m_bOffsetDependMe	= false,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 55/30,
+
+					m_bTargetUnit		= false,
+
+					m_OffsetX 			= 0,
+					m_OffsetJumpYPos	= -700,
+
+					m_MoveTime 			= 45/30,
+					m_bLandMove 		= false,
+					m_bOffsetDependMe	= true,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime		= 100/30,
+
+					m_bTargetUnit		= false,
+
+					m_OffsetX 			= 0,
+					m_OffsetJumpYPos	= 0,
+
+					m_MoveTime 			= 20/30,
+					m_bLandMove 		= false,
+					m_bOffsetDependMe	= false,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime			= 40/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 9999,
+			
+					m_fCameraCrashGap		= 10,
+					m_fCameraCrashTime		= 10/30,
+				},
+				{
+					m_fEventTime			= 115/30,
+					m_CameraCrashType		= "NCCT_UP_DOWN",
+					m_fCrashRadius			= 9999,
+			
+					m_fCameraCrashGap		= 20,
+					m_fCameraCrashTime		= 50/30,
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 3/30,
+					m_fEventTimeMax       = 55/30,
+
+					m_fPosXOffset         = 200,
+					m_fPosYOffset         = 100,
+					m_fZoom               = -100,
+					m_fFocusBlur          = 0.0,
+
+					m_fMoveTrackingTime   = 0.1,
+					m_fZoomTrackingTime   = 0.1,
+					m_fCameraRadius       = 9999.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 55/30,
+					m_fEventTimeMax       = 90/30,
+
+					m_fPosXOffset         = 100,
+					m_fPosYOffset         = 150,
+					m_fZoom               = -150,
+					m_fFocusBlur          = 0.0,
+
+					m_fMoveTrackingTime   = 5/30,
+					m_fZoomTrackingTime   = 5/30,
+					m_fCameraRadius       = 9999.0,
+				},
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 90/30,
+					m_fEventTimeMax       = 120/30,
+
+					m_fPosXOffset         = 700,
+					m_fPosYOffset         = 150,
+					m_fZoom               = 0,
+					m_fFocusBlur          = 0.1,
+
+					m_fMoveTrackingTime   = 30/30,
+					m_fZoomTrackingTime   = 20/30,
+					m_fCameraRadius       = 9999.0,
+				},
+			},
+			m_listNKMEventStopTime =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 0/30,
+
+					m_StopTimeIndex     = "NSTI_SKILL",
+					m_fStopTime         = 40/30,
+					m_bStopEnemyOnly    = false,
+					m_bMyStop           = false,
+					m_fRange            = 1500,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime             = true,
+					m_fEventTimeMin         = 1/30,
+					m_fEventTimeMax         = 75/30,
+
+					m_fColorR               = 0.8,
+					m_fColorG               = 0.0,
+					m_fColorB               = 0.8,
+
+					m_fMapColorKeepTime     = 60/30,
+					m_fMapColorReturnTime   = 60/30,
+				},
+				{
+					m_bAnimTime             = true,
+					m_fEventTimeMin         = 75/30,
+					m_fEventTimeMax         = 110/30,
+
+					m_fColorR               = 0.0,
+					m_fColorG               = 0.0,
+					m_fColorB               = 0.0,
+
+					m_fMapColorKeepTime     = 60/30,
+					m_fMapColorReturnTime   = 60/30,
+				},
+			},
+		},
+		{	--* 쓰러짐
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_DOWN",
+			m_AnimName                    = "DAMAGE_DOWN",
+			m_bAnimLoop                   = false,
+	  
+			m_AnimEndDyingState           = "USN_DAMAGE_DIE",
+			
+			-- m_listNKMEventAnimSpeed =
+			-- {
+			-- 	{
+			-- 		m_fEventTime	= 57/30,
+			-- 		m_fAnimSpeed	= 0.015,
+			-- 	},
+			-- },
+			m_listNKMEventGameSpeed = 
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+	
+					m_fGameSpeed              = 0.33,
+					m_fTrackingTime           = 1.5,
+				},
+			},    
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime           = true,
+					m_fEventTimeMin       = 0,
+					m_fEventTimeMax       = 1.5,
+			
+					m_bForce              = true,
+					m_fPosXOffset         = 0,
+					m_fPosYOffset         = 150,
+					m_fZoom               = -150,
+					m_fFocusBlur          = 0.3,
+			
+					m_fMoveTrackingTime   = 0.2,
+					m_fZoomTrackingTime   = 0.2,
+					m_fCameraRadius       = 0.0,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_52",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 30/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_FOOT_STEP",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 32/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC_04",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+			},
+		},
+		{	--* 죽음
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DIE",
+			m_StateName                   = "USN_DAMAGE_DIE",
+			m_AnimName                    = "DAMAGE_DIE",
+			m_bAnimLoop                   = false,
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_fTrackTime		= 10,
+				},
+			},
+		},
+	},
+}

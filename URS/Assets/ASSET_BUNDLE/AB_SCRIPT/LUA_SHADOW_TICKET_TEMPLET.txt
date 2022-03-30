@@ -1,0 +1,11 @@
+﻿-- Exported from SHADOW_TEMPLET.xlsx
+
+SHADOW_TICKET_TEMPLET =
+{
+  {
+    INDEX = 1,
+    SUPPLY_WEEK = "WEEK_MON",
+    TICKET_ID = 19,
+    COUNT = 500,
+  },
+}

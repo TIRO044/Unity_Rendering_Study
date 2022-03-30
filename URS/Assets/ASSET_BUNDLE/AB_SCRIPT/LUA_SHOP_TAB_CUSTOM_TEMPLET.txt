@@ -1,0 +1,29 @@
+﻿-- Exported from SHOP_PACKAGE_TEMPLET.xlsx
+
+SHOP_TAB_CUSTOM_TEMPLET =
+{
+  {
+    m_TabID = "TAB_PACKAGE_FIXED_CHARGE_V2",
+    m_TabSubIndex = 1,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_FIXED_CHARGE_V2_18DAYS_COMMON"},
+    m_OrderList = 10,
+    m_UsePrefabName = "AB_UI_SHOP_CHARGE_MONTHLY_PACKAGE",
+    m_UseProductID = {"160382", "160036"},
+  },
+  {
+    m_TabID = "TAB_PACKAGE_FIXED_CHARGE_V2",
+    m_TabSubIndex = 1,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_FIXED_CHARGE_V2_18DAYS_ONLY_JPN"},
+    m_OrderList = 10,
+    m_UsePrefabName = "AB_UI_SHOP_CHARGE_MONTHLY_PACKAGE",
+    m_UseProductID = {"160441", "160036"},
+  },
+  {
+    m_TabID = "TAB_PACKAGE_FIXED_CHARGE_V2",
+    m_TabSubIndex = 2,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_FIXED_CHARGE_ETERNIUM"},
+    m_OrderList = 10,
+    m_UsePrefabName = "AB_UI_SHOP_BANNER_FULL_160492",
+    m_UseProductID = {"160492"},
+  },
+}

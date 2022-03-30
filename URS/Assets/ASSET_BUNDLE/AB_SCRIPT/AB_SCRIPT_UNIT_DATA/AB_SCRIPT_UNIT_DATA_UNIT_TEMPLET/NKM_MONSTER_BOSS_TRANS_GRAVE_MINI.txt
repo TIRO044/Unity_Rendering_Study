@@ -1,0 +1,43 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_N",
+
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName             = "USN_ATTACK1",
+			
+			m_listNKMEventAttack = 
+			{
+				{
+					m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_TRANS_GRAVE_MINI_ATTACK1",
+				},
+				{
+					m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_TRANS_GRAVE_MINI_ATTACK1",
+				},
+				{
+					m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_TRANS_GRAVE_MINI_ATTACK1",
+				},
+			},
+		},
+		{
+			m_StateName             = "USN_SKILL1",
+			m_listNKMEventAttack = 
+			{
+				{
+					m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_TRANS_GRAVE_MINI_SKILL1",
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_fEventTime		= 25/30,
+					m_DEName			= "DE_NKM_MONSTER_BOSS_TRANS_GRAVE_MIST",
+
+					m_OffsetX			= 600,
+					m_OffsetY			= 0,
+				},
+			},
+		},
+	},
+}

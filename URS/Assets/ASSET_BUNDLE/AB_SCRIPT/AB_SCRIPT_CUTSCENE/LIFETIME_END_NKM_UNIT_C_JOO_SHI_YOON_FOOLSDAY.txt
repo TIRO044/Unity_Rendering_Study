@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10031502,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_JOO_SHI_YOON_FOOLSDAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_JOO_SHI_YOON_FOOLSDAY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10031502,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_JOO_SHI_YOON_FOOLSDAY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "JOO_SHI_YOON_NPC_FOOLSDAY_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "앞으로 계속 신세지게 됐네요. 사장님도 참... 재미있는 분인 것 같아요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "これからも、お世話になります。社長は本当に変わった人ですね。",
+    m_Talk_ENG = "This means I'll be seeing you for a long time. Boss, I've got to say you're pretty interesting.",
+    m_Talk_TWN = "以後一直都要受您照顧了。老闆您也真是……一位非常有趣的人呢。",
+    m_Talk_THA = "แสดงว่าผมต้องเจอกับคุณไปอีกนานเลยสินะครับ ยอมรับเลยว่าคุณนี่ช่างน่าสนใจจริงๆ",
+    m_Talk_VTN = "Điều này nghĩa là tôi sẽ gặp ngài trong một thời gian dài đấy. Ông Chủ, tôi phải nói ngài rất thú vị.",
+    m_Talk_SCN = "老板您也是一个非常有趣的人呢，以后要请您多多关照了。",
+    m_Talk_DEU = "Das heißt, wir sehen uns jetzt öfter. Boss, ich muss schon sagen, Sie sind … interessant.",
+    m_Talk_FRA = "Ça veut dire qu'on va se croiser pendant un moment, patron. Je dois dire que vous êtes plutôt intéressant.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10031502,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_JOO_SHI_YOON_FOOLSDAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

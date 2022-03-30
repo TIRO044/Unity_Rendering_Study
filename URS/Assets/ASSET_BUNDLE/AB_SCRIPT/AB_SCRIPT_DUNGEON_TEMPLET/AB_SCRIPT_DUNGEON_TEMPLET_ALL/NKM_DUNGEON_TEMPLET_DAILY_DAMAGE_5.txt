@@ -1,0 +1,9 @@
+
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK3_H",
+    
+    m_fBossPosZ 	= 0.6,
+		
+}

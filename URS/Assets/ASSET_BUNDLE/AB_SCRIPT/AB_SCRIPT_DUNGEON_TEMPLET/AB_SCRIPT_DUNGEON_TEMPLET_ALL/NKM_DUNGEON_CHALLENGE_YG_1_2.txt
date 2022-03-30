@@ -1,0 +1,115 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 3,
+	m_fCostSpeedRateB = 0.5,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_EQC_YG_SORIM",
+    
+    m_fBossPosZ 	= 0.6,
+
+	m_BossRespawnUnitTemplet =
+	{
+		m_AddStatData =
+		{
+			m_StatValue =
+			{
+				NST_HP  = 160000,
+			},
+		},
+	},
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHOTGUN",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 1,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				 = 0.4,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_RIFLE",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				 = 0.1,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_BASIC_WALL",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart            = 0,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 15,
+				m_fEventPos 	        	 = 0.55,
+			},
+		},
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_CHALLENGE_SL_RIFLE",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart            = 4,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 15,
+				m_fEventPos 	        	 = 0.25,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK			= 1.5,
+					NST_DEF         = 2.0,
+				},
+			},
+		},
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_CHALLENGE_SL_SHIELD",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart            = 4,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 15,
+				m_fEventPos 	        	 = 0.35,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK			= 1.5,
+					NST_DEF         = 2.0,
+				},
+			},
+		},
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_CHALLENGE_SL_RIFLE",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart            = 4,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 15,
+				m_fEventPos 	        	 = 0.35,
+			},
+		},
+	},
+}

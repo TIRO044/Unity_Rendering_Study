@@ -1,0 +1,19 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_NORMAL_BASIC_FAIL_VALENTINE_N",
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName                 = "USN_DAMAGE_DIE",
+			m_listNKMEventRespawn = 
+			{
+				{
+					m_UnitStrID 	= "NKM_MONSTER_NORMAL_BASIC_FAIL_MINI_VALENTINE_H",
+				},
+				{
+					m_UnitStrID 	= "NKM_MONSTER_NORMAL_BASIC_FAIL_MINI_VALENTINE_H",
+				},
+			},
+		},
+	},
+}

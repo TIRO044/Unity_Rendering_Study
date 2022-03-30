@@ -1,0 +1,110 @@
+
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_OMEN_N", --KM_MONSTER_BOSS_BASIC_EATER_MOVE_N
+    -- m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_EATER_MOVE_N", --NKM_MONSTER_BOSS_BASIC_BARRICADE_N
+    m_BossUnitLevel = 1,
+    m_fBossPosZ 	= 0.6,
+
+    m_fCostSpeedRateA = 10;
+	
+	m_listDungeonDeck = 
+	{
+		--{
+		--	m_UnitStrID = "NKM_UNIT_DUNGEON_NORMAL_W_PITCHER",
+		--	m_UnitLevel = 1,
+        --
+		--	m_bUseCost = true,
+		--	m_fRespawnTimeStart = 0.0,
+		--	m_fRespawnTimeEnd = 0.0,
+		--	m_fRespawnPos = 0.0,
+        --
+		--	m_NKM_DUNGEON_UNIT_RESPAWN_TYPE = "NDURT_DECK",
+		--},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		--{
+		--	m_UnitStrID 				= "NKM_UNIT_DUNGEON_NORMAL_W_BULLY",
+		--	m_UnitLevel 				= 1,
+		--	m_EventRespawnUnitTag		= "ZAKO",	
+        --
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		--		m_fEventTimeStart   = 0.0,
+		--		m_fEventPos 		= 0.0,
+    	--	},
+		--},
+		--{
+		--	m_UnitStrID 				= "NKM_UNIT_DUNGEON_NORMAL_W_PITCHER",
+		--	m_UnitLevel 				= 1,
+		--	m_EventRespawnUnitTag		= "ZAKO",	
+        --
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		--		m_fEventTimeStart   = 8.0,
+		--		m_fEventPos 		= 0.0,
+    	--	},
+		--},	
+		--{
+		--	m_UnitStrID 				= "NKM_UNIT_DUNGEON_NORMAL_W_PITCHER",
+		--	m_UnitLevel 				= 1,
+		--	m_EventRespawnUnitTag		= "ZAKO",	
+        --
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		--		m_fEventTimeStart   = 16.0,
+		--		m_fEventPos 		= 0.0,
+    	--	},
+		--},
+		
+		--{
+		--	m_UnitStrID 				= "NKM_UNIT_C_HILDE",
+		--	m_UnitLevel 				= 1,
+		--	m_EventRespawnUnitTag		= "HILDE",	
+        --
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_EventDieUnitTag 			= "ZAKO",
+		--		m_EventDieUnitTagCount  	= 1,
+		--		
+		--		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		--		m_fEventPos 		= 0.5,
+    	--	},
+		--},
+		--
+		--{
+		--	m_UnitStrID 				= "NKM_UNIT_C_YOO_MI_NA",
+		--	m_UnitLevel 				= 1,			
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_EventDieUnitTag 			= "HILDE",
+		--		m_EventDieUnitTagCount  	= 1,
+		--		
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventPos 				= 0.5,
+    	--	},
+		--},
+		--{
+		--	m_UnitStrID 				= "NKM_UNIT_C_JOO_SHI_YOON",
+		--	m_UnitLevel 				= 1,
+		--	
+		--	m_fRespawnCoolTime 			= 1.0,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_EventDieUnitTag 			= "HILDE",
+		--		m_EventDieUnitTagCount  	= 1,
+		--		
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventPos 				= 0.5,
+    	--	},
+		--},
+	},
+}

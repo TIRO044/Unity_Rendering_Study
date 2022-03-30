@@ -1,0 +1,71 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 1.6,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_SPORTS_RUBBER_DUCK",
+    
+    m_fBossPosZ 	= 0.0,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PV_CA_SEO_YOON_ALT_YOO_JIN", --유진
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.5,
+    		},
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_PV_CA_SEO_YOON_ALT_KIM_SOBIN",  --김소빈
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.5,
+    		},
+        },
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_PV_CA_SEO_YOON_ALT_XIAOLIN", --샤오린
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 6,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+    		},
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 0.8,
+					  NST_HP          = 1.0,
+				},
+			},
+        },
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_SPORTS_BONUS_DRONE", --보너스 드론
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 5,
+				m_fEventTimeGap	        	= 25,
+				m_fEventPos 	        	= 0.2,
+			},
+		},
+	},
+}

@@ -1,0 +1,49 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 8,
+	m_fCostSpeedRateB = 0.6,
+    m_BossUnitStrID = "NKM_MOB_BOSS_SUPPLY_BARRICADE4_S",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_SL_DRONE_FIGHTER_S",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 4,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_SL_DRONE_BOMBER_S",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.35,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_SUPPLY_STATE_TANK_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 3,
+				m_fEventTimeGap	        	= 25,
+				m_fEventPos 	        	= 0.15,
+			},
+		},
+	},
+}

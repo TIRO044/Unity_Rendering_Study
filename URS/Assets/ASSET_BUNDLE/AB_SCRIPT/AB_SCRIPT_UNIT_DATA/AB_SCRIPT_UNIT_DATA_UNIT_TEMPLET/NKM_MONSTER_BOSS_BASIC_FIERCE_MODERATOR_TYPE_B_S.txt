@@ -1,0 +1,55 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID                     = "NKM_MONSTER_BOSS_BASIC_FIERCE_MODERATOR_TYPE_B_N",
+	m_listPhaseChangeData =
+	{ 
+		{ --* 페이즈1
+			m_Condition =
+			{ --? 1회 전진 후 전진 안함
+				m_IgnoreBuffStrID           = "BUFF_BOSS_FIERCE_MODERATOR_TYPE_AB_PHASE_ASPD_UP",
+				m_IgnoreBuffOverlapCount    = {1,2},
+			},
+			m_TargetPhase                = 1,
+			m_fChangeConditionTime       = 45, --? 2:15
+
+			m_ChangeStateName            = "USN_PATTERN1_READY",
+		},
+		{ --* 페이즈1
+			m_Condition =
+			{ --? 2회 전진 후 전진 안함
+				m_IgnoreBuffStrID           = "BUFF_BOSS_FIERCE_MODERATOR_TYPE_AB_PHASE_ASPD_UP",
+				m_IgnoreBuffOverlapCount    = {2,2},
+			},
+			m_TargetPhase                = 2,
+			m_fChangeConditionTime       = 90, --? 1:30
+
+			m_ChangeStateName            = "USN_PATTERN2_READY",
+		},
+		{ --* 페이즈2
+			m_TargetPhase                = 3,
+			m_fChangeConditionHPRate     = 0.3,
+
+			m_ChangeStateName            = "USN_PHASE2_READY",
+		},
+	},
+	m_dicNKMUnitState =
+	{
+		{ --* 이동 (대기)
+			m_StateName               = "USN_RUN",
+			m_listNKMEventText	=
+			{
+				{
+					m_bAnimTime             = false,
+					m_fEventTime            = 4,
+					m_Text                  = "SI_BATTLE_MOB_BOSS_FIERCE_MODERATOR_TYPE_AB_ASTAND",
+				},
+			},
+			m_DangerCharge =
+			{
+				m_fChargeTime            = 8,
+				m_SuccessState           = "USN_PATTERN1_READY2",
+				m_CancelState            = "USN_PATTERN1_READY2",
+			},
+		},
+	},
+}

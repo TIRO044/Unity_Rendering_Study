@@ -1,0 +1,9 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID = "NKM_UNIT_S_STATE_AIRBORNE",
+
+	m_fForceRespawnZposMin	 = 0.61,
+	m_fForceRespawnZposMax	 = 0.7,
+}
+
+

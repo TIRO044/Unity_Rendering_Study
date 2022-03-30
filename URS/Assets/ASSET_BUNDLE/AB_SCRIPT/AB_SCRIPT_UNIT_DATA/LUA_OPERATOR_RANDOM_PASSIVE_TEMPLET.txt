@@ -1,0 +1,80 @@
+﻿-- Exported from OPERATOR_TEMPLET.xlsx
+
+m_OperatorRandomPassiveTable =
+{
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1001,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1002,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1003,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1004,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1005,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1007,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1010,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1011,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1012,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1013,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1014,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 1,
+    m_OperSkillID = 1015,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 999,
+    m_OperSkillID = 1006,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 999,
+    m_OperSkillID = 1008,
+    m_Ratio = 10,
+  },
+  {
+    m_OprPassiveGroupID = 999,
+    m_OperSkillID = 1009,
+    m_Ratio = 10,
+  },
+}

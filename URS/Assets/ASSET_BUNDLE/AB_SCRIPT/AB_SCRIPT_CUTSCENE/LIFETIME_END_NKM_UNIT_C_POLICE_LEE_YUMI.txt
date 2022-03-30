@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10990002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_POLICE_LEE_YUMI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_POLICE_LEE_YUMI@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10990002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_POLICE_LEE_YUMI",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "YUMI_POLICE_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사장님을 따르기로 했어도 경찰의 신분을 포기한 건 아닙니다. 그러니까, 앞으로 잘못된 일을 저지르게 될 것 같으면 제게 미리 언질을 주세요. 실수하실 일 없도록 묶어 놓고 잘~ 감시해 드릴 테니까요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "社長に従うことになりましたが、警察を辞めるわけではありませんので。これから悪いことをやらかしそうなら、前もって私に言ってください。そういうことがないように、縛った後、し～っかり見張ってますから。",
+    m_Talk_ENG = "I may have agreed to follow you, but that doesn't mean I'm giving up being a police officer. So, if you have the sudden urge to do something bad, you let me know. I'll tie you up and watch you until the urge completely disappears.",
+    m_Talk_TWN = "雖然決定要跟隨老闆，但我並沒有放棄警察的身份。所以，如果你以後覺得自己要犯案了，就提前跟我說一聲吧。為了不讓你做壞事，我會把你綁起來，好～好地監視你的。",
+    m_Talk_THA = "ถึงฉันจะยินยอมติดตามคุณ แต่ก็ไม่ได้หมายความว่าฉันจะเลิกเป็นตำรวจนะ เพราะฉะนั้น ถ้าจู่ๆ คุณรู้สึกอยากจะทำความผิดก็รีบบอกฉันมา ฉันจะมัดคุณไว้ และเฝ้าดูจนกว่าความรู้สึกนั้นจะหายไป",
+    m_Talk_VTN = "Tôi có thể đồng ý đi theo ngài, nhưng điều này không đồng nghĩa với việc tôi phải từ bỏ vị trí cảnh sát của mình. Vì vậy, nếu ngài đột nhiên muốn làm chuyện xấu, hãy nói cho tôi biết. Tôi sẽ trói ngài lại và theo dõi ngài cho đến khi mong muốn xấu xa đó hoàn toàn biến mất.",
+    m_Talk_SCN = "虽然决定了以后要跟随老板，但我并没有放弃我的警察身份。所以，如果以后觉得自己要犯事了就提前跟我说一声吧。我会把你好~好地绑起来，这样你就不能做坏事了。",
+    m_Talk_DEU = "Ich bin bereit, für Sie zu arbeiten. Aber das heißt nicht, dass ich keine Polizistin mehr bin. Also sollten Sie plötzlich Lust verspüren, etwas Böses zu tun, sagen Sie nur Bescheid, ich fessel Sie und warte bis Sie wieder zu sich kommen.",
+    m_Talk_FRA = "J'ai peut-être accepté de vous suivre, mais je reste un officier de police. Donc si vous avez une envie soudaine de commettre un crime, appelez-moi. C'est avec plaisir que je vous passerai les menottes jusqu'à ce que vous repreniez vos esprits.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10990002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_POLICE_LEE_YUMI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

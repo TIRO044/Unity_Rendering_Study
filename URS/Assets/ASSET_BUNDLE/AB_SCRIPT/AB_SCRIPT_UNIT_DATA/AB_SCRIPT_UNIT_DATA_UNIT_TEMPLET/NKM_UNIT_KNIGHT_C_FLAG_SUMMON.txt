@@ -1,0 +1,166 @@
+﻿NKMUnitTemplet =
+{
+	m_NKC_TEAM_COLOR_TYPE = "NTCT_ONLY_SHADOW",
+	--*출격
+	m_fForceRespawnZposMin         = 0.25,
+	m_fForceRespawnZposMax         = 0.25,
+	--*크기
+	m_UnitSizeX                    = 100,
+	m_UnitSizeY                    = 100,
+	m_SpriteScale                  = 1.0,
+	--*게이지
+	m_bShowGage                    = false,
+	--*그림자
+	m_fShadowScaleX                = 100,
+	m_fShadowScaleY                = 100,
+	m_fShadowOffsetX			   = 40,
+	m_fShadowOffsetY			   = -10,
+	--*이동
+	m_SpeedRun                     = 0,
+	m_bNoMove					   = true,
+	--*타겟
+	m_SeeTarget                    = false,
+	--*사망
+	m_fDieCompleteTime             = 1/30,
+
+	m_listStaticBuffData =
+	{
+		{--* PVE 적용 피해감소 15% 버프레벨 1당 15% 추가.
+			m_Condition = 
+			{
+				m_MasterSkillStrID	= "NKM_UNIT_KNIGHT_C_FLAG_PASSIVE",
+				m_MasterSkillLevel	= {1,4},
+				m_bUsePVP           = false,
+			},
+			m_BuffStrID    	= "BUFF_KNIGHT_C_FLAG_PASSIVE1_PVE",
+			m_BuffLevel		= 1,
+		},
+		{
+			m_Condition = 
+			{
+				m_MasterSkillStrID	= "NKM_UNIT_KNIGHT_C_FLAG_PASSIVE",
+				m_MasterSkillLevel	= {5,99},
+				m_bUsePVP           = false,
+			},
+			m_BuffStrID    	= "BUFF_KNIGHT_C_FLAG_PASSIVE1_PVE",
+			m_BuffLevel		= 2,
+		},
+		{--*PVP 적용 피해감소, 특수기 피해감소 30퍼
+			m_Condition = 
+			{
+				m_bUsePVE           = false,
+			},
+			m_BuffStrID    	= "BUFF_KNIGHT_C_FLAG_PASSIVE1_PVP",
+		},
+		{--*PVP 적용 피해감소, 궁극기 피해감소 30퍼
+			m_Condition = 
+			{
+				m_MasterSkillStrID	= "NKM_UNIT_KNIGHT_C_FLAG_PASSIVE",
+				m_MasterSkillLevel	= {5,99},
+				m_bUsePVE           = false,
+			},
+			m_BuffStrID    	= "BUFF_KNIGHT_C_FLAG_PASSIVE1_LV5_PVP",
+		},
+	},
+
+	m_dicNKMUnitState =
+	{
+		{
+			m_NKM_UNIT_STATE_TYPE        = "NUST_START",
+			m_StateName                  = "USN_START",
+			m_AnimName                   = "START",
+			m_bAnimLoop                  = false,
+			m_fAnimSpeed                 = 0.5,
+
+			m_AnimEndChangeState         = "USN_ASTAND",
+
+			m_listNKMEventAnimSpeed =
+			{
+				{
+					m_fEventTime               = 0/30,
+					m_fAnimSpeed               = 0.3,
+				},
+				{
+					m_fEventTime               = 20/30,
+					m_fAnimSpeed               = 1.0,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime               = 0/30,
+					m_fLocalVol                = 1.5,
+					m_listSoundName            = {"FX_COMBAT_ALL_EARTHQUAKE",},
+				},
+				{
+					m_fEventTime               = 0/30,
+					m_fLocalVol                = 1,
+					m_listSoundName            = {"FX_COMBAT_ALL_MONSTER_SPELL",},
+				},
+				{
+					m_fEventTime               = 0/30,
+					m_fLocalVol                = 1,
+					m_listSoundName            = {"FX_COMBAT_ALL_WHOOSH",},
+				},
+			},
+			m_listNKMEventCameraCrash =
+			{
+				{
+					m_bAnimTime                     = true,
+					m_fEventTime                    = 0/30,
+					m_CameraCrashType               = "NCCT_UP_DOWN",
+					m_fCrashRadius                  = 1250,
+
+					m_fCameraCrashGap               = 3,
+					m_fCameraCrashTime              = 45/30,
+				},
+			},
+		},
+		{--*경직A
+			m_NKM_UNIT_STATE_TYPE        = "NUST_DAMAGE",
+			m_StateName                  = "USN_DAMAGE_A",
+			m_AnimName                   = "DAMAGE_A",
+
+			m_AnimEndChangeState         = "USN_ASTAND",
+			m_FootOffLandChangeState     = "USN_DAMAGE_AIR_DOWN",
+		},
+		{--*경직B
+			m_NKM_UNIT_STATE_TYPE        = "NUST_DAMAGE",
+			m_StateName                  = "USN_DAMAGE_B",
+			m_AnimName                   = "DAMAGE_B",
+		},
+		{--*에어본
+			m_NKM_UNIT_STATE_TYPE        = "NUST_DAMAGE",
+			m_StateName                  = "USN_DAMAGE_AIR_UP",
+			m_AnimName                   = "DAMAGE_AIR_UP",
+		},
+		{--* 다운
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_DOWN",
+			m_AnimName                    = "DAMAGE_DOWN",
+			m_bAnimLoop                   = false,
+      
+			m_listNKMEventDie	=
+			{
+				{
+					m_bAnimTime		= false,
+					m_fEventTime	= 5/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime               = 5/30,
+					m_fLocalVol                = 1.0,
+					m_listSoundName            = {"FX_COMBAT_ALL_MAGIC_SPELL_02",},
+				},
+			},
+
+			m_AnimEndDyingState           = "USN_DAMAGE_DIE",
+		},
+		{--*죽음
+			m_StateName                  = "USN_DAMAGE_DIE",
+			m_AnimName                   = "DAMAGE_DIE",
+		},
+	},
+}

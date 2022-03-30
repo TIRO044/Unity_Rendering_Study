@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 13300002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_CATHY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_CIVIL_CATHY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 13300002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_CATHY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "CATHY_CIVIL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "엠바고를 원하시면 더 좋은 기삿거리를 던져 주셔야 할 거에요. 예를 들어...... 후훗, 사장님의 이상형이라거나?",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "情報解禁をお望みなら、記事になるようないい情報をください。例えば……ふふっ、社長のタイプとか？",
+    m_Talk_ENG = "If you want an embargo, then you'll have to give up some good information. For instance... your ideal type? Hah hah.",
+    m_Talk_TWN = "想要限制我的報導，您就得拿出更勁爆的新聞喔，例如……呵呵，老闆的理想對象？",
+    m_Talk_THA = "ถ้าอยากจะให้สัญญาล่ะก็ คุณจะต้องเปิดเผยข้อมูลดีๆ กับฉันนะ อย่างเช่น… ผู้หญิงในสเป็กของคุณก็น่าจะดีนะ? ฮ่าฮ่า",
+    m_Talk_VTN = "Nếu muốn cấm vận thì ngài phải đổi lại bằng một số thông tin tốt. Ví dụ như… kiểu người lý tưởng của ngài là gì? Ha ha.",
+    m_Talk_SCN = "想要让我停止报道一段时间就得拿出更劲爆的新闻哦，例如...嘻，老板的理想型是什么？",
+    m_Talk_DEU = "Wenn Sie ’ne Exklusiv-Story wollen, müssen Sie schon ganz besondere Informationen rausrücken. Zum Beispiel … Ihren Geschmack bei Frauen? Haha.",
+    m_Talk_FRA = "Mais si vous achetez mon silence, il me faudra une information croustillante en échange. Par exemple, quel est votre type de fille ? Ha ha.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 13300002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_CIVIL_CATHY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

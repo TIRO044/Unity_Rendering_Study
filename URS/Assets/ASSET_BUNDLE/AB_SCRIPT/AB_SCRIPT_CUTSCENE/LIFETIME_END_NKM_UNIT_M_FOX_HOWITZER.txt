@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10240002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FOX_HOWITZER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_FOX_HOWITZER@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10240002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FOX_HOWITZER",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "HOWITZER_FOX_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사장의 지원을 받으면 본 기체는 동일 기종 중에서도 가장 완벽해질 수 있다. 제안에 찬성한다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "社長の支援を受けると、本機体は同一機種の中で最も完璧なものになれる。提案に乗る。",
+    m_Talk_ENG = "With your support, I can become the most flawless of all units of the same model. I accept your offer.",
+    m_Talk_TWN = "如果能得到老闆的支援，本機就算在同一機種中，也能變得最為完美。贊成您的提案。",
+    m_Talk_THA = "ด้วยการสนับสนุนของคุณ ฉันก็สามารถเป็นหน่วยรบที่สมบูรณ์แบบที่สุดในบรรดาเครื่องจักรรุ่นเดียวกันได้ เพราะฉะนั้นฉันจะยอมรับข้อเสนอนี้",
+    m_Talk_VTN = "Với sự hỗ trợ của ngài, tôi có thể trở thành người hoàn hảo nhất trong tất cả các đơn vị cùng mẫu. Tôi chấp nhận lời đề nghị của ngài.",
+    m_Talk_SCN = "如果得到老板的支持，本机将升级到比同类机型更加完美的版本。同意老板的提案。",
+    m_Talk_DEU = "Mit Ihrer Unterstützung kann ich die makelloseste aller Einheiten desselben Modells werden. Ich nehme Ihr Angebot an.",
+    m_Talk_FRA = "Avec votre soutien, je deviendrai le représentant parfait de mon modèle. J'accepte votre offre.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10240002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FOX_HOWITZER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

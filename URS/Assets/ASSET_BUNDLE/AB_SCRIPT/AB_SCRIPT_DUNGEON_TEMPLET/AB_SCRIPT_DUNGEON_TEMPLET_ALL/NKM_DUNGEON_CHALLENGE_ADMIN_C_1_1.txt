@@ -1,0 +1,79 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 1,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_EQC_C_ADMIN_NA_YUBIN",
+    
+    m_fBossPosZ 	= 0.1,
+
+	m_BossRespawnUnitTemplet =
+	{
+		m_AddStatData =
+		{
+			m_StatValue =
+			{
+				NST_HP  = 20000,
+			},
+		},
+	},
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_ADMIN_RIFLE_H",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_H",
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				 = 0.4,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_HP = 1.2,
+					NST_DEF = 1.1,
+				}
+			}
+		},
+	},
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID	= "NKM_MOB_BOSS_EQC_C_ADMIN_LEE_SUYEON",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart            = 0,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 30,
+				m_fEventPos 	        	 = 0.2,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					-- NST_ATK = 0.7,
+					NST_HP = 1.5,
+					NST_DEF = 1.1,
+				}
+			}
+
+		},
+	},
+}

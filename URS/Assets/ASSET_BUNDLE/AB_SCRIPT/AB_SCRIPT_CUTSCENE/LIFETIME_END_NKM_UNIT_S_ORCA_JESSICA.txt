@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11430002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_ORCA_JESSICA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_ORCA_JESSICA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11430002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_ORCA_JESSICA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "JESSICA_RSEVEN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "나쁘지 않은 회사였어요. 아니, 사실은 꽤 괜찮았다고 해야겠죠. 후후, 앞으로도 사장님만 믿을게요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "悪くない会社だと思います。いや、本当はかなり良いと言った方が適切ですね。これからも社長だけを信じようと思います。",
+    m_Talk_ENG = "Your company isn't too bad. Actually, it's better than that. Hah hah. I'll continue to count on you, Boss.",
+    m_Talk_TWN = "這公司還不錯，不，其實該說是非常好。呵呵，以後我就跟隨你了，老闆。",
+    m_Talk_THA = "บริษัทของคุณก็ไม่เลวนะ จริงๆ ต้องเรียกว่าดีเลยล่ะ ฮ่าฮ่า ฉันคงต้องพึ่งคุณต่อไปแล้วล่ะ บอส",
+    m_Talk_VTN = "Công ty của ngài cũng không quá tệ. Thực ra còn rất tốt nữa. Ha ha. Tôi sẽ tiếp tục tin tưởng vào ngài đấy, Ông Chủ.",
+    m_Talk_SCN = "这个公司还不错，不对，应该说非常好了。以后就跟随你了，老板。",
+    m_Talk_DEU = "Ihr Unternehmen ist gar nicht so übel. Eigentlich ist es das Gegenteil von übel. Haha. Ich zähle weiter auf Sie, Boss.",
+    m_Talk_FRA = "Votre entreprise est pas trop mal. Elle est même mieux que ça. Ha ha ha. Je compte toujours sur vous, patron.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11430002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_ORCA_JESSICA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

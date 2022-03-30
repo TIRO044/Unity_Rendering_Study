@@ -1,0 +1,91 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1.0,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP7_TYRANT_DEFFENDER",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_NEEDLER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.3,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 1.5,
+					NST_HP 	= 2.5,
+				},
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.15,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 60,
+				m_fEventPos 	        	= 0.5,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},		
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart           = 120,
+				m_fEventPos 	        	= 0.5,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+				},
+			},		
+		},
+	},
+}

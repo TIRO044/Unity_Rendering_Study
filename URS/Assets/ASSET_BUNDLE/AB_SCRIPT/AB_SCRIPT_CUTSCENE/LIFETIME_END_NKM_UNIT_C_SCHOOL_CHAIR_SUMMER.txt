@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 15200902,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_SCHOOL_CHAIR_SUMMER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_SCHOOL_CHAIR_SUMMER@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 15200902,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_SCHOOL_CHAIR_SUMMER",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_IDLE",
+    m_CharStrID = "CHAIR_SCHOOL_SUMMER_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사장님은 항상 잠이 부족해 보여서 걱정이야. 혹시 의자가 불편해서 그런 거라면, 내가 멋지게 개조해줄게~ 으응? 싫어?",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "社長は十分な睡眠を取れてないみたいで心配だよ。\nもし椅子の座り心地がイマイチなら、私がかっこよく改造してあげるよ！\nねえ？　どう？",
+    m_Talk_ENG = "You never look like you get enough sleep. If you can't sleep because your chair is not comfortable enough, then I can tweak it for you. What do you say? No?",
+    m_Talk_TWN = "我很擔心，因為老闆看起來總是睡眠不足的樣子。如果是因為椅子坐得不舒服，那我來幫你做個超棒的改造吧～什麼？你不要？",
+    m_Talk_THA = "คุณไม่เคยดูเหมือนคนที่ได้นอนอิ่มเลย ถ้านอนไม่หลับเพราะเก้าอี้นั่งไม่สบายพอ ฉันช่วยดัดแปลงมันให้คุณได้นะ คิดว่าไงคะ? ไม่ต้องเหรอ?",
+    m_Talk_VTN = "Trông ngài như thể không bao giờ ngủ đủ giấc vậy. Nếu ngài không thể ngủ được vì ghế không đủ thoải mái, thì tôi có thể chỉnh nó cho ngài. Gì cơ? Không á?",
+    m_Talk_SCN = "老板你看起来总是一副睡眠不足的样子，我挺担心的。如果是因为椅子不舒服，我帮你改造一下~呃嗯？不要？",
+    m_Talk_DEU = "Sie wirken immer etwas übermüdet. Wenn Sie nicht genug Schlaf kriegen, weil Ihr Stuhl nicht bequem genug ist, kann ich gerne mal einen Blick darauf werfen. Was meinen Sie? Nein?",
+    m_Talk_FRA = "On dirait que vous ne dormez pas assez. Si c'est parce que votre chaise n'est pas assez confortable, je peux vous la modifier. Qu'est-ce que vous en dites ? Non ?",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 15200902,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_SCHOOL_CHAIR_SUMMER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

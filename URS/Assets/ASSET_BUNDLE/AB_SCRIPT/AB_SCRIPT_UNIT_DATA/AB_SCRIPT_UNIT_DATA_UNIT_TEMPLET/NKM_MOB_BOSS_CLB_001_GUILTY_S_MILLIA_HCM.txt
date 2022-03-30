@@ -1,0 +1,1684 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID              = "NKM_UNIT_BASE_BOSS_MOVE",
+	--*출격
+	m_fForceRespawnZposMin        = 0.2,
+	m_fForceRespawnZposMax        = 0.4,
+	--*크기
+	m_UnitSizeX                   = 100,
+	m_UnitSizeY                   = 270,
+	m_SpriteScale                 = 1.0,
+	--*게이지
+	m_bShowGage                   = true,
+	m_fGageOffsetY                = 300,
+	--*그림자
+	m_fShadowScaleX               = 170,
+	m_fShadowScaleY               = 170,
+	--*이동
+	m_SpeedRun                    = 300,
+	--*타겟
+	m_SeeTarget                   = true,
+	m_TargetNearRange             = 800,
+	m_SeeRange                    = 3000,
+	m_SeeRangeMax                 = 3000,
+	--*사망
+	m_fDieCompleteTime            = 1.8,
+	--*이펙트
+	m_bUseMotionBlur              = true,
+	m_fBuffEffectScaleFactor      = 1.0,
+
+	m_bImmuneStun                 = true,
+	m_bNoDamageStopTime           = true,
+	m_bNoDamageState              = true,
+	m_bNoDamageDownState          = true,
+	m_fDamageUpFactor             = 0.0,
+	m_fDamageBackFactor           = 0.3,
+
+	m_listStaticBuffData =
+	{
+		{
+			m_BuffStrID      = "BUFF_MOB_BOSS_CLB_001_GUILTY_HCM_COMMON",
+		},
+	},
+
+	m_listPhaseChangeData =
+	{
+		{--* 뒤로 대기
+			m_TargetPhase                = 1,
+			m_fChangeConditionHPRate     = 0.5,
+
+			m_ChangeStateName            = "USN_BACK",
+		},
+		{--* 돌진하면서 참전
+			m_Condition =
+			{
+				m_NeedBuffStrID          = "BUFF_MOB_BOSS_CLB_001_TAG_TRIGGER"
+			},
+			m_TargetPhase                = 2,
+			m_ChangeStateName            = "USN_REGAME",
+			m_listChangeCoolTime         =
+			{
+				{
+					m_StateName              = "USN_HYPER1",
+					m_fCoolTime              = 1.0,
+				},
+			},
+		},
+		{--* 돌진하면서 참전 (1분 남았을 때)
+			m_Condition =
+			{
+				m_IgnoreBuffStrID        = "BUFF_MOB_BOSS_CLB_001_TAG_TRIGGER"
+			},
+			m_TargetPhase                = 2,
+			m_fChangeConditionTime       = 120.0,
+			m_ChangeStateName            = "USN_REGAME",
+			m_listChangeCoolTime         =
+			{
+				{
+					m_StateName              = "USN_HYPER1",
+					m_fCoolTime              = 1.0,
+				},
+			},
+		},
+	},
+
+	m_listAttackStateData =
+	{
+		{--*기본공격
+			m_StateName		= "USN_ATTACK1",
+			m_fRangeMin                 = 0,
+			m_fRangeMax                 = 800,
+		},
+	},
+	m_listAirAttackStateData = 
+	{
+		{--*기본공격_대공
+			m_StateName 	= "USN_ATTACK1_AIR",
+			m_fRangeMin                 = 0,
+			m_fRangeMax                 = 800,
+		},
+	},
+	m_listSkillStateData =
+	{
+		{--*특수기
+			m_Condition = 
+			{
+				m_IgnoreBuffStrID = "BUFF_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_SKILL",
+			},
+			m_StateName		= "USN_SKILL1",
+			m_fRangeMax                 = 1000,
+		},
+	},
+	m_listHyperSkillStateData =
+	{
+		{--*궁극기
+			m_StateName                 = "USN_HYPER1",
+			m_fStartCool                = 0.7,
+			m_fRangeMax                 = 1000,
+		},
+	},
+
+	m_dicNKMUnitState =
+	{
+		{--* 대기 상태
+			m_StateName					  = "USN_WAITING",
+			m_NKM_UNIT_STATE_TYPE		  = "NUST_ATTACK",
+            m_AnimName					  = "ASTAND",
+            m_fAnimSpeed                  = 1.0,
+			m_bAnimLoop					  = true,
+			m_bNoMove					  = true,
+			m_bForceLeft				  = true,
+			m_bForceNoTargeted			  = true,
+			-- m_DamagedChangeState		  = "USN_ASTAND",
+
+			m_listNKMEventInvincible =
+            {
+                {
+                    m_bAnimTime 	= true,
+                    m_fEventTimeMin = 0/30,
+                    m_fEventTimeMax = 200/30,
+                },
+			},
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = false,
+					m_fEventTime      = 0/30,
+
+					m_fDissolve       = 0,
+					m_fTrackTime      = 0.1,
+				},
+			},
+        },
+		{--*선수 교체
+			m_StateName            		= "USN_BACK",
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",	
+			m_AnimName             		= "DODGE",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed           		= 1.0,
+			m_SuperArmorLevel      		= "NSAL_HYPER",
+			-- m_AnimTimeChangeStateTime 	= 19/30,
+			-- m_AnimTimeChangeState 		= "USN_WAITING",
+			m_AnimEndChangeState 		= "USN_WAITING",
+			m_bNoAI					    = true,
+			m_bForceLeft				= true,
+
+			m_listNKMEventDispel =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime 	= 0/30,
+					m_bDebuff 		= true, --true이면 우리편 디버프 제거, false이면 적편 버프 제거
+					m_fRange		= 10, 	--0이면 무한대
+					m_MaxCount 		= 1, 	--0이면 무한대
+					m_bDeleteInfinity = false, -- true이면 infinity 도 없애줌.
+				},
+			},
+
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime            = 1/30,
+					m_UnitStrID             = "NKM_MOB_BOSS_CLB_001_GUILTY_C_RAMLETHAL_HCM",
+					m_MaxCount              = 1,
+					m_bMaxCountReRespawn 	= true,
+				},
+			},
+			
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime              = true,
+					m_fEventTime             = 15/30,
+
+					m_EffectName             = "AB_FX_CMN_RECALL",
+					m_AnimName               = "BASE",
+					m_BoneName               = "root",
+					
+					-- m_OffsetY				 = -150,
+					m_fScaleFactor           = 0.8,
+					m_bHold                  = false,
+				},
+			},
+			
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = false,
+					m_fEventTime      = 15/30,
+
+					m_fDissolve       = 1,
+					m_fTrackTime      = 0.1,
+				},
+			},
+
+			m_listNKMEventInvincible =
+            {
+                {
+                    m_bAnimTime 	= true,
+                    m_fEventTimeMin = 0/30,
+                    m_fEventTimeMax = 99/30,
+                },
+			},
+			
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bTargetUnit             = false,
+					m_bOffsetDependMe         = true,
+
+					m_OffsetX			   	  = -100,
+
+					m_MoveTime                = 0.6,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 18/30,
+					m_bTargetUnit             = false,
+					m_bOffsetDependMe         = true,
+
+					m_fMapPosFactor			  = 0.01,
+					m_MoveTime                = 0.1,
+				},	
+			},
+		},
+		{--*다시 싸움
+			m_StateName                 = "USN_REGAME",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_HYPER",
+			m_bShowGage                 = false,
+			m_StateCoolTime             = 54,
+			--*애니메이션
+			m_AnimName                  = "HYPER_SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 60/30,
+					m_fEventTimeMax           = 70/30,
+
+					m_fRangeMin               = -300,
+					m_fRangeMax               = 300,
+
+					m_AttackUnitCount         = 4,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1",
+
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical	= true,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 80/30,
+					m_fEventTimeMax           = 90/30,
+
+					m_fRangeMin               = -500,
+					m_fRangeMax               = 500,
+
+					m_AttackUnitCount         = 4,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1_END",
+
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical	= true,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 90/30,
+					m_fEventTimeMax           = 100/30,
+
+					m_fRangeMin               = -500,
+					m_fRangeMax               = 500,
+
+					m_AttackUnitCount         = 4,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1_END",
+
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical	= true,
+				},
+			},
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+	
+					m_fColorR                 = 1.0,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 0.5,
+				},
+			},
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 80/30,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 60/30,
+					-- m_bTargetUnit   	= true,
+					
+					m_OffsetX  			= 200,
+					m_OffsetJumpYPos	= 0.0,
+			    
+					m_MoveTime 			= 30/30,
+					m_bLandMove 		= true,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 76/30,
+					m_bTargetUnit   	= true,
+					
+					m_OffsetX  			= 250,
+					m_OffsetJumpYPos	= 0.0,
+			    
+					m_MoveTime 			= 4/30,
+					m_bLandMove 		= true,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 97/30,
+					
+					m_OffsetX  			= -700,
+					m_OffsetJumpYPos    = 0.0,
+			    
+					m_MoveTime 			= 1/30,
+					m_bLandMove 		= true,
+					m_bDependMyShip   	= true,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.7,
+					m_listSoundName           = {"FX_COMBAT_ALL_HYPER_GUILTY",},
+				},
+				{
+					m_fEventTime              = 5/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_1",},
+				},
+				{
+					m_fEventTime              = 55/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_2",},
+				},
+				{
+					m_fEventTime              = 75/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_3",},
+				},
+				{
+					m_fEventTime              = 97/30,
+					m_fLocalVol               = 0.5,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_4",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 15/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 1.0,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_HYPER_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_HYPER_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_HYPER_3",
+					},
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 35/30,
+
+					m_fPosXOffset             = -250,
+					m_fPosYOffset             = 150,
+					m_fZoom                   = -175,
+
+					m_fMoveTrackingTime       = 0.1,
+					m_fZoomTrackingTime       = 0.1,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 35/30,
+					m_fEventTimeMax           = 60/30,
+
+					m_fPosXOffset             = 0,
+					m_fPosYOffset             = 200,
+					m_fZoom                   = -100,
+
+					m_fMoveTrackingTime       = 0.5,
+					m_fZoomTrackingTime       = 0.5,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 60/30,
+					m_fEventTimeMax           = 75/30,
+
+					m_fPosXOffset             = 200,
+					m_fPosYOffset             = 700,
+					m_fZoom                   = -150,
+
+					m_fMoveTrackingTime       = 1.0,
+					m_fZoomTrackingTime       = 1.0,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 75/30,
+					m_fEventTimeMax           = 98/30,
+
+					m_fPosXOffset             = 0,
+					m_fPosYOffset             = 0,
+					m_fZoom                   = -150,
+
+					m_fMoveTrackingTime       = 0.2,
+					m_fZoomTrackingTime       = 0.2,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 98/30,
+					m_fEventTimeMax           = 115/30,
+
+					m_fPosXOffset             = 200,
+					m_fPosYOffset             = 0,
+					m_fZoom                   = 0,
+
+					m_fMoveTrackingTime       = 0.5,
+					m_fZoomTrackingTime       = 0.5,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 42/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 8,
+					m_fCameraCrashTime        = 10/30,
+				},
+				{
+					m_fEventTime              = 80/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 15,
+					m_fCameraCrashTime        = 20/30,
+				},
+			},
+		},
+
+		{--*시작
+			m_StateName                 = "USN_START",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_START",
+			m_bShowGage                 = false,
+			m_DamagedChangeState        = "USN_ASTAND",
+			--*애니메이션
+			m_AnimName                  = "START",
+			m_fAnimSpeed                = 1.0,
+			m_AnimEndChangeState        = "USN_ASTAND",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_FOOT_STEP",},
+				},
+				{
+					m_fEventTime              = 15/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_FOOT_STEP",},
+				},
+				{
+					m_fEventTime              = 50/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_52",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 0/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_PlayRate                = 1.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_START_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_START_6",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_START_7",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_START_8",
+					},
+				},
+			},
+		},
+
+		{--*패시브
+			m_NKM_UNIT_STATE_TYPE  		= "NUST_ATTACK",
+			m_StateName            		= "USN_PASSIVE",
+			m_AnimName             		= "PASSIVE",
+			m_fAnimSpeed           		= 1.0,
+			m_SuperArmorLevel      		= "NSAL_HYPER",
+			m_bShowGage					= false,
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime         	= true,
+					m_fEventTimeMin     	= 10/30,
+					m_fEventTimeMax     	= 20/30,
+
+					m_fRangeMin         	= -400.0,
+					m_fRangeMax         	= 400.0,
+
+					m_bHitAir           	= false,
+					m_AttackUnitCount   	= 3,
+					m_DamageTempletName 	= "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_PASSIVE",
+					m_bForceHit                 = true,
+					m_bDamageSpeedDependRight	= true,
+				},
+			},
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 1/30,
+					m_BuffStrID  		= "BUFF_COMMON_FORCEHIT",
+					m_StateEndRemove	= true,
+				},
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 1/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_PASSIVE",
+				},
+			},
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 30/30,
+				},
+			},
+			m_listNKMEventSpeedY =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 10/30,
+					m_fEventTimeMax           = 16/30,
+					m_SpeedY                  = 1.0,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 8,
+					m_fCameraCrashTime        = 10/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 10/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_56",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_PASSIVE_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_PASSIVE_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_PASSIVE_3",
+					},
+				},
+			},
+			-- m_listNKMEventChangeState	=
+			-- {
+			-- 	{
+			-- 		m_fEventTime	= 28/30,
+			-- 		m_ChangeState	= "USN_DODGE",
+			-- 	},
+			-- },
+		},
+		-- {--*기본공격
+		-- 	m_StateName                 = "USN_DODGE",
+		-- 	m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+		-- 	m_AnimName                  = "DODGE",
+		-- 	m_bAnimLoop                 = false,
+		-- 	m_fAnimSpeed                = 1.0,
+		-- 	m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+		-- 	m_AnimEndChangeState		= "USN_ASTAND",
+
+		-- 	m_listNKMEventInvincible =
+		-- 	{
+		-- 		{
+		-- 			m_bAnimTime 	= true,
+		-- 			m_fEventTimeMin = 0/30,
+		-- 			m_fEventTimeMax = 30/30,
+		-- 		},
+		-- 	},
+		-- 	m_listNKMEventMove	=
+		-- 	{
+		-- 		{
+		-- 			m_bAnimTime 		= true,
+		-- 			m_fEventTime 		= 3/30,
+		-- 			-- m_bTargetUnit   	= true,
+					
+		-- 			m_OffsetX  			= -400,
+		-- 			m_OffsetJumpYPos	= 0.0,
+			    
+		-- 			m_MoveTime 			= 5/30,
+		-- 			m_bLandMove 		= true,
+		-- 		},
+		-- 	},
+
+		-- 	m_listNKMEventBuff =
+		-- 	{
+		-- 		{
+		-- 			m_bStateEndTime  	= true,
+		-- 			m_BuffStrID  		= "BUFF_COMMON_INVINCIBLE",
+		-- 			m_BuffLevel			= 2,
+		-- 		},
+		-- 	},
+		-- },
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_AnimEndChangeState		= "USN_ATTACK1_LOOP",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 25/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.33,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_7",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_8",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_9",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_10",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_11",
+					},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_LOOP",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_LOOP",
+			m_bAnimLoop                 = true,
+			m_fAnimSpeed                = 1.0,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_StateTimeChangeStateTime			= 4,
+			m_StateTimeChangeState				= "USN_ATTACK1_PASSIVE",
+			
+			m_TargetLostOrDieStateDurationTime	= 0.5,
+			m_TargetLostOrDieState				= "USN_ATTACK1_END", 
+
+			m_TargetDistOverChangeStateDist		= 950,
+			m_TargetDistOverChangeState			= "USN_ATTACK1_END",
+
+			m_AirTargetThisFrameChangeState = "USN_ATTACK1_AIR_LOOP",
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 1/30,
+					m_fEventTimeMax           = 12/30,
+
+					m_fRangeMin               = -3000.0,
+					m_fRangeMax               = 3000.0,
+					m_bHitAir                 = true,
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_listNKM_UNIT_STYLE_TYPE = {"NUST_COUNTER","NUST_SOLDIER","NUST_MECHANIC","NUST_CORRUPTED"},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 1/30,
+					m_fEventTimeMax           = 12/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 12/30,
+					m_fEventTimeMax           = 24/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 24/30,
+					m_fEventTimeMax           = 36/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 36/30,
+					m_fEventTimeMax           = 48/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitAir                 = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+			},
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 0/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_SKILL",
+					m_StateEndRemove    = true,
+				},
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 20/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_BuffRemove        = true,
+				},
+			},
+
+			m_listNKMEventChangeState	=
+			{
+				{
+					m_Condition = 
+					{
+						m_NeedBuffStrID			= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK", 
+						m_NeedBuffOverlapCount	= {5,5},
+					},
+					m_fEventTime	= 12/30,
+					m_ChangeState	= "USN_HYPER1",
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 5/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 9/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 13/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 17/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 21/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 25/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 29/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 33/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 33/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 37/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 41/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 15/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_5",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_6",
+					},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_PASSIVE",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_END",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.25,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 1/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_BuffRemove        = true,
+				},
+			},
+
+			m_listNKMEventChangeState	=
+			{
+				{
+					m_Condition = 
+					{
+						m_IgnoreBuffStrID			= "BUFF_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_PASSIVE", 
+						m_IgnoreBuffOverlapCount	= {5,5},
+					},
+					m_fEventTime	= 10/30,	
+					m_ChangeState	= "USN_PASSIVE",
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_END",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_END",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.25,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 1/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_BuffRemove        = true,
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_AIR",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_AnimEndChangeState		= "USN_ATTACK1_AIR_LOOP",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 25/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SWING_SMALL_10",},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.33,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_7",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_8",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_9",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_10",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_11",
+					},
+				},
+			},
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_AIR_LOOP",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_LOOP",
+			m_bAnimLoop                 = true,
+			m_fAnimSpeed                = 1.0,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_StateTimeChangeStateTime			= 4,
+			m_StateTimeChangeState				= "USN_ATTACK1_PASSIVE",
+			
+			m_TargetLostOrDieStateDurationTime	= 1,
+			m_TargetLostOrDieState				= "USN_ATTACK1_AIR_END", 
+
+			m_TargetDistOverChangeStateDist		= 950,
+			m_TargetDistOverChangeState			= "USN_ATTACK1_AIR_END",
+
+			m_LandTargetThisFrameChangeState = "USN_ATTACK1_LOOP",
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 1/30,
+					m_fEventTimeMax           = 12/30,
+
+					m_fRangeMin               = -3000.0,
+					m_fRangeMax               = 3000.0,
+					m_bHitAir                 = true,
+					m_AttackUnitCount         = 99,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_listNKM_UNIT_STYLE_TYPE = {"NUST_COUNTER","NUST_SOLDIER","NUST_MECHANIC","NUST_CORRUPTED"},
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 1/30,
+					m_fEventTimeMax           = 12/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitLand               = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 12/30,
+					m_fEventTimeMax           = 24/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitLand               = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 24/30,
+					m_fEventTimeMax           = 36/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitLand               = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 36/30,
+					m_fEventTimeMax           = 45/30,
+
+					m_fRangeMin               = 0.0,
+					m_fRangeMax               = 1000.0,
+
+					m_bHitLand               = false,
+					m_AttackUnitCount         = 1,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_ATTACK1",
+				},
+			},
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 0/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_SKILL",
+					m_StateEndRemove    = true,
+				},
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 20/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_BuffRemove        = true,
+				},
+			},
+
+			m_listNKMEventChangeState	=
+			{
+				{
+					m_Condition = 
+					{
+						m_NeedBuffStrID			= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK", 
+						m_NeedBuffOverlapCount	= {5,5},
+					},
+					m_fEventTime	= 12/30,
+					m_ChangeState	= "USN_HYPER1",
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 5/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 9/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 13/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 17/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 21/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 25/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 29/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 33/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 33/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 37/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+				{
+					m_fEventTime              = 41/30,
+					m_fLocalVol               = 0.8,
+					m_listSoundName           = {"FX_COMBAT_ALL_DAGGER_STING_SMALL_03",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 15/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_5",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ATTACK_6",
+					},
+				},
+			},
+
+		},
+		{--*기본공격
+			m_StateName                 = "USN_ATTACK1_AIR_END",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_AnimName                  = "ATTACK1_END",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.25,
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 1/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_BuffRemove        = true,
+				},
+			},
+		},
+
+		{--*특수기
+			m_StateName                 = "USN_SKILL1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_SKILL",
+			m_StateCoolTime             = 26,
+			-- m_bSkillCutIn               = true,
+			m_bShowGage					= false,
+			--*애니메이션
+			m_AnimName                  = "SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime               = false,
+					m_fEventTime              = 0/30,
+					m_EffectName              = "AB_FX_CAST_SKILL",
+					m_AnimName                = "BASE",
+					m_BoneName                = "BIP01_SPINE1",
+					m_fScaleFactor            = 30.0,
+					m_bHold                   = true,
+				},
+			},
+			m_listNKMEventDamageEffect = 
+			{
+				{
+					m_bAnimTime 			= true,
+					m_fEventTime			= 28/30,
+					m_DEName    			= "DE_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_SKILL1",
+					m_OffsetX    			= 55,
+					m_OffsetY   			= 150,
+					-- m_bIgnoreTarget            = true, --? 마스터의 타겟 상속 여부
+				},
+			},
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 30/30,
+					m_fEventTimeMax           = 140/30,
+
+					m_fColorR                 = 0.5,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 1.0,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 28/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 8,
+					m_fCameraCrashTime        = 15/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 0/30,
+					m_fLocalVol               = 1.0,
+					m_listSoundName           = {"FX_COMBAT_ALL_SKILL_START",},
+				},
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.7,
+					m_listSoundName           = {"FX_COMBAT_ALL_MAGIC_SPELL_29",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 10/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ACTIVE_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ACTIVE_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_ACTIVE_3",
+					},
+				},
+			},
+		},
+
+
+		{--*궁극기
+			m_StateName                 = "USN_HYPER1",
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+			m_SuperArmorLevel           = "NSAL_HYPER",
+			m_bShowGage                 = false,
+			m_StateCoolTime             = 54,
+			--*애니메이션
+			m_AnimName                  = "HYPER_SKILL1",
+			m_bAnimLoop                 = false,
+			m_fAnimSpeed                = 1.0,
+
+			m_listNKMEventBuff =
+			{
+				{
+					m_bAnimTime  		= true,
+					m_fEventTime 		= 1/30,
+					m_BuffStrID  		= "BUFF_MOB_BOSS_CLB_001_GUILTY_UNIT_CHECK",
+					m_BuffRemove        = true,
+				},
+			},
+
+			m_listNKMEventAttack =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 60/30,
+					m_fEventTimeMax           = 70/30,
+
+					m_fRangeMin               = -300,
+					m_fRangeMax               = 300,
+
+					m_AttackUnitCount         = 4,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1",
+
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical	= true,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 80/30,
+					m_fEventTimeMax           = 90/30,
+
+					m_fRangeMin               = -600,
+					m_fRangeMax               = 600,
+
+					m_AttackUnitCount         = 4,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1_END",
+
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical	= true,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 90/30,
+					m_fEventTimeMax           = 100/30,
+
+					m_fRangeMin               = -600,
+					m_fRangeMax               = 600,
+
+					m_AttackUnitCount         = 4,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_CLB_001_GUILTY_S_MILLIA_HCM_HYPER1_END",
+
+					m_bDamageSpeedDependRight 	= true,
+					m_bForceCritical	= true,
+				},
+			},
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+	
+					m_fColorR                 = 1.0,
+					m_fColorG                 = 0.5,
+					m_fColorB                 = 0.5,
+				},
+			},
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 80/30,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 60/30,
+					-- m_bTargetUnit   	= true,
+					
+					m_OffsetX  			= 200,
+					m_OffsetJumpYPos	= 0.0,
+			    
+					m_MoveTime 			= 30/30,
+					m_bLandMove 		= true,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 76/30,
+					-- m_bTargetUnit   	= true,
+					
+					m_OffsetX  			= 350,
+					m_OffsetJumpYPos	= 0.0,
+			    
+					m_MoveTime 			= 4/30,
+					m_bLandMove 		= true,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 97/30,
+					
+					m_OffsetX  			= -700,
+					m_OffsetJumpYPos    = 0.0,
+			    
+					m_MoveTime 			= 1/30,
+					m_bLandMove 		= true,
+					m_bDependMyShip   	= true,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_fEventTime              = 1/30,
+					m_fLocalVol               = 0.7,
+					m_listSoundName           = {"FX_COMBAT_ALL_HYPER_GUILTY",},
+				},
+				{
+					m_fEventTime              = 5/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_1",},
+				},
+				{
+					m_fEventTime              = 55/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_2",},
+				},
+				{
+					m_fEventTime              = 75/30,
+					m_fLocalVol               = 0.4,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_3",},
+				},
+				{
+					m_fEventTime              = 97/30,
+					m_fLocalVol               = 0.5,
+					m_listSoundName           = {"FX_COMBAT_GUILTY_S_MILLIA_HYPER1_4",},
+				},
+
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 15/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 1.0,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_HYPER_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_HYPER_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_HYPER_3",
+					},
+				},
+			},
+			m_listNKMEventCameraMove =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 35/30,
+
+					m_fPosXOffset             = -250,
+					m_fPosYOffset             = 150,
+					m_fZoom                   = -175,
+
+					m_fMoveTrackingTime       = 0.1,
+					m_fZoomTrackingTime       = 0.1,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 35/30,
+					m_fEventTimeMax           = 60/30,
+
+					m_fPosXOffset             = 0,
+					m_fPosYOffset             = 200,
+					m_fZoom                   = -100,
+
+					m_fMoveTrackingTime       = 0.5,
+					m_fZoomTrackingTime       = 0.5,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 60/30,
+					m_fEventTimeMax           = 75/30,
+
+					m_fPosXOffset             = 200,
+					m_fPosYOffset             = 700,
+					m_fZoom                   = -150,
+
+					m_fMoveTrackingTime       = 1.0,
+					m_fZoomTrackingTime       = 1.0,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 75/30,
+					m_fEventTimeMax           = 98/30,
+
+					m_fPosXOffset             = 0,
+					m_fPosYOffset             = 0,
+					m_fZoom                   = -150,
+
+					m_fMoveTrackingTime       = 0.2,
+					m_fZoomTrackingTime       = 0.2,
+				},
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 98/30,
+					m_fEventTimeMax           = 115/30,
+
+					m_fPosXOffset             = 200,
+					m_fPosYOffset             = 0,
+					m_fZoom                   = 0,
+
+					m_fMoveTrackingTime       = 0.5,
+					m_fZoomTrackingTime       = 0.5,
+				},
+			},
+			m_listNKMEventCameraCrash = 
+			{
+				{
+					m_fEventTime              = 42/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 8,
+					m_fCameraCrashTime        = 10/30,
+				},
+				{
+					m_fEventTime              = 80/30,
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					m_fCrashRadius            = 1250,
+			
+					m_fCameraCrashGap         = 15,
+					m_fCameraCrashTime        = 20/30,
+				},
+			},
+			m_listNKMEventFadeWorld =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTimeMin           = 0/30,
+					m_fEventTimeMax           = 125/30,
+
+					m_fColorR                 = 0.0,
+					m_fColorG                 = 0.0,
+					m_fColorB                 = 0.0,
+
+					m_fMapColorKeepTime       = 10/30,
+					m_fMapColorReturnTime     = 10/30,
+				},
+			},
+			m_listNKMEventStopTime =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					
+					m_StopTimeIndex           = "NSTI_SKILL",
+					m_fStopTime               = 30/30,
+					m_bStopEnemyOnly          = false,
+					m_bMyStop                 = false,
+					m_fRange                  = 1200,
+				},
+			},
+		},
+
+		{	-- 스턴 (길티기어 유닛한테만 있음)
+			m_StateName                   = "USN_DAMAGE_STUN",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = false,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.75,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_STUN_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_STUN_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_STUN_3",
+					},
+				},
+			},			
+		},
+		{--*경직A
+			m_StateName			= "USN_DAMAGE_A",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*경직B
+			m_StateName			= "USN_DAMAGE_B",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*에어본
+			m_StateName  			= "USN_DAMAGE_AIR_UP",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*다운
+			m_StateName  			= "USN_DAMAGE_DOWN",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.25,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_5",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DAMAGE_6",
+					},
+				},
+			},
+		},
+		{--*다이
+			m_StateName      	= "USN_DAMAGE_DIE",
+			
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_bVoice                  = true,
+					m_PlayRate                = 0.7,
+					m_listSoundName   =
+					{
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DEATH_1",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DEATH_2",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DEATH_3",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DEATH_4",
+						"VOICE_UNIT_GUILTY_S_MILLIA_BATTLE_DEATH_5",
+					},
+				},
+			},
+		},
+	},
+}

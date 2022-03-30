@@ -1,0 +1,40 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.6,
+    m_BossUnitStrID = "NKM_MOB_BOSS_PV_REPLACER_BLASTER",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+        {
+			m_UnitStrID = "NKM_MONSTER_NORMAL_TRANS_NEEDLER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.1,
+    		},
+        },
+        {
+			m_UnitStrID = "NKM_MONSTER_NORMAL_TRANS_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 4,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.01,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

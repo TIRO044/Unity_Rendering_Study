@@ -1,0 +1,59 @@
+NKMDungeonTemplet =
+{
+	m_fStartCost                = 10,
+	m_fCostSpeedRateB           = 1.1,
+
+		m_BossUnitStrID            = "NKM_MONSTER_BOSS_BASIC_FALLEN_ROSARIA_ADMIN_H",
+
+		m_fBossPosZ                = 0.6,
+
+	m_listDungeonDeck =
+	{
+	},
+
+	m_listDungeonUnitRespawnB =
+	{
+		{
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_FALLEN_DOMA_ADMIN_N",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart           = 0,
+				m_fEventTimeGap             = 40,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK         = 1.5,
+					NST_DEF         = 1.2,
+					NST_HP          = 1.3,
+				},
+			},
+		},
+		{
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_FALLEN_YUMA_ADMIN_N",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart           = 0,
+				m_fEventTimeGap             = 40,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.2,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK         = 1.3,
+					NST_DEF         = 1.3,
+					NST_HP          = 1.5,
+				},
+			},
+		},
+	},	
+}

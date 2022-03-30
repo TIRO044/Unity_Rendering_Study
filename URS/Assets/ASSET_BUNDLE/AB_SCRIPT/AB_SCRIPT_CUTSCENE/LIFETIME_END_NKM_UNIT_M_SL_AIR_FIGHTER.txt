@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_AIR_FIGHTER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_SL_AIR_FIGHTER@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_AIR_FIGHTER",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "SPARROW_SL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "ST-DSA078M 스패로우. 현 시간부로 영구 소유권자를 갱신.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "ST-DSA078M スパロウ。現時間より永久所有権者を更新。",
+    m_Talk_ENG = "ST-DSA078M Sparrow's permanent owner has been renewed.",
+    m_Talk_TWN = "ST-DSA078M 麻雀，即刻起，更新永久擁有者。",
+    m_Talk_THA = "เจ้าของถาวรของ ST-DSA078M สแปร์โรว์ได้รับการอัปเดตใหม่แล้ว",
+    m_Talk_VTN = "Chủ sở hữu vĩnh viễn của Chim Sẻ ST-DSA078M đã được gia hạn.",
+    m_Talk_SCN = "ST-DSA078M 麻雀，从现在起更换新的拥有者",
+    m_Talk_DEU = "ST-DSA078M Sparrows langfristiger Besitzer wurde erneuert.",
+    m_Talk_FRA = "Le nouveau propriétaire permanent du Sparrow ST-DSA078M est enregistré.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_AIR_FIGHTER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

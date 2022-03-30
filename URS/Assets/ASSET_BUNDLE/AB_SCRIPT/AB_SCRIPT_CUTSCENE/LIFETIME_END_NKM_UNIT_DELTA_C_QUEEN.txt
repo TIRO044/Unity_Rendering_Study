@@ -1,0 +1,37 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 12040002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_DELTA_C_QUEEN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_DELTA_C_QUEEN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 12040002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_DELTA_C_QUEEN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "JAINA_DELTA_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "주사위가 줄 수 있는 답은 여섯 개뿐이지만, 고개를 들면 세상에는 그보다 더 많은 답이 존재해요. 그러니 저는… 마지막까지 안주하지 않겠어요.",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 12040002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_DELTA_C_QUEEN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

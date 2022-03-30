@@ -1,0 +1,62 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 0,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP7_MINISTRA_TRANS",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_WRAITH_TRANS_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 3,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.3,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_WRAITH_TRANS_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.15,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		--보여주기용--
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_EP6_SNIFFER_N",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 999,
+				m_fEventPos 	        	= 0.6,
+			},
+		},
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_EP6_BOMB_TRANS_N",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 999,
+				m_fEventPos 	        	= 0.3,
+			},
+		},
+		--보여주기용--
+	},
+}

@@ -1,0 +1,52 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 8,
+	m_fCostSpeedRateB = 1,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP6_BEAST_MINI_N",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_NEEDLER_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_SCOURGE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.15,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_AXE_N",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 4,
+				m_fEventTimeEnd				= 999,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

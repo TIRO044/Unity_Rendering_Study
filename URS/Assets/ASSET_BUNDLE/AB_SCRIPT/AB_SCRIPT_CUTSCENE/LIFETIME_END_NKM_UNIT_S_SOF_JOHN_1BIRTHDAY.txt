@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10961202,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SOF_JOHN_1BIRTHDAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_SOF_JOHN_1BIRTHDAY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10961202,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SOF_JOHN_1BIRTHDAY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "JOHN_MASON_1BIRTH_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "좋아. 이런 게 바로 건설적인 상생이라는 거지. 우린 좋은 파트너가 될 거야, 브라더.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "よし。これこそシナジー効果というものだ。俺たちはいいパートナーになれそうだな、兄弟。",
+    m_Talk_ENG = "Good, this is what they call constructive collaboration. We'll make good partners, brother.",
+    m_Talk_TWN = "很好，這就是互利雙贏。我們會成為好夥伴的，兄弟。",
+    m_Talk_THA = "เยี่ยมมาก นี่ล่ะที่เขาเรียกกันว่าช่วยเหลือเกื้อกูล เราต้องเป็นคู่หูที่ดีอย่างแน่นอน บอส",
+    m_Talk_VTN = "Tốt, đây là cái mà họ gọi là hợp tác mang tính xây dựng. Chúng ta sẽ là đối tác tốt đấy, anh trai.",
+    m_Talk_SCN = "很好，这就是互利双赢。我们会成为好伙伴的，我的兄弟。",
+    m_Talk_DEU = "Gut, das nennt man dann wohl konstruktive Zusammenarbeit. Wir werden gute Partner sein, Bruder.",
+    m_Talk_FRA = "Bien. C'est ce qu'on appelle une collaboration fructueuse. On fera une bonne équipe, frérot.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10961202,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SOF_JOHN_1BIRTHDAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

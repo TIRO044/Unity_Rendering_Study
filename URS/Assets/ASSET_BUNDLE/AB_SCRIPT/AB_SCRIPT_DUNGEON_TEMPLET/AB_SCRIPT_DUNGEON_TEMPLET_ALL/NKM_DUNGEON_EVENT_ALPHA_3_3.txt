@@ -1,0 +1,303 @@
+NKMDungeonTemplet = 
+{
+	m_listDungeonWave = 
+	{
+	
+		{
+			m_WaveID		= 1,	
+			m_NextWaveID	= 2,	
+			m_fNextWavetime	= 30,
+		
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 0+(0.3*0),		
+						m_fEventPos 				= 0.1,					
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 0+(0.3*1),
+						m_fEventPos 				= 0.1,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 5+(0.3*0),
+						m_fEventPos 				= 0.4,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*0),
+						m_fEventPos 				= 0.1,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*1),
+						m_fEventPos 				= 0.1,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 12+(0.3*0),
+						m_fEventPos 				= 0.1,
+					},
+				},
+			},
+		},
+		
+		{
+			m_WaveID		= 2,	
+			m_NextWaveID	= 3,	
+			m_fNextWavetime	= 30,
+			
+			m_listDungeonUnitRespawnA = 
+			{
+				{
+					m_UnitStrID 				= "NKM_MOB_NORMAL_EVENT_ALPHA_CA_JIA_ALLY", -- 각성 신지아
+					m_UnitLevel 				= 110,
+					
+					m_NKMDungeonEventTiming = 
+					{
+						-- m_EventDieUnitTag 			= "JAKE",
+						-- m_EventDieUnitTagCount 		= 1,
+						m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",
+						m_fEventTimeStart           = 5,
+						m_fEventPos 	        	= 0.2,
+					},
+				},
+			},
+
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 2+(0.3*0),		
+						m_fEventPos 				= 0.3,					
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 2+(0.3*1),
+						m_fEventPos 				= 0.6,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 6+(0.3*0),
+						m_fEventPos 				= 0.2,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 6+(0.3*1),
+						m_fEventPos 				= 0.5,
+					},
+				},
+                {
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 12+(0.3*0),
+						m_fEventPos 				= 0.1,
+					},
+				},
+                {
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 12+(0.3*1),
+						m_fEventPos 				= 0.6,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 18+(0.3*0),
+						m_fEventPos 				= 0.1,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 18+(0.3*1),
+						m_fEventPos 				= 0.6,
+					},
+				},
+			},
+        },
+        
+        {
+            m_WaveID		= 3,	
+            
+			m_fNextWavetime	= 40,
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 2+(0.3*0),		
+						m_fEventPos 				= 0.1,					
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 2+(0.3*1),
+						m_fEventPos 				= 0.3,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 2+(0.3*2),
+						m_fEventPos 				= 0.6,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*0),
+						m_fEventPos 				= 0.15,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*1),
+						m_fEventPos 				= 0.4,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 8+(0.3*2),
+						m_fEventPos 				= 0.6,
+					},
+				},
+                {
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 15+(0.3*0),
+						m_fEventPos 				= 0.1,
+					},
+				},
+                {
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 15+(0.3*1),
+						m_fEventPos 				= 0.3,
+					},
+				},
+				{
+					m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_ALPHA_C_JIA_CLONE",
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+						m_fEventTimeStart   		= 15+(0.3*2),
+						m_fEventPos 				= 0.5,
+					},
+				},
+			},
+		},
+	},
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			--* 첫 시작
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3300211,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EVENT_ALPHA_CA_JIA_ALLY",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+			},
+		},
+	},
+}

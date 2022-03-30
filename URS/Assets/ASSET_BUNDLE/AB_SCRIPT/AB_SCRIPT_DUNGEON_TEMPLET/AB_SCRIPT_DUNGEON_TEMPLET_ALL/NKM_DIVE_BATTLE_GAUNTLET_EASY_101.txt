@@ -1,0 +1,179 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB    = 1.0,
+    m_BossUnitStrID = "NKM_MOB_BOSS_DIVE_SHIP_X_ABRAHAM",
+    
+    m_fBossPosZ 	= 1,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_DIVE_SL_TANK",
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_FOX_ANTIAIR",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0.5,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_TIDE_SUBMACHINEGUN",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 1,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_STATE_HELI_SHIELD",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 1.5,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.35,
+				
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_DIVE_SL_TANK",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.2,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_FOX_ANTIAIR",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.15,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_TIDE_SUBMACHINEGUN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_STATE_HELI_SHIELD",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.8,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+		},
+
+
+
+
+
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_DIVE_SL_TANK",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.3,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.2,
+			},
+		},	
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_FOX_ANTIAIR",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.3,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.15,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_TIDE_SUBMACHINEGUN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.3,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_TIDE_SUBMACHINEGUN",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.3,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_DIVE_STATE_HELI_SHIELD",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.5,
+				m_fEventBossHPUpper  	     = 0.3,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+		},
+	},
+}

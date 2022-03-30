@@ -1,0 +1,304 @@
+﻿
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 2,
+    m_BossUnitStrID = "NKM_MONSTER_RAID_BASIC_RAID_BOSS_1_NIGHTMARE_S",
+    
+    m_fBossPosZ 	= 0.6,
+
+    m_listDungeonDeck = 
+	{
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			
+        
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+		-- 		m_fEventTimeStart   		= 0,
+		-- 		m_fEventTimeEnd				= 60*4,
+    	-- 	},
+		-- },
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		-- 페이즈1 HP100% ~ 80% START
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 1.1,
+		-- 		m_fEventBossHPUpper  		= 0.8,
+		-- 		m_fEventTimeStart   		= 12,
+
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+        -- },
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 1.1,
+		-- 		m_fEventBossHPUpper  		= 0.8,
+		-- 		m_fEventTimeStart   		= 12,
+
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.15,
+		-- 	},
+		-- },
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 1.1,
+		-- 		m_fEventBossHPUpper  		= 0.8,
+		-- 		m_fEventTimeStart   		= 12,
+
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 1.1,
+		-- 		m_fEventBossHPUpper  		= 0.8,
+		-- 		m_fEventTimeStart   		= 12,
+				
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.15,
+		-- 	},
+		-- },
+
+		-- 페이즈1 HP100% ~ 80% END
+
+		-- 페이즈2 HP80% ~ 40% START
+
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 0.79,
+		-- 		m_fEventBossHPUpper  		= 0.41,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.4,
+		-- 	},
+        -- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 0.79,
+		-- 		m_fEventBossHPUpper  		= 0.41,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.45,
+		-- 	},
+        -- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 0.79,
+		-- 		m_fEventBossHPUpper  		= 0.41,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.35,
+		-- 	},
+        -- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 0.79,
+		-- 		m_fEventBossHPUpper  		= 0.41,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.3,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 0.79,
+		-- 		m_fEventBossHPUpper  		= 0.41,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.5,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventBossHPLess  		= 0.79,
+		-- 		m_fEventBossHPUpper  		= 0.41,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+		-- 		m_fEventPos 	        	= 0.25,
+		-- 	},
+		-- },
+
+
+		
+		-- 페이즈2 HP80% ~ 40% END
+
+		-- 페이즈3 HP40% ~ 20% START
+
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_DEMOLISHER",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+        --         m_fEventBossHPLess  		= 0.4,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+        -- },
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_WIZARD_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+        --         m_fEventBossHPLess  		= 0.4,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_DEMOLISHER",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+        --         m_fEventBossHPLess  		= 0.3,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BLASTER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+        --         m_fEventBossHPLess  		= 0.3,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_WIZARD_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+        --         m_fEventBossHPLess  		= 0.25,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BLASTER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+        --         m_fEventBossHPLess  		= 0.25,
+		-- 		m_fEventPos 	        	= 0.1,
+		-- 	},
+		-- },
+
+		-- 페이즈3 HP40% ~ 20% END
+
+		-- 페이즈4 HP20% ~ 00% START
+
+        -- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_TIME",
+		-- 		m_fEventBossHPLess  		= 0.2,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+        --         m_fEventTimeGap				= 20,
+		-- 		m_fEventPos 				= 0.1,
+		-- 	},
+		-- },
+
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_WRAITH_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_TIME",
+		-- 		m_fEventBossHPLess  		= 0.2,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+        --         m_fEventTimeGap				= 20,
+		-- 		m_fEventPos 				= 0.1,
+		-- 	},
+		-- },
+
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_BITER_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_TIME",
+		-- 		m_fEventBossHPLess  		= 0.15,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+        --         m_fEventTimeGap				= 40,
+		-- 		m_fEventPos 				= 0.1,
+		-- 	},
+		-- },
+
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_WRAITH_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_TIME",
+		-- 		m_fEventBossHPLess  		= 0.15,
+		-- 		m_fEventIgnoreBossInitHPLess = false,
+				
+        --         m_fEventTimeGap				= 40,
+		-- 		m_fEventPos 				= 0.1,
+		-- 	},
+		-- },
+
+		-- 페이즈4 HP20% ~ 00% END
+	},
+	-- m_listDungeonEventTempletTeamA = 
+	-- {
+	-- 	{
+	-- 		m_EventID = 21001,
+	-- 		m_dungeonEventType = "GAME_EVENT",
+
+	-- 		m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+	-- 		m_EventConditionNumValue = 40,
+
+	-- 		m_NKMDungeonEventTiming = 
+	-- 		{								
+	-- 			m_NKM_DUNGEON_EVENT_TYPE	= "NDET_ONE_TIME",
+	-- 			m_fEventTimeEnd   			= 0,
+	-- 		},
+	-- 	},	
+	-- },
+}

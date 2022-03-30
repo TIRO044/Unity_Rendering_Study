@@ -1,0 +1,54 @@
+﻿-- Exported from RAID_TEMPLET.xlsx
+
+RAID_SEASON_TEMPLET =
+{
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_DUMMY",
+    Raid_Season_ID = 10001,
+    Reward_Board_ID = 101,
+    Raid_Boss_ID = 1001,
+    Assist_Activate_Point = 40000,
+  },
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_1",
+    Raid_Season_ID = 22001,
+    Reward_Board_ID = 101,
+    Raid_Boss_ID = 10001,
+    Assist_Activate_Point = 40000,
+  },
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_2",
+    Raid_Season_ID = 22002,
+    Reward_Board_ID = 102,
+    Raid_Boss_ID = 10002,
+    Assist_Activate_Point = 40000,
+  },
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_3",
+    Raid_Season_ID = 22003,
+    Reward_Board_ID = 103,
+    Raid_Boss_ID = 10001,
+    Assist_Activate_Point = 40000,
+  },
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_4",
+    Raid_Season_ID = 22004,
+    Reward_Board_ID = 104,
+    Raid_Boss_ID = 10002,
+    Assist_Activate_Point = 40000,
+  },
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_5",
+    Raid_Season_ID = 22005,
+    Reward_Board_ID = 105,
+    Raid_Boss_ID = 10001,
+    Assist_Activate_Point = 40000,
+  },
+  {
+    m_DateStrID = "DATE_RAID_DUNGEON_SEASON_6",
+    Raid_Season_ID = 22006,
+    Reward_Board_ID = 106,
+    Raid_Boss_ID = 10002,
+    Assist_Activate_Point = 40000,
+  },
+}

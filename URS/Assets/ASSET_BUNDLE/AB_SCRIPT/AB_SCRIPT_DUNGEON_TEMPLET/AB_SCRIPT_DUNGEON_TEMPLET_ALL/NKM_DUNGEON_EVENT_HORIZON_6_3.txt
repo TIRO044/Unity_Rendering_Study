@@ -1,0 +1,191 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateA = 1.0,---아군 코스트 회복량
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_HORIZON_HARMONY_C_VIOLIN_H",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_SUMMER_N",
+			
+        
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+		-- 		m_fEventTimeStart   		= 0,
+		-- 		m_fEventTimeEnd				= 240,
+		-- 		m_fEventPos 				= 0.15,
+    	-- 	},
+		-- 	m_AddStatData =
+		-- 	{
+		-- 		m_StatFactor = 
+		-- 		{
+		-- 			  NST_ATK         = 1.5,
+		-- 			  NST_HP          = 1.7,
+		-- 		},
+		-- 	},		
+		-- },
+		
+	},
+
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		------후방 지원 소총병, 드론으로 처리 유도
+		{
+			m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE     = "NDET_TIME",
+                m_fEventTimeStart            = 2,
+                m_fEventTimeGap              = 10,
+                m_fEventPos                  = 0.1,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK = 3.5,
+					NST_HIT = 3.5,
+				}
+			}
+		},
+
+
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+		-- 	m_EventRespawnUnitTag     = "First",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		 = 2,
+		-- 		m_fEventPos 				 = 0.1,
+		-- 	},
+		-- 	m_AddStatData =
+		-- 	{
+		-- 		m_StatFactor =
+		-- 		{
+		-- 			NST_ATK = 2.5,
+		-- 			NST_HIT = 3.5,
+		-- 		}
+		-- 	}
+		-- },
+
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+		-- 	m_EventRespawnUnitTag     = "Second",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+		-- 		m_EventDieUnitTag        = "First",
+		-- 		m_EventDieUnitTagCount   = 3,
+		-- 		m_fEventPos 			 = 0.2,
+		-- 	},
+		-- 	m_AddStatData =
+		-- 	{
+		-- 		m_StatFactor =
+		-- 		{
+		-- 			NST_ATK = 2.5,
+		-- 			NST_HIT = 3.5,
+		-- 		}
+		-- 	}
+		-- },
+
+
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+		-- 	m_EventRespawnUnitTag     = "Third",
+
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+		-- 		m_EventDieUnitTag        = "Second",
+		-- 		m_EventDieUnitTagCount   = 3,
+		-- 		m_fEventPos 			 = 0.2,
+		-- 	},
+		-- 	m_AddStatData =
+		-- 	{
+		-- 		m_StatFactor =
+		-- 		{
+		-- 			NST_ATK = 2.5,
+		-- 			NST_HIT = 3.5,
+		-- 		}
+		-- 	}
+		-- },
+		
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		 = 25,
+		-- 		m_fEventPos 				 = 0.3,
+		-- 	},
+		-- },
+		-- {
+		-- 	m_UnitStrID	= "NKM_MONSTER_NORMAL_REPLACER_RIFLE_N",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		 = 25,
+		-- 		m_fEventPos 				 = 0.25,
+		-- 	},
+		-- },	
+	},
+
+
+
+
+
+
+
+
+	m_listDungeonEventTempletTeamB =
+	{
+		{	
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 23563,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_HORIZON_HARMONY_C_VIOLIN_H",
+			m_EventConditionValue2 = "USN_PATTERN1_START",
+			
+			m_bPause = true,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 2.5,
+    		},
+		},	
+
+		{
+			m_dungeonEventType = "CHANGE_BGM",
+			m_EventID = 1,
+			m_bPause = false,
+			m_EventActionStrValue = "THEMA_SCAENA_02",
+
+            m_EventCondition       = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_HORIZON_HARMONY_C_VIOLIN_H",
+			m_EventConditionValue2 = "USN_HYPER1",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",
+                m_fEventTimeStart   		= 1,	
+				-- m_fEventBossHPLess			 = 0.5,
+				-- m_fEventIgnoreBossInitHPLess = false,
+			},
+		},	
+	},
+}

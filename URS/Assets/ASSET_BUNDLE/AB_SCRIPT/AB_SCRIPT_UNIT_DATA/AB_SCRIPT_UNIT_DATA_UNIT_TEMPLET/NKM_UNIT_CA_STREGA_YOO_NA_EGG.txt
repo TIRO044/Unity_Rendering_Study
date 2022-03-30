@@ -1,0 +1,90 @@
+﻿NKMUnitTemplet =
+{ 
+	m_UnitSizeX 			= 120,
+	m_UnitSizeY 			= 120,
+	m_SpriteScale           = 1.0,      
+  
+	m_fShadowScaleX         = 0,     
+	m_fShadowScaleY         = 0,
+
+	m_fForceRespawnZposMin	 = 0.3,	
+	m_fForceRespawnZposMax	 = 0.3,
+	m_bShowGage              = true,
+
+	m_bAirUnit              = true,
+	m_fAirHigh              = 340,
+
+	m_fGageOffsetY			= 100,
+	m_fForceRespawnZposMin	 = 1.0,
+	m_fForceRespawnZposMax	 = 1.0,
+
+	m_SpeedRun              = 0,
+
+	m_fForceRespawnZposMin	 = 0.5,
+	m_fForceRespawnZposMax	 = 0.5,
+
+	m_SeeRange              = 2000,
+	m_SeeRangeMax           = 2200,
+	m_TargetNearRange       = 100,
+
+	m_AttackedTargetTime    = 1,
+	m_bAttackedTarget       = false,
+  
+	m_bNoMove				= true,
+	m_bUseMotionBlur        = false,
+	m_bNoDamageBackSpeed	= true,
+	m_bNoDamageBackSpeed	= true,
+
+	m_fDieCompleteTime		= 1.0,
+  
+	m_dicNKMUnitState =
+	{
+	
+		{
+			m_NKM_UNIT_STATE_TYPE      	= "NUST_START",
+			m_StateName                	= "USN_START",
+			m_AnimName                 	= "ASTART",
+			m_bAnimLoop                	= false,
+			
+			m_fAnimSpeed            	= 1.0,
+			
+			m_AnimEndChangeState		= "USN_ASTAND",
+			m_DamagedChangeState		= "USN_ASTAND",
+
+			m_SuperArmorLevel			= "NSAL_HYPER",
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_MOVE",
+			m_StateName                   = "USN_RUN",
+			m_AnimName                    = "RUN",
+			m_bAnimLoop                   = true,
+			m_fAnimSpeed                  = 1.0,
+			
+			m_bRun                        = true,
+
+			m_SuperArmorLevel		= "NSAL_HYPER",
+				},
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_ASTAND",
+			m_StateName                   = "USN_ASTAND",
+			m_AnimName                    = "ASTAND",
+			m_bAnimLoop                   = true,
+			
+			-- m_listNKMEventDie	=
+			-- {
+			-- 	{
+			-- 		m_bAnimTime		= false,
+			-- 		m_fEventTime	= 150/30,
+			-- 	},
+			-- },
+			
+			-- m_NKMEventUnitChange =
+			-- {
+			-- 	m_bAnimTime		= false,
+			-- 	m_fEventTime	= 150/30,
+			-- 	m_UnitStrID		= "NKM_UNIT_CA_STREGA_YOO_NA_SUMMON",	
+			-- },
+		},
+	},
+}
+

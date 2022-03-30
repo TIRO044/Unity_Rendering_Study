@@ -1,0 +1,1085 @@
+﻿-- Exported from RECALL_UNIT_TEMPLET.xlsx
+
+RECALL_EXCHANGE_UNIT_LIST =
+{
+  {
+    Index = 1073011,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1071,
+  },
+  {
+    Index = 1073012,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1072,
+  },
+  {
+    Index = 1073013,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1073,
+  },
+  {
+    Index = 1073014,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1150,
+  },
+  {
+    Index = 1073015,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1154,
+  },
+  {
+    Index = 1073016,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1159,
+  },
+  {
+    Index = 1073017,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1161,
+  },
+  {
+    Index = 1073018,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1166,
+  },
+  {
+    Index = 1073019,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1171,
+  },
+  {
+    Index = 1073020,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1172,
+  },
+  {
+    Index = 1073021,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1176,
+  },
+  {
+    Index = 1073022,
+    UnitExchangeGroupID = 107301,
+    UnitID = 1190,
+  },
+  {
+    Index = 1074011,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1059,
+  },
+  {
+    Index = 1074012,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1152,
+  },
+  {
+    Index = 1074013,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1192,
+  },
+  {
+    Index = 1074014,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1043,
+  },
+  {
+    Index = 1074015,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1063,
+  },
+  {
+    Index = 1074016,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1085,
+  },
+  {
+    Index = 1074017,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1113,
+  },
+  {
+    Index = 1074018,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1138,
+  },
+  {
+    Index = 1074019,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1151,
+  },
+  {
+    Index = 1074020,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1158,
+  },
+  {
+    Index = 1074021,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1167,
+  },
+  {
+    Index = 1074022,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1174,
+  },
+  {
+    Index = 1074023,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1175,
+  },
+  {
+    Index = 1074024,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1178,
+  },
+  {
+    Index = 1074025,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1199,
+  },
+  {
+    Index = 1074026,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1006,
+  },
+  {
+    Index = 1074027,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1115,
+  },
+  {
+    Index = 1074028,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1139,
+  },
+  {
+    Index = 1074029,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1147,
+  },
+  {
+    Index = 1074030,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1157,
+  },
+  {
+    Index = 1074031,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1193,
+  },
+  {
+    Index = 1074032,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1198,
+  },
+  {
+    Index = 1074033,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1112,
+  },
+  {
+    Index = 1074034,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1135,
+  },
+  {
+    Index = 1074035,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1149,
+  },
+  {
+    Index = 1074036,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1165,
+  },
+  {
+    Index = 1074037,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1169,
+  },
+  {
+    Index = 1074038,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1179,
+  },
+  {
+    Index = 1074039,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1100,
+  },
+  {
+    Index = 1074040,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1181,
+  },
+  {
+    Index = 1074041,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1189,
+  },
+  {
+    Index = 1074042,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1004,
+  },
+  {
+    Index = 1074043,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1042,
+  },
+  {
+    Index = 1074044,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1061,
+  },
+  {
+    Index = 1074045,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1064,
+  },
+  {
+    Index = 1074046,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1104,
+  },
+  {
+    Index = 1074047,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1109,
+  },
+  {
+    Index = 1074048,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1110,
+  },
+  {
+    Index = 1074049,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1118,
+  },
+  {
+    Index = 1074050,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1121,
+  },
+  {
+    Index = 1074051,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1195,
+  },
+  {
+    Index = 1074052,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1099,
+  },
+  {
+    Index = 1074053,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1146,
+  },
+  {
+    Index = 1074054,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1170,
+  },
+  {
+    Index = 1074055,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1173,
+  },
+  {
+    Index = 1074056,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1101,
+  },
+  {
+    Index = 1074057,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1031,
+  },
+  {
+    Index = 1074058,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1065,
+  },
+  {
+    Index = 1074059,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1162,
+  },
+  {
+    Index = 1074060,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1105,
+  },
+  {
+    Index = 1074061,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1191,
+  },
+  {
+    Index = 1074062,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1098,
+  },
+  {
+    Index = 1074063,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1029,
+  },
+  {
+    Index = 1074064,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1188,
+  },
+  {
+    Index = 1074065,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1160,
+  },
+  {
+    Index = 1074066,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1040,
+  },
+  {
+    Index = 1074067,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1068,
+  },
+  {
+    Index = 1074068,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1070,
+  },
+  {
+    Index = 1074069,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1155,
+  },
+  {
+    Index = 1074070,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1196,
+  },
+  {
+    Index = 1074071,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1081,
+  },
+  {
+    Index = 1074072,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1082,
+  },
+  {
+    Index = 1074073,
+    UnitExchangeGroupID = 107401,
+    UnitID = 1084,
+  },
+  {
+    Index = 1075011,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1210,
+  },
+  {
+    Index = 1075012,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1059,
+  },
+  {
+    Index = 1075013,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1152,
+  },
+  {
+    Index = 1075014,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1192,
+  },
+  {
+    Index = 1075015,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1043,
+  },
+  {
+    Index = 1075016,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1063,
+  },
+  {
+    Index = 1075017,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1085,
+  },
+  {
+    Index = 1075018,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1113,
+  },
+  {
+    Index = 1075019,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1138,
+  },
+  {
+    Index = 1075020,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1151,
+  },
+  {
+    Index = 1075021,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1158,
+  },
+  {
+    Index = 1075022,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1167,
+  },
+  {
+    Index = 1075023,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1174,
+  },
+  {
+    Index = 1075024,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1175,
+  },
+  {
+    Index = 1075025,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1178,
+  },
+  {
+    Index = 1075026,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1199,
+  },
+  {
+    Index = 1075027,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1006,
+  },
+  {
+    Index = 1075028,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1115,
+  },
+  {
+    Index = 1075029,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1139,
+  },
+  {
+    Index = 1075030,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1147,
+  },
+  {
+    Index = 1075031,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1157,
+  },
+  {
+    Index = 1075032,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1193,
+  },
+  {
+    Index = 1075033,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1198,
+  },
+  {
+    Index = 1075034,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1204,
+  },
+  {
+    Index = 1075035,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1112,
+  },
+  {
+    Index = 1075036,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1135,
+  },
+  {
+    Index = 1075037,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1149,
+  },
+  {
+    Index = 1075038,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1165,
+  },
+  {
+    Index = 1075039,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1169,
+  },
+  {
+    Index = 1075040,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1179,
+  },
+  {
+    Index = 1075041,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1100,
+  },
+  {
+    Index = 1075042,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1181,
+  },
+  {
+    Index = 1075043,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1189,
+  },
+  {
+    Index = 1075044,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1205,
+  },
+  {
+    Index = 1075045,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1004,
+  },
+  {
+    Index = 1075046,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1042,
+  },
+  {
+    Index = 1075047,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1061,
+  },
+  {
+    Index = 1075048,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1064,
+  },
+  {
+    Index = 1075049,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1104,
+  },
+  {
+    Index = 1075050,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1109,
+  },
+  {
+    Index = 1075051,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1110,
+  },
+  {
+    Index = 1075052,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1118,
+  },
+  {
+    Index = 1075053,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1121,
+  },
+  {
+    Index = 1075054,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1195,
+  },
+  {
+    Index = 1075055,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1201,
+  },
+  {
+    Index = 1075056,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1099,
+  },
+  {
+    Index = 1075057,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1146,
+  },
+  {
+    Index = 1075058,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1170,
+  },
+  {
+    Index = 1075059,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1173,
+  },
+  {
+    Index = 1075060,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1101,
+  },
+  {
+    Index = 1075061,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1203,
+  },
+  {
+    Index = 1075062,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1031,
+  },
+  {
+    Index = 1075063,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1065,
+  },
+  {
+    Index = 1075064,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1162,
+  },
+  {
+    Index = 1075065,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1200,
+  },
+  {
+    Index = 1075066,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1105,
+  },
+  {
+    Index = 1075067,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1191,
+  },
+  {
+    Index = 1075068,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1098,
+  },
+  {
+    Index = 1075069,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1207,
+  },
+  {
+    Index = 1075070,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1029,
+  },
+  {
+    Index = 1075071,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1188,
+  },
+  {
+    Index = 1075072,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1160,
+  },
+  {
+    Index = 1075073,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1040,
+  },
+  {
+    Index = 1075074,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1068,
+  },
+  {
+    Index = 1075075,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1070,
+  },
+  {
+    Index = 1075076,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1155,
+  },
+  {
+    Index = 1075077,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1196,
+  },
+  {
+    Index = 1075078,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1081,
+  },
+  {
+    Index = 1075079,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1082,
+  },
+  {
+    Index = 1075080,
+    UnitExchangeGroupID = 107501,
+    UnitID = 1084,
+  },
+  {
+    Index = 1076011,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1210,
+  },
+  {
+    Index = 1076012,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1059,
+  },
+  {
+    Index = 1076013,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1152,
+  },
+  {
+    Index = 1076014,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1192,
+  },
+  {
+    Index = 1076015,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1043,
+  },
+  {
+    Index = 1076016,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1063,
+  },
+  {
+    Index = 1076017,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1085,
+  },
+  {
+    Index = 1076018,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1113,
+  },
+  {
+    Index = 1076019,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1138,
+  },
+  {
+    Index = 1076020,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1151,
+  },
+  {
+    Index = 1076021,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1158,
+  },
+  {
+    Index = 1076022,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1167,
+  },
+  {
+    Index = 1076023,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1174,
+  },
+  {
+    Index = 1076024,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1175,
+  },
+  {
+    Index = 1076025,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1178,
+  },
+  {
+    Index = 1076026,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1199,
+  },
+  {
+    Index = 1076027,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1006,
+  },
+  {
+    Index = 1076028,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1115,
+  },
+  {
+    Index = 1076029,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1139,
+  },
+  {
+    Index = 1076030,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1147,
+  },
+  {
+    Index = 1076031,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1157,
+  },
+  {
+    Index = 1076032,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1193,
+  },
+  {
+    Index = 1076033,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1198,
+  },
+  {
+    Index = 1076034,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1204,
+  },
+  {
+    Index = 1076035,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1112,
+  },
+  {
+    Index = 1076036,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1135,
+  },
+  {
+    Index = 1076037,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1149,
+  },
+  {
+    Index = 1076038,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1165,
+  },
+  {
+    Index = 1076039,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1169,
+  },
+  {
+    Index = 1076040,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1179,
+  },
+  {
+    Index = 1076041,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1100,
+  },
+  {
+    Index = 1076042,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1181,
+  },
+  {
+    Index = 1076043,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1189,
+  },
+  {
+    Index = 1076044,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1205,
+  },
+  {
+    Index = 1076045,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1004,
+  },
+  {
+    Index = 1076046,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1042,
+  },
+  {
+    Index = 1076047,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1061,
+  },
+  {
+    Index = 1076048,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1064,
+  },
+  {
+    Index = 1076049,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1104,
+  },
+  {
+    Index = 1076050,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1109,
+  },
+  {
+    Index = 1076051,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1110,
+  },
+  {
+    Index = 1076052,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1118,
+  },
+  {
+    Index = 1076053,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1121,
+  },
+  {
+    Index = 1076054,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1195,
+  },
+  {
+    Index = 1076055,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1201,
+  },
+  {
+    Index = 1076056,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1099,
+  },
+  {
+    Index = 1076057,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1146,
+  },
+  {
+    Index = 1076058,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1170,
+  },
+  {
+    Index = 1076059,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1173,
+  },
+  {
+    Index = 1076060,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1101,
+  },
+  {
+    Index = 1076061,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1203,
+  },
+  {
+    Index = 1076062,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1031,
+  },
+  {
+    Index = 1076063,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1065,
+  },
+  {
+    Index = 1076064,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1162,
+  },
+  {
+    Index = 1076065,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1200,
+  },
+  {
+    Index = 1076066,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1105,
+  },
+  {
+    Index = 1076067,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1191,
+  },
+  {
+    Index = 1076068,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1098,
+  },
+  {
+    Index = 1076069,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1207,
+  },
+  {
+    Index = 1076070,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1029,
+  },
+  {
+    Index = 1076071,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1188,
+  },
+  {
+    Index = 1076072,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1160,
+  },
+  {
+    Index = 1076073,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1040,
+  },
+  {
+    Index = 1076074,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1068,
+  },
+  {
+    Index = 1076075,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1070,
+  },
+  {
+    Index = 1076076,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1155,
+  },
+  {
+    Index = 1076077,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1196,
+  },
+  {
+    Index = 1076078,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1081,
+  },
+  {
+    Index = 1076079,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1082,
+  },
+  {
+    Index = 1076080,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1084,
+  },
+  {
+    Index = 1076081,
+    UnitExchangeGroupID = 107601,
+    UnitID = 1211,
+  },
+}

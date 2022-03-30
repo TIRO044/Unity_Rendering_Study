@@ -1,0 +1,235 @@
+﻿NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_H",
+    m_bRespawnFreePos = true,
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		-- 처음 소환
+		{
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+			
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 20,
+        
+				m_fEventPos 	        	= 0.75,
+			},
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 14,
+
+				m_fEventPos 	        	= 0.72,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 17,
+
+				m_fEventPos 	        	= 0.76,
+    		},
+		},
+        -- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 12,
+
+		-- 		m_fEventPos 	        	= 0.35,
+		-- 	},
+		-- },
+		{
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 15,
+			
+				m_fEventPos 	        	= 0.35,
+			},
+		},
+        
+		-- 2차 소환 ()
+        {
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 46,
+
+				m_fEventPos 	        	= 0.75,
+    		},
+		},
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 36,
+
+				m_fEventPos 	        	= 0.7,
+			},
+	},
+        -- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+	
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 36,
+
+		-- 		m_fEventPos 	        	= 0.35,
+		-- 	},
+		-- },
+
+		-- 3차 소환 ()
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 67,
+
+				m_fEventPos 	        	= 0.7,
+			},
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 69,
+
+				m_fEventPos 	        	= 0.75,
+			},
+		},
+        -- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 84,
+
+		-- 		m_fEventPos 	        	= 0.35,
+		-- 	},
+		-- },
+		{
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+		
+			m_NKMDungeonEventTiming = 
+	{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 72,
+				
+				m_fEventPos 	        	= 0.35,
+			},
+		},
+
+		-- 4차 소환 ()
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 85,
+
+				m_fEventPos 	        	= 0.7,
+			},
+		},
+        -- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 84,
+
+		-- 		m_fEventPos 	        	= 0.35,
+		-- 	},
+		-- },
+		{
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 96,
+		
+				m_fEventPos 	        	= 0.35,
+			},
+		},
+
+		-- 4차 소환 ()
+        {
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 150,
+
+				m_fEventPos 	        	= 0.75,
+			},
+        },
+        {
+			m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 152,
+
+				m_fEventPos 	        	= 0.75,
+			},
+		},
+        -- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_GUILD_WRAITH_S",
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{								
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 150,
+
+		-- 		m_fEventPos 	        	= 0.35,
+		-- 	},
+		-- },
+		{
+			m_UnitStrID = "NKM_MOB_RAID_GUILD_BOSS_S1_SPHERE_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 153,
+				
+				m_fEventPos 	        	= 0.35,
+			},
+		},
+	},
+}

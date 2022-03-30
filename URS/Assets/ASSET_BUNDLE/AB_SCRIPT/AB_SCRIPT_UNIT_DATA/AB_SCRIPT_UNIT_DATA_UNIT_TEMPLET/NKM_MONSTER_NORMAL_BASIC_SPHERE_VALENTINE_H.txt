@@ -1,0 +1,23 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_NORMAL_BASIC_SPHERE_VALENTINE_N",
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName				= "USN_ATTACK1",
+			m_listNKMEventRespawn =
+			{
+				{
+					m_UnitStrID			= "NKM_MONSTER_NORMAL_BASIC_SCOURGE_VALENTINE_N",
+				},
+				{
+					m_UnitStrID			= "NKM_MONSTER_NORMAL_BASIC_SCOURGE_VALENTINE_N",
+					
+				},
+				{
+					m_UnitStrID			= "NKM_MONSTER_NORMAL_BASIC_SCOURGE_VALENTINE_N",
+				},
+			},
+		},
+	},
+}

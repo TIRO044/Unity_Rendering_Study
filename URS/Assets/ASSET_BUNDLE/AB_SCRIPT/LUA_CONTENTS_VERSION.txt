@@ -1,0 +1,5 @@
+ContentsVersion = '4.7.c'
+ContentsTags =
+{
+    'KOR',
+}

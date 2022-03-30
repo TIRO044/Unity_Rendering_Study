@@ -1,0 +1,29 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 8,
+	m_fCostSpeedRateB = 1,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_MAID_MAID_S_LEADER_S",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+    },
+	
+	m_listDungeonUnitRespawnB = 
+	{
+        {
+			m_UnitStrID = "NKM_MOB_BOSS_MAID_MAID_C_MASK_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 1.1,
+				m_fEventBossHPUpper  	     = 0.8,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.1,
+			},
+		},		
+	},
+}

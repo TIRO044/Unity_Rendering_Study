@@ -1,0 +1,71 @@
+NKMDungeonTemplet =
+{
+	m_fStartCost                = 10,
+	m_fCostSpeedRateB           = 1.1,
+
+		m_BossUnitStrID            = "NKM_MONSTER_BOSS_BASIC_FALLEN_ROSARIA_ADMIN_MOVE_H",
+
+		m_fBossPosZ                = 0.6,
+
+	m_listDungeonDeck =
+	{
+	},
+
+	m_listDungeonUnitRespawnB =
+	{
+		{
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_FALLEN_DOMA_ADMIN_H",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 0,
+				m_fEventPos              = 0.1,
+			},
+		},
+		{
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_FALLEN_YUMA_ADMIN_H",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 0,
+				m_fEventPos              = 0.2,
+			},
+		},
+	},
+	
+	m_listDungeonEventTempletTeamA =
+	{
+		{
+			-- m_EventCondition          = "UNIT_STATE_START",
+			-- m_EventConditionValue1    = "NKM_MONSTER_BOSS_BASIC_FALLEN_ROSARIA_ADMIN_MOVE_H",
+			-- m_EventConditionValue2    = "USN_WAITING",
+			-- m_dungeonEventType     = "SET_ENEMY_BOSS_HP_RATE",
+			-- m_EventActionValue     = 29,
+			
+			-- m_bPause               = false,
+			
+			-- m_NKMDungeonEventTiming = 
+			-- {
+			-- 	m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+			-- 	m_fEventTimeStart        = 150,
+			-- },
+		},
+		-- {
+		-- 	-- m_EventCondition          = "UNIT_STATE_START",
+		-- 	-- m_EventConditionValue1    = "NKM_MONSTER_BOSS_BASIC_FALLEN_ROSARIA_ADMIN_MOVE_H",
+		-- 	-- m_EventConditionValue2    = "USN_WAITING",
+		-- 	m_dungeonEventType     = "SET_ENEMY_BOSS_HP_RATE",
+		-- 	m_EventActionValue     = 100,
+			
+		-- 	-- m_bPause               = false,
+			
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart        = 60,
+		-- 	},
+		-- },
+	},
+}

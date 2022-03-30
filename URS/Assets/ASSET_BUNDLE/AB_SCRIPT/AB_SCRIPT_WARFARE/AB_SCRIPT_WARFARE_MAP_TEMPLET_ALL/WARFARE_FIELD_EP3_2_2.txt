@@ -1,0 +1,115 @@
+NKMWarfareMapTemplet =
+{
+	m_MapSizeX = 7,
+	m_MapSizeY = 3,
+	NKMWarfareTile0 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile1 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile2 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile3 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_FIELD_BATTLE_EP3_2_2_MEDIUM_WAVE_A",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile4 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_FIELD_BATTLE_EP3_2_2_MEDIUM_WAVE_A",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile5 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile6 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile7 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile8 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile9 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_ASSAULT",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile10 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile11 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_FIELD_BATTLE_EP3_2_2_MEDIUM_BOSS_B",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile12 =
+	{
+		m_TileType = "NWMTT_DISABLE",
+	},
+	NKMWarfareTile13 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_FIELD_BATTLE_EP3_2_2_HARD_BOSS_A",
+		m_bFlagDungeon = true,
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_DEFENSE",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile14 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_NKM_WARFARE_SPAWN_POINT_TYPE = "NWSPT_DIVE",
+	},
+	NKMWarfareTile15 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile16 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile17 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_FIELD_BATTLE_EP3_2_2_MEDIUM_WAVE_A",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+	},
+	NKMWarfareTile18 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_DungeonStrID = "NKM_FIELD_BATTLE_EP3_2_2_MEDIUM_WAVE_A",
+		m_NKM_WARFARE_ENEMY_ACTION_TYPE = "NWEAT_NEAREST_ATK",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+	NKMWarfareTile19 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+	},
+	NKMWarfareTile20 =
+	{
+		m_TileType = "NWMTT_NORMAL",
+		m_BattleConditionStrID = "BC_FOG_MENTAL",
+	},
+}

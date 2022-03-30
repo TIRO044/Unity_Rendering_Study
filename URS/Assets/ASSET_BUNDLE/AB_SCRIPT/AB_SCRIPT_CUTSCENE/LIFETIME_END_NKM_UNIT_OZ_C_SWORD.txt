@@ -1,0 +1,11 @@
+﻿-- Exported from WORKSPACE1.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenID = 12120002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_OZ_C_SWORD",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+  },
+}

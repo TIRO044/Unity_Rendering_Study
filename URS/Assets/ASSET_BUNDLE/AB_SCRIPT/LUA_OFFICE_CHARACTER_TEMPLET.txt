@@ -1,0 +1,80 @@
+﻿-- Exported from OFFICE_TEMPLET.xlsx
+
+m_OfficeCharacter =
+{
+  {
+    Type = "Unit",
+    ID = 1167,
+    PrefabAsset = "UNIT_OFFICE_SD_BARCODE",
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1039,
+    BTAsset = "OFFICE_BT_IDLE",
+  },
+  {
+    Type = "Unit",
+    ID = 1135,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1181,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1178,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1164,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1098,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1018,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1192,
+    BTAsset = "OFFICE_BT_RUSH",
+  },
+  {
+    Type = "Unit",
+    ID = 1180,
+    BTAsset = "OFFICE_BT_FOLLOWER",
+    Variables = "FollowTargetID=1179",
+  },
+  {
+    Type = "Unit",
+    ID = 1138,
+    BTAsset = "OFFICE_BT_FOLLOWER",
+    Variables = "FollowTargetID=1139; FollowEmotion = EMO_MUSIC; ArriveEmotion= EMO_HEART",
+  },
+  {
+    Type = "Unit",
+    ID = 1170,
+    Variables = "GrabEmotion = EMO_HEART",
+  },
+  {
+    Type = "Unit",
+    ID = 1160,
+    BTAsset = "OFFICE_BT_WARP",
+    Variables = "WarpAnimName = OFFICE_RAS_WARP; WarpProbability = 0.3",
+  },
+  {
+    Type = "Unit",
+    ID = 1063,
+    BTAsset = "OFFICE_BT_FOLLOWER",
+    Variables = "FollowTargetID=1002",
+  },
+}

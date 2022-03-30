@@ -1,0 +1,95 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID        = "NKM_MOB_BOSS_TEST_OMEN_INVALID",
+	m_bShowGage             = false,
+	m_listStaticBuffData =
+	{
+		{--* 무적 버프
+			m_BuffStrID           = "BUFF_BOSS_TEST_OMEN_COMMON2",
+		},
+	},
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName           = "USN_START",
+			m_AnimName            = "NOANI",
+			m_AnimEndChangeState  = "USN_START_END",
+			m_AnimEndChangeState  = "USN_ASTAND",
+		},
+		{--* 무상성 소환
+			m_StateName           = "USN_SUMMON_INVALID",
+			m_NKM_UNIT_STATE_TYPE = "NUST_ATTACK",
+			m_AnimName            = "NOANI",
+			m_bAnimLoop           = false,
+			m_AnimEndChangeState  = "USN_ASTAND",
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime        = 0/30,
+					m_UnitStrID         = "NKM_MOB_BOSS_TEST_OMEN_INVALID",
+					m_MaxCount          = 1,
+				},
+			},
+		},
+		{--* 디펜더 소환
+			m_StateName           = "USN_SUMMON_DEFENDER",
+			m_NKM_UNIT_STATE_TYPE = "NUST_ATTACK",
+			m_AnimName            = "NOANI",
+			m_bAnimLoop           = false,
+			m_AnimEndChangeState  = "USN_ASTAND",
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime        = 0/30,
+					m_UnitStrID         = "NKM_MOB_BOSS_TEST_OMEN_DEFENDER",
+					m_MaxCount          = 1,
+				},
+			},
+		},
+		{--* 스트라이커 소환
+			m_StateName           = "USN_SUMMON_STRIKER",
+			m_NKM_UNIT_STATE_TYPE = "NUST_ATTACK",
+			m_AnimName            = "NOANI",
+			m_bAnimLoop           = false,
+			m_AnimEndChangeState  = "USN_ASTAND",
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime        = 0/30,
+					m_UnitStrID         = "NKM_MOB_BOSS_TEST_OMEN_STRIKER",
+					m_MaxCount          = 1,
+				},
+			},
+		},
+		{--* 레인저 소환
+			m_StateName           = "USN_SUMMON_RANGER",
+			m_NKM_UNIT_STATE_TYPE = "NUST_ATTACK",
+			m_AnimName            = "NOANI",
+			m_bAnimLoop           = false,
+			m_AnimEndChangeState  = "USN_ASTAND",
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime        = 0/30,
+					m_UnitStrID         = "NKM_MOB_BOSS_TEST_OMEN_RANGER",
+					m_MaxCount          = 1,
+				},
+			},
+		},
+		{--* 스나이퍼 소환
+			m_StateName           = "USN_SUMMON_SNIPER",
+			m_NKM_UNIT_STATE_TYPE = "NUST_ATTACK",
+			m_AnimName            = "NOANI",
+			m_bAnimLoop           = false,
+			m_AnimEndChangeState  = "USN_ASTAND",
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime        = 0/30,
+					m_UnitStrID         = "NKM_MOB_BOSS_TEST_OMEN_SNIPER",
+					m_MaxCount          = 1,
+				},
+			},
+		},
+	},
+}

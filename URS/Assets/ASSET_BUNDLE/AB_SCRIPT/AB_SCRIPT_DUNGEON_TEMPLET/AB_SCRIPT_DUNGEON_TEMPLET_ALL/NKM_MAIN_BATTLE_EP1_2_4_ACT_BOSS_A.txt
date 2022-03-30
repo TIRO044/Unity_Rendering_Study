@@ -1,0 +1,215 @@
+
+NKMDungeonTemplet = 
+{
+	m_bCanUseAuto	= false,
+	
+	m_listDungeonWave = 
+	{
+		{
+			m_WaveID		= 1,	
+			m_NextWaveID	= 2,	
+			m_fNextWavetime	= 25,
+			
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MONSTER_BOSS_BASIC_BEAST_BASIC_MOVE_N",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 2.5,		
+						m_fEventPos 				= 0.0,					
+					},
+				},
+			},
+		},		
+		{
+			m_WaveID		= 2,	
+			
+			m_fNextWavetime	= 120,
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID	= "NKM_MONSTER_NORMAL_BASIC_WRAITH_N",	
+				
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 2+(0.3*0),		
+						m_fEventPos 				= 0.5,					
+					},
+				},
+			},
+		},
+	},
+	m_listDungeonEventTempletTeamA =
+	{
+		{						
+			m_EventID = 11101, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_bPause = true,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 2,
+    		},
+		},
+		
+		{						
+			m_EventID = 11100, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_bPause = false,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+		
+		-- 출격 하나라도 했는지 토큰 확인		
+		{				
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_ALT_SEO_YOON",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventActionStrValue	= "ALT",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{				
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_ALT_YOO_JIN",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventActionStrValue	= "ALT",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{				
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_ALT_XIAOLIN",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventActionStrValue	= "ALT",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{				
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_ALT_KIM_SOBIN",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventActionStrValue	= "ALT",
+			m_EventActionValue 		= 1,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		--{		 오래 안내고있으면 켜지게 하고싶은데 안되나
+		--
+		--	m_EventID = 11105, 
+		--	m_dungeonEventType = "GAME_EVENT",
+		--	m_bPause	= true,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventTimeStart   		= 30,
+		--		
+		--		m_EventTag = "ALT",
+		--		m_EventTagCount = 0,				
+    	--	},
+		--},
+		
+	},
+	m_listDungeonEventTempletTeamB =
+	{
+		{	
+			-- 보스 나오고 시작모션 끝나면 서윤 격려
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MONSTER_BOSS_BASIC_BEAST_BASIC_MOVE_N",
+			m_EventConditionValue2 = "USN_START",
+			
+			--m_fEventDelay		=	1.5,
+			
+			m_EventID = 11102, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_bPause = true,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+				
+    		},
+		},
+		{	
+			-- 레이스 서윤으로 대항
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_WRAITH_N",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_fEventDelay		=	1,
+			
+			m_EventID = 11103, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_bPause = true,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+				m_EventTag = "ALT",
+				m_EventTagCount = 1,
+    		},
+		},
+		{	
+			-- 보스잡고 대화
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_BOSS_BASIC_BEAST_BASIC_MOVE_N",
+			m_EventConditionValue2 = "USN_DAMAGE_DIE",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 11104,
+			m_bPause = false,
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",	
+				m_fEventTimeStart   		= 0,
+				
+				m_EventTag = "ALT",
+				m_EventTagCount = 1,
+    		},
+		},
+	},
+}

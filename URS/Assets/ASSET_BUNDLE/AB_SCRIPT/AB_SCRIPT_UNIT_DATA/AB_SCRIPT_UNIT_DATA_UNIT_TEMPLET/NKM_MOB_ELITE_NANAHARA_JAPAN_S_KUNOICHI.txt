@@ -1,0 +1,782 @@
+﻿NKMUnitTemplet =
+{ 
+	m_UnitSizeX 			= 200,
+	m_UnitSizeY 			= 270,
+	m_SpriteScale           = 1.0,      
+  
+	m_fShadowScaleX         = 200,     
+	m_fShadowScaleY         = 200,
+
+	m_fForceRespawnZposMin	 = 0.2,
+	m_fForceRespawnZposMax	 = 0.3,
+
+	m_SpeedRun              = 320,
+  
+	m_SeeRange              = 1100,
+	m_SeeRangeMax           = 1200,
+	m_TargetNearRange       = 150,
+  
+	m_AttackedTargetTime    = 1,
+	m_bAttackedTarget       = false,
+  
+	m_bUseMotionBlur        = true,
+  
+	m_listAttackStateData =  
+	{ 
+		{
+			m_StateName 	= "USN_ATTACK1",
+			-- m_StateName 	= "USN_PASSIVE",
+		},
+	},
+	m_listSkillStateData = 
+	{
+		{
+			m_StateName 	= "USN_SKILL1",
+			m_fRangeMin 	= 0,
+			m_fRangeMax		= 600,
+		},
+    },
+
+	m_listHitEvadeFeedBack	=
+	{
+		{
+			m_Condition = 
+			{
+				m_IgnoreBuffStrID	= "BUFF_JAPAN_KUNOICHI_PASSIVE_COOL",      
+			},
+
+			-- m_bStartAnyTime	= true,
+			m_Count 	= 6,
+			m_StateName = "USN_PASSIVE",
+		},
+	},
+
+	m_dicNKMUnitState =
+	{
+	
+		{
+            m_StateName             = "USN_START",
+            m_NKM_UNIT_STATE_TYPE   = "NUST_START",
+			m_AnimName              = "START",
+			m_bAnimLoop             = false,
+			
+			m_fAnimSpeed            = 1.0,
+			
+			m_AnimEndChangeState    = "USN_ASTAND",
+			m_DamagedChangeState    = "USN_ASTAND",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 5/30,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MAGIC_SPELL_DARK_20",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 25/30,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MOVEMENT_06",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 42/30,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MOVEMENT_02",
+					},
+				},
+
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_START_1",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_START_3",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_START_5",
+					},
+				},
+			},
+        },
+
+        {
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ASTAND",
+			m_StateName             = "USN_ASTAND",
+			m_AnimName              = "ASTAND",
+            m_bAnimLoop             = true,
+            m_fAnimSpeed            = 1.0,
+        },
+        
+		{
+            m_StateName             = "USN_RUN",
+            m_NKM_UNIT_STATE_TYPE   = "NUST_MOVE",
+			m_AnimName              = "RUN",
+			m_bAnimLoop             = true,
+			m_fAnimSpeed            = 0.8,
+			m_bRun                  = true,
+
+			-- m_bChangeIsAirUnit	= true,
+			-- m_fAirHigh    		= 150,
+        },
+		
+		
+		{
+            m_StateName             = "USN_ATTACK1",
+            m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",          
+			m_AnimName              = "ATTACK1",
+			m_bAnimLoop             = false,
+			m_fAnimSpeed            = 1.0,
+			
+			m_NKM_SKILL_TYPE		= "NST_ATTACK",
+			
+			m_listNKMEventAnimSpeed =
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_fAnimSpeed	= 0.8,
+				},
+				{
+					m_fEventTime	= 5/30,
+					m_fAnimSpeed	= 2.0,
+				},
+				{
+					m_fEventTime	= 20/30,
+					m_fAnimSpeed	= 1.5,
+				},
+				{
+					m_fEventTime	= 50/30,
+					m_fAnimSpeed	= 0.7,
+				},
+				{
+					m_fEventTime	= 60/30,
+					m_fAnimSpeed	= 0.8,
+				},
+			},
+
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 5/30,
+					m_fEventTimeMax     = 25/30,
+                    
+					m_fRangeMin         = 0.0,
+					m_fRangeMax         = 300.0,
+
+					m_bHitAir			= false,
+					
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_NANAHARA_JAPAN_S_KUNOICHI_ATTACK1",
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 46/30,
+					m_fEventTimeMax     = 56/30,
+                    
+					m_fRangeMin         = 0.0,
+					m_fRangeMax         = 300.0,
+
+					m_bHitAir			= false,
+					
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_NANAHARA_JAPAN_S_KUNOICHI_ATTACK1_END",
+				},
+            },
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 5/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_DAGGER_STING_SMALL",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 20/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_HIT_SMASH_SMALL_02",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 27/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_HIT_SMASH_SMALL_03",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 47/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_SWORD_SLASH_SMALL_04",
+					},
+				}, 
+
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.3,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_2",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_4",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_6",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 45/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.3,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_10",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_14",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_19",
+					},
+				},
+			},
+		},
+		
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_PASSIVE",
+			m_AnimName              = "PASSIVE",
+            m_fAnimSpeed            = 1.0,
+			m_NKM_SKILL_TYPE		= "NST_ATTACK",
+
+			m_AnimEndChangeState    = "USN_PASSIVE_LOOP",
+
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 35/30,
+				},
+			},
+
+			m_listNKMEventAnimSpeed =
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_fAnimSpeed	= 1.5,
+				},
+				{
+					m_fEventTime	= 30/30,
+					m_fAnimSpeed	= 0.8,
+				},
+			},
+			m_listNKMEventAttack = 
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 12/30,
+					m_fEventTimeMax     = 22/30,
+                    
+					m_fRangeMin         = -250.0,
+					m_fRangeMax         = 250.0,
+
+					m_bHitAir			= false,
+					
+					m_AttackUnitCount         = 2,
+					m_DamageTempletName       = "DT_NKM_MOB_BOSS_NANAHARA_JAPAN_S_KUNOICHI_ATTACK1",
+				},
+			},
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime  	= true,
+					m_fEventTime 	= 12/30,
+					m_EffectName 	= "AB_FX_JAPAN_S_KUNOICHI_PASSIVE_START",
+					m_fScaleFactor	= 0.8,
+					m_AnimName		= "BASE",
+				},
+			},
+
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 30/30,                
+					m_bTargetUnit		= false,                
+					m_OffsetJumpYPos	= 320.0,
+					m_MoveTime 			= 5/30,
+				},
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 35/30,                
+					m_bTargetUnit		= false,                
+					m_OffsetJumpYPos	= 0.0,
+					m_MoveTime 			= 20/30,
+				},
+			},
+			m_listNKMEventBuff = 
+			{
+				{
+					m_bAnimTime  	= true,
+					m_fEventTime 	= 1/30,
+					m_BuffStrID  	= "BUFF_JAPAN_KUNOICHI_PASSIVE_COOL",
+				},
+			},
+
+			m_listNKMEventCameraCrash =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 12/30,
+
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					
+					m_fCameraCrashSpeed       = -300.0,
+					m_fCameraCrashAccel       = 1000.0,
+
+					m_fCameraCrashGap         = 6.0,
+					m_fCameraCrashTime        = 0.5
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 12/30,
+					m_fLocalVol			= 0.7,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_HIT_EXPLOSION_ENERGY_BIG_02",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 28/30,
+					-- m_fLocalVol			= 0.7,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MONSTER_MOVEMENT",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_PASSIVE_1",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_PASSIVE_4",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_PASSIVE_5",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_PASSIVE_10",
+					},
+				},
+			},
+        },
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_PASSIVE_LOOP",
+			m_AnimName              = "PASSIVE_ATTACK",
+            m_bAnimLoop             = true,
+            m_fAnimSpeed            = 1.15,
+			m_bSeeTarget			= true,
+
+			m_SuperArmorLevel	= "NSAL_SUPER",
+
+			m_bChangeIsAirUnit	= true,
+
+			m_StateTimeChangeStateTime 	= 5,
+			m_StateTimeChangeState		= "USN_PASSIVE_END",
+			
+			m_TargetLostOrDieStateDurationTime = 0.5,
+			m_TargetLostOrDieState		= "USN_PASSIVE_END", 
+            
+			m_TargetDistOverChangeStateDist = 600.0,
+			m_TargetDistOverChangeState = "USN_PASSIVE_END",
+
+
+			-- m_SpeedY0NegativeChangeState   = "USN_PASSIVE_DIE",
+			m_AnimEndDyingState           = "USN_PASSIVE_DIE",
+			-- m_FootOffLandChangeState      = "USN_PASSIVE_DIE",
+			-- m_AnimEndChangeState          = "USN_PASSIVE_DIE",
+		
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 1/30,                
+					m_bTargetUnit		= false,                
+					m_OffsetJumpYPos	= 1.0,
+					m_MoveTime 			= 60/30,
+				},
+			},
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime     = true,
+					m_fEventTime    = 7/30,
+					m_DEName        = "DE_NKM_MOB_BOSS_NANAHARA_JAPAN_S_KUNOICHI_PASSIVE",
+					-- m_OffsetX		= 50,
+					m_bTargetPos	= true,
+				},
+				{
+					m_bAnimTime     = true,
+					m_fEventTime    = 29/30,
+					m_DEName        = "DE_NKM_MOB_BOSS_NANAHARA_JAPAN_S_KUNOICHI_PASSIVE",
+					-- m_OffsetX		= 50,
+					m_bTargetPos	= true,
+				},
+			},
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 7/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.2,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_10",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_14",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 29/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.2,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_26",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_29",
+					},
+				},
+			},
+        },
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_ATTACK",
+			m_StateName             = "USN_PASSIVE_END",
+			m_AnimName              = "PASSIVE_END",
+            m_fAnimSpeed            = 1.5,
+
+			m_listNKMEventInvincible =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTimeMin = 0/30,
+					m_fEventTimeMax = 35/30,
+				},
+			},
+			m_listNKMEventAnimSpeed =
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_fAnimSpeed	= 1.5,
+				},
+				{
+					m_fEventTime	= 35/30,
+					m_fAnimSpeed	= 0.5,
+				},
+			},
+			m_listNKMEventBuff = 
+			{
+				{
+					m_BuffStrID  		= "BUFF_JAPAN_KUNOICHI_PASSIVE_COOL",
+					m_BuffRemove		= true,
+					m_bStateEndTime		= true,
+				},
+			},
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 30/30,                
+					m_bTargetUnit		= false,                
+					m_OffsetJumpYPos	= -400.0,
+					m_MoveTime 			= 5/30,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 8/30,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_MOVEMENT_07",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 34/30,
+					m_listSoundName	= 
+					{
+						"FX_COMBAT_ALL_FOOT_STEP_LANDING_SMALL_02",
+					},
+				},
+			},
+        },
+
+		{
+			m_NKM_UNIT_STATE_TYPE   = "NUST_DIE",
+			m_StateName             = "USN_PASSIVE_DIE",
+			m_AnimName              = "PASSIVE_DIE",
+            m_fAnimSpeed            = 1.0,
+
+			m_AnimEndChangeState    = "USN_ASTAND",
+
+			m_listNKMEventMove	=
+			{
+				{
+					m_bAnimTime 		= true,
+					m_fEventTime 		= 1/30,                
+					m_bTargetUnit		= false,                
+					m_OffsetJumpYPos	= 1.0,
+					m_MoveTime 			= 60/30,
+				},
+			},
+        },
+
+		{
+            m_StateName             = "USN_SKILL1",
+            m_NKM_UNIT_STATE_TYPE   = "NUST_SKILL",
+			m_AnimName              = "SKILL1",
+			m_bAnimLoop             = false,
+			m_fAnimSpeed            = 1.0,
+			
+			m_NKM_SKILL_TYPE		= "NST_ATTACK",
+			m_SuperArmorLevel		= "NSAL_SKILL",
+            m_StateCoolTime			= 18,
+            m_bSkillCutIn	        = true,
+            
+            
+            m_listNKMEventAnimSpeed = 
+			{
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 0/30,
+					m_fAnimSpeed    = 1.75,
+                },
+				{
+					m_bAnimTime		= true,
+					m_fEventTime 	= 29/30,
+					m_fAnimSpeed    = 1.0,
+                },
+            },
+
+			m_listNKMEventEffect =
+			{
+				{
+					m_bAnimTime  	= true,
+					m_fEventTime 	= 1/30,
+					m_EffectName 	= "AB_FX_CAST_SKILL",
+					m_fScaleFactor	= 30.0,
+					m_OffsetX		= -140,
+					m_OffsetY		= 180,
+					m_AnimName		= "BASE",
+				},
+			},
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime 	= true,
+					m_fEventTime	= 25/30,
+					m_DEName    	= "DE_NKM_MOB_BOSS_NANAHARA_JAPAN_S_KUNOICHI_SKILL1",
+					m_OffsetX   	= 0,
+					m_OffsetY   	= 100,
+					m_OffsetZ		= -10,
+				},
+			},
+
+			m_listNKMEventMotionBlur =
+			{
+				{
+					m_bAnimTime         = true,
+					m_fEventTimeMin     = 0,
+					m_fEventTimeMax     = 99999,
+                    
+					m_fColorR           = 0.5,
+					m_fColorG           = 0.5,
+					m_fColorB           = 1.0,
+				},
+            },
+			m_listNKMEventCameraCrash =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 25/30,
+
+					m_CameraCrashType         = "NCCT_UP_DOWN",
+					
+					m_fCameraCrashSpeed       = -300.0,
+					m_fCameraCrashAccel       = 1000.0,
+
+					m_fCameraCrashGap         = 6.0,
+					m_fCameraCrashTime        = 0.75
+				},
+			},
+            m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_SKILL_START",
+					},
+				},
+				
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 15/30,
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_SWING_BIG",
+					},
+				},
+				-- {
+				-- 	m_bAnimTime               = true,
+				-- 	m_fEventTime              = 32/30,
+				-- 	m_listSoundName           = 
+				-- 	{
+				-- 		"FX_COMBAT_ALL_SWORD_SLASH_BIG_08",
+				-- 	},
+				-- },
+				-- {
+				-- 	m_bAnimTime               = true,
+				-- 	m_fEventTime              = 60/30,
+				-- 	m_listSoundName           = 
+				-- 	{
+				-- 		"FX_COMBAT_ALL_SHOTGUN_FIRE_SMALL",
+				-- 	},
+				-- },
+
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 10/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ACTIVE_1",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ACTIVE_4",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ACTIVE_7",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ACTIVE_8",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_ATTACK_27",
+					},
+				},
+			},	
+		},
+
+		{
+            m_StateName                   = "USN_DAMAGE_A",
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.25,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_7",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_11",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_12",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_14",
+					},
+				},
+			},	
+		},
+		{
+            m_StateName                   = "USN_DAMAGE_B",
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.25,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_7",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_11",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_12",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_14",
+					},
+				},
+			},	
+		},
+		{
+            m_StateName                   = "USN_DAMAGE_AIR_UP",
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.25,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_7",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_11",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_12",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_14",
+					},
+				},
+			},	
+		},
+		{
+            m_StateName                   = "USN_DAMAGE_DOWN",
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.25,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_7",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_11",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_12",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DAMAGE_14",
+					},
+				},
+			},	
+		},
+		{
+			m_StateName                 = "USN_DAMAGE_DIE",
+			m_listNKMEventSound =
+			{ 
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DEATH_6",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DEATH_7",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DEATH_8",
+						"VOICE_UNIT_JAPAN_S_KUNOICHI_BATTLE_DEATH_9",
+					},
+				},
+			},	
+		},
+	},
+}
+

@@ -1,0 +1,18 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_BOSS_BASIC_BEAST_MINI_MOVE_N",
+	
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName             = "USN_ATTACK1",
+			m_listNKMEventAttack = 
+			{
+				{
+					m_DamageTempletName       = "DT_NKM_MONSTER_BOSS_TRANS_BEAST_MINI_ATTACK1",
+				},
+			},
+		},
+	},
+}
+

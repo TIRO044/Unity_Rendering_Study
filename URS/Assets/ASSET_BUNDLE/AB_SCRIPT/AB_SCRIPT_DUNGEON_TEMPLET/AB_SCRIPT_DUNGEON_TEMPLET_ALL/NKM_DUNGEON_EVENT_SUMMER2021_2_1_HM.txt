@@ -1,0 +1,121 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 8,
+	m_fCostSpeedRateB = 1.1,
+    m_BossUnitStrID = "NKM_MOB_BOSS_SUMMER2021_SL_HEAVY_TANK_H",
+    m_bRespawnFreePos = true,
+	
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EVENT_STATE_RIFLE",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.3,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 1.6,
+					  NST_HP          = 1.7,		
+				},
+			},						
+		},
+		
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EVENT_STATE_AIRBORNE",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.35,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 1.6,
+					  NST_HP          = 1.7,		
+				},
+			},						
+		},
+		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EVENT_STATE_ENGINEER",
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+    		},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 1.6,
+					  NST_HP          = 1.7,		
+				},
+			},						
+		},		
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_STATE_ENGINEER",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.7,
+				m_fEventBossHPUpper  	     = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.5,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 1.3,
+					  NST_HP          = 2.0,		
+				},
+			},									
+		},	
+
+		{
+			m_UnitStrID	= "NKM_MOB_NORMAL_EVENT_STATE_ENGINEER",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventBossHPLess			 = 0.35,
+				m_fEventBossHPUpper  	     = 0.1,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 				 = 0.8,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					  NST_ATK         = 1.3,
+					  NST_HP          = 2.0,		
+				},
+			},									
+		},			
+	},
+}

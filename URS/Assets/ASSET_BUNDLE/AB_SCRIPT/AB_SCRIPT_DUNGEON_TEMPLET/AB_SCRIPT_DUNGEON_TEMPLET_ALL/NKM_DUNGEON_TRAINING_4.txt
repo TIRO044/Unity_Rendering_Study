@@ -1,0 +1,19 @@
+﻿
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_OMEN_N", --KM_MONSTER_BOSS_BASIC_EATER_MOVE_N
+    -- m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_EATER_MOVE_N", --NKM_MONSTER_BOSS_BASIC_BARRICADE_N
+    m_BossUnitLevel = 1,
+    m_fBossPosZ 	= 0.6,
+
+    m_fCostSpeedRateA = 10;
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

@@ -1,0 +1,43 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10851502,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ZODIAC_CHARLOTTE_FOOLSDAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_ZODIAC_CHARLOTTE_FOOLSDAY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10851502,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ZODIAC_CHARLOTTE_FOOLSDAY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "ESTAROSSA_NPC_FOOLSDAY_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "나는 이미 그대와 기사로서 맹세했다. 한 번 맺은 맹세는 변하지 않아. 그리고 이 계약으로 내 뜻을 증명해야 한다면... 기꺼이 그렇게 하겠다. 그대는 내게 그럴 만한 가치가 있는 사람이야.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "私はすでに騎士として君に誓いを立てている。一度立てた誓いは守り通す。これで私の意志を証明できるなら……喜んで契りを交わそう。私にとって君は、生涯をかけるだけの価値のある人なのだから。",
+    m_Talk_ENG = "I've already sworn my fealty to you, and I'm not going to break that. If this contract is what it takes to prove it, then I'll sign. You're worth the trouble.",
+    m_Talk_TWN = "我已與閣下簽下身為騎士的誓約。一旦簽訂，誓約就不會改變。如果閣下仍需要用這份契約來證明我的意志……我將樂於聽從。閣下是值得我這麼做的人。",
+    m_Talk_THA = "เรากล่าวคำปฏิญาณออกไปแล้วว่าจะจงรักภักดีกับคุณ และฉันก็จะไม่ผิดคำสาบานนั้น ถ้าสัญญาฉบับนี้เป็นเครื่องพิสูจน์ ฉันก็ยินดีลงชื่อค่ะ เพราะคุณคือคนที่คู่ควร",
+    m_Talk_VTN = "Tôi đã tuyên thệ lòng trung thành của tôi với ngài, và tôi sẽ không phá vỡ lời thề. Nếu hợp đồng này giúp chứng minh điều đó, vậy tôi sẽ ký. Ngài xứng đáng nhận được điều này.",
+    m_Talk_SCN = "我已与阁下签下骑士之誓。誓约永不改变。如果要我表明心意的话……最多就是……阁下是值得我这么做的人。 ",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10851502,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ZODIAC_CHARLOTTE_FOOLSDAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

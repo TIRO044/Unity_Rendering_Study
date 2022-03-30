@@ -1,0 +1,274 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 0.8,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP8_NEPHILIM_BLACK_H",
+    m_fBossPosZ 	= 0.6,
+
+	m_listDungeonDeck = 
+	{
+		--- 기간 유닛 : 바이터 ---		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		--- 기간 유닛 : 레이스 ---		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_WRAITH_N",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.25,
+    		},
+		},
+		--- 기간 유닛 : 바이터 ---		
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_EP6_BITER_N",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 10,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.2,
+    		},
+		},
+	},
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_EP6_BITER_N",
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart           = 12,
+				m_fEventTimeEnd             = 180,
+				m_fEventTimeGap             = 15,
+				m_fEventIgnoreBossInitHPLess = false,
+                m_fEventPos 				= 0.25,
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_EP6_WRAITH_N",
+			m_EventRespawnUnitTag		= "BANSHEE",			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart           = 25,
+				m_fEventTimeEnd             = 180,
+				m_fEventTimeGap             = 15,
+				m_fEventIgnoreBossInitHPLess = false,
+                m_fEventPos 				= 0.1,
+			},
+		},
+	},
+	
+	m_listDungeonUnitRespawnA = 
+    {
+        {
+			m_UnitStrID 				= "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY", -- 각성 제이크
+			m_EventRespawnUnitTag		= "JAKE",
+            m_UnitLevel 				= 110,
+			
+            m_NKMDungeonEventTiming = 
+            {
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",
+				m_fEventTimeStart           = 6,
+				m_fEventPos 	        	= 0.5,
+            },
+        },
+		{
+			m_UnitStrID 				= "NKM_MOB_NORMAL_EP8_CA_YOO_MI_NA_ALLY", -- 각성 유미나
+            m_UnitLevel 				= 110,
+			
+            m_NKMDungeonEventTiming = 
+            {
+				-- m_EventDieUnitTag 			= "JAKE",
+				-- m_EventDieUnitTagCount 		= 1,
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 5,
+				m_fEventPos 	        	= 0.55,
+				m_EventTag 					= "YOO_MI_NA",
+				m_EventTagCount 			= 1,
+            },
+        },
+    },
+
+	m_listDungeonEventTempletTeamA =
+	{
+		-- {
+		-- 	m_dungeonEventType = "CHANGE_BGM",
+		-- 	m_EventID = 1,
+		-- 	m_bPause = false,
+		-- 	m_EventActionStrValue = "THEMA_STORM",
+        --     m_EventCondition       = "UNIT_STATE_END",
+		-- 	m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY",
+		-- 	m_EventConditionValue2 = "USN_START",
+
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",
+        --         m_fEventTimeStart   		= 1,	
+		-- 		-- m_fEventBossHPLess			 = 0.5,
+		-- 		-- m_fEventIgnoreBossInitHPLess = false,
+		-- 	},
+		-- },
+		{	
+			--* 첫 시작
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10084411,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{	
+			--* 첫 시작
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10084412,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY",
+			m_EventConditionValue2 = "USN_PASSIVE",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		-- {	
+		-- 	--* 제이크 궁극기
+		-- 	m_dungeonEventType = "GAME_EVENT",
+		-- 	m_EventID = 10084413,
+			
+		-- 	m_EventCondition = "UNIT_STATE_START",
+		-- 	m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY",
+		-- 	m_EventConditionValue2 = "USN_HYPER1",
+			
+		-- 	m_bPause = false,
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 3.0,
+    	-- 	},
+		-- },
+		{	
+			--* 제이크 궁극기
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10084414,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY",
+			m_EventConditionValue2 = "USN_HYPER1",
+			
+			m_bPause = false,
+			-- m_fEventDelay	=	1,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		{--* 제이크 궁극기 쓰고 나면 유미나 등장
+
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_DELTA_CA_JAKE_ALLY",
+			m_EventConditionValue2 = "USN_HYPER1",
+			
+			
+			m_dungeonEventType = "ADD_EVENTTAG", -- 어느 시트의 이벤트를 읽을 것인지 확인하는 변수 값
+			m_EventActionStrValue	= "YOO_MI_NA",
+			m_EventActionValue 		= 1,
+			
+			m_fEventDelay		=	2.5,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},	
+		{	
+			--* 유미나 등장 시
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10084415,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_EP8_CA_YOO_MI_NA_ALLY",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+	},
+
+	m_listDungeonEventTempletTeamB =
+	{
+		{	
+			--* 제이크 궁극기 사용
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10084413,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_EP8_NEPHILIM_BLACK_H",
+			m_EventConditionValue2 = "USN_HYPER1",
+			
+			
+			-- m_fEventDelay	=	1,
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+			},
+		},
+		{	
+			--* 제이크 궁 온
+			m_dungeonEventType = "SET_UNIT_HYPER_FULL",
+			m_EventActionValue = 210302,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_EP8_NEPHILIM_BLACK_H",
+			m_EventConditionValue2 = "USN_HYPER1",
+
+			-- m_fEventDelay	=	1,
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+			},
+		},
+	},
+}

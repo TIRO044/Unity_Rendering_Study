@@ -1,0 +1,39 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID = "NKM_MONSTER_NORMAL_BASIC_SPHERE_N",
+	m_dicNKMUnitState =
+	{
+		
+		{
+			m_StateName			= "USN_ATTACK1",
+
+			m_listNKMEventRespawn =
+			{
+				{
+					m_fEventTime		= 0/30,
+					m_UnitStrID 		= "NKM_MONSTER_NORMAL_TRANS_BITER_N",
+					m_MaxCount 			= 3,
+					m_bUsePerSkillLevel	= 0,
+					
+					m_fOffsetX			= -50,
+				},
+				{
+					m_fEventTime		= 10/30,
+					m_UnitStrID 		= "NKM_MONSTER_NORMAL_TRANS_BITER_N",
+					m_MaxCount 			= 3,
+					m_bUsePerSkillLevel	= 0,
+					
+					m_fOffsetX			= 50,
+				},
+				{
+					m_fEventTime		= 20/30,
+					m_UnitStrID 		= "NKM_MONSTER_NORMAL_TRANS_BITER_N",
+					m_MaxCount 			= 3,
+					m_bUsePerSkillLevel	= 0,
+					
+					m_fOffsetX			= 0,
+				},
+			},
+		},
+	}
+}

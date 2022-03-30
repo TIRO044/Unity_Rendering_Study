@@ -1,0 +1,37 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 12060002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BAR_S_BARTENDER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_BAR_S_BARTENDER@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 12060002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BAR_S_BARTENDER",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_PRIDE",
+    m_CharStrID = "BARTENDER_BAR_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "제가 해드릴 수 있는 재밌는 이야깃거리는 별로 없어요. 전 사회 경험도 별로 없고, 손님처럼 화려한 삶을 살아본 적도 없으니까요. 하지만 이야길 듣는 사람이 있단 것만으로 마음의 위로를 얻을 수 있다면, 제가 손님 곁에 있어드려도 괜찮을까요? 흐으… 갑자기 얼굴이 뜨거워지네요. 술기운 때문이려나?",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 12060002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BAR_S_BARTENDER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

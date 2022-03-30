@@ -1,0 +1,22 @@
+﻿-- Exported from STRING_TABLE_PVP.xlsx
+
+m_dicString =
+{
+  { "SI_PVP_BOT_NAME_1", "펜릴 소대", },
+  { "SI_PVP_BOT_NAME_2", "알트 소대", },
+  { "SI_PVP_BOT_NAME_3", "스틸 레인", },
+  { "SI_PVP_BOT_NAME_4", "데이마인 채굴4팀", },
+  { "SI_PVP_BOT_NAME_5", "오피셜 서포트", },
+  { "SI_PVP_BOT_NAME_6", "스트레가", },
+  { "SI_PVP_BOT_NAME_7", "프리덤 라이더즈", },
+  { "SI_PVP_BOT_NAME_8", "제 9호 기적심의회", },
+  { "SI_PVP_BOT_NAME_9", "R7 비정규 정찰대", },
+  { "SI_PVP_BOT_NAME_10", "페넥 폭스", },
+  { "SI_PVP_BOT_NAME_11", "조디악 나이츠", },
+  { "SI_PVP_BOT_NAME_12", "메이슨 용병 사무소", },
+  { "SI_PVP_BOT_NAME_13", "나나하라 가문연합", },
+  { "SI_PVP_BOT_NAME_14", "블랙 타이드", },
+  { "SI_PVP_BOT_NAME_15", "구 관리국 : 보병", },
+  { "SI_PVP_BOT_NAME_16", "구 관리국 : 기갑", },
+  { "SI_PVP_BOT_NAME_17", "스테이츠 오브 원", },
+}

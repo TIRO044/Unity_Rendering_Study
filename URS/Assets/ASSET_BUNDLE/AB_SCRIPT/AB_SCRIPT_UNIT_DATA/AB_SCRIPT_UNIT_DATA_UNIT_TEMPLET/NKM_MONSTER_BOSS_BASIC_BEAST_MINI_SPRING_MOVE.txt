@@ -1,0 +1,6 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_BOSS_BASIC_BEAST_MINI_MOVE_N",
+	
+}
+

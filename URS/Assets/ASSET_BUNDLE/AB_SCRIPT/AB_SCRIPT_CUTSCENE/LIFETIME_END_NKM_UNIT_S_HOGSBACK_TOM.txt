@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11450004,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_HOGSBACK_TOM",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_HOGSBACK_TOM@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11450004,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_HOGSBACK_TOM",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "TOMY_MASON_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "혹시 무슨 일이 터져도 제가 건너건너 아는 사람이 좀 많잖습니까. 뭐든 맡겨 주시면 깔끔하게 처리해 드릴 테니, 두 다리 쭉 뻗고 계십쇼!",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "万が一何かあったら、俺のコネを使えばいいからさ。\n何でも任せてくれ！　綺麗に片付けるから、お前はもう安心しな！",
+    m_Talk_ENG = "Don't worry even if you're in trouble. I have connections in high places. I'll take care of you, no matter what. You just count on me!",
+    m_Talk_TWN = "就算發生什麼事，我的人脈不是很廣嗎？不論交給我什麼事情，我都會乾淨俐落地解決的，您就放一百二十個心吧！",
+    m_Talk_THA = "ไม่ต้องห่วงหรอกนะครับถ้าเกิดปัญหาอะไรขึ้นกับคุณ ผมมีเส้นสายกับคนใหญ่คนโต ผมจะช่วยเหลือคุณทุกวิถีทาง ไว้ใจผมได้เลย!",
+    m_Talk_VTN = "Đừng lo lắng ngay cả khi ngài đang gặp khó khăn. Tôi quen biết nhiều người ở vị trí cao lắm. Tôi sẽ chăm sóc cho ngài bằng mọi giá. Cứ tin tưởng ở tôi nhé!",
+    m_Talk_SCN = "您看我不是人脉挺广的吗，不管发生什么事情，交给我就可以了，我会为您干净利落地解决问题，您就放一百个心吧！",
+    m_Talk_DEU = "Machen Sie sich keine Sorgen, falls Sie mal in Schwierigkeiten sind. Ich habe Beziehungen in hohen Positionen. Ich kümmere mich um Sie, egal was passiert. Sie können sich auf mich verlassen!",
+    m_Talk_FRA = "Si vous avez des ennuis, vous en faites pas ! J'ai des contacts hauts placés. Je vous protègerai coûte que coûte. Vous pouvez compter sur moi !",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11450004,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_HOGSBACK_TOM",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,41 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11880002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_SCAVENGER_S_HAMMER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_SCAVENGER_S_HAMMER@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11880002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_SCAVENGER_S_HAMMER",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "OVERFLOW_SCAVENGER_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "짐승은 길들일 수 있어도 해적을 길들일 수는 없어. 내가 아직 두목을 좋아하는 걸 다행으로 알라고.",
+    m_fTalkTime = 0.03,
+    m_Talk_ENG = "You can tame a beast; you can't tame a pirate. You should be glad that I'm still fond of you, Boss.",
+    m_Talk_TWN = "禽獸是可以被馴服的，但海盜可不行！老大您要慶幸，我目前還是喜歡您的，呵呵呵～",
+    m_Talk_THA = "คนเราสามารถฝึกสัตว์ร้ายให้เชื่องได้ แต่ไม่มีวันฝึกโจรสลัดให้เชื่องได้หรอก คุณควรจะดีใจนะที่ผมยังชอบคุณอยู่น่ะ บอส",
+    m_Talk_VTN = "Ngài có thể thuần hóa một con thú; nhưng ngài không thể chế ngự một tên cướp biển. Ngài nên vui mừng vì tôi vẫn còn yêu thích ngài đấy, Ông Chủ.",
+    m_Talk_SCN = "野兽可以驯服，海盗却不能驯服。你应该为我现在还喜欢你而感到庆幸。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11880002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_SCAVENGER_S_HAMMER",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

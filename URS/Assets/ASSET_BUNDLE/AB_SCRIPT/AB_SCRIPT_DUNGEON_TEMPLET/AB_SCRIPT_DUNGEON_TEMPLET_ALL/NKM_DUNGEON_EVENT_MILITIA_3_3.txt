@@ -1,0 +1,16 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 10,
+	m_fCostSpeedRateB = 1,
+    m_BossUnitStrID = "NKM_MOB_BOSS_MILITIA_CRIMINAL_MATCHMAN_H",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+    },    
+}

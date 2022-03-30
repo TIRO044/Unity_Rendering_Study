@@ -1,0 +1,137 @@
+
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_N",
+    m_BossUnitLevel = 1,
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_SCOURGE_N",
+			m_UnitLevel = 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 70,
+				m_fEventTimeEnd				= 60*4,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel = 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 90,
+				m_fEventTimeEnd				= 60*4,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 10+(0.5*0),
+				m_fEventPos 		= 0.3,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 15+(0.5*0),
+				m_fEventPos 		= 0.3,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 20+(0.5*0),
+				m_fEventPos 		= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 25+(0.5*0),
+				m_fEventPos 		= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 30+(0.5*0),
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 35+(0.5*0),
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 40+(0.5*0),
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 45+(0.5*0),
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			m_UnitLevel 				= 1,
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 55+(0.5*0),
+				m_fEventPos 		= 0.1,
+    		},
+		},
+	},
+}

@@ -1,0 +1,29 @@
+﻿-- Exported from RECALL_UNIT_TEMPLET.xlsx
+
+RECALL_UNIT_TEMPLET =
+{
+  {
+    Index = 1,
+    ExchangeDateStrID = "DATE_KOR_R_SIXWING_AMY_V1",
+    UnitID = 1073,
+    UnitExchangeGroupID = 107301,
+  },
+  {
+    Index = 2,
+    ExchangeDateStrID = "DATE_KOR_R_GUILTY_MILLIA_V1",
+    UnitID = 1184,
+    UnitExchangeGroupID = 107401,
+  },
+  {
+    Index = 3,
+    ExchangeDateStrID = "DATE_KOR_R_REAPER_SIEGE_V1",
+    UnitID = 1210,
+    UnitExchangeGroupID = 107501,
+  },
+  {
+    Index = 4,
+    ExchangeDateStrID = "DATE_KOR_R_ALPHA_SPEAR_V1",
+    UnitID = 1208,
+    UnitExchangeGroupID = 107601,
+  },
+}

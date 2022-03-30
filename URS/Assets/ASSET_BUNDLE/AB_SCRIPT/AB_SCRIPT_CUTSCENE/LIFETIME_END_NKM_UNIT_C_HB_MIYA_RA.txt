@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 20440002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_HB_MIYA_RA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_HB_MIYA_RA@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 20440002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_HB_MIYA_RA",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "MIYA_HB_ReinforcedA_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "저... 제안해 주셔서 정말 고마워요. 방송은 켜지 않을 테니까... 괜찮으시면 다시 한 번 말씀해 주실 수 없을까요? 그... 중요한 하이라이트라... 녹방으로라도 오래오래 간직하고 싶어요.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "えっと……身に余るご提案、本当に嬉しいです。\n今は配信はしてないんですけど……よろしければ、もう一度話してもらえませんか？\nえっと……大事なところでしたので……ライブ配信じゃなくて、個人的に撮っておきたいんです。",
+    m_Talk_ENG = "Th-thank you for the offer. I won't broadcast it. Could you tell that to me one more time? I-it means so much that I want to preserve it.",
+    m_Talk_TWN = "那個……能對我提出終身契約，真的非常謝謝您。我不會打開直播的，所以……如果可以的話，可以請您再說一遍嗎？那個……因為這是重要的精彩時刻……我想錄下來永遠珍藏。",
+    m_Talk_THA = "ขะ-ขอบคุณสำหรับข้อเสนอค่ะ ฉันจะไม่สตรีมออกอากาศค่ะ แต่ช่วยบอกกับฉันอีกทีได้มั้ยคะ? มะ-มันมีความหมายกับฉันเหลือเกิน และฉันก็อยากจะเก็บรักษามันไว้น่ะค่ะ",
+    m_Talk_VTN = "C-cảm ơn đề nghị của ngài. Tôi sẽ không phát sóng. Ngài có thể nói lại với tôi lần nữa không? N-nó thật quá tuyệt vời đến nỗi tôi muốn ghi lại.",
+    m_Talk_SCN = "那个...非常感谢给我这种机会。我不会打开直播...能不能再给我说一遍呢？那个...这是个非常重要的瞬间...想录下来并且永远保存。",
+    m_Talk_DEU = "D-danke für das Angebot. Das werde ich nicht streamen. Würden Sie das noch mal für die Kamera sagen? Es bedeutet mir so viel!",
+    m_Talk_FRA = "M-Merci pour votre proposition. Je n'en parlerai pas à mes fans, promis. Vous pourriez le dire encore une fois ? Je... Je n'arrive pas à y croire.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 20440002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_HB_MIYA_RA",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,73 @@
+﻿-- Exported from LIMITBREAK_TEMPLET.xlsx
+
+m_LimitBreakInfo =
+{
+  {
+    m_iLBRank = 0,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 100,
+    m_iUnitRequirement = 0,
+    m_bTranscendence = false,
+  },
+  {
+    m_iLBRank = 1,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 100,
+    m_iUnitRequirement = 1,
+    m_bTranscendence = false,
+  },
+  {
+    m_iLBRank = 2,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 100,
+    m_iUnitRequirement = 2,
+    m_bTranscendence = false,
+  },
+  {
+    m_iLBRank = 3,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 100,
+    m_iUnitRequirement = 3,
+    m_bTranscendence = false,
+  },
+  {
+    m_iLBRank = 4,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 102,
+    m_iUnitRequirement = 3,
+    m_bTranscendence = true,
+    listContentsTagAllow = {"SYSTEM_TRANSCENDENCE"},
+  },
+  {
+    m_iLBRank = 5,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 104,
+    m_iUnitRequirement = 3,
+    m_bTranscendence = true,
+    listContentsTagAllow = {"SYSTEM_TRANSCENDENCE"},
+  },
+  {
+    m_iLBRank = 6,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 106,
+    m_iUnitRequirement = 3,
+    m_bTranscendence = true,
+    listContentsTagAllow = {"SYSTEM_TRANSCENDENCE"},
+  },
+  {
+    m_iLBRank = 7,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 108,
+    m_iUnitRequirement = 3,
+    m_bTranscendence = true,
+    listContentsTagAllow = {"SYSTEM_TRANSCENDENCE"},
+  },
+  {
+    m_iLBRank = 8,
+    m_iRequiredLevel = 1,
+    m_iMaxLevel = 110,
+    m_iUnitRequirement = 3,
+    m_bTranscendence = true,
+    listContentsTagAllow = {"SYSTEM_TRANSCENDENCE"},
+  },
+}

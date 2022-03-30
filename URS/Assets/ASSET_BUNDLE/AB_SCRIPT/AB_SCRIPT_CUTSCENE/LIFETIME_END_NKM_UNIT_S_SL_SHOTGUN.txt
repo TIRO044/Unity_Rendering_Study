@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SL_SHOTGUN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_SL_SHOTGUN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SL_SHOTGUN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "SHOTGUN_SL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "이런 김빠진 녀석도 챙겨 주실라 하고, 사장님도 참... 배포가 크십니다......",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "こんなしがない制圧兵にもよくしてくださるんですね。社長は……とても懐が深い方ですね……",
+    m_Talk_ENG = "You're such a good boss that you even want to take care of unimpressive employees like me.",
+    m_Talk_TWN = "竟然會關心我這麼消沉的人，老闆還真是......心胸寬大啊......",
+    m_Talk_THA = "คุณเป็นเจ้านายที่แสนดีเหลือเกิน อุตส่าห์ดูแลพนักงานธรรมดาที่ไม่มีอะไรโดดเด่นแบบผมด้วย",
+    m_Talk_VTN = "Ngài là một ông chủ tốt đến mức thậm chí còn quan tâm đến cả những nhân viên không ấn tượng như tôi mà.",
+    m_Talk_SCN = "竟然会关心这么丧气的人，老板也真是......胆识过人啊......",
+    m_Talk_DEU = "Sie sind so ein guter Boss, dass Sie sich sogar um unscheinbare Mitarbeiter wie mich kümmern wollen.",
+    m_Talk_FRA = "Vous êtes un excellent supérieur. Vous prenez soin d'employés aussi insignifiants que moi...",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10110002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_SL_SHOTGUN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

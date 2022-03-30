@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10170002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_CARGO",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_SL_CARGO@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10170002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_CARGO",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "CARGO_SL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "ST-DTV328 투 앤 하프는 요인을 영구 소유권자로 등록한다. 호출 시 언제든 달려가겠다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "ST-DTV328 ツー&ハーフは要人を永久所有権者に登録する。呼び出されたら直ちに駆けつける。",
+    m_Talk_ENG = "ST-DTV328 Deuce-and-a-Half is now registering you as its permanent owner. Call me whenever you need me.",
+    m_Talk_TWN = "ST-DTV328 運輸車，已將您登錄為永久擁有者，只要您呼叫，不論何時都會趕到您身邊！",
+    m_Talk_THA = "รถลำเลียงพล ST-DTV328 ลงทะเบียนคุณเป็นเจ้าของถาวรแล้ว โปรดเรียกใช้ทุกเมื่อถ้าต้องการ",
+    m_Talk_VTN = "Xe Tải 2 Tấn ST-DTV328 hiện đang đăng ký ngài là chủ sở hữu vĩnh viễn. Cứ gọi cho tôi bất cứ khi nào ngài cần tôi nhé.",
+    m_Talk_SCN = "ST-DTV328 战术运输车将要员登记为永久拥有者，请求进行之后的战术运输行动",
+    m_Talk_DEU = "Der Militärtransporter ST-DTV328 trägt Sie jetzt als seinen langfristigen Besitzer ein. Rufen Sie mich, wann immer Sie mich brauchen.",
+    m_Talk_FRA = "Vous êtes désormais enregistré comme propriétaire permanent du camion militaire ST-DTV328. Appelez-moi dès que vous aurez besoin de moi.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10170002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_CARGO",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

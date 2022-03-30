@@ -1,0 +1,241 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 0.5,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_NANAHARA_OROCHI_SNAKE",
+    m_fBossPosZ 	= 0.6,
+	 
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_BITER_N",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.2,
+			},		
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_ATK         = 0.6,
+					-- NST_EVADE		= 2.0,
+				},
+			},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_WRAITH_S",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 2,
+				m_fEventTimeEnd				= 240,
+				m_fEventPos 				= 0.21,
+			},		
+			m_AddStatData =
+			{
+				m_StatFactor =
+				{
+					NST_HP         = 0.5,
+					NST_DEF        = 0.6,
+					NST_ATK        = 0.6,
+					-- NST_EVADE		= 2.0,
+				},
+			},
+		},		
+	},
+
+	m_listDungeonUnitRespawnA = 
+    {
+        {
+			m_UnitStrID 				= "NKM_MOB_NORMAL_NANAHARA_JAPAN_ZENJIROU_E",
+			m_EventRespawnUnitTag		= "SENHIME",
+            m_UnitLevel 				= 70,
+			
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_ONE_TIME",
+				m_fEventTimeStart           = 6,
+				m_fEventPos 				= 0.2,
+			},
+        },
+		{
+			m_UnitStrID 				= "NKM_MOB_NORMAL_NANAHARA_JAPAN_SENHIME_E",
+            m_UnitLevel 				= 70,
+			
+            m_NKMDungeonEventTiming = 
+            {
+				m_EventDieUnitTag 			= "SENHIME",
+				m_EventDieUnitTagCount 		= 1,
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 5,
+				m_fEventPos 	        	= 0.2,
+            },
+        },
+    },
+
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_STUNNER_H",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart            = 25,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 27,
+				m_fEventIgnoreBossInitHPLess = false,
+                m_fEventPos                  = 0.4,
+			},
+		},
+	},
+
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			--* 첫 시작
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3264021,
+			
+			-- m_EventCondition = "UNIT_STATE_START",
+			-- m_EventConditionValue1 = "NKM_MOB_NORMAL_EP7_CA_JOO_SHI_YOON_E",
+			-- m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = true,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 2.0,
+    		},
+		},
+		{	
+			--* 마사키 막아줌
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3264022,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_NANAHARA_JAPAN_ZENJIROU_E",
+			m_EventConditionValue2 = "USN_HYPER1",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		{	
+			--* 마사키 퇴각
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3264023,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_NANAHARA_JAPAN_ZENJIROU_E",
+			m_EventConditionValue2 = "USN_DAMAGE_DOWN",
+			
+			m_bPause = true,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		{	
+			--* 치후유 등장
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3264024,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_NANAHARA_JAPAN_SENHIME_E",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_bPause = true,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		{	
+			--* 치후유 궁극기 사용 이후
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3264025,
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_NANAHARA_JAPAN_SENHIME_E",
+			m_EventConditionValue2 = "USN_HYPER1",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+		{	
+			--* 치후유 퇴각
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 3264026,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_NORMAL_NANAHARA_JAPAN_SENHIME_E",
+			m_EventConditionValue2 = "USN_DAMAGE_DIE",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+    		},
+		},
+	},
+	m_listDungeonEventTempletTeamB =
+	{
+		{	
+			--* 마사키 궁 온
+			m_dungeonEventType = "SET_UNIT_HYPER_FULL",
+			m_EventActionValue = 210292,
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MOB_BOSS_NANAHARA_OROCHI_SNAKE",
+			m_EventConditionValue2 = "USN_HYPER1",
+			
+			m_bPause = false,
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.0,
+			},
+		},
+		-- {	
+		-- 	--* 오로치 궁극기 방어
+		-- 	m_dungeonEventType = "GAME_EVENT",
+		-- 	m_EventID = 3264022,
+			
+		-- 	m_EventCondition = "UNIT_STATE_START",
+		-- 	m_EventConditionValue1 = "NKM_MOB_BOSS_NANAHARA_OROCHI_SNAKE",
+		-- 	m_EventConditionValue2 = "USN_PATTERN1",
+			
+		-- 	m_bPause = true,
+		
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 3.0,
+		-- 	},
+		-- },
+	},
+}

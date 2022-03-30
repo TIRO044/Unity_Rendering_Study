@@ -1,0 +1,17 @@
+﻿-- Exported from OFFICE_TEMPLET.xlsx
+
+OFFICE_ILLUST_TEMPLET =
+{
+  {
+    IDX = 1,
+    IllustSTRID = "UI_CUTSCEN_SD_PARTY_01",
+    IllustID = "UI_CUTSCEN_SD_PARTY_01@UI_CUTSCEN_SD_PARTY_01",
+    IllustRatio = 1,
+  },
+  {
+    IDX = 2,
+    IllustSTRID = "UI_CUTSCEN_SD_PARTY_02",
+    IllustID = "UI_CUTSCEN_SD_PARTY_02@UI_CUTSCEN_SD_PARTY_02",
+    IllustRatio = 1,
+  },
+}

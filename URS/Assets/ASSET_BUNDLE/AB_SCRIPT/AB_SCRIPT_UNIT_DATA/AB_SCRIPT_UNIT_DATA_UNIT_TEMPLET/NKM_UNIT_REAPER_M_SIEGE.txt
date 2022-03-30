@@ -1,0 +1,433 @@
+﻿NKMUnitTemplet =
+{
+	m_UnitSizeX 			= 225,
+	m_UnitSizeY 			= 320,
+	m_SpriteScale           = 0.75,
+       
+	m_fShadowScaleX         = 600,
+	m_fShadowScaleY         = 600,
+	m_fGageOffsetY          = 290,
+
+	m_fForceRespawnZposMin	 = 0.91,
+	m_fForceRespawnZposMax	 = 0.94,
+
+	m_SpeedRun          		  = 140,
+	m_fDamageUpFactor             = 0,
+	m_fDamageBackFactor			  = 0.5,
+	m_bNoDamageDownState		  = true,
+	m_bNoBackTarget               = true,
+	-- m_bTargetNoChange			  = true,
+
+	m_TargetNearRange             = 200,--공격 시전하는 범위 
+	m_SeeRange                    = 10000,--적 인식 범위
+	m_SeeRangeMax                 = 10100,--적을 놓치는 범위
+
+
+	m_NKM_FIND_TARGET_TYPE        = "NFTT_ENEMY_BOSS",
+
+	m_AttackedTargetTime          = 1, --타겟 바꾸는 시간
+	m_bAttackedTarget             = false, --자신을 공격한 적으로 타겟 변경
+  
+	m_fBuffEffectScaleFactor	= 1.5, --나한테 달리는 버프 이펙트들의 사이즈를 조절
+
+	
+	m_listStaticBuffData	=
+	{
+		{--? 영구 모든경직면역 버프
+			m_BuffStrID	= "BUFF_REAPER_M_SIEGE_PASSIVE1",
+		},
+		{--? 패시브2 5레벨 감소체력비례 공격력
+			m_Condition =
+			{
+				m_SkillStrID = "NKM_UNIT_REAPER_M_SIEGE_PASSIVE2",
+				m_SkillLevel = {5,99},
+			},
+			m_BuffStrID	= "BUFF_REAPER_M_SIEGE_PASSIVE2",
+		},
+	},
+
+
+	m_listAttackStateData = 
+	{--? 지상 공격 스테이트
+		{ --? listAttackStateData는 괄호 묶음 하나 더 넣어서 묶음 리스트로 관리해야함 //
+			m_StateName = "USN_ATTACK",
+		},
+	},
+	m_listAirAttackStateData = 
+	{--? 공중 공격 스테이트
+		{
+			m_StateName = "USN_ATTACK_AIR",
+		},
+	},
+	m_listSkillStateData = 
+	{--? 특수기 스테이트
+		{
+			m_Condition = --발동 조건
+			{
+				m_IgnoreBuffStrID	= "BUFF_REAPER_M_SIEGE_SKILL_STATCK_4", --이 버프가 발동중에는 스킬 안씀
+			},
+			m_StateName = "USN_SKILL",
+			-- m_bNoTarget = true,
+			m_fRangeMin = 350, --원거리 공격과 근접공격을 따로 사용하는 애들도 이런식으로 구현함
+			m_fRangeMax = 3000,
+		},
+	},
+
+	m_dicNKMUnitState =
+	{
+		{--? 출격 모션
+			m_NKM_UNIT_STATE_TYPE         = "NUST_START",
+			m_StateName                   = "USN_START",
+			m_AnimName                    = "START",
+			m_bAnimLoop                   = false,
+
+			m_AnimEndChangeState          = "USN_ASTAND",
+			m_DamagedChangeState		  = "USN_ASTAND",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/30,			
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_TANK_START_BIG",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 12/30,	
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_ELECTRIC",
+					},
+				}, 
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 45/30,
+					m_listSoundName           = 
+					{
+						"FX_CUTSCEN_ENERGY_CHARGE",
+					},
+				},
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 10/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.7,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_START_1",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_START_3",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_START_4",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_START_6",
+					},
+				},
+			},
+
+		},
+		{--? 대기 모션
+			m_NKM_UNIT_STATE_TYPE         = "NUST_ASTAND",
+			m_StateName                   = "USN_ASTAND",
+			m_AnimName                    = "ASTAND",
+			m_bAnimLoop                   = true,
+		},
+		{--? 이동 모션
+			m_NKM_UNIT_STATE_TYPE         = "NUST_MOVE",
+			m_StateName                   = "USN_RUN",
+			m_AnimName                    = "RUN",
+			m_bAnimLoop                   = true,
+			m_fAnimSpeed                  = 2.0,
+
+			
+
+		},
+		{--? 지상 공격 모션
+			m_NKM_UNIT_STATE_TYPE         = "NUST_ATTACK",
+			m_StateName                   = "USN_ATTACK",
+			m_AnimName                    = "ATTACK1",
+			m_bAnimLoop                   = false,
+			m_bNoChangeRight			  = true,
+
+			m_AirTargetThisFrameChangeState = "USN_ATTACK_AIR", -- 공중 타겟을 인식했을 경우 해당 스테이트로 변경
+
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_TargetLostOrDieStateDurationTime = 0.1,
+			m_TargetLostOrDieState		  = "USN_ASTAND",
+
+			m_TargetDistOverChangeStateDist = 600,
+			m_TargetDistOverChangeState = "USN_ASTAND",
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime                = true,
+					m_fEventTime               = 90/30,
+					m_DEName                   = "DE_NKM_UNIT_REAPER_M_SIEGE_ATTACK1",
+					m_bTargetPos			   = true,
+					m_OffsetX				   =  0,
+					m_OffsetY				   =  250,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 1/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_RISE",
+					},
+					m_fLocalVol		= 1.1,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{--?인게임 보이스
+					m_fEventTime                  = 110/30,
+					m_bVoice                      = true,
+					m_PlayRate                    = 0.25,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_1",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_19",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_20",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_21",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_22",
+					},
+				},
+			},
+		},
+
+		{--? 공중 공격 모션
+			m_NKM_UNIT_STATE_TYPE         = "NUST_ATTACK",
+			m_StateName                   = "USN_ATTACK_AIR",
+			m_AnimName                    = "ATTACK1_AIR",
+			m_bAnimLoop                   = false,
+			m_bNoChangeRight			  = true,
+
+			m_LandTargetThisFrameChangeState = "USN_ATTACK", -- 지상 타겟을 인식했을 경우 해당 스테이트로 변경
+
+			m_NKM_SKILL_TYPE            = "NST_ATTACK",
+
+			m_TargetLostOrDieStateDurationTime = 0.1,
+			m_TargetLostOrDieState		  = "USN_ASTAND",
+
+			m_TargetDistOverChangeStateDist = 600,
+			m_TargetDistOverChangeState = "USN_ASTAND",
+
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime                = true,
+					m_fEventTime               = 92/30,
+					m_DEName                   = "DE_NKM_UNIT_REAPER_M_SIEGE_ATTACK1_AIR",
+					m_bTargetPos			   = true,
+					m_OffsetY				   =  200,
+					m_fAddRotate			   = -30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 1/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_RISE",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{--?인게임 보이스
+					m_fEventTime                  = 110/30,
+					m_bVoice                      = true,
+					m_PlayRate                    = 0.25,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_1",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_19",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_20",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_21",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ATTACK_22",
+					},
+				},	
+			},
+		},
+		{--? 스킬 사용 모션
+			m_NKM_UNIT_STATE_TYPE       = "NUST_ATTACK",
+			m_StateName					= "USN_SKILL",
+			m_AnimName					= "SKILL1",
+			
+			m_NKM_SKILL_TYPE			= "NST_SKILL",
+			m_SuperArmorLevel			= "NSAL_SKILL",
+			m_bSkillCutIn				= true,
+
+			m_AnimEndChangeState	= "USN_ASTAND",
+			
+			m_listNKMEventBuff =
+			{
+				{
+					m_Condition = --?스킬 레벨1에 발동할 버프의 ID
+					{
+						m_SkillStrID	= "NKM_UNIT_REAPER_M_SIEGE_SKILL",
+						m_SkillLevel	= {1,4},
+					},
+					m_fEventTime		= 50/30,
+					m_BuffStrID			= "BUFF_REAPER_M_SIEGE_SKILL",
+				},
+				{
+					m_Condition = --?스킬 레벨5에 발동할 버프의 ID
+					{
+						m_SkillStrID	= "NKM_UNIT_REAPER_M_SIEGE_SKILL",
+						m_SkillLevel	= {5,99},
+					},
+
+					m_fEventTime		= 50/30,
+					m_BuffStrID			= "BUFF_REAPER_M_SIEGE_SKILL_LV5",
+				},
+				{
+					m_Condition = --?스킬 레벨5에 발동할 배리어 버프의 ID
+					{
+						m_SkillStrID	= "NKM_UNIT_REAPER_M_SIEGE_SKILL",
+						m_SkillLevel	= {5,99},
+					},
+
+					m_fEventTime		= 50/30,
+					m_BuffStrID			= "BUFF_REAPER_M_SIEGE_SKILL_BARRIIER",
+				},
+				{
+					m_Condition = --? 5레벨 스킬의 버프가 4중첩일 때 발동할 해제불가
+					{
+						m_NeedBuffStrID	= "BUFF_REAPER_M_SIEGE_SKILL_LV5",
+						m_NeedBuffOverlapCount	= {4,4},
+					},
+					m_fEventTime		= 50/30,
+					m_BuffStrID			= "BUFF_REAPER_M_SIEGE_SKILL_STATCK_4",
+					m_AddOverlap        = 4,
+				},
+				{ 
+					m_Condition = --? 기존의 4중첩 버프는 삭제
+					{
+						m_NeedBuffStrID	= "BUFF_REAPER_M_SIEGE_SKILL_LV5",
+						m_NeedBuffOverlapCount	= {4,4},
+					},
+					m_bStateEndTime		= true,
+					m_BuffStrID			= "BUFF_REAPER_M_SIEGE_SKILL_LV5",
+					m_BuffRemove        = true,
+				},
+			},
+			m_listNKMEventCameraCrash =
+			{
+				{
+					m_fEventTime                     = 45/30,
+					m_CameraCrashType                = "NCCT_UP_DOWN",
+					m_fCrashRadius                   = 1250,
+
+					m_fCameraCrashGap                = 30,
+					m_fCameraCrashTime               = 10/30,
+				},
+			},
+			m_listNKMEventSound = 
+			{
+				{
+					m_fEventTime	= 0/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_ENERGY_ATTACK_BIG_22",
+					},
+					m_fLocalVol		= 0.5,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 5/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_WORK_05",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{
+					m_fEventTime	= 35/30,
+					m_listSoundName = 
+					{
+						"FX_COMBAT_ALL_HIT_EXPLOSION_FIRE_BIG_02",
+					},
+					m_fLocalVol		= 1.0,
+					m_PlayRate		= 1.0,
+					m_fFocusRange	= 1200.0,
+				},
+				{--?인게임 보이스
+					m_fEventTime                  = 43/30,
+					m_bVoice                      = true,
+					m_PlayRate                    = 0.7,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ACTIVE_2",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_ACTIVE_8",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_PASSIVE_6",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_PASSIVE_7",
+					},
+				},
+			},
+		},
+
+		{--? 사망 직전 모션
+			m_NKM_UNIT_STATE_TYPE         = "NUST_DAMAGE",
+			m_StateName                   = "USN_DAMAGE_DOWN",
+			m_AnimName                    = "DAMAGE_DOWN",
+			m_bAnimLoop                   = false,
+      
+			m_AnimEndDyingState           = "USN_DAMAGE_DIE",
+
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 1/40,
+					m_bStateEndTime           = false,
+			
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_MECHANIC_TANK_DAMAGE_DIE",
+					},
+					m_bStopSound              = false, 
+				},
+				{--?인게임 보이스
+					m_fEventTime                  = 10/30,
+					m_bVoice                      = true,
+					m_PlayRate                    = 1.0,
+					m_listSoundName =
+					{
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_DEATH_2",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_DEATH_3",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_DEATH_6",
+						"VOICE_UNIT_REAPER_M_SIEGE_BATTLE_DEATH_7",
+					},
+				},
+			},
+		},
+
+
+		{--?사망 모션
+			m_NKM_UNIT_STATE_TYPE       = "NUST_DIE",
+			m_StateName                 = "USN_DAMAGE_DIE",
+			m_AnimName                  = "DAMAGE_DIE",
+			m_bAnimLoop                 = false,
+			m_bShowGage					= false,
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_bAnimTime       = true,
+					m_fEventTime      = 0.0,
+					
+					m_fDissolve       = 1,
+					m_fTrackTime      = 1.8,
+				},
+			},
+		},
+	},
+}

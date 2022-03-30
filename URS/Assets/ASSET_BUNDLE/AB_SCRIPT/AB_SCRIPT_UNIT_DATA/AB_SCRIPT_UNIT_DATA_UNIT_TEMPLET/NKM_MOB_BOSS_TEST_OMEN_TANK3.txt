@@ -1,0 +1,35 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID   = "NKM_MOB_BOSS_TEST_OMEN_INVALID",
+	m_bShowGage        = false,
+	m_listStaticBuffData =
+	{
+		{--* 무적 버프
+			m_BuffStrID      = "BUFF_BOSS_TEST_OMEN_COMMON2",
+		},
+		{--* 탱킹
+			m_BuffStrID      = "BUFF_BOSS_TEST_OMEN_TANK3",
+		},
+	},
+	m_listAttackStateData =
+	{
+		{
+			m_Condition =
+			{
+				m_NeedBuffStrID = "TEST_BUFF",
+			},
+		},
+		{
+			m_Condition =
+			{
+				m_NeedBuffStrID = "TEST_BUFF",
+			},
+		},
+		{
+			m_Condition =
+			{
+				m_NeedBuffStrID = "TEST_BUFF",
+			},
+		},
+	},
+}

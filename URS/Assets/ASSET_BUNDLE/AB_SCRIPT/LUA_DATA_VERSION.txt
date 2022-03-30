@@ -1,0 +1,4 @@
+m_DataVersion =
+{
+    DataVersion = 600,
+}

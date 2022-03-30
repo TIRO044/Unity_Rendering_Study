@@ -1,0 +1,5 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID			= "NKM_MONSTER_BOSS_REPLACER_SEO_YOON_LANCE_N", --! 유닛 ID를 넣어야함!!!
+	m_bNoMove					= false,
+}

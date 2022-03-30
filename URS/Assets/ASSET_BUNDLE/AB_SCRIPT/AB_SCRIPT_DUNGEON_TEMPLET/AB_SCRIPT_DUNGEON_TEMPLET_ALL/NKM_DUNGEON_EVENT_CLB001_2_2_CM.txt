@@ -1,0 +1,24 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 6,
+	m_fCostSpeedRateB = 0.0,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_CLB_001_GUILTY_C_SOL_HCM",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+    {
+      m_UnitStrID = "NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_HCM",
+      
+           
+      m_NKMDungeonEventTiming = 
+      {
+       m_NKM_DUNGEON_EVENT_TYPE  = "NDET_DECK",
+       m_fEventTimeStart     = 999,
+       m_fEventPos     = 0.15,
+         },
+     },
+	},
+}

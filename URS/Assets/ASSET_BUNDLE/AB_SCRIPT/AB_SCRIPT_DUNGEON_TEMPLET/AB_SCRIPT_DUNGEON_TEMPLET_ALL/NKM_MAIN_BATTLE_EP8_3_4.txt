@@ -1,0 +1,30 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 1.0,
+    m_BossUnitStrID = "NKM_MOB_BOSS_EP8_NEPHILIM_BLACK",
+    
+    m_fBossPosZ 	= 0.8,
+
+	m_BossRespawnUnitTemplet =
+	{
+	  m_AddStatData =
+	  {
+		m_StatValue =
+		{
+		  NST_ATK                 = -2000,
+		  NST_HP                  = -10000,
+		  NST_DEF                 = -400,
+		},
+	  },
+	},	
+
+
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{		
+	},
+}

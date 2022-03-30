@@ -1,0 +1,278 @@
+NKMDungeonTemplet = 
+{
+	m_bCanUseAuto	= false,
+	m_fStartCost 	= 3,
+	m_fCostSpeedRateA = 1,
+	m_fCostSpeedRateB = 0.5,
+	
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_BEAST_MINI_MOVE_TR",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	
+	},
+	
+	m_listDungeonUnitRespawnA = 
+	{
+		{
+			m_UnitStrID 				= "NKM_UNIT_C_HILDE_TR",
+			m_UnitLevel 				= 20,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 9.2,
+				m_fEventPos 		= 0.5,
+				
+				
+    		},
+		},
+	}, 
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 2,
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 2.3,
+				m_fEventPos 		= 0.05,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_OMEN_MINI_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 2.6,
+				m_fEventPos 		= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3.2,
+				m_fEventPos 		= 0.13,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3.2,
+				m_fEventPos 		= 0.18,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3.2,
+				m_fEventPos 		= 0.07,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3.2,
+				m_fEventPos 		= 0.02,
+    		},
+		},
+	},
+	
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 5,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 1,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 1.5,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 2,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 2.5,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.5,
+    		},
+		},
+		{	
+			-- 카메라
+			
+			m_EventID = 10800, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 4,
+    		},
+		},
+		{	
+			-- 비스트 경고하고 함선스킬 튜토리얼
+			
+			m_EventID = 10801, 
+			m_dungeonEventType = "GAME_EVENT",
+			m_bPause = true,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 4.32,
+    		},
+		},
+		{	
+			-- 함선스킬 쓴 다음 힐데 출격 전까지						
+			m_EventID = 10802, 
+			m_dungeonEventType = "GAME_EVENT",
+			m_bPause = true,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 9,
+    		},
+		},
+		{	
+			-- 힐데 포즈 잡고 덱 언락
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_HILDE_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_fEventDelay		=	1.5,
+			
+			m_EventID = 10803, 
+			m_dungeonEventType = "GAME_EVENT",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+    		},
+		},
+		{	
+			-- 10. 보스 죽으면 펜릴소대 대화
+			
+			m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+			m_EventConditionNumValue = 0,
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10804,
+			m_bPause = false,
+			
+			m_fEventDelay		=	2,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",				
+    		},
+		},
+	},
+}

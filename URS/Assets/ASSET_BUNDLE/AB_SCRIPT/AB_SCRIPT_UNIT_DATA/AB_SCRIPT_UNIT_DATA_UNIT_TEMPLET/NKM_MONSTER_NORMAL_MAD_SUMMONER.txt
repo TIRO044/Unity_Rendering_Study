@@ -1,0 +1,38 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_NORMAL_BASIC_SUMMONER_N",
+	
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName				= "USN_SKILL1",
+			m_listNKMEventRespawn = 
+			{
+				{
+					m_fEventTime    	= 20/30,
+					m_UnitStrID 		= "NKM_MONSTER_NORMAL_MAD_BOMB_N",
+					m_MaxCount 			= 1,
+					m_bUsePerSkillLevel	= 0,
+					
+					m_fOffsetX			= 100,
+				},
+				{
+					m_fEventTime    	= 25/30,
+					m_UnitStrID 		= "NKM_MONSTER_NORMAL_MAD_BOMB_N",
+					m_MaxCount 			= 1,
+					m_bUsePerSkillLevel	= 0,
+					
+					m_fOffsetX			= 300,
+				},
+				{
+					m_fEventTime    	= 30/30,
+					m_UnitStrID 		= "NKM_MONSTER_NORMAL_MAD_BOMB_N",
+					m_MaxCount 			= 1,
+					m_bUsePerSkillLevel	= 0,
+					
+					m_fOffsetX			= 500,
+				},
+			},
+		},
+	},
+}

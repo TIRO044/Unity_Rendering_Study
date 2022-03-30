@@ -1,0 +1,192 @@
+﻿
+NKMDungeonTemplet = 
+{
+	m_bCanUseAuto	= false,
+	m_fStartCost 	= 0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_T",
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	
+	},
+	
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_T",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 4,
+				m_fEventPos 		= 0.35,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_NEEDLER_T",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3.6,
+				m_fEventPos 		= 0.35,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_SCOURGE_T",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3.7,
+				m_fEventPos 		= 0.3,
+
+				-- TEST 이벤트 태그가 게임에 1 이상의 값으로 적용되어 있어야 발동
+				m_EventTag = "TEST",
+				m_EventTagCount = 1,
+    		},
+		},
+	},
+
+	m_listDungeonEventTempletTeamA =
+	{
+		{	
+			-- 힐데 소환
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10101,
+			m_bPause = true,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+		
+		{	
+			-- 힐데 소환 직후 스테이트 변경될 때
+			-- 목표 스테이트, 목표 유닛 ID 필요
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10102,
+			m_bPause = true,
+
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_HILDE_T_1",
+			m_EventConditionValue2 = "USN_RUN",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+			
+		{	
+			-- 힐데 스킬 사용 후
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_UNIT_C_HILDE_T_1",
+			m_EventConditionValue2 = "USN_SKILL1",
+
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10104,  
+			m_bPause = true,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 5,
+    		},
+		},
+		{
+			-- 나유빈 등장 후 대사
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10105,
+			m_bPause = false,
+
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_ADMIN_NA_YUBIN_T_1",
+			m_EventConditionValue2 = "USN_START",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 5,
+    		},
+		},
+		{
+			-- 나유빈 등장 후 이수연 소환
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10106,
+			m_bPause = false,
+
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_UNIT_C_ADMIN_NA_YUBIN_T_1",
+			m_EventConditionValue2 = "USN_START",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 5,
+    		},
+		},
+		
+		{	
+			-- 자동으로 끝날때 대사 연출
+			m_EventCondition = "NONE",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10106,
+			m_bPause = false,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 99,
+    		},
+		},
+		{	
+			-- 시작 110초후 보스 죽임
+			m_dungeonEventType = "SET_ENEMY_BOSS_HP_RATE",
+			m_EventActionValue = 0,
+			
+			m_bPause = false,
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 100,
+    		},
+		},
+
+		{
+			-- 힐데 한대라도 맞으면
+			m_EventCondition = "TARGET_ALLY_UNIT_HP_RATE_LESS",
+			m_EventConditionValue1 = "NKM_UNIT_C_HILDE_T_1",
+			m_EventConditionNumValue = 100,
+		
+			-- 게임의 이벤트 태그 목록 중 TEST 태그에 10이 더해진다
+			m_dungeonEventType = "ADD_EVENTTAG",
+			m_EventActionStrValue = "TEST",
+			m_EventActionValue = 10,
+		
+			m_bPause = false,
+		
+			
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 1,
+    		},
+		},
+
+		
+		
+	},
+	
+	m_listDungeonEventTempletTeamB =
+	{
+
+	
+	},
+}

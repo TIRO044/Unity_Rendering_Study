@@ -1,0 +1,288 @@
+NKMDungeonTemplet = 
+{
+	m_listDungeonWave = 
+	{
+		{ 
+			m_WaveID		= 1,	
+			m_fNextWavetime	= 60,
+			
+			m_listDungeonUnitRespawnB = 
+			{
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*0)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*0)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK3_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*0)+(0.5*0),		
+						m_fEventPos 				= 0.02,					
+					},
+				},
+
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*1)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*1)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*1)+(0.5*2),		
+						m_fEventPos 				= 0.0,					
+					},
+				},
+
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*2)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*2)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*2)+(0.5*2),		
+						m_fEventPos 				= 0.04,					
+					},
+				},
+
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*3)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*3)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*3)+(0.5*2),		
+						m_fEventPos 				= 0.04,					
+					},
+				},
+
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*4)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*4)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK3_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*4)+(0.5*0),		
+						m_fEventPos 				= 0.04,					
+					},
+				},
+
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*5)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*5)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*5)+(0.5*2),		
+						m_fEventPos 				= 0.04,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*5)+(0.5*3),		
+						m_fEventPos 				= 0.04,					
+					},
+				},
+
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*6)+(0.5*0),		
+						m_fEventPos 				= 0.08,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*6)+(0.5*1),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+				{
+					m_UnitStrID				= "NKM_MONSTER_BOSS_DAILY_MACHINE_GAP_MK1_MINI_N",	
+					m_EventRespawnUnitTag	= "NPC",
+
+					m_NKMDungeonEventTiming = 
+					{
+						m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",		
+						m_fEventTimeStart   		= 1+(9*6)+(0.5*2),		
+						m_fEventPos 				= 0.06,					
+					},
+				},
+			},
+		},
+	},
+	
+	m_listDungeonEventTempletTeamA =
+	{
+		-- {	
+		-- 	-- 시작 1초후
+		-- 	m_EventID = 910201,
+		-- 	m_dungeonEventType = "GAME_EVENT",
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart   		= 0,
+    	-- 	},
+		-- },
+		{	
+			m_dungeonEventType 		= "KILL_ALL_TAGGED_UNIT",
+			m_EventActionStrValue	= "NPC",
+			
+			m_bPause = true,
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 59,
+    		},
+		},
+	},
+}

@@ -1,0 +1,79 @@
+
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 2,
+    m_BossUnitStrID = "NKM_MOB_BOSS_RAID_INHIBITOR_N",
+	m_BossRespawnUnitTemplet =
+	{
+		m_AddStatData =
+		{
+			m_StatValue =
+			{
+				-- NST_HP  = 50000,
+				NST_ATK  = -500,
+				-- NST_HIT = 1000,
+				-- NST_DEF = -2000,
+				-- NST_CRITICAL = -15000,
+			},
+		},
+	},
+
+    
+    m_fBossPosZ 	= 0.6,
+
+    m_listDungeonDeck = 
+	{
+		-- {
+		-- 	m_UnitStrID = "NKM_MONSTER_NORMAL_BASIC_NEEDLER_N",
+			
+        
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+		-- 		m_fEventTimeStart   		= 0,
+		-- 		m_fEventTimeEnd				= 60*4,
+    	-- 	},
+		-- },
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+        {--? 최초 1회 더 월 소환
+			m_UnitStrID = "NKM_MOB_ELITE_RAID_DEMOLISHER_N",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 240,
+                m_fEventPos                  = 0.3,
+			},
+			m_AddStatData =
+			{
+			  m_StatFactor =
+			  {
+				  NST_HP          = 0.5,
+				  NST_DEF         = 0.4,
+			  },
+			},	
+        },
+	},
+	m_listDungeonEventTempletTeamA = 
+	{
+		{
+			m_EventID = 31001,
+			m_dungeonEventType = "GAME_EVENT",
+
+			-- m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+			-- m_EventConditionNumValue = 40,
+
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 57,
+				m_fEventTimeEnd   			= 67,
+			},
+		},	
+	},
+}

@@ -1,0 +1,52 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_MAD_BEAST_BASIC_S",
+    m_fCostSpeedRateB = 1.2, -- 보스
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_STUNNER_S",
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_NEEDLER_S",
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.05,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_SCOURGE_S",
+			
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 120,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

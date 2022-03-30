@@ -1,0 +1,23 @@
+NKMDungeonTemplet = 
+{
+ m_fStartCost  = 5,
+ m_fCostSpeedRateB = 0.5,
+ m_BossUnitStrID = "NKM_MOB_BOSS_CLB_001_GUILTY_S_MAY_CM",
+    
+    m_fBossPosZ  = 0.6,
+ 
+ m_listDungeonDeck =
+ {
+  {
+   m_UnitStrID = "NKM_MOB_BOSS_CLB_001_FREEDOM_KASUMI_CM",
+   
+        
+   m_NKMDungeonEventTiming = 
+   {
+    m_NKM_DUNGEON_EVENT_TYPE  = "NDET_DECK",
+    m_fEventTimeStart     = 999,
+    m_fEventPos     = 0.15,
+      },
+  },
+ },
+}

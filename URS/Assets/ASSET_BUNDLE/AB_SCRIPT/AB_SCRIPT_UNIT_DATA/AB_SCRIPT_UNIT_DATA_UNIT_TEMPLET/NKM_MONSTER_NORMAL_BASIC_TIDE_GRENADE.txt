@@ -1,0 +1,84 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_UNIT_S_TIDE_GRENADE",
+	m_listAccumStateChangePack = 
+	{
+		{
+			m_Condition = 
+			{
+				m_SkillStrID	= -1,
+				-- m_SkillStrID	= "NKM_UNIT_S_TIDE_GRENADE_PASSIVE2",      
+				-- m_SkillLevel	= {1,5},
+			},
+			-- m_listAccumStateChange = 
+			-- {
+			-- 	{
+			-- 		m_listAccumStateName	= {"USN_ATTACK1"},
+			-- 		m_AccumCount 		= 4,
+			-- 		m_TargetStateName 	= "USN_PASSIVE2",
+			-- 	},
+			-- }
+		},
+	},
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName             = "USN_PASSIVE2",
+			m_listNKMEventDamageEffect =
+			{
+				{
+					-- m_Condition = 
+					-- {
+					-- 	m_SkillStrID	= "NKM_UNIT_S_TIDE_GRENADE_PASSIVE2",      
+					-- 	m_SkillLevel	= {1,4},
+					-- },
+
+					-- m_bAnimTime     = true,
+					-- m_fEventTime    = 20/30,
+					-- m_DEName        = "DE_NKM_UNIT_S_TIDE_GRENADE_PASSIVE2",
+					-- m_OffsetX       = 80,
+					-- m_OffsetY       = 230,
+				},
+				{
+					m_Condition = 
+					{
+						m_SkillStrID	= -1,
+						-- m_SkillStrID	= "NKM_UNIT_S_TIDE_GRENADE_PASSIVE2",      
+						-- m_SkillLevel	= {5,99},
+					},
+
+					-- m_bAnimTime     = true,
+					-- m_fEventTime    = 20/30,
+					-- m_DEName        = "DE_NKM_UNIT_S_TIDE_GRENADE_PASSIVE2_LV5",
+					-- m_OffsetX       = 80,
+					-- m_OffsetY       = 230,
+				},
+			},
+			m_listNKMEventSound =
+			{
+				{
+					m_bAnimTime               = true,
+					m_fEventTime              = 20/30,			
+					m_listSoundName           = 
+					{
+						"FX_COMBAT_ALL_ONESHOT_FIRE_SMALL_03",
+					},
+				}, 
+
+				{
+					m_bAnimTime         = true,
+					m_fEventTime        = 1/30,
+					m_bVoice			= true,
+					m_PlayRate			= 0.4,			
+					m_listSoundName	= 
+					{
+						"VOICE_UNIT_S_TIDE_GRENADE_BATTLE_ATTACK_3",
+						"VOICE_UNIT_S_TIDE_GRENADE_BATTLE_ATTACK_5",
+						"VOICE_UNIT_S_TIDE_GRENADE_BATTLE_ATTACK_7",
+					},
+				},
+			},
+		},
+	},
+}
+

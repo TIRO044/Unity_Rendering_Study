@@ -1,0 +1,41 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 1,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_FOOLSDAY_MANAGER_H",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+    },
+    
+    m_listDungeonUnitRespawnB = 
+	{
+        {
+			m_UnitStrID = "NKM_MOB_ELITE_EVENT_BLASTER",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+                m_fEventTimeStart   		 = 2,
+                m_fEventTimeGap	        	 = 20,
+				m_fEventPos 				 = 0.4,
+			},
+		},		
+
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_EVENT_BLASTER",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+                m_fEventTimeStart   		 = 2,
+                m_fEventTimeGap	        	 = 18,
+				m_fEventPos 				 = 0.2,
+			},
+		},
+	},
+
+}

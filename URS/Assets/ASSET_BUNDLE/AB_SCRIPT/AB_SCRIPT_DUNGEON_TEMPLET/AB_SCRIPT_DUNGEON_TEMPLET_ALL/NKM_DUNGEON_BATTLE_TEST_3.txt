@@ -1,0 +1,45 @@
+NKMDungeonTemplet =
+{
+	m_fStartCost                = 0,
+	m_fCostSpeedRateB           = 0,
+	m_BossUnitStrID             = "NKM_MOB_BOSS_TEST_OMEN_TANK1",
+	m_fBossPosZ                 = 0.5,
+	m_fCostSpeedRateA           = 99,
+	m_bRespawnFreePos           = true,
+	-- m_bNoTimeStop               = true,
+	m_listDungeonUnitRespawnB =
+	{
+		{
+			m_UnitStrID               = "NKM_MOB_BOSS_TEST_OMEN_INVALID",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart        = 0,
+				m_fEventPos              = 0.0,
+				m_fEventTimeGap          = 0,
+			},
+			m_listStaticBuffData =
+			{
+				{--* 면역버프
+					m_BuffStrID                  = "BUFF_BOSS_TEST_OMEN_COMMON1",
+				},
+				-- {--* 피해감소 1% * m_BuffLevel
+				-- 	m_BuffStrID               = "BUFF_MOB_ELITE_DIVE_SCAVENGER_S_CUTLASS_PASSIVE",
+				-- 	m_BuffLevel               = 40,
+				-- },
+			},
+			m_AddStatData =
+			{
+				m_StatValue =
+				{
+					NST_HP                  = 1000000000,
+					NST_ATK                 = 10000,
+					NST_DEF                 = 0,
+					NST_CRITICAL            = 0,
+					NST_HIT                 = 0,
+					NST_EVADE               = 0,
+				},
+			},
+		},
+	},
+}

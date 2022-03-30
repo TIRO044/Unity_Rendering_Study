@@ -1,0 +1,5 @@
+﻿
+m_dicEffectTemplet =
+{
+	--{ "EFFECT/fx_hit_b_blue", 10 },
+}

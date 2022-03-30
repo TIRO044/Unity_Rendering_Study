@@ -1,0 +1,234 @@
+NKMDungeonTemplet = 
+{
+	m_bCanUseAuto	= false,
+	m_fStartCost 	= 7,
+	m_fCostSpeedRateA = 1,
+	m_fCostSpeedRateB = 0.5,
+	
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_N_TR",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID 				= "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 1,
+				m_fEventPos 		= 0.15,
+    		},
+		},
+	},
+
+	m_listDungeonEventTempletTeamA =
+	{
+	    -- 1. 디몰리셔나오고 조금있다가 디펜더라고 경고
+		{	
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10501,
+			m_bPause = true,
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},		
+		--{	
+		--	-- 3. 소총병 출격 끝나면 유미나 출격
+		--	
+		--	m_EventCondition = "UNIT_STATE_END",
+		--	m_EventConditionValue1 = "NKM_UNIT_S_SL_RIFLE_TR",
+		--	m_EventConditionValue2 = "USN_START",
+		--	
+		--	m_dungeonEventType = "GAME_EVENT",
+		--	m_EventID = 10503,
+		--	m_bPause = true,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventTimeStart   		= 2,
+    	--	},
+		--},
+		{	
+			-- 4. 유미나 나오고 나면 머리위에 스킬 표기
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_UNIT_C_YOO_MI_NA_TR_NOULT",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10504,
+			m_bPause = true,
+			
+			m_fEventDelay		= 0.6,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 2,
+    		},
+		},		
+		--{	
+		--	-- 6. 디몰리셔 죽고 유미나 칭찬 끝나면 힐데 출격후 버프 안내
+		--	
+		--	m_EventCondition = "UNIT_STATE_START",
+		--	m_EventConditionValue1 = "NKM_UNIT_C_YOO_MI_NA_TR_NOULT",
+		--	m_EventConditionValue2 = "USN_START",
+		--	
+		--	m_dungeonEventType = "GAME_EVENT",
+		--	m_EventID = 10506,
+		--	m_bPause = true,
+		--	
+		--	m_fEventDelay		= 0.6,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventTimeStart   		= 2,
+    	--	},
+		--},
+		{	
+			-- 8. 주시윤 스킬 쓰고나면 보스 체력 줄어들고 바로 궁극기 사용
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_UNIT_C_JOO_SHI_YOON_TR",
+			m_EventConditionValue2 = "USN_SKILL1",
+			
+			m_dungeonEventType = "SET_ENEMY_BOSS_HP_RATE",
+			m_EventActionValue = 50,
+			
+			m_fEventDelay		=	0.0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+		{	
+			-- 8. 주시윤 스킬 쓰고나면 바로 궁극기 사용
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_UNIT_C_JOO_SHI_YOON_TR",
+			m_EventConditionValue2 = "USN_SKILL1",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10507,
+			m_bPause = true,
+			
+			m_fEventDelay		=	0.6,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+		--{	
+		--	-- 8. 주시윤 궁극기 쓰고나면 보스 사망
+		--	
+		--	m_EventCondition = "UNIT_STATE_END",
+		--	m_EventConditionValue1 = "NKM_UNIT_C_JOO_SHI_YOON_TR",
+		--	m_EventConditionValue2 = "USN_HYPER_SKILL1",
+		--	
+		--	m_dungeonEventType = "SET_ENEMY_BOSS_HP_RATE",
+		--	m_EventActionValue = 0,
+		--	
+		--	m_fEventDelay		=	0.0,
+		--	
+		--	m_NKMDungeonEventTiming = 
+		--	{
+		--		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+		--		m_fEventTimeStart   		= 3,
+    	--	},
+		--},
+		{	
+			-- 10. 보스 죽으면 펜릴소대 대화
+			
+			m_EventCondition = "ENEMY_BOSS_HP_RATE_LESS",
+			m_EventConditionNumValue = 1,
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10508,
+			m_bPause = false,
+			
+			m_fEventDelay		=	0.0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+	},
+	
+	m_listDungeonEventTempletTeamB =
+	{
+		{	
+			-- 2. 소총병 출격
+			
+			m_EventCondition = "UNIT_STATE_END",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			m_EventConditionValue2 = "USN_START",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10503,
+			m_bPause = true,
+			
+			m_fEventDelay		=	0,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3.5,
+    		},
+		},		
+		{	
+			-- 5. 디몰리셔 죽으면 유미나 칭찬
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_NORMAL_BASIC_DEMOLISHER_TR",
+			m_EventConditionValue2 = "USN_DAMAGE_DIE",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10505,
+			m_bPause = false,
+			
+			m_fEventDelay		=	0.2,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+		{	
+			-- 7. 침식쐐기 스킬 쓰는것같으면 반격기 가이드
+			
+			m_EventCondition = "UNIT_STATE_START",
+			m_EventConditionValue1 = "NKM_MONSTER_BOSS_BASIC_GRAVE_MINI_N_TR",
+			m_EventConditionValue2 = "USN_SKILL1",
+			
+			m_dungeonEventType = "GAME_EVENT",
+			m_EventID = 10506,
+			m_bPause = true,
+			
+			m_fEventDelay		=	0.3,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_ONE_TIME",
+				m_fEventTimeStart   		= 3,
+    		},
+		},
+	},
+}

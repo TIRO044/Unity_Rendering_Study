@@ -1,0 +1,16 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 0,
+	m_fCostSpeedRateB = 0,
+    m_BossUnitStrID = "NKM_MONSTER_BOSS_BASIC_SIXWING_LEE_JISOO_N",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+	},
+}

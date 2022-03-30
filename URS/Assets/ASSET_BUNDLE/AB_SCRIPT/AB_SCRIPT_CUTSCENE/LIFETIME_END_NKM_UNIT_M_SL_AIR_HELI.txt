@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10160002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_AIR_HELI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_SL_AIR_HELI@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10160002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_AIR_HELI",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "BUZZARD_SL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "ST-DAH205 버자드는 사장님을 영구 소유권자로 등록했습니다. 이후로도 전폭적인 관심과 지원을 기대하겠습니다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "ST-DAH205 バザードは社長を永久所有権者に登録しました。今後ともご関心とご支援をお願いします。",
+    m_Talk_ENG = "ST-DAH205 Buzzard has registered you as its permanent owner. Thank you for your continued interest and support.",
+    m_Talk_TWN = "ST-DAH205 禿鷲，已將您登錄為永久擁有者，期待今後也可以獲得全面的關心和支援。",
+    m_Talk_THA = "ST-DAH205 บัซซาร์ด ลงทะเบียนคุณเป็นเจ้าของถาวรแล้ว ขอขอบคุณที่สนใจและให้การสนับสนุนอย่างต่อเนื่อง",
+    m_Talk_VTN = "Chim Ó ST-DAH205 đã đăng ký ngài là chủ sở hữu vĩnh viễn. Cảm ơn sự ủng hộ và quan tâm không ngừng nghỉ của ngài.",
+    m_Talk_SCN = "ST-DAH205 秃鹫将要员登记为永久拥有者，期待进行游刃有余的战斗行动。",
+    m_Talk_DEU = "ST-DAH205 Buzzard hat Sie als seinen langfristigen Besitzer registriert. Ich danke Ihnen für Ihr anhaltendes Interesse und Ihre Unterstützung.",
+    m_Talk_FRA = "Vous êtes désormais enregistré comme propriétaire permanent du Buzzard ST-DAH205. Merci pour votre intérêt et votre soutien continus.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10160002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_AIR_HELI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

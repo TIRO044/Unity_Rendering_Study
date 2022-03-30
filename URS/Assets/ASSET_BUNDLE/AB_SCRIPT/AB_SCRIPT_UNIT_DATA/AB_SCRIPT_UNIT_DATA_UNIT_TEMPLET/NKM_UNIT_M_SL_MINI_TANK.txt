@@ -1,0 +1,53 @@
+﻿NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID        = "NKM_UNIT_M_SL_AIR_FIGHTER",
+  
+	m_SpeedRun              = 310+50,
+	m_fGageOffsetY          = 190,
+  
+	m_TargetNearRange       = 20,
+	m_NKM_FIND_TARGET_TYPE  = "NFTT_NEAR_ENEMY_LAND",
+  
+	m_dicNKMUnitState =
+	{
+		{
+			m_NKM_UNIT_STATE_TYPE         = "NUST_ATTACK",
+			m_StateName                   = "USN_ATTACK1",
+			m_AnimName                    = "ATTACK1",
+			m_bAnimLoop                   = false,
+			m_fAnimSpeed                  = 1,
+        
+			m_StateCoolTime             = { 2.5, 2.5, },
+      
+			m_listNKMEventAttack = 
+			{
+			},
+			--m_listNKMEventSound =
+			--{
+			--	{
+			--		m_bAnimTime               = true,
+			--		m_fEventTime              = 1/30,
+			--		m_bStateEndTime           = false,
+			--    
+			--		m_listSoundName           = 
+			--		{
+			--			"FX_UNIT_AIR_DRONE_START",
+			--		},
+			--	},
+            --},  
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_bAnimTime       = true,
+					m_fEventTime      = 1/30,
+					m_DEName          = "DE_NKM_UNIT_M_SL_AIR_BOMBER_ATTACK1",
+					m_OffsetX         = -4,
+					m_OffsetY         = 48,
+					
+				},
+			},   
+			
+		},  
+	},
+}
+

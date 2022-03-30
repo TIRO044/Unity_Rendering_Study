@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11190002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_BD_RYAN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_BD_RYAN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11190002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_BD_RYAN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "RYAN_PRYDWEN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "꾸준한 자기 단련이야말로 성공을 위한 지름길. 기대에 부응해서 사장님의 자기 단련을 전력으로 돕겠습니다. 음? 잠시 자리를 비우시겠다고요?",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "たゆまぬ自己鍛錬こそが成功への近道。\n期待にお応えすべく、あなたの鍛練を力の限りサポートいたします。\nおや？　しばらくお留守になさるのですか？",
+    m_Talk_ENG = "Tireless self-discipline is a shortcut to success. I'll help you improve yourself to my best ability. Mm? You have to go away for a while?",
+    m_Talk_TWN = "只有堅持不懈地鍛煉自我，才是通往成功的捷徑。我會回應老闆的期待，盡全力地幫助老闆進行自我鍛煉。嗯？您說您有要事需要離開一下嗎？",
+    m_Talk_THA = "การรักษาวินัยของตนเองอย่างไม่รู้เหน็ดเหนื่อยคือทางลัดสู่ความสำเร็จ ผมจะช่วยคุณในการพัฒนาตัวเองอย่างสุดความสามารถ หืม? คุณจะต้องไปธุระที่อื่นสักพักเหรอครับ?",
+    m_Talk_VTN = "Kỷ luật cá nhân không ngừng nghỉ là con đường tắt dẫn đến thành công. Tôi sẽ nỗ lực hết sức giúp ngài cải thiện bản thân. Hử? Ngài phải đi xa một thời gian à?",
+    m_Talk_SCN = "只有坚持不懈地自我锻炼才能走向成功。我不会辜负您的期待，全力以赴地帮助老板。嗯？有要事需要离开？",
+    m_Talk_DEU = "Unermüdliche Selbstdisziplin ist eine Abkürzung zum Erfolg. Ich werde Ihnen so gut ich kann dabei helfen. Hmm? Sie müssen eine Weile weg?",
+    m_Talk_FRA = "Une autodiscipline sans faille est le chemin le plus court vers le succès. Je ferai de mon mieux pour vous aider à réussir. Hm ? Vous devez vous absenter ?",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11190002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_BD_RYAN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

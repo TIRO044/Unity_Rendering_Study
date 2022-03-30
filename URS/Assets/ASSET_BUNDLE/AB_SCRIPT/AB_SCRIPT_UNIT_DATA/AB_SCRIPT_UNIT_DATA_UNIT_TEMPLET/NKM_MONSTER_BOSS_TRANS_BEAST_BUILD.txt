@@ -1,0 +1,26 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID = "NKM_MONSTER_BOSS_BASIC_BEAST_BUILD_N",
+
+	m_dicNKMUnitState =
+	{
+		{	
+			m_StateName		= "USN_ATTACK1",
+			m_listNKMEventAttack = 
+			{
+				{
+					m_DamageTempletName		= "DT_NKM_MONSTER_BOSS_TRANS_BEAST_BUILD_ATTACK1",
+				},
+			},
+		},
+		{
+			m_StateName		= "USN_SKILL1",
+			m_listNKMEventDamageEffect =
+			{
+				{
+					m_DEName				= "DE_NKM_MONSTER_BOSS_TRANS_BEAST_BUILD_SKILL1",
+				},
+			},
+		},
+	},
+}

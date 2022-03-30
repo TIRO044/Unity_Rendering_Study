@@ -1,0 +1,53 @@
+﻿-- Exported from SHOP_PACKAGE_TEMPLET.xlsx
+
+ACQ_PACKAGE_TEMPLET =
+{
+  {
+    m_PackageID = 160466,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_ACTIVITY_CONTRACT_160466"},
+    ConsumeRequireItemID = 2,
+    ConsumeRequireItemValue = 10000,
+    m_RewardType_1 = "RT_MISC",
+    m_RewardID_1 = 101,
+    m_RewardValue_1 = 450,
+    m_FreeValue_1 = 450,
+    m_MailTitle = "SI_ACQ_PKG_MAIL_TITLE@@SI_SHOP_CASH_ITEM_NAME_TAB_PACKAGE_160466",
+    m_MailDesc = "SI_ACQ_PKG_MAIL_DESC",
+  },
+  {
+    m_PackageID = 160466,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_ACTIVITY_CONTRACT_160466"},
+    ConsumeRequireItemID = 2,
+    ConsumeRequireItemValue = 50000,
+    m_RewardType_1 = "RT_MISC",
+    m_RewardID_1 = 101,
+    m_RewardValue_1 = 900,
+    m_FreeValue_1 = 900,
+    m_MailTitle = "SI_ACQ_PKG_MAIL_TITLE@@SI_SHOP_CASH_ITEM_NAME_TAB_PACKAGE_160466",
+    m_MailDesc = "SI_ACQ_PKG_MAIL_DESC",
+  },
+  {
+    m_PackageID = 160466,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_ACTIVITY_CONTRACT_160466"},
+    ConsumeRequireItemID = 2,
+    ConsumeRequireItemValue = 100000,
+    m_RewardType_1 = "RT_MISC",
+    m_RewardID_1 = 101,
+    m_RewardValue_1 = 450,
+    m_FreeValue_1 = 450,
+    m_MailTitle = "SI_ACQ_PKG_MAIL_TITLE@@SI_SHOP_CASH_ITEM_NAME_TAB_PACKAGE_160466",
+    m_MailDesc = "SI_ACQ_PKG_MAIL_DESC",
+  },
+  {
+    m_PackageID = 160466,
+    listContentsTagAllow = {"TAG_COMMON_SHOP_TAB_PACKAGE_ACTIVITY_CONTRACT_160466"},
+    ConsumeRequireItemID = 2,
+    ConsumeRequireItemValue = 150000,
+    m_RewardType_1 = "RT_MISC",
+    m_RewardID_1 = 101,
+    m_RewardValue_1 = 900,
+    m_FreeValue_1 = 900,
+    m_MailTitle = "SI_ACQ_PKG_MAIL_TITLE@@SI_SHOP_CASH_ITEM_NAME_TAB_PACKAGE_160466",
+    m_MailDesc = "SI_ACQ_PKG_MAIL_DESC",
+  },
+}

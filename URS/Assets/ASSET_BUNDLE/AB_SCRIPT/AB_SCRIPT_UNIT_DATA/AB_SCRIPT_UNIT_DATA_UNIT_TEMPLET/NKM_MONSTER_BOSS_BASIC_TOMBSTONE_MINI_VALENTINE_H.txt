@@ -1,0 +1,16 @@
+﻿ NKMUnitTemplet =
+{ 
+	BASE_UNIT_STR_ID		= "NKM_MONSTER_BOSS_BASIC_TOMBSTONE_MINI_VALENTINE_N",
+	m_dicNKMUnitState =
+	{
+		{	--* 
+			m_StateName					= "USN_PATTERN1",
+			m_listNKMEventRespawn = 
+			{
+				{
+					m_UnitStrID 	= "NKM_MONSTER_ELITE_BASIC_NEEDLER_VALENTINE_H",
+				},
+			},
+		},
+	},
+}

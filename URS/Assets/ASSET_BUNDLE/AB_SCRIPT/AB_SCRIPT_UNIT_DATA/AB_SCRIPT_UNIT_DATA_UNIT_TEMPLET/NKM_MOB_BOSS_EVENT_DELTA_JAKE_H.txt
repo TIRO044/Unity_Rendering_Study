@@ -1,0 +1,33 @@
+﻿NKMUnitTemplet =
+{
+	BASE_UNIT_STR_ID = "NKM_MOB_BOSS_EVENT_DELTA_JAKE_N",
+	m_bShowGage                       = false,
+	m_bDieDeActive                    = false,
+	m_NKC_TEAM_COLOR_TYPE             = "NTCT_ONLY_SHADOW",
+	m_dicNKMUnitState =
+	{
+		{
+			m_StateName                     = "USN_START",
+			m_AnimEndChangeState            = "USN_WAITING",
+		},
+		{	--* 대기
+			m_StateName                     = "USN_WAITING",
+			
+			m_StateTimeChangeStateTime      = 60,
+			m_TargetDistLessChangeStateDist = 1000,
+		},
+		{
+			m_NKM_UNIT_STATE_TYPE           = "NUST_DIE",
+			m_StateName                     = "USN_DAMAGE_DIE",
+			m_AnimName                      = "DAMAGE_DIE",
+
+			m_listNKMEventDissolve =
+			{
+				{
+					m_fDissolve                   = 0,
+					m_fTrackTime                  = 0,
+				},
+			},
+		},
+	},
+}

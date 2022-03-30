@@ -1,0 +1,240 @@
+﻿NKMDungeonTemplet =
+{
+	m_fStartCost                = 5,
+	m_fCostSpeedRateB           = 0.5,
+
+	m_BossUnitStrID             = "NKM_MONSTER_BOSS_BASIC_ADMIN_ARTILLERY_ADMIN_MOVE_H",
+	m_fBossPosZ                 = 0.6,
+
+	m_listDungeonDeck =
+	{
+		{--? 덱 표시 노출용
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_ADMIN_GREATSWORD_ADMIN_H",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DECK",
+				m_fEventTimeStart        = 300,
+			},
+		},
+	},
+	m_listDungeonEventTempletTeamA =
+	{
+		{--? 체력 60%
+			m_dungeonEventType        = "SET_ENEMY_BOSS_HP_RATE",
+			m_EventActionValue        = 59,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 0,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--? 체력 30%
+			m_dungeonEventType        = "SET_ENEMY_BOSS_HP_RATE",
+			m_EventActionValue        = 29,
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 0,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 2,
+			},
+		},
+		{--? 30초 남으면 에스타크 처리
+			m_dungeonEventType        = "KILL_ALL_TAGGED_UNIT",
+			m_EventActionStrValue     = "ADMIN_CANNON",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 150,
+			},
+		},
+	},
+	m_listDungeonUnitRespawnB =
+	{
+		{--? 제1 요새형 에스타크
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_ADMIN_CANNON_ADMIN_FRONTLINE_1",
+			m_EventRespawnUnitTag     = "ADMIN_CANNON",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventPos              = 0.5,
+				m_fEventTimeStart        = 1,
+			},
+		},
+		{--? 제2 요새형 에스타크
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_ADMIN_CANNON_ADMIN_FRONTLINE_2",
+			m_EventRespawnUnitTag     = "ADMIN_CANNON",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventPos              = 0.2,
+				m_fEventTimeStart        = 2,
+			},
+		},
+		{--? 2차 저지선 이프리트
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_ADMIN_MACHINEGUN_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_MACHINEGUN",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventPos              = 0.4,
+				m_fEventTimeStart        = 0,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--? 1차 저지선 검사 1
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.45,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.6,
+				m_fEventTimeStart        = 3,
+			},
+		},
+		{--? 1차 저지선 검사 2
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.45,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.6,
+				m_fEventTimeStart        = 33,
+			},
+		},
+		{--? 1차 저지선 검사 3
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.45,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.6,
+				m_fEventTimeStart        = 63,
+			},
+		},
+		{--? 1차 저지선 검사 4
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.45,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.6,
+				m_fEventTimeStart        = 93,
+			},
+		},
+		{--? 2차 저지선 검사 1
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.25,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.3,
+				m_fEventTimeStart        = 60,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--? 2차 저지선 검사 2
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.25,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.3,
+				m_fEventTimeStart        = 75,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--? 2차 저지선 검사 3
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_SWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_SWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 15,
+				m_fEventPos              = 0.25,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.3,
+				m_fEventTimeStart        = 90,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--? 2차 저지선 총병 1
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_RIFLE_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_RIFLE",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.15,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.3,
+				m_fEventTimeStart        = 15,
+			},
+		},
+		{--? 2차 저지선 총병 2
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_RIFLE_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_RIFLE",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 20,
+				m_fEventPos              = 0.15,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.3,
+				m_fEventTimeStart        = 65,
+			},
+		},
+		{--? 2차 저지선 총병 3
+			m_UnitStrID               = "NKM_MONSTER_NORMAL_BASIC_ADMIN_RIFLE_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_RIFLE",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeGap          = 15,
+				m_fEventPos              = 0.15,
+				m_fEventBossHPLess       = 1.1,
+				m_fEventBossHPUpper      = 0.3,
+				m_fEventTimeStart        = 105,
+			},
+		},
+		{--? 마지막 알렉스
+			m_UnitStrID               = "NKM_MONSTER_ELITE_BASIC_ADMIN_GREATSWORD_ADMIN_H",
+			m_EventRespawnUnitTag     = "ADMIN_GREATSWORD",
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventPos              = 0.2,
+				m_fEventTimeStart        = 0,
+				m_EventDieUnitTag        = "ADMIN_CANNON",
+				m_EventDieUnitTagCount   = 2,
+			},
+		},
+	},
+}

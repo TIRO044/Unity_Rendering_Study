@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11170002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_BD_ROI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_BD_ROI@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11170002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_BD_ROI",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "ROI_PRYDWEN_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "쳇. 요새 할배들 잔소리 덜 듣나 싶더니...... 이젠 아예 코 꿰였구만. 이봐, 다음부터 이런 일 있을 땐 귀띔이라도 줘. 괜히 사람 놀래키지 말고.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "チッ。ジジイどもの小言を聞かなくて済むと思ったら、今度は完全に捕まっちまったな。\nなあ、次からこういうことがある時は、こっそり教えてくれ。無駄に驚くんだよ。",
+    m_Talk_ENG = "Gah, just when I thought the gaffers had stopped nagging at me, this had to happen to chain me for life. Mate, let me know ahead of time if you want to talk to me about something like this again, alright? I don't like surprises.",
+    m_Talk_TWN = "切！還以為最近不用再聽那些老頭子的囉嗦了……現在是直接被牽著鼻子走。喂！下次有這種事情早點告訴我，不要亂嚇人啦。",
+    m_Talk_THA = "ให้ตายสิ อุตส่าห์หลุดพ้นจากพวกตาแก่จุ้นจ้านมาได้ แต่กลับต้องมาทำงานที่นี่ตลอดชีวิตอีก บอส คราวหลังบอกผมล่วงหน้าก่อนนะถ้าอยากจะคุยเรื่องแบบนี้ โอเคมั้ย? ผมไม่ชอบเรื่องเซอร์ไพรส์น่ะ",
+    m_Talk_VTN = "Chậc, chỉ vừa mới nghĩ đến việc các cụ đã thôi không rầy rà tôi nữa thì thứ này lại đến để trói buộc tôi suốt đời. Này chiến hữu, nếu còn có lần sau thì nhớ cho tôi biết trước nhé? Tôi không thích bất ngờ đâu.",
+    m_Talk_SCN = "切。我还以为以后不用听长辈们的唠叨了，这次真的是逃不掉了。以后有这种事情的话就早点告诉我吧，不要吓到我啊。",
+    m_Talk_DEU = "Gott, gerade als ich dachte, die Gaffer würden mich endlich in Ruhe lassen, muss mir DAS passieren und ich bin ein Leben lang gebunden. Kumpel, lassen Sie mich nächstes mal vorher wissen, wenn Sie über so was reden wollen, ja? Ich mag keine Überraschungen.",
+    m_Talk_FRA = "Pfff, juste quand je pensais avoir enfin la paix, il a fallu que je m'enchaîne à vie. La prochaine fois, vous serez gentil de me prévenir si vous souhaitez discuter de ce genre de sujet, d'accord ? J'ai horreur des surprises.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11170002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_BD_ROI",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

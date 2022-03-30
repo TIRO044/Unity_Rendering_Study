@@ -1,0 +1,42 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10730002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_SIXWING_AMY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_SIXWING_AMY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10730002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_SIXWING_AMY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "AMY_SIX_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "난 적당히 하자는 말을 별로 안 좋아해. 악착같이 살아도 다 못 즐기는 게 인생이잖아~ 안 그래? 그런 면에서 우린 엄청 잘 맞는 거 같아. 앞으로도 잘 해보자?",
+    m_fTalkTime = 0.03,
+    m_Talk_ENG = "I don't like the word, moderation. You can't enjoy everything that life has to offer just by being moderate, don't you agree? In that sense, we speak the same language. Let's stay this way, shall we?",
+    m_Talk_TWN = "我不太喜歡適當這個詞，因為人生就是求一個痛快～你不覺得嗎？我們在這一方面好像很合得來呢！以後就好好相處吧！",
+    m_Talk_THA = "ฉันไม่ชอบคำว่าความพอเพียงเลย เราจะไม่มีทางได้สนุกกับทุกสิ่งในชีวิตหากเราแค่ทำตัวพอเพียงนะคะ ว่ามั้ย? ถ้างั้นเราก็ใจตรงกันแล้วละ ขอให้เป็นแบบนี้ไปเรื่อยๆ เนอะ?",
+    m_Talk_VTN = "Tôi không thích từ tiết chế. Ngài không thể tận hưởng mọi thứ trong cuộc sống chỉ bằng cách tiết chế, ngài có đồng ý không? Theo nghĩa đó thì chúng ta có chung suy nghĩ đấy. Hãy cứ tiếp tục như thế này, nhé?",
+    m_Talk_SCN = "我不太喜欢“差不多”“随便做”这些词。这样可不能享受完完整整的人生~不是吗？就这一点来讲，我觉得我们两个人很相似。以后也希望好好相处哦~",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10730002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_SIXWING_AMY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

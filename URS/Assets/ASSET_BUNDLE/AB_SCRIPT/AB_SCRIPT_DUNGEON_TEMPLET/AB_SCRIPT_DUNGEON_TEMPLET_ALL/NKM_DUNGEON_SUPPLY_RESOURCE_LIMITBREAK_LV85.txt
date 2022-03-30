@@ -1,0 +1,77 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 10,
+	m_fCostSpeedRateB = 1.0, -- 적
+	m_fCostSpeedRateA = 1.0, -- 플레이어
+    m_BossUnitStrID = "NKM_MOB_BOSS_SUPPLY_MAD_ALTER_S", -- ~50
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_SCOURGE_S", -- 광폭 스커지
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 0,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_MONSTER_NORMAL_MAD_WIZARD_S", -- 광폭 위자드
+			
+        
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+				m_fEventPos 				= 0.0,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_DEMOLISHER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 1,
+				m_fEventPos 	        	= 0.6,
+			},
+		},	
+		
+		{
+			m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_DEMOLISHER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventBossHPLess           = 0.6,
+				m_fEventBossHPUpper          = 0.5,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos                  = 0.2,
+			},
+		},	
+
+		{
+			m_UnitStrID = "NKM_MONSTER_ELITE_BASIC_DEMOLISHER_S",
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventBossHPLess           = 0.3,
+				m_fEventBossHPUpper          = 0.2,
+				m_fEventIgnoreBossInitHPLess = false,
+				m_fEventPos 	        	= 0.2,
+			},
+		},	
+	},
+}

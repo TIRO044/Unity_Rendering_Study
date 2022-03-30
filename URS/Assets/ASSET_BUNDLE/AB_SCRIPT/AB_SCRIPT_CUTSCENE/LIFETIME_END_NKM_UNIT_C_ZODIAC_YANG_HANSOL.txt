@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10860002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ZODIAC_YANG_HANSOL",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_ZODIAC_YANG_HANSOL@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10860002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ZODIAC_YANG_HANSOL",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "YANGHANSOL_ZODIAC_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "견습인 제게 이런 제안을...... 제 열정이 사장님께 전해진 거군요! 알겠습니다!",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "見習いの私なんかにもこんな提案を……\n私の情熱が社長にも伝わったようですね！ 了解しました！",
+    m_Talk_ENG = "I can't believe you want to hire me for life when I'm just a trainee. You took notice of my passion, didn't you? Thank you!",
+    m_Talk_TWN = "居然向還在實習的我提出這種提案……看來我的熱情已經傳達給老闆了！我明白了！",
+    m_Talk_THA = "ไม่อยากเชื่อเลยว่าคุณอยากจะจ้างผมตลอดชีวิต ทั้งๆ ที่ผมเป็นแค่เด็กฝึกงานแท้ๆ คุณคงจะรับรู้ได้ถึงความมุ่งมั่นของผมสินะครับ? ขอบคุณมากเลยครับ!",
+    m_Talk_VTN = "Tôi không thể tin là ngài muốn thuê tôi cả đời khi tôi chỉ là một thực tập sinh. Ngài đã để ý đến sự nhiệt huyết của tôi đúng không? Cảm ơn ngài!",
+    m_Talk_SCN = "居然向还在实习的我提出这种提案......看来我的热情已经传达给老板了！我明白了！",
+    m_Talk_DEU = "Ich kann einfach nicht fassen, dass Sie mich lebenslang anstellen wollen, obwohl ich noch in der Ausbildung bin. Anscheinend hat meine Leidenschaft doch was genützt. Vielen Dank!",
+    m_Talk_FRA = "Je n'arrive pas à croire que vous voulez m'embaucher à vie alors que je ne suis qu'un apprenti. Vous avez remarqué à quel point j'étais passionné, c'est ça ? Merci !",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10860002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_ZODIAC_YANG_HANSOL",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

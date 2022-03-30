@@ -1,0 +1,77 @@
+﻿-- Exported from EPISODE_TEMPLET.xlsx
+
+PHASE_ORDER_TEMPLET =
+{
+  {
+    m_PhaseGroupID = 1001,
+    m_PhaseOrder = 1,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_1_1_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1001,
+    m_PhaseOrder = 2,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_1_2_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1001,
+    m_PhaseOrder = 3,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_1_3_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1002,
+    m_PhaseOrder = 1,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_2_1_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1002,
+    m_PhaseOrder = 2,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_2_2_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1002,
+    m_PhaseOrder = 3,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_2_3_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1003,
+    m_PhaseOrder = 1,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_3_1_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1003,
+    m_PhaseOrder = 2,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_3_2_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1003,
+    m_PhaseOrder = 3,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_PHASE_EVENT_HORIZON_3_3_WAVE_CM",
+  },
+  {
+    m_PhaseGroupID = 1004,
+    m_PhaseOrder = 1,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_DUNGEON_EVENT_HORIZON_6_2_1",
+  },
+  {
+    m_PhaseGroupID = 1004,
+    m_PhaseOrder = 2,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_DUNGEON_EVENT_HORIZON_6_2_2_WAVE",
+  },
+  {
+    m_PhaseGroupID = 1004,
+    m_PhaseOrder = 3,
+    m_PhaseTime = 180,
+    m_DungeonStrID = "NKM_DUNGEON_EVENT_HORIZON_6_2_3",
+  },
+}

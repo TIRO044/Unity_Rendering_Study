@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11370002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_YG_HOJIN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_C_YG_HOJIN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11370002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_YG_HOJIN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "HOJIN_REBBIT_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "이 계약서만큼은 잃어 버리지 않게 소중히 간직할게요. 아 참! 회사 앞에 새 분식집이 생겼던데 엄청 맛있더라고요. 같이 가 보실래요? ",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "この契約書だけは捨てないように大切にします。\nあっ、そういえば！\n会社の前に新しいお店ができてて、すごくおいしかったんです。今度一緒にどうですか？  ",
+    m_Talk_ENG = "I'll make sure I'll never lose this contract. By the way, a new snack shop has opened in front of our building, and it's got really great food. Want to go there with me sometime? ",
+    m_Talk_TWN = "這份契約書我會好好保管，絕不會弄丟的。啊對了！公司門口新開了一家粉食店，超級好吃的，老闆要不要一起去呀？",
+    m_Talk_THA = "ฉันจะรักษาสัญญานี้ไว้เป็นอย่างดีเลยล่ะ ว่าแต่ มีร้านขนมใหม่เปิดอยู่หน้าตึกของเราด้วย ขนมที่นั่นอร่อยมากเลยนะ ถ้าว่างๆ อยากไปกันฉันมั้ยคะ?",
+    m_Talk_VTN = "Tôi bảo đảm tôi sẽ không để mất hợp đồng này. Nhân tiện, một cửa hàng đồ ăn nhẹ vừa khai trương trước tòa nhà chúng ta, và họ phục vụ những món cực ngon. Lúc nào cùng tôi qua đó nhé?",
+    m_Talk_SCN = "这份合同，我会好好保管它。啊对！公司门口新开了一家年糕店，很好吃，要不要一起去？ ",
+    m_Talk_DEU = "Ich verspreche, dass ich diesen Vertrag nie verlieren werde. Im Übrigen: Ein richtig guter Imbiss hat gleich gegenüber aufgemacht, die machen echt gutes Essen. Sollen wir mal zusammen hingehen? ",
+    m_Talk_FRA = "Je ferai de mon mieux pour ne pas perdre ce contrat. Au fait, une nouvelle boutique de snacks a ouvert en face, et leur nourriture est super. Vous voulez y aller avec moi un jour ? ",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11370002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_C_YG_HOJIN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

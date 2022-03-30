@@ -1,0 +1,10 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 5,
+	m_fCostSpeedRateB = 1,
+	
+    m_BossUnitStrID = "NKM_MOB_BOSS_FIERCE_REGEN_BISHOP_N", --NKM_MONSTER_BOSS_BASIC_FIERCE_MODERATOR_TYPE_B_N
+    
+    m_fBossPosZ 	= 0.6,
+	
+}

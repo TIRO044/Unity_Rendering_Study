@@ -1,0 +1,11 @@
+Dive = 
+{
+    fAutoSpeed = 2, 
+}
+
+Cutscen = 
+{
+    fNextTalkChangeSpeedWhenAuto_Fast = 1.0,
+	fNextTalkChangeSpeedWhenAuto_Normal = 1.2,
+	fNextTalkChangeSpeedWhenAuto_Slow = 1.4,
+}

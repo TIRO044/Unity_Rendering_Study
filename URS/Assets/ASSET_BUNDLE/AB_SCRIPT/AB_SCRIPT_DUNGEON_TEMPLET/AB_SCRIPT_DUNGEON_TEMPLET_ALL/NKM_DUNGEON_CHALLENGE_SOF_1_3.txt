@@ -1,0 +1,92 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	  = 10,
+	m_fCostSpeedRateB = 2,
+
+    m_BossUnitStrID = "NKM_MOB_BOSS_EQC_C_SOF_JOHN",
+    m_fBossPosZ 	= 0.05,
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_MTC_TIDE_HELI",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart            = 1,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 10,
+				m_fEventPos 	             = 0.1,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+				},
+			},	
+		},
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_EVENT_FUTURE_BALLISTA",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart            = 1,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 25,
+				m_fEventPos 	             = 0.1,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+				},
+			},	
+		},
+		{
+			m_UnitStrID = "NKM_MOB_ELITE_EVENT_FUTURE_BALLISTA",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart            = 1,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 25,
+				m_fEventPos 	             = 0.4,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+				},
+			},	
+		},
+		{
+			m_UnitStrID = "NKM_MOB_NORMAL_CHALLENGE_SL_SHIELD",
+		
+			m_NKMDungeonEventTiming = 
+			{								
+				m_NKM_DUNGEON_EVENT_TYPE	 = "NDET_DIE_AFTER_TIME",
+				m_fEventTimeStart            = 1,
+				m_fEventTimeEnd              = 180,
+				m_fEventTimeGap              = 10,
+				m_fEventPos 	             = 0.1,
+			},
+			m_AddStatData =
+			{
+				m_StatFactor = 
+				{
+					NST_ATK			= 1.4,
+					NST_DEF         = 2.0,
+				},
+			},	
+		},
+	},
+}

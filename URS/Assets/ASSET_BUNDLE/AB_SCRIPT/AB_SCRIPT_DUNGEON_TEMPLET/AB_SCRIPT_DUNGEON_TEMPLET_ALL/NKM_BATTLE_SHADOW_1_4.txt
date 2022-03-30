@@ -1,0 +1,135 @@
+
+NKMDungeonTemplet = 
+{
+	m_fStartCost 	= 7,
+    m_BossUnitStrID = "NKM_SHADOW_C_BALISADA",
+    -- m_BossUnitLevel = 1,
+    m_fBossPosZ 	= 0.6,
+
+    m_fCostSpeedRateA = 1,
+    m_fCostSpeedRateB = 1.0,
+	
+	m_listDungeonDeck = 
+	{
+		{
+			m_UnitStrID = "NKM_SHADOW_C_JAPAN_ZENJIROU",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 181,
+				m_fEventTimeEnd				= 181,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_SHADOW_C_HB_RUMI",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 181,
+				m_fEventTimeEnd				= 181,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_SHADOW_S_SL_RIFLE",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 5,
+				m_fEventTimeEnd				= 180,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_SHADOW_S_SL_SHOTGUN",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 8,
+				m_fEventTimeEnd				= 180,
+    		},
+		},
+		{
+			m_UnitStrID = "NKM_SHADOW_S_SL_SNIPER",
+			
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+				m_fEventTimeStart   		= 10,
+				m_fEventTimeEnd				= 180,
+    		},
+		},
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{
+			m_UnitStrID 				= "NKM_SHADOW_C_JAPAN_ZENJIROU",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 3,
+				m_fEventPos 		= 0.4,
+    		},
+		},
+		
+		{
+			m_UnitStrID 				= "NKM_SHADOW_C_HB_RUMI",
+			m_EventRespawnUnitTag		= "RUMI",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 35,
+				m_fEventPos 		= 0.1,
+    		},
+		},
+
+		{
+			m_UnitStrID 				= "NKM_SHADOW_C_JAPAN_ZENJIROU",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+
+				m_EventDieUnitTag 			= "RUMI",
+				m_EventDieUnitTagCount 		= 1,
+				m_fEventPos 				= 0.1,
+    		},	
+		},
+
+		{
+			m_UnitStrID 				= "NKM_SHADOW_C_HB_RUMI",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 120,
+				m_fEventPos 		= 0.2,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_SHADOW_S_SL_SNIPER",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 121,
+				m_fEventPos 		= 0.1,
+    		},
+		},
+		{
+			m_UnitStrID 				= "NKM_SHADOW_S_SL_SNIPER",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart   = 122,
+				m_fEventPos 		= 0.075,
+    		},
+		},
+	},
+}

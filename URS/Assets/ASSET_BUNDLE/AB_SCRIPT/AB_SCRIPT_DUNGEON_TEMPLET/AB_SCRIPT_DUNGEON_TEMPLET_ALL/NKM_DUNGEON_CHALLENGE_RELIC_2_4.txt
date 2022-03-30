@@ -1,0 +1,296 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 5,
+	m_fCostSpeedRateB = 0.5,
+    m_BossUnitStrID = "NKM_MOB_BOSS_RELIC_DOMINION",
+    
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+		-- {
+		-- 	m_UnitStrID = "NKM_MOB_NORMAL_EP6_WRAITH_TRANS_N",
+			
+        
+		-- 	m_NKMDungeonEventTiming = 
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE 	= "NDET_DECK",
+		-- 		m_fEventTimeStart   		= 181,
+		-- 		m_fEventTimeEnd				= 999,
+		-- 		m_fEventPos 				= 0.15,
+    	-- 	},
+		-- },
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+		{--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 6,
+				m_fEventPos              = 0.55,
+			},
+			m_AddStatData =
+			{
+				m_StatValue =
+				{
+					NST_ATK                 = 7000,
+					NST_HP                  = 60000,
+				},
+			},
+		},
+		{--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 30,
+				m_fEventPos              = 0.4,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 1,
+			},
+			m_AddStatData =
+			{
+				m_StatValue =
+				{
+					NST_ATK                 = 7000,
+					NST_HP                  = 40000,
+				},
+			},
+		},
+        {--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 45,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 2,
+			},
+			m_AddStatData =
+			{
+				m_StatValue =
+				{
+					NST_HP                  = 40000,
+				},
+			},
+		},
+		{--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 60,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 3,
+			},
+			m_AddStatData =
+			{
+				m_StatValue =
+				{
+					NST_HP                  = 40000,
+				},
+			},
+		},
+		{--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 90,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 4,
+			},
+		},
+		{--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 110,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 5,
+			},
+		},
+		{--*도플갱어 제이크
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_JAKE",
+			m_EventRespawnUnitTag     = "BOSS",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 130,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "BOSS",
+				m_EventDieUnitTagCount   = 6,
+			},
+		},
+		{--*도플갱어 마리아
+			m_UnitStrID	              = "NKM_MOB_ELITE_RELIC_DELTA_MARIA",
+			m_EventRespawnUnitTag     = "MARIA",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 8,
+				m_fEventPos 	        	= 0,
+			},
+		},	
+		{--*도플갱어 마리아
+			m_UnitStrID	              = "NKM_MOB_ELITE_RELIC_DELTA_MARIA",
+			m_EventRespawnUnitTag     = "MARIA",	
+		
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 91,
+				m_fEventPos 	        	= 0,
+
+				m_EventDieUnitTag           = "MARIA",
+				m_EventDieUnitTagCount      = 1,
+			},
+		},	
+		{--마리아 하운드
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+			m_EventRespawnUnitTag     = "TANK",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_ONE_TIME",		
+				m_fEventTimeStart           = 4,
+				m_fEventPos 	        	= 0.42,
+			},
+		},
+		{--마리아 하운드
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+			m_EventRespawnUnitTag     = "TANK",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 30,
+				m_fEventPos              = 0.42,
+
+				m_EventDieUnitTag        = "TANK",
+				m_EventDieUnitTagCount   = 1,
+			},
+		},
+		{--마리아 하운드
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+			m_EventRespawnUnitTag     = "TANK",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 45,
+				m_fEventPos              = 0.21,
+
+				m_EventDieUnitTag        = "TANK",
+				m_EventDieUnitTagCount   = 2,
+			},
+		},
+		{--마리아 하운드
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+			m_EventRespawnUnitTag     = "TANK",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 60,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "TANK",
+				m_EventDieUnitTagCount   = 3,
+			},
+		},
+		{--마리아 하운드
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+			m_EventRespawnUnitTag     = "TANK",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 90,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "TANK",
+				m_EventDieUnitTagCount   = 4,
+			},
+		},
+		{--마리아 하운드
+			m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+			m_EventRespawnUnitTag     = "TANK",
+
+			m_NKMDungeonEventTiming =
+			{
+				m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+				m_fEventTimeStart        = 110,
+				m_fEventPos              = 0.15,
+
+				m_EventDieUnitTag        = "TANK",
+				m_EventDieUnitTagCount   = 5,
+			},
+		},
+		-- {--마리아 하운드
+		-- 	m_UnitStrID               = "NKM_MOB_ELITE_RELIC_DELTA_MARIA_TANK",
+		-- 	m_EventRespawnUnitTag     = "TANK",
+
+		-- 	m_NKMDungeonEventTiming =
+		-- 	{
+		-- 		m_NKM_DUNGEON_EVENT_TYPE = "NDET_ONE_TIME",
+		-- 		m_fEventTimeStart        = 130,
+		-- 		m_fEventPos              = 0.15,
+
+		-- 		m_EventDieUnitTag        = "TANK",
+		-- 		m_EventDieUnitTagCount   = 6,
+		-- 	},
+		-- },
+		{--침식된 피스 키퍼
+			m_UnitStrID               = "NKM_MOB_NORMAL_RELIC_STATE_AIRCRAFT_TRANS",
+
+			m_NKMDungeonEventTiming = 
+			{
+				m_NKM_DUNGEON_EVENT_TYPE    = "NDET_DIE_AFTER_TIME",		
+				m_fEventTimeStart           = 4,
+				m_fEventTimeGap	        	= 9,
+				m_fEventPos 	        	= 0.15,
+			},
+			m_AddStatData =
+			{
+				m_StatValue =
+				{
+					NST_ATK                 = 13000,
+					NST_HP                  = 7000,
+					NST_DEF                 = 400,
+					NST_CRITICAL            = 0,
+					NST_HIT                 = 500,
+					NST_EVADE               = 0,
+				},
+			},
+		},
+	},
+}

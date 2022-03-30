@@ -1,0 +1,34 @@
+﻿-- Exported from WORKSPACE1.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenID = 11830002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_GUILTY_S_MAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenID = 11830002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_GUILTY_S_MAY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_TOUCH",
+    m_CharStrID = "MAY_COLLABO_NULL_NULL",
+    m_Pos = "C",
+    m_bFaceLoop = false,
+    m_Talk_KOREA = "나만의 매력이 통한 걸까? 얼마나 매력이 넘치는지 감상 들려 주기야?",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenID = 11830002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_GUILTY_S_MAY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

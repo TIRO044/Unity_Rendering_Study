@@ -1,0 +1,37 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11792102,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_HORIZON_C_STAND_BUNNY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_HORIZON_C_STAND_BUNNY@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11792102,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_HORIZON_C_STAND_BUNNY",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_PRIDE",
+    m_CharStrID = "RITA_HORIZON_NULL_BUNNY",
+    m_Pos = "C",
+    m_Talk_KOREA = "어떤 약속은 다른 모든 약속들보다 중요하지. 내 침묵은 너의 안전을 위해 쓰일 거다. 물론, 앞으로 너한테서 받아야 될 이자는 다른 얘기지만.",
+    m_fTalkTime = 0.03,
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11792102,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_HORIZON_C_STAND_BUNNY",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,45 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11670002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BARCODE_C_CHILDREN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_BARCODE_C_CHILDREN@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11670002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BARCODE_C_CHILDREN",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_Face = "UNIT_PRIDE",
+    m_CharStrID = "CHILDREN_BARCODE_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "이제 우리 오빠랑 앞으로 계~속 같이 있을 수 있는 거지?  응. 앞으로도 쭉 함께야. 그렇지, 오빠?",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "これでぼくたち、これからもずっとお兄ちゃんと一緒にいられるよね？\nうん。ずっと一緒だよ！　ね、お兄ちゃん？",
+    m_Talk_ENG = "Brother, we can now stay with you forever, can't we?\nYes. We'll never be apart, right?",
+    m_Talk_TWN = "那麼我們以後也一直～～～一直跟哥哥在一起對吧？嗯，以後永遠都在一起，對吧，哥哥？",
+    m_Talk_THA = "พี่คะ ตอนนี้เราก็อยู่กับพี่ตลอดไปได้แล้วใช่มั้ย?\nใช่ เราจะไม่ต้องจากกันอีกแล้วใช่มั้ย?",
+    m_Talk_VTN = "Anh trai, giờ chúng em có thể ở bên anh mãi mãi, được không?\nỪ. Chúng ta sẽ không bao giờ xa nhau nhé?",
+    m_Talk_SCN = "哥哥以后也会一直～和我们一起，对不对？嗯，以后也要一直在一起哦，哥哥？",
+    m_Talk_DEU = "Bruder, wir können jetzt für immer bei dir bleiben, oder?\nJa. Wir werden uns nie mehr trennen, richtig?",
+    m_Talk_FRA = "Grâce à ça, on va pouvoir rester avec toi pour toujours, grand frère ?\nOn sera jamais séparés, pas vrai ?",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11670002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_BARCODE_C_CHILDREN",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10140002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_TANK",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_SL_TANK@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10140002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_TANK",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "HOUND_SL_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "ST-DBT095 하운드는 요인을 영구 소유권자로 등록한다. 추후 공격적인 운용을 요구하겠다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "ST-DBT095 ハウンドは要人を永久所有権者に登録する。今後、アグレッシブな運用を要求する。",
+    m_Talk_ENG = "ST-DBT095 Hound is now registering you as its permanent owner. Feel free to use it whenever you want.",
+    m_Talk_TWN = "ST-DBT095 獵犬，已將您登錄為永久擁有者，並要求今後能有攻擊性的運用。",
+    m_Talk_THA = "ST-DBT095 ฮาวนด์ ลงทะเบียนคุณในฐานะเจ้าของถาวรแล้ว โปรดใช้งานได้ตามต้องการ",
+    m_Talk_VTN = "Chó Săn ST-DBT095 hiện đang đăng ký ngài là chủ sở hữu vĩnh viễn. Hãy thoải mái sử dụng tôi bất cứ khi nào ngài muốn.",
+    m_Talk_SCN = "ST-DBT095 猎犬将要员登记为永久拥有者，请求进行之后的作战行动。",
+    m_Talk_DEU = "ST-DBT095 Hound registriert Sie jetzt als seinen langfristigen Besitzer. Sie können ihn benutzen, wann immer Sie wollen.",
+    m_Talk_FRA = "Vous êtes désormais enregistré comme propriétaire permanent du Hound ST-DBT095. Vous être libre de l'utiliser quand vous le souhaitez.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10140002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_SL_TANK",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

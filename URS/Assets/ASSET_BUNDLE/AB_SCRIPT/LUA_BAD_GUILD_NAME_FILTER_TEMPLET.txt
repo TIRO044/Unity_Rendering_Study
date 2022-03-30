@@ -1,0 +1,13 @@
+﻿-- Exported from BADWORDS_FILTER_TEMPLET.xlsx
+
+BAD_GUILD_NAME_FILTER_TEMPLET =
+{
+  {
+    IDX = 1,
+    WORD = "카운터사이드",
+  },
+  {
+    IDX = 2,
+    WORD = "스튜디오비사이드",
+  },
+}

@@ -1,0 +1,4217 @@
+﻿
+m_listNKMMapTemplet =
+{
+	{	-- 프랙티스 맵(임시로 이면세계랑 동일하게 해놓음)
+		m_MapID = 1000,
+		m_MapStrID = "AB_MAP_GAME_PRACTICE",
+		m_MapAssetName	= {"AB_MAP_GAME_SHIP_CORRIDOR","AB_MAP_GAME_SHIP_CORRIDOR"},
+    
+		m_MusicName = "BATTLE_NORMAL_02",
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 800,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 800,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.02,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+			{
+				m_LayerName   = "6_Close_Close",
+				m_fMoveFactor = -0.2,
+			},
+		
+		},
+	},
+	{
+		m_MapID = 1001,
+		m_MapStrID = "AB_MAP_GAME_GANGNAM_DAY",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2400,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listBloomPoint =
+		{
+			{
+				m_LensFlareName         = { "AB_PREFAB", "NKM_LENS_FLARE", },
+
+				m_fBloomPointX          = 814,
+				m_fBloomPointY          = 106,
+				m_fBloomAddIntensity    = 0.6,
+				m_fBloomAddThreshHold   = -0.5,
+				m_fBloomDistance        = 500,
+			},
+		},
+
+		--맵 레이어 효과
+		--m_listMapLayer =
+		--{
+			--{
+			--	m_LayerName   = "LAYER2",
+			--	m_fMoveFactor = -0.02,
+			--},
+		--},
+	},
+	{
+		m_MapID = 1002,
+		m_MapStrID = "AB_MAP_GAME_GANGNAM_NIGHT",
+		m_bUsePVP = true,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+	},
+	{
+		m_MapID = 1003,
+		m_MapStrID = "AB_MAP_GAME_GANGNAM_SUNSET",
+		m_bUsePVP = true,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		
+	},
+	{
+		m_MapID = 1004,
+		m_MapStrID = "AB_MAP_GAME_MYEONGDONG_DAY",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		
+	},
+	{
+		m_MapID = 1005,
+		m_MapStrID = "AB_MAP_GAME_MYEONGDONG_NIGHT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+	},
+	{
+		m_MapID = 1006,
+		m_MapStrID = "AB_MAP_GAME_MYEONGDONG_DARK",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		
+	},
+	{
+		m_MapID = 1007,
+		m_MapStrID = "AB_MAP_GAME_BANPO_NORMAL",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+	},
+	{
+		m_MapID = 1008,
+		m_MapStrID = "AB_MAP_GAME_BANPO_TWILIGHT",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+	},
+	{
+		m_MapID = 1009,
+		m_MapStrID = "AB_MAP_GAME_BANPO_DAYTIME",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		
+	},
+	{
+	--이면세계
+		m_MapID = 1010,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_RUIN",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_02", "BATTLE_NORMAL_02", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "1_CLOUD",
+				m_fMoveFactor = 0.3,
+			},
+			{
+				m_LayerName   = "2_FAR",
+				m_fMoveFactor = 0.15,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			
+		},
+	},
+	{
+	--이면세계 눈
+		m_MapID = 1011,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_RUIN_FROST",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_02", "BATTLE_NORMAL_02", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+	--이면세계 녹색
+		m_MapID = 1012,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_RUIN_FLOAT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_02", "BATTLE_NORMAL_02", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_SKY",
+				m_fMoveFactor = 0.3,
+			},			
+			{
+				m_LayerName   = "1_FAR",
+				m_fMoveFactor = 0.2,
+			},	
+			
+		},
+	},
+	{
+	--신도시 개발지역
+		m_MapID = 1013,
+		m_MapStrID = "AB_MAP_GAME_NEWTOWN_DAY",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+		--신도시 개발지역 낮2
+		m_MapID = 1014,
+		m_MapStrID = "AB_MAP_GAME_NEWTOWN_DAY2",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+		--신도시 개발지역 밤
+		m_MapID = 1015,
+		m_MapStrID = "AB_MAP_GAME_NEWTOWN_NIGHT",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	-- {
+	-- 	--신도시 개발지역 공격특훈1
+	-- 	m_MapID = 1016,
+	-- 	m_MapStrID = "AB_MAP_GAME_NEWTOWN_DAMAGE1",
+    
+	-- 	--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+	-- 	m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+	-- 	m_fInitPosX = -1000,
+    
+	-- 	m_fCamMinX = -400,
+	-- 	m_fCamMaxX = 1250,
+    
+	-- 	m_fCamSize = 500,
+	-- 	m_fCamSizeMax = 512,
+
+	-- 	m_fMinX = -400,
+	-- 	m_fMaxX = 1250,
+    
+	-- 	m_fMinZ = -270,
+	-- 	m_fMaxZ = -110,
+	-- },
+	-- {
+	-- 	--신도시 개발지역 공격특훈2
+	-- 	m_MapID = 1017,
+	-- 	m_MapStrID = "AB_MAP_GAME_NEWTOWN_DAMAGE2",
+    
+	-- 	--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+	-- 	m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+	-- 	m_fInitPosX = -1000,
+    
+	-- 	m_fCamMinX = -400,
+	-- 	m_fCamMaxX = 1250,
+    
+	-- 	m_fCamSize = 500,
+	-- 	m_fCamSizeMax = 512,
+
+	-- 	m_fMinX = -400,
+	-- 	m_fMaxX = 1250,
+    
+	-- 	m_fMinZ = -270,
+	-- 	m_fMaxZ = -110,
+	-- },
+	{
+		--고속도로
+		m_MapID = 1018,
+		m_MapStrID = "AB_MAP_GAME_HIGHWAY_DAY",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.15,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{ 
+		--고속도로 베리1 황혼
+		m_MapID = 1019,
+		m_MapStrID = "AB_MAP_GAME_HIGHWAY_SUNSET",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.15,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{ 
+		--고속도로 베리2 밤
+		m_MapID = 1020,
+		m_MapStrID = "AB_MAP_GAME_HIGHWAY_NIGHT",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.15,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--동대문 사거리
+		m_MapID = 1021,
+		m_MapStrID = "AB_MAP_GAME_DONGDEAMOONST_DAY",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+		--동대문 사거리 레인
+		m_MapID = 1022,
+		m_MapStrID = "AB_MAP_GAME_DONGDEAMOONST_RAIN",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+		--동대문 사거리 다크
+		m_MapID = 1023,
+		m_MapStrID = "AB_MAP_GAME_DONGDEAMOONST_DARK",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+		--튜토리얼 맵
+		m_MapID = 1024,
+		m_MapStrID = "AB_MAP_GAME_TUTORIAL",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2100,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -300,
+		m_fMaxX = 2000,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		--맵 레이어 효과
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.11,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "4_Middle",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "4_Middle_2",
+				m_fMoveFactor = 0.05,
+			},
+		},
+	},
+	{
+		--튜토리얼 맵_인트로
+		m_MapID = 1025,
+		m_MapStrID = "AB_MAP_GAME_TUTORIAL_INTRO",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -300,
+		m_fCamMaxX = 2100,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -200,
+		m_fMaxX = 1950,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "1_CLOUD",
+				m_fMoveFactor = 0.4,
+			},
+			{
+				m_LayerName   = "4_FAR",
+				m_fMoveFactor = 0.3,
+			},
+			{
+				m_LayerName   = "5_MIDDLE",
+				m_fMoveFactor = 0.2,
+			},	
+			{
+				m_LayerName   = "8_CLOSE",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--튜토리얼 맵_인트로 재색 현재
+		m_MapID = 1026,
+		m_MapStrID = "AB_MAP_GAME_TUTORIAL_INTRO_PRESENT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "1_CLOUD",
+				m_fMoveFactor = 0.4,
+			},
+			{
+				m_LayerName   = "4_FAR",
+				m_fMoveFactor = 0.3,
+			},
+			{
+				m_LayerName   = "5_MIDDLE",
+				m_fMoveFactor = 0.2,
+			},	
+			{
+				m_LayerName   = "8_CLOSE",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--시가지
+		m_MapID = 1027,
+		m_MapStrID = "AB_MAP_GAME_STREET_OPS",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = true,
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.03,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+
+	},
+	{
+		--시가지(밤)
+		m_MapID = 1028,
+		m_MapStrID = "AB_MAP_GAME_STREET_OPS_NIGHT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.03,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},			
+	},
+	{
+		--함내복도
+		m_MapID = 1029,
+		m_MapStrID = "AB_MAP_GAME_SHIP_CORRIDOR",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.02,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+			{
+				m_LayerName   = "6_Close_Close",
+				m_fMoveFactor = -0.2,
+			},
+		
+		},
+	},
+	{
+		--함내복도 침식
+		m_MapID = 1030,
+		m_MapStrID = "AB_MAP_GAME_SHIP_CORRIDOR_CORRUPT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.02,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+			{
+				m_LayerName   = "6_Close_Close",
+				m_fMoveFactor = -0.2,
+			},
+		
+		},
+	},
+	{
+		--부두
+		m_MapID = 1031,
+		m_MapStrID = "AB_MAP_GAME_WHARF_DAY",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+    
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.09,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--부두 베리 비오는 날
+		m_MapID = 1032,
+		m_MapStrID = "AB_MAP_GAME_WHARF_RAINY",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+    
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.09,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--부두 베리 밤 파괴
+		m_MapID = 1033,
+		m_MapStrID = "AB_MAP_GAME_WHARF_NIGHT_DESTORYED",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+    
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.09,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	-- {
+	-- 	--신도시 개발지역 모의작전1 (웨이브)
+	-- 	m_MapID = 1034,
+	-- 	m_MapStrID = "AB_MAP_GAME_NEWTOWN_WAVE1",
+    
+	-- 	--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+	-- 	m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+	-- 	m_fInitPosX = -1000,
+    
+	-- 	m_fCamMinX = -400,
+	-- 	m_fCamMaxX = 2000,
+    
+	-- 	m_fCamSize = 500,
+	-- 	m_fCamSizeMax = 512,
+
+	-- 	m_fMinX = -400,
+	-- 	m_fMaxX = 2000,
+    
+	-- 	m_fMinZ = -270,
+	-- 	m_fMaxZ = -110,
+	-- },
+	-- {
+	-- 	--신도시 개발지역 모의작전2 (웨이브)
+	-- 	m_MapID = 1035,
+	-- 	m_MapStrID = "AB_MAP_GAME_NEWTOWN_WAVE2",
+    
+	-- 	--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+	-- 	m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+	-- 	m_fInitPosX = -1000,
+    
+	-- 	m_fCamMinX = -400,
+	-- 	m_fCamMaxX = 2000,
+    
+	-- 	m_fCamSize = 500,
+	-- 	m_fCamSizeMax = 512,
+
+	-- 	m_fMinX = -400,
+	-- 	m_fMaxX = 2000,
+    
+	-- 	m_fMinZ = -270,
+	-- 	m_fMaxZ = -110,
+	-- },
+	{
+		--이면세계 유적지
+		m_MapID = 1036,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_ANCIENT",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.04,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.2,
+			},
+		},
+	},
+	{
+		--이면세계 유적지 베리 부유
+		m_MapID = 1037,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_ANCIENT_RISE",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.04,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.2,
+			},
+		},
+	},
+	{
+		--이면세계 평야
+		m_MapID = 1038,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_PLAIN",
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.08,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.04,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--이면세계 평야 베리 중력
+		m_MapID = 1039,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_PLAIN_GRAVITY",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = false,
+    
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{		
+			{
+				m_LayerName   = "1_Sky",
+				m_fMoveFactor = 0.16,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.08,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--고지대
+		m_MapID = 1040,
+		m_MapStrID = "AB_MAP_GAME_SKYWAY_NORMAL",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = true,
+    
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "3_Middle_3",
+				m_fMoveFactor = 0.04,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--고지대 베리 밤
+		m_MapID = 1041,
+		m_MapStrID = "AB_MAP_GAME_SKYWAY_NIGHT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = true,
+    
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.09,
+			},					
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--고지대 베리 비
+		m_MapID = 1042,
+		m_MapStrID = "AB_MAP_GAME_SKYWAY_NIGHT_RAIN",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = true,
+    
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.032,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.026,
+			},	
+			{
+				m_LayerName   = "3_Middle_3",
+				m_fMoveFactor = 0.02,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--스페이스
+		m_MapID = 1043,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_SPACE_TUTORIAL",
+		m_MapAssetName	= {"AB_MAP_GAME_COUNTERSIDE_SPACE","AB_MAP_GAME_COUNTERSIDE_SPACE"},
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -300,
+		m_fCamMaxX = 2300,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -200,
+		m_fMaxX = 1950,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+
+	},	
+	{
+		--레이드
+		m_MapID = 1044,
+		m_MapStrID = "AB_MAP_GAME_RAID",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -200,
+		m_fCamMaxX = 2700,
+
+		m_fCamMinY = 0,
+		m_fCamMaxY = 800,
+    
+		m_fCamSize = 750,
+		m_fCamSizeMax = 3000,
+
+		m_fMinX = -100, 
+		m_fMaxX = 2300,
+    
+		m_fMinZ = -450,
+		m_fMaxZ = -150,
+
+
+
+		m_listMapLayer =
+		{	
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.032,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--PVP맵
+		m_MapID = 1045,
+		m_MapStrID = "AB_MAP_GAME_HELIPORT_NIGHT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = true,
+    	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+
+
+		m_listMapLayer =
+		{		
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.15,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.2,
+			},
+		},
+	},
+	
+	{
+		--함내복도_모의작전용 (AB_MAP_GAME_NEWTOWN_DAMAGE1,2 의 세부설정 값을 적용했습니다.)
+		m_MapID = 1046,
+		m_MapStrID = "AB_MAP_GAME_SHIP_CORRIDOR_DAILY",
+		m_MapAssetName	= {"AB_MAP_GAME_SHIP_CORRIDOR","AB_MAP_GAME_SHIP_CORRIDOR"},
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 1250,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 1250,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.02,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+			{
+				m_LayerName   = "6_Close_Close",
+				m_fMoveFactor = -0.2,
+			},
+		},
+	},
+
+	{
+		-- 신규 모의작전 리소스 (그린)
+		m_MapID = 1047,
+		m_MapStrID = "AB_MAP_GAME_DUNGEON_DAILY_GREEN",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -50,
+		m_fCamMaxX = 1600,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -50,
+		m_fMaxX = 1600,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+
+	{
+		-- 신규 모의작전 리소스 (블루)
+		m_MapID = 1048,
+		m_MapStrID = "AB_MAP_GAME_DUNGEON_DAILY_BLUE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -50,
+		m_fCamMaxX = 1600,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -50,
+		m_fMaxX = 1600,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+
+	{
+		-- 신규 모의작전 리소스 (퍼플)
+		m_MapID = 1049,
+		m_MapStrID = "AB_MAP_GAME_DUNGEON_DAILY_PUPPLE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -50,
+		m_fCamMaxX = 1600,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -50,
+		m_fMaxX = 1600,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+
+	{
+		-- 신규 모의작전 리소스 (레드)
+		m_MapID = 1050,
+		m_MapStrID = "AB_MAP_GAME_DUNGEON_DAILY_RED",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -50,
+		m_fCamMaxX = 1600,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -50,
+		m_fMaxX = 1600,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+	-- 학교맵
+		m_MapID = 1051,
+		m_MapStrID = "AB_MAP_GAME_SCHOOL_ABANDONED",
+		m_bUsePVP = true,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -320,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.09,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.02,
+			},			
+		},
+
+	},
+	{
+	--이면세계 공용 보스
+		m_MapID = 1052,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_COLLAPSE",
+		m_bUsePVP = true,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+	},
+	{
+	-- 파괴된 놀이공원
+		m_MapID = 1053,
+		m_MapStrID = "AB_MAP_GAME_PARK_DESTROYED",
+		m_bUsePVP = true,
+	
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+	
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+	
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+	
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{				
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.07,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.02,
+			},			
+		},
+	},
+	{
+		--스페이스
+		m_MapID = 1054,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_SPACE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+	
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+	
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+	
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+
+	{
+		--심상세계, 튜토리얼 인트로 와 같지만 긴 버전
+		m_MapID = 1055,
+		m_MapStrID = "AB_MAP_GAME_IMAGE_WORLD",
+		m_MapAssetName	= {"AB_MAP_GAME_TUTORIAL_INTRO","AB_MAP_GAME_TUTORIAL_INTRO"},
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "1_CLOUD",
+				m_fMoveFactor = 0.4,
+			},
+			{
+				m_LayerName   = "4_FAR",
+				m_fMoveFactor = 0.3,
+			},
+			{
+				m_LayerName   = "5_MIDDLE",
+				m_fMoveFactor = 0.2,
+			},	
+			{
+				m_LayerName   = "8_CLOSE",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--이벤트 던전 발렌타인 2020 도시
+		m_MapID = 1056,
+		m_MapStrID = "AB_MAP_GAME_CITY_STREET_FESTIVAL",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--이벤트 던전 발렌타인 이면세계 숲
+		m_MapID = 1057,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_FOREST",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+		
+	},
+	{
+		--이벤트 던전 신학기 봄 거리
+		m_MapID = 1058,
+		m_MapStrID = "AB_MAP_GAME_CITY_STREET_SPRING",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+	},
+	{
+		--개활지
+		m_MapID = 1059,
+		m_MapStrID = "AB_MAP_GAME_COUNTRY_ROAD_NORMAL",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+	},
+	{
+		--재난지역
+		m_MapID = 1060,
+		m_MapStrID = "AB_MAP_GAME_DISASTER_NORMAL",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--재난지역, 침식 , 제4종침식체 보임
+		m_MapID = 1061,
+		m_MapStrID = "AB_MAP_GAME_DISASTER_CORRUPT1",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+		{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--재난지역, 침식 , 제4종침식체 안보임
+		m_MapID = 1062,
+		m_MapStrID = "AB_MAP_GAME_DISASTER_CORRUPT2",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--양자터널 차원간 공간
+		m_MapID = 1063,
+		m_MapStrID = "AB_MAP_GAME_MIND",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--시가지(밤) / 튜토리얼용 짧은 버전
+		m_MapID = 1064,
+		m_MapStrID = "AB_MAP_GAME_STREET_OPS_NIGHT_SHORT",
+		m_MapAssetName	= {"AB_MAP_GAME_STREET_OPS_NIGHT","AB_MAP_GAME_STREET_OPS_NIGHT"},
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = 0,
+		m_fCamMaxX = 1100,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -200,
+		m_fMaxX = 1300,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.03,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},			
+	},
+	
+	{
+		--신도시 개발지역 밤 튜토리얼용 짧은버전
+		m_MapID = 1065,
+		m_MapStrID = "AB_MAP_GAME_NEWTOWN_NIGHT_SHORT",
+		m_MapAssetName	= {"AB_MAP_GAME_NEWTOWN_NIGHT","AB_MAP_GAME_NEWTOWN_NIGHT"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = 0,
+		m_fCamMaxX = 1850,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 1650,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},	
+	{
+		--신도시 개발지역 밤 1-1-4용 미들버전
+		m_MapID = 1066,
+		m_MapStrID = "AB_MAP_GAME_NEWTOWN_NIGHT_MIDDLE",
+		m_MapAssetName	= {"AB_MAP_GAME_NEWTOWN_NIGHT","AB_MAP_GAME_NEWTOWN_NIGHT"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -200,
+		m_fCamMaxX = 2200,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2200,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+	},
+	{
+		--맵 배경 수영장
+		m_MapID = 1067,
+		m_MapStrID = "AB_MAP_GAME_SUMMER_HOTEL",
+		m_MapAssetName	= {"AB_MAP_GAME_SUMMER_HOTEL","AB_MAP_GAME_SUMMER_HOTEL"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--이벤트 던전 발렌타인 이면세계 숲
+		m_MapID = 1068,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_FOREST_NIGHT",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+		
+	},
+	{
+		--고지대 베리 밤베리 (탱크 제거)
+		m_MapID = 1069,
+		m_MapStrID = "AB_MAP_GAME_SKYWAY_NIGHT_EX",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+		m_bUsePVP = true,
+    
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.12,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.09,
+			},					
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--맵 배경 수영장
+		m_MapID = 1070,
+		m_MapStrID = "AB_MAP_GAME_SUMMER_HOTEL_NIGHT",
+		m_MapAssetName	= {"AB_MAP_GAME_SUMMER_HOTEL_NIGHT","AB_MAP_GAME_SUMMER_HOTEL_NIGHT"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.05,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	
+
+	{
+		--맵 배경 해변
+		m_MapID = 1071,
+		m_MapStrID = "AB_MAP_GAME_SUMMER_BEACH",
+		m_MapAssetName	= {"AB_MAP_GAME_SUMMER_BEACH","AB_MAP_GAME_SUMMER_BEACH"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--맵 배경 학교 수영장
+		m_MapID = 1072,
+		m_MapStrID = "AB_MAP_GAME_SUMMER_SWIMPOOL",
+		m_MapAssetName	= {"AB_MAP_GAME_SUMMER_SWIMPOOL","AB_MAP_GAME_SUMMER_SWIMPOOL"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.09,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.02,
+			},
+		},
+	},
+	{
+		--맵 배경 해변 밤
+		m_MapID = 1073,
+		m_MapStrID = "AB_MAP_GAME_SUMMER_BEACH_NIGHT",
+		m_MapAssetName	= {"AB_MAP_GAME_SUMMER_BEACH_NIGHT","AB_MAP_GAME_SUMMER_BEACH_NIGHT"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+    },
+    
+    {
+		--튜토리얼 마지막 스테이지 와 같지만 긴 버전
+		m_MapID = 1074,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_BEAM",
+		m_MapAssetName	= {"AB_MAP_GAME_TUTORIAL","AB_MAP_GAME_TUTORIAL"},
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.11,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "4_Middle",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "4_Middle_2",
+				m_fMoveFactor = 0.05,
+			},
+		},
+	},
+	{
+		--함내복도 낡은 버전
+		m_MapID = 1075,
+		m_MapStrID = "AB_MAP_GAME_SHIP_CORRIDOR_RUIN",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_MapAssetName	= {"AB_MAP_GAME_SHIP_CORRIDOR_RUIN","AB_MAP_GAME_SHIP_CORRIDOR_RUIN"},
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.02,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+			{
+				m_LayerName   = "6_Close_Close",
+				m_fMoveFactor = -0.2,
+			},
+		
+		},
+	},
+	{
+		--함선 무덤
+		m_MapID = 1076,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_GRAVE",
+		m_MapAssetName	= {"AB_MAP_GAME_COUNTERSIDE_GRAVE","AB_MAP_GAME_COUNTERSIDE_GRAVE"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+    },
+	{
+		--이면세계 유적지 긴버전
+		m_MapID = 1077,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_ANCIENT_LONG",
+		m_MapAssetName	= {"AB_MAP_GAME_COUNTERSIDE_ANCIENT_LONG","AB_MAP_GAME_COUNTERSIDE_ANCIENT_LONG"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 5000,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 5000,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.1,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.08,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.04,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.2,
+			},
+		},
+	},
+	{
+		--빌딩 내부
+		m_MapID = 1078,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_BUILDING",
+		m_MapAssetName	= {"AB_MAP_GAME_COUNTERSIDE_BUILDING","AB_MAP_GAME_COUNTERSIDE_BUILDING"},
+		m_bUsePVP = false,
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_NORMAL_01", "BATTLE_NORMAL_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			
+		},
+    },
+	{
+		--레이드
+		m_MapID = 1079,
+		m_MapStrID = "AB_MAP_GAME_RAID_NIGHTMARE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -200,
+		m_fCamMaxX = 2700,
+
+		m_fCamMinY = 0,
+		m_fCamMaxY = 800,
+    
+		m_fCamSize = 750,
+		m_fCamSizeMax = 3000,
+
+		m_fMinX = -100, 
+		m_fMaxX = 2300,
+    
+		m_fMinZ = -450,
+		m_fMaxZ = -150,
+
+
+
+		m_listMapLayer =
+		{	
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.032,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		
+		m_MapID = 1080,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_WITCH",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{		
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.03,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.02,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.02,
+			},
+			
+		},
+	},
+	{
+		
+		m_MapID = 1081,
+		m_MapStrID = "AB_MAP_GAME_CASTLE_CORRIDOR",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{			
+			
+		},
+	},
+	{
+		--길드 던전 보스
+		m_MapID = 1082,
+		m_MapStrID = "AB_MAP_GAME_GD_BOSS_DEMO",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -100,
+		m_fCamMaxX = 3300,
+
+		m_fCamMinY = 0,
+		m_fCamMaxY = 800,
+    
+		m_fCamSize = 750,
+		m_fCamSizeMax = 3000,
+
+		m_fMinX = -100,
+		m_fMaxX = 4800,
+    
+		m_fMinZ = -450,
+		m_fMaxZ = -150,
+			   
+		
+			   
+		m_listMapLayer =
+		{	
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.032,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+	{
+		--크리스마스 배경
+		m_MapID = 1083,
+		m_MapStrID = "AB_MAP_GAME_X_MAS_HOUSE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.03,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+
+	},
+	{
+		--크리스마스 배경 노 데코
+		m_MapID = 1084,
+		m_MapStrID = "AB_MAP_GAME_X_MAS_HOUSE_NODECO",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.03,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+
+	},
+	{
+		--아카데미
+		m_MapID = 1085,
+		m_MapStrID = "AB_MAP_GAME_ACADEMY",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+
+	},
+	{
+		--군사기지
+		m_MapID = 1086,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_BASE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+	},
+	{
+		--군사기지 밤
+		m_MapID = 1087,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_BASE_NIGHT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+	},
+	{
+		--루프탑
+		m_MapID = 1088,
+		m_MapStrID = "AB_MAP_GAME_ROOFTOP",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.02,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = -0.01,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.1,
+			},
+		},
+	},
+	{
+		--숲 데이
+		m_MapID = 1089,
+		m_MapStrID = "AB_MAP_GAME_FOREST_DAY",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.02,
+			},				
+			
+		},
+	},
+	{
+		--스케빈져 기지
+		m_MapID = 1090,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_AURORA",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.02,
+			},				
+			
+		},
+	},
+	{
+		--스페이스 오로라
+		m_MapID = 1091,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_SPACE_AURORA",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			
+		},
+	},
+	{
+		--빌리지
+		m_MapID = 1092,
+		m_MapStrID = "AB_MAP_GAME_SUMMER_VILLAGE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = -0.08,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.02,
+			},	
+			
+		},
+	},
+	{
+		--성 외각1
+		m_MapID = 1093,
+		m_MapStrID = "AB_MAP_GAME_CASTLE_CITY1",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+		
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.02,
+			},
+			
+		},
+	},
+	{
+		--성 외각2_폭격
+		m_MapID = 1094,
+		m_MapStrID = "AB_MAP_GAME_CASTLE_CITY2",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+		
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = -0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = -0.03,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.02,
+			},
+			
+		},
+	},
+	{
+		--GAME LIFT
+		m_MapID = 1095,
+		m_MapStrID = "AB_MAP_GAME_LIFT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{
+		
+			
+		},
+	},
+	{
+		--숲 밤
+		m_MapID = 1096,
+		m_MapStrID = "AB_MAP_GAME_FOREST_NIGHT",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+	},
+	{
+		--갈대밭
+		m_MapID = 1097,
+		m_MapStrID = "AB_MAP_GAME_REEDS_FIELD",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_PVPMusicName = "BATTLE_PVP_01",
+
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+    
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+    
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+
+		m_listMapLayer =
+		{	
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = -0.04,
+			},
+			
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0.02,
+			},
+			
+		},
+		
+	},
+	{
+		--렐릭던전1
+		m_MapID = 1098,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_FOREST_R1",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+		
+	},
+	{
+		--렐릭던전2
+		m_MapID = 1099,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_FOREST_R2",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+		
+	},
+	{
+		--렐릭던전3
+		m_MapID = 1100,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_FOREST_R3",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+		
+	},
+	{
+		--렐릭던전4
+		m_MapID = 1101,
+		m_MapStrID = "AB_MAP_GAME_COUNTERSIDE_FOREST_R4",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.18,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.14,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.1,
+			},	
+			{
+				m_LayerName   = "3_Middle_2",
+				m_fMoveFactor = 0.06,
+			},	
+
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = 0,
+			},
+		},
+		
+	},
+	{
+		--렐릭던전 양자터널 차원간 공간 베리
+		m_MapID = 1102,
+		m_MapStrID = "AB_MAP_GAME_MIND_GLITCH",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.07,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.06,
+			},	
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--보이드
+		m_MapID = 1103,
+		m_MapStrID = "AB_MAP_GAME_VOID_FIELD",
+
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_01", "BATTLE_BOSS_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1000,
+    
+		m_fCamMinX = -400,
+		m_fCamMaxX = 2500,
+		
+		m_fCamSize = 500,
+		m_fCamSizeMax = 512,
+		
+		m_fMinX = -400,
+		m_fMaxX = 2500,
+		
+		m_fMinZ = -270,
+		m_fMaxZ = -110,
+		
+		m_listMapLayer =
+		{			
+			
+		},
+	},	
+	{
+		--레이드2
+		m_MapID = 1104,
+		m_MapStrID = "AB_MAP_GAME_RAID2",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1900, --X축 카메라 범위
+    
+		m_fCamMinX = -200,
+		m_fCamMaxX = 2700,
+
+		m_fCamMinY = 0,
+		m_fCamMaxY = 800,
+    
+		m_fCamSize = 750,
+		m_fCamSizeMax = 3000,
+
+		m_fMinX = -100,
+		m_fMaxX = 2300,
+    
+		m_fMinZ = -400,
+		m_fMaxZ = -200,
+
+
+
+		m_listMapLayer =
+		{	
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.032,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},	
+	{
+		--레이드2베리
+		m_MapID = 1105,
+		m_MapStrID = "AB_MAP_GAME_RAID2_NIGHTMARE",
+    
+		--m_MusicName = { "AB_MUSIC/BATTLE_BOSS_EPIC_01", "BATTLE_BOSS_EPIC_01", },
+		m_AmbientName = "MUSIC/TEST_AMBIENT",
+	
+		m_fInitPosX = -1900, --X축 카메라 범위
+    
+		m_fCamMinX = -200,
+		m_fCamMaxX = 2700,
+
+		m_fCamMinY = 0,
+		m_fCamMaxY = 800,
+    
+		m_fCamSize = 750,
+		m_fCamSizeMax = 3000,
+
+		m_fMinX = -100,
+		m_fMaxX = 2300,
+    
+		m_fMinZ = -400,
+		m_fMaxZ = -200,
+
+
+
+		m_listMapLayer =
+		{	
+			{
+				m_LayerName   = "0_Sky",
+				m_fMoveFactor = 0.2,
+			},
+			{
+				m_LayerName   = "1_Cloud",
+				m_fMoveFactor = 0.06,
+			},
+			{
+				m_LayerName   = "2_Far",
+				m_fMoveFactor = 0.04,
+			},
+			{
+				m_LayerName   = "3_Middle",
+				m_fMoveFactor = 0.032,
+			},				
+			{
+				m_LayerName   = "5_Close",
+				m_fMoveFactor = -0.1,
+			},
+		},
+	},
+}
+
+

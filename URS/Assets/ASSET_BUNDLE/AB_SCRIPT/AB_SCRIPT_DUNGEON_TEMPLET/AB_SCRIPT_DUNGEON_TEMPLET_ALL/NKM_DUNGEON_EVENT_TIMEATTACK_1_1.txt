@@ -1,0 +1,13 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 8,
+	m_fCostSpeedRateA = 0.7,
+	m_fCostSpeedRateB = 1,
+	m_BossUnitStrID = "NKM_MOB_BOSS_TIME_MACHINE_GAP_STRIKER",
+	
+    m_fBossPosZ 	= 0.6,
+	
+	m_listDungeonDeck = 
+	{
+	},
+}

@@ -1,0 +1,43 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 11621002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_MAID_S_LEADER_WEDDING",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "CHURCH",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_MAID_S_LEADER_WEDDING@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 11621002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_MAID_S_LEADER_WEDDING",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_Face = "UNIT_LAUGH",
+    m_CharStrID = "LEADER_FLORA_WEDDING_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "반지를 끼울 때 쓰는 좋은 미사여구는 많이 있지만, 다른 방해꾼이 오기 전에 짧게 말씀드리겠습니다. 주인님 손에 피 한 방울 묻지 않도록, 마지막까지 곁에서 주인님을 지키겠습니다.",
+    m_fTalkTime = 0.04,
+    m_Talk_JPN = "(JPN)반지를 끼울 때 쓰는 좋은 미사여구는 많이 있지만, 다른 방해꾼이 오기 전에 짧게 말씀드리겠습니다. 주인님 손에 피 한 방울 묻지 않도록, 마지막까지 곁에서 주인님을 지키겠습니다.",
+    m_Talk_ENG = "I can think of many good wedding vows, but I'll make it quick before more crashers show up. I'll protect you by your side until the end, without getting a drop of blood on you.",
+    m_Talk_TWN = "戴戒指的時候都會說一些很美的誓言，但在其他妨礙者出現之前，我還是長話短說。我會一直守在主人身邊，永遠不讓主人的手沾到一滴血。",
+    m_Talk_THA = "ฉันนึกถึงคำสัตย์สาบานแต่งงานดีๆ ได้มากมาย แต่ฉันจะทำให้เร็วที่สุดก่อนที่คนร้ายจะโผล่มาอีก ฉันจะปกป้องคุณเคียงข้างคุณจนถึงที่สุด โดยไม่ให้เลือดคุณหยด",
+    m_Talk_VTN = "Tôi có thể nghĩ ra nhiều lời thề trong đám cưới, nhưng tôi sẽ thực hiện nhanh trước khi có thêm nhiều vụ va chạm xuất hiện. Tôi sẽ bảo vệ ngài ở bên cạnh cho đến phút cuối cùng, không để ngài dính một giọt máu.",
+    m_Talk_SCN = "我想到过许多很好的求婚誓言，但在其她碍事者出现之前，我还是长话短说吧——我会一直守护在您左右的，保证不让您的双手沾上一滴血，主人。",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 11621002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_MAID_S_LEADER_WEDDING",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

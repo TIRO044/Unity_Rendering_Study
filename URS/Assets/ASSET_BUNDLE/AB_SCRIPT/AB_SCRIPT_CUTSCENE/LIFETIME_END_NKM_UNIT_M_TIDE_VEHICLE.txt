@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10320002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_TIDE_VEHICLE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_TIDE_VEHICLE@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10320002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_TIDE_VEHICLE",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "VEHICLE_TIDE_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "소속 전환 완료. 채리엇은 앞으로도 계속 사장님의 튼튼한 준족이 되어 드리겠습니다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "所属転換完了。チャリオットはこれからも社長の手足となって働きます。",
+    m_Talk_ENG = "Transfer to the new organization completed. Chariot will continue to be your reliable method of transportation.",
+    m_Talk_TWN = "所屬部隊更改完畢。柴瑞爾今後也會繼續擔任老闆座下健壯的快馬。",
+    m_Talk_THA = "การย้ายองค์กรใหม่เสร็จเรียบร้อย แชริอ็อตจะเป็นพาหนะขนส่งที่ไว้วางใจได้ของคุณต่อไป",
+    m_Talk_VTN = "Đã hoàn thành quá trình chuyển sang tổ chức mới. Xe Ngựa sẽ tiếp tục là phương tiện di chuyển đáng tin cậy của ngài.",
+    m_Talk_SCN = "所属部队更改完毕。柴瑞尔特今后也会继续成为老板坚实的后盾。",
+    m_Talk_DEU = "Der Wechsel zur neuen Organisation ist abgeschlossen. Chariot wird weiterhin Ihr zuverlässiges Transportmittel sein.",
+    m_Talk_FRA = "Transfert vers la nouvelle organisation terminé. Quadrige continue d'être votre solution de transport par excellence.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10320002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_TIDE_VEHICLE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

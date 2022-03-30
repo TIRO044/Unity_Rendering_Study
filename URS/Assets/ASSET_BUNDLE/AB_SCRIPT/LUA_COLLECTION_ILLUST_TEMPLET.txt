@@ -1,0 +1,5 @@
+﻿-- Exported from ../../../CSClient\Assets/EXCEL_DATA/COLLECTION_TEMPLET.xlsx
+
+COLLECTION_ILLUST_TEMPLET =
+{
+}

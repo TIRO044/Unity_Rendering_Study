@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10270002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FOX_VEHICLE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_M_FOX_VEHICLE@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10270002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FOX_VEHICLE",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "VEHICLE_FOX_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "사장님을 위해서. 기동불능이 되는 순간까지 지시를 이행하겠습니다.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "社長のために、起動不能になる瞬間まで指示に従います。",
+    m_Talk_ENG = "I'll follow your orders as long as I can move.",
+    m_Talk_TWN = "為了老闆，直到無法啟動的那一刻，本機都將繼續執行命令。",
+    m_Talk_THA = "ฉันจะทำตามคำสั่งของคุณ ตราบใดที่ยังเคลื่อนที่ได้",
+    m_Talk_VTN = "Tôi sẽ làm theo mệnh lệnh của ngài, cho đến chừng nào tôi còn có thể di chuyển.",
+    m_Talk_SCN = "为了老板。直到所有功能停止，本机都将继续执行指令。",
+    m_Talk_DEU = "Ich werde Ihre Befehle befolgen, solange ich mich bewegen kann.",
+    m_Talk_FRA = "Tant que je pourrai me déplacer, je suivrai vos ordres.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10270002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_M_FOX_VEHICLE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}

@@ -1,0 +1,28 @@
+NKMDungeonTemplet = 
+{
+	m_fStartCost = 10,
+	m_fCostSpeedRateB = 1,
+    m_BossUnitStrID = "NKM_MOB_BOSS_NANAHARA_JAPAN_SENHIME",
+    m_fBossPosZ 	= 0.6,
+
+	m_BossRespawnUnitTemplet =
+	{
+	  m_AddStatData =
+	  {
+		m_StatValue =
+		{
+		  NST_ATK                 = 500,
+		  NST_HP                  = -0,
+		  NST_DEF                 = -500,
+		},
+	  },
+	},
+
+	m_listDungeonDeck = 
+	{
+	},
+	
+	m_listDungeonUnitRespawnB = 
+	{
+    },    
+}

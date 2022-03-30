@@ -1,0 +1,44 @@
+﻿-- Exported from CUTSCENE_UNION.xlsx
+
+m_dicNKCCutScenTempletByID =
+{
+  {
+    m_CutScenProcessKey = 1,
+    m_CutScenID = 10780002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_STATE_AIRBORNE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_BGFileName = "LIFETIME",
+    m_StartBGMFileName = "CUTSCENE_HOPE",
+  },
+  {
+    m_CutScenKey_Talk = "LIFETIME_END_NKM_UNIT_S_STATE_AIRBORNE@2#Talk",
+    m_CutScenProcessKey = 2,
+    m_CutScenID = 10780002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_STATE_AIRBORNE",
+    m_bWaitClick = true,
+    m_fWaitTime = 0,
+    m_CharStrID = "AIRBORNE_STATE_NULL_NULL",
+    m_Pos = "C",
+    m_Talk_KOREA = "거슬리는 놈들 뒤통수 까는 게 저희들 보람인 건 어떻게 아셔 가지고. 많이도 안 바랍니다. 전투화만 제때 보급해 주십시오.",
+    m_fTalkTime = 0.03,
+    m_Talk_JPN = "敵に不意打ちを食らわすのが、私たちの原動力だってことをご存知だったとは。\n多くは望みません。戦闘靴だけちゃんと補給してください。",
+    m_Talk_ENG = "How did you know that we get the kick out of kicking enemies' heads? We won't ask for much. Just get us new combat boots on a regular basis.",
+    m_Talk_TWN = "我們就是喜歡給那些礙眼的傢伙後腦來一腳，這您是怎麼知道的？我們也沒什麼要求，只要適時供應戰靴就行了。",
+    m_Talk_THA = "คุณรู้ได้ยังไงน่ะครับ ว่าพวกเราชอบถีบหัวศัตรู? เอาเป็นว่าเราไม่ขออะไรมากก็แล้วกัน แค่รองเท้าคอมแบ็ตคู่ใหม่เป็นครั้งคราวก็พอแล้ว",
+    m_Talk_VTN = "Sao ngài biết chúng tôi thích đá vỡ đầu kẻ thù thế?\nChúng tôi sẽ không đòi hỏi gì nhiều đâu. Chỉ cần thường xuyên cung cấp cho chúng tôi giày chiến mới thôi.",
+    m_Talk_SCN = "您怎么知道？我们就是喜欢给碍眼的家伙们的后脑来一脚。我们没有什么需求，不要让战靴断供就可以了。",
+    m_Talk_DEU = "Woher wussten Sie, dass wir Spaß daran haben, Feinden den Kopf einzutreten? Wir verlangen nicht viel. Besorgen Sie uns einfach regelmäßig neue Kampfstiefel.",
+    m_Talk_FRA = "Comment vous avez deviné qu'on prenait notre pied en bottant les fesses des ennemis ? On demande pas grand-chose. On veut juste des nouvelles bottes de combat régulièrement.",
+  },
+  {
+    m_CutScenProcessKey = 3,
+    m_CutScenID = 10780002,
+    m_CutScenStrID = "LIFETIME_END_NKM_UNIT_S_STATE_AIRBORNE",
+    m_bWaitClick = false,
+    m_fWaitTime = 0,
+    m_bFadeIn = false,
+    m_fFadeTime = 3,
+    m_bFadeWhite = true,
+  },
+}
