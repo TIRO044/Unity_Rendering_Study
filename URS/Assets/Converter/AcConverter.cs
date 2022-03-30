@@ -14,7 +14,7 @@ namespace Converter
         char ShiftChar(char ch, int range);
     }
 
-    public class EasyStrTransformer : IStrTransformer
+    public class EasyStrConverter : IStrTransformer
     {
         private StringBuilder _strBuilder = new StringBuilder();
 
@@ -78,8 +78,21 @@ namespace Converter
 
         private char ShiftChar(char ch, int range, int min, int max)
         {
-            var minMax = max - min;
-            var rangeOverFlow = range % minMax;
+            var minMaxGap = max - min;
+            var rangeOverFlow = range % minMaxGap;
+            if (rangeOverFlow == 0)
+            {
+                if (range > 0)
+                {
+                    rangeOverFlow += 2;
+                }
+
+                if (range < 0)
+                {
+                    rangeOverFlow -= 2;
+                }
+            }
+
             var shiftGap = ch + rangeOverFlow;
 
             if (shiftGap > max)
@@ -101,4 +114,5 @@ namespace Converter
             return Convert.ToChar(shiftGap);
         }
     }
+
 }

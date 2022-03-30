@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.IO;
+using System.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
@@ -7,18 +9,311 @@ using Converter;
 
 namespace TestRunner
 {
+
+    public class DivideCases : IEnumerable
+    {
+        private static string[] _abScriptPath;
+
+        public DivideCases()
+        {
+            _abScriptPath = new string[]
+            {
+                "Assets/ASSET_BUNDLE/AB_SCRIPT/AB_SCRIPT_ANIM_DATA",
+                "Assets/ASSET_BUNDLE/AB_SCRIPT/AB_SCRIPT_EFFECT"
+            };
+        }
+        public IEnumerator GetEnumerator()
+        {
+            foreach (var t in _abScriptPath)
+            {
+                yield return new object[] { t };
+            }
+        }
+    }
+
+    public class DivideCases1 : IEnumerable
+    {
+        private static string[] _abScriptPath;
+
+        public DivideCases1()
+        {
+            _abScriptPath = new string[]
+            {
+                "Assets/ASSET_BUNDLE/AB_SCRIPT/AB_SCRIPT_EFFECT/LUA_DAMAGE_EFFECT_TEMPLET.txt",
+                "Assets/ASSET_BUNDLE/AB_SCRIPT/AB_SCRIPT_EFFECT/LUA_DAMAGE_EFFECT_TEMPLET.txt.meta"
+            };
+        }
+        public IEnumerator GetEnumerator()
+        {
+            foreach (var t in _abScriptPath)
+            {
+                yield return new object[] { t };
+            }
+        }
+    }
+
+    public class DivideCases2 : IEnumerable
+    {
+        private static string[] _abScriptPath;
+
+        public DivideCases2()
+        {
+            _abScriptPath = new string[]
+            {
+                "Assets/ASSET_BUNDLE/AB_SCRIPT"
+            };
+        }
+        public IEnumerator GetEnumerator()
+        {
+            foreach (var t in _abScriptPath)
+            {
+                yield return new object[] { t };
+            }
+        }
+    }
+
+    [TestFixture()]
+    public class NameConverterEncryptionTest
+    {
+        private IStrConverter _est = new EasyStrConverter();
+
+        [TestCaseSource(typeof(DivideCases1)), Order(1)]
+        public void FileTest(string tc)
+        {
+            Debug.Log(nameof(FileTest));
+            var fi = new FileInfo(tc);
+
+            var isMetaFile = fi.Name.Contains(".meta");
+            var fileName = Path.GetFileNameWithoutExtension(fi.FullName);
+            if (isMetaFile)
+            {
+                fileName = Path.GetFileNameWithoutExtension(fileName);
+            }
+
+            var c = _est.Encryption(fileName);
+            var c1 = _est.Decryption(c);
+
+            Debug.Log($"{fileName} to {c1}");
+            Assert.IsTrue(string.Equals(fileName, c1));
+        }
+
+        [TestCaseSource(typeof(DivideCases)), Order(4)]
+        public void Test(string tc)
+        {
+            Debug.Log(nameof(Test));
+
+            var files = Directory.GetFiles(tc);
+
+            foreach (var f in files)
+            {
+                var fileName = Path.GetFileNameWithoutExtension(f);
+                //메타 파일 변환 때문에 한 번 더 해줌
+                fileName = Path.GetFileNameWithoutExtension(fileName);
+
+                var c = _est.Encryption(fileName);
+                var c1 = _est.Decryption(c);
+
+                Debug.Log($"[{fileName}] -> [{c}] -> [{c1}]");
+
+                Assert.IsTrue(string.Equals(fileName, c1));
+            }
+        }
+
+        [TestCaseSource(typeof(DivideCases2)), Order(4)]
+        public void TestAllFile(string tc)
+        {
+            Debug.Log(nameof(TestAllFile));
+
+            var files = Directory.GetFiles(tc, "*", searchOption: SearchOption.AllDirectories);
+
+            foreach (var f in files)
+            {
+                var fileName = Path.GetFileNameWithoutExtension(f);
+                //메타 파일 변환 때문에 한 번 더 해줌
+                fileName = Path.GetFileNameWithoutExtension(fileName);
+
+                var c = _est.Encryption(fileName);
+                var c1 = _est.Decryption(c);
+
+                Debug.Log($"[{fileName}] -> [{c}] -> [{c1}]");
+
+                Assert.IsTrue(string.Equals(fileName, c1));
+            }
+        }
+
+        [TestCaseSource(typeof(DivideCases2)), Order(7)]
+        public void EncryptionAllScript(string tc)
+        {
+            Debug.Log(nameof(EncryptionTest));
+            var files = Directory.EnumerateFiles(tc, "*.*", searchOption: SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".txt") || s.EndsWith(".txt.meta"));
+
+            foreach (var f in files)
+            {
+                var dirPath = Path.GetDirectoryName(f);
+                var isMetaFile = f.Contains(".meta");
+                var extension = Path.GetExtension(f);
+                var fileName = Path.GetFileNameWithoutExtension(f);
+                if (isMetaFile)
+                {
+                    extension = Path.GetExtension(fileName);
+                    fileName = Path.GetFileNameWithoutExtension(fileName);
+                }
+
+                var c = _est.Encryption(fileName);
+                if (isMetaFile == false)
+                {
+                    var meta = $"{dirPath}/{fileName}{extension}";
+                    var meta1 = $"{dirPath}/{c}{extension}";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+                else
+                {
+                    var meta = $"{dirPath}/{fileName}{extension}.meta";
+                    var meta1 = $"{dirPath}/{c}{extension}.meta";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+
+                Debug.Log($"[{fileName}] -> [{c}]");
+            }
+
+            AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+        }
+
+        [TestCaseSource(typeof(DivideCases2)), Order(8)]
+        public void DecryptionAllScript(string tc)
+        {
+            Debug.Log(nameof(DecryptionTest));
+
+            var files = Directory.EnumerateFiles(tc, "*.txt", searchOption: SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".txt") || s.EndsWith(".txt.meta"));
+
+            foreach (var f in files)
+            {
+                var dirPath = Path.GetDirectoryName(f);
+                var isMetaFile = f.Contains(".meta");
+                var extension = Path.GetExtension(f);
+                var fileName = Path.GetFileNameWithoutExtension(f);
+                if (isMetaFile)
+                {
+                    extension = Path.GetExtension(fileName);
+                    fileName = Path.GetFileNameWithoutExtension(fileName);
+                }
+
+                var c = _est.Decryption(fileName);
+                if (isMetaFile == false)
+                {
+                    var meta = $"{dirPath}/{fileName}{extension}";
+                    var meta1 = $"{dirPath}/{c}{extension}";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+                else
+                {
+                    var meta = $"{dirPath}/{fileName}{extension}.meta";
+                    var meta1 = $"{dirPath}/{c}{extension}.meta";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+
+                Debug.Log($"[{fileName}] -> [{c}]");
+            }
+
+            AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+        }
+
+        [TestCaseSource(typeof(DivideCases)), Order(5)]
+        public void EncryptionTest(string tc)
+        {
+            Debug.Log(nameof(EncryptionTest));
+            var files = Directory.GetFiles(tc, "*", searchOption: SearchOption.AllDirectories);
+
+            foreach (var f in files)
+            {
+                var isMetaFile = f.Contains(".meta");
+                var extension = Path.GetExtension(f);
+                var fileName = Path.GetFileNameWithoutExtension(f);
+                if (isMetaFile)
+                {
+                    extension = Path.GetExtension(fileName);
+                    fileName = Path.GetFileNameWithoutExtension(fileName);
+                }
+
+                var c = _est.Encryption(fileName);
+                if (isMetaFile == false)
+                {
+                    var meta = $"{tc}/{fileName}{extension}";
+                    var meta1 = $"{tc}/{c}{extension}";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+                else
+                {
+                    var meta = $"{tc}/{fileName}{extension}.meta";
+                    var meta1 = $"{tc}/{c}{extension}.meta";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+
+                Debug.Log($"[{fileName}] -> [{c}]");
+            }
+
+            AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+        }
+
+        [TestCaseSource(typeof(DivideCases)), Order(6)]
+        public void DecryptionTest(string tc)
+        {
+            Debug.Log(nameof(DecryptionTest));
+
+            var files = Directory.GetFiles(tc, "*", searchOption: SearchOption.AllDirectories);
+
+            foreach (var f in files)
+            {
+                var isMetaFile = f.Contains(".meta");
+                var extension = Path.GetExtension(f);
+                var fileName = Path.GetFileNameWithoutExtension(f);
+                if (isMetaFile)
+                {
+                    extension = Path.GetExtension(fileName);
+                    fileName = Path.GetFileNameWithoutExtension(fileName);
+                }
+
+                var c = _est.Decryption(fileName);
+                if (isMetaFile == false)
+                {
+                    var meta = $"{tc}/{fileName}{extension}";
+                    var meta1 = $"{tc}/{c}{extension}";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+                else
+                {
+                    var meta = $"{tc}/{fileName}{extension}.meta";
+                    var meta1 = $"{tc}/{c}{extension}.meta";
+                    Debug.Log($"{meta} to {meta1}");
+                    File.Move(meta, meta1);
+                }
+
+                Debug.Log($"[{fileName}] -> [{c}]");
+            }
+
+            AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+        }
+    }
+
     [TestFixture()]
     public class NameConverter
     {
-        private static IStrTransformer _est = new EasyStrTransformer();
+        private static IStrConverter _est = new EasyStrConverter();
 
         [Test()]
         [TestCase("Assets/ASSET_BUNDLE/AB_LOADING_LOC_THA/")]
         public void 네이밍_변환(string tc)
         {
             var files = Directory.GetFiles(tc);
-            Log($" --------- Start FileChange : {files.Length} --------- ");
-            Log($"file Count : {files.Length}");
 
             for (var index = 0; index < files.Length; index++)
             {
