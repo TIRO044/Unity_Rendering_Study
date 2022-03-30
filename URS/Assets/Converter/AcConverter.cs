@@ -7,14 +7,14 @@ namespace Converter
     /// 스크립트 암호화에 대한 정의를 구현하기 위한 Interface입니다.
     /// 추후에 암호/복화화에 대한 로직이 좀 더 정교해질 때 손쉽게 교체할 수 있도록 하기위해 인터페이스로 만듬
     /// </summary>
-    public interface IStrTransformer
+    public interface IStrConverter
     {
         string Encryption(string str);
         string Decryption(string str);
         char ShiftChar(char ch, int range);
     }
 
-    public class EasyStrConverter : IStrTransformer
+    public class EasyStrConverter : IStrConverter
     {
         private StringBuilder _strBuilder = new StringBuilder();
 

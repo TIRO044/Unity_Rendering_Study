@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Linq;
+using System.Text;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
@@ -60,7 +61,8 @@ namespace TestRunner
         {
             _abScriptPath = new string[]
             {
-                "Assets/ASSET_BUNDLE/AB_SCRIPT"
+                "Assets/ASSET_BUNDLE/AB_SCRIPT",
+                "Assets/ASSET_BUNDLE/AB_SCRIPT/AB_SCRIPT_CUTSCENE"
             };
         }
         public IEnumerator GetEnumerator()
@@ -144,13 +146,16 @@ namespace TestRunner
         [TestCaseSource(typeof(DivideCases2)), Order(7)]
         public void EncryptionAllScript(string tc)
         {
-            Debug.Log(nameof(EncryptionTest));
-            var files = Directory.EnumerateFiles(tc, "*.*", searchOption: SearchOption.AllDirectories)
-                .Where(s => s.EndsWith(".txt") || s.EndsWith(".txt.meta"));
+            Debug.Log(nameof(EncryptionAllScript));
+            var files = Directory.GetFiles(tc, "*.*", searchOption: SearchOption.AllDirectories)
+                .Where(s => s.Contains(".txt"));
+
+            var sb = new StringBuilder();
 
             foreach (var f in files)
             {
-                var dirPath = Path.GetDirectoryName(f);
+                var fullPath = Path.GetFullPath(f);
+                var dirPath = Path.GetDirectoryName(fullPath);
                 var isMetaFile = f.Contains(".meta");
                 var extension = Path.GetExtension(f);
                 var fileName = Path.GetFileNameWithoutExtension(f);
@@ -163,20 +168,40 @@ namespace TestRunner
                 var c = _est.Encryption(fileName);
                 if (isMetaFile == false)
                 {
-                    var meta = $"{dirPath}/{fileName}{extension}";
-                    var meta1 = $"{dirPath}/{c}{extension}";
-                    Debug.Log($"{meta} to {meta1}");
+                    var meta = $@"{dirPath}\{fileName}{extension}";
+                    var meta1 = $@"{dirPath}\{c}{extension}";
+                    sb.Append($"{meta} to {meta1}").AppendLine();
+                    //Debug.Log($"{meta} to {meta1}");
+                    if (File.Exists(meta) == false)
+                    {
+                        Debug.LogError($"not found {meta}");
+                        continue;
+                    }
                     File.Move(meta, meta1);
                 }
                 else
                 {
-                    var meta = $"{dirPath}/{fileName}{extension}.meta";
-                    var meta1 = $"{dirPath}/{c}{extension}.meta";
-                    Debug.Log($"{meta} to {meta1}");
+                    var meta = $@"{dirPath}\{fileName}{extension}.meta";
+                    var meta1 = $@"{dirPath}\{c}{extension}.meta";
+                    sb.Append($"{meta} to {meta1}").AppendLine();
+                    //Debug.Log($"{meta} to {meta1}");
+                    if (File.Exists(meta) == false)
+                    {
+                        Debug.LogError($"not found {meta}");
+                        continue;
+                    }
                     File.Move(meta, meta1);
                 }
 
                 Debug.Log($"[{fileName}] -> [{c}]");
+            }
+
+            var path = Path.GetPathRoot(tc) + $"{nameof(EncryptionAllScript)}_Result.txt";
+            Debug.Log($"root path {path}");
+
+            using (var file = File.CreateText(path))
+            {
+                file.Write(sb.ToString());
             }
 
             AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
@@ -185,14 +210,15 @@ namespace TestRunner
         [TestCaseSource(typeof(DivideCases2)), Order(8)]
         public void DecryptionAllScript(string tc)
         {
-            Debug.Log(nameof(DecryptionTest));
+            Debug.Log(nameof(DecryptionAllScript));
 
-            var files = Directory.EnumerateFiles(tc, "*.txt", searchOption: SearchOption.AllDirectories)
-                .Where(s => s.EndsWith(".txt") || s.EndsWith(".txt.meta"));
+            var files = Directory.GetFiles(tc, "*.*", searchOption: SearchOption.AllDirectories)
+                .Where(s => s.Contains(".txt"));
 
             foreach (var f in files)
             {
-                var dirPath = Path.GetDirectoryName(f);
+                var fullPath = Path.GetFullPath(f);
+                var dirPath = Path.GetDirectoryName(fullPath);
                 var isMetaFile = f.Contains(".meta");
                 var extension = Path.GetExtension(f);
                 var fileName = Path.GetFileNameWithoutExtension(f);
@@ -205,16 +231,26 @@ namespace TestRunner
                 var c = _est.Decryption(fileName);
                 if (isMetaFile == false)
                 {
-                    var meta = $"{dirPath}/{fileName}{extension}";
-                    var meta1 = $"{dirPath}/{c}{extension}";
+                    var meta = $@"{dirPath}\{fileName}{extension}";
+                    var meta1 = $@"{dirPath}\{c}{extension}";
                     Debug.Log($"{meta} to {meta1}");
+                    if (File.Exists(meta) == false)
+                    {
+                        Debug.LogError($"not found {meta}");
+                        continue;
+                    }
                     File.Move(meta, meta1);
                 }
                 else
                 {
-                    var meta = $"{dirPath}/{fileName}{extension}.meta";
-                    var meta1 = $"{dirPath}/{c}{extension}.meta";
+                    var meta = $@"{dirPath}\{fileName}{extension}.meta";
+                    var meta1 = $@"{dirPath}\{c}{extension}.meta";
                     Debug.Log($"{meta} to {meta1}");
+                    if (File.Exists(meta) == false)
+                    {
+                        Debug.LogError($"not found {meta}");
+                        continue;
+                    }
                     File.Move(meta, meta1);
                 }
 
