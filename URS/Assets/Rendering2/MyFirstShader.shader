@@ -9,12 +9,12 @@ Shader "Custom/MyFirstShader"
 
 			#include "UnityCG.cginc"
 
-			void MyVertexProgram() 
-			{
+			float4 MyVertexProgram(float4 position : POSITION) : SV_POSITION {
+				return UnityObjectToClipPos(position);
 			}
 
-			void MyFragmentProgram()
-			{
+			float4 MyFragmentProgram(float4 position: SV_POSITION) : SV_TARGET {
+				return float4(1, 0.8, 0, 1);
 			}
 
 			ENDCG
