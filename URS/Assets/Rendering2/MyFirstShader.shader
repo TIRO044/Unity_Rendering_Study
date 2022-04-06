@@ -1,5 +1,9 @@
 Shader "Custom/MyFirstShader"
 {
+	Properties{
+		_Tint("Tint", Color) = (1, 1, 1, 1)
+	}
+
 	SubShader{
 		Pass{
 			CGPROGRAM
@@ -9,12 +13,19 @@ Shader "Custom/MyFirstShader"
 
 			#include "UnityCG.cginc"
 
-			float4 MyVertexProgram(float4 position : POSITION) : SV_POSITION {
-				return UnityObjectToClipPos(position);
+			float4 _Tint;
+
+			float4 MyVertexProgram(
+				float4 position : POSITION,
+				out float3 localPos : TEXCOORD0) : SV_POSITION {
+					localPos = position.xyz;
+					return UnityObjectToClipPos(position);
 			}
 
-			float4 MyFragmentProgram(float4 position: SV_POSITION) : SV_TARGET {
-				return float4(1, 0.8, 0, 1);
+			float4 MyFragmentProgram(
+				float4 position: SV_POSITION,
+				float3 localPos : TEXCOORD0) : SV_TARGET {
+					return float4(localPos, 1);
 			}
 
 			ENDCG
