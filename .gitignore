@@ -1,8 +1,10 @@
 *.suo
 
-
 URS/Library
 URS/Logs
 URS/Temp
-URS/obj/Debug
+URS/.vs
+URS/obj
+URS/ProjectSettings
+URS/UserSettings
 
