@@ -4,6 +4,7 @@ Shader "Custom/Texture With Detail"
 		_Tint ("Tint", Color) = (1, 1, 1, 1)
 		_MainTex ("Texture", 2D) = "white" {}
 		_DetailTex ("Detail Texture", 2D) = "gray" {}
+		_Bright2 ("Bright", Range(0, 2)) = 2
 	}
 
 	SubShader{
@@ -44,7 +45,7 @@ Shader "Custom/Texture With Detail"
 
 			float4 MyFragmentProgram(Interpolators i) : SV_TARGET {
 				float4 color = tex2D(_MainTex, i.uv) * _Tint;
-				color *= tex2D(_DetailTex, i.uvDetail) * 2;
+				color *= tex2D(_DetailTex, i.uvDetail) * _Bright2;
 				return color;
 			}
 
