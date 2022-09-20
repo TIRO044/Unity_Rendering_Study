@@ -32,7 +32,7 @@ Shader "Custom/Lighting Shader"
                 Interpolators i;
                 i.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 i.position = UnityObjectToClipPos(v.position);
-                i.normal = v.normal;
+                i.normal = mul(unity_ObjectToWorld, float4(v.normal, 0));
                 return i;
             }
 
